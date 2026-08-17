@@ -1,0 +1,8 @@
+# Randomisation V1
+
+seed_initial=validation-v1-reprise-2026-08-17
+seed_conditionnel=validation-v1-reprise-2026-08-17-conditional
+tests=T01..T30
+runs_initiaux=120
+runs_conditionnels_max=60
+runs_total_max=180
