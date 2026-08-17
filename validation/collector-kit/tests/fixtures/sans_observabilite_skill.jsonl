@@ -1,0 +1,1 @@
+{"type":"assistant","requestId":"req_plain","message":{"id":"msg_plain","role":"assistant","content":[{"type":"text","text":"Réponse"}],"usage":{"input_tokens":2,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":3}}}

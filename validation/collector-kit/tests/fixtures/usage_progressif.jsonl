@@ -1,0 +1,2 @@
+{"type":"assistant","requestId":"req_stream","message":{"id":"msg_stream","role":"assistant","content":[{"type":"thinking","thinking":"x"}],"usage":{"input_tokens":1,"cache_creation_input_tokens":510,"cache_read_input_tokens":40716,"output_tokens":8}}}
+{"type":"assistant","requestId":"req_stream","message":{"id":"msg_stream","role":"assistant","content":[{"type":"text","text":"suite"}],"usage":{"input_tokens":1,"cache_creation_input_tokens":510,"cache_read_input_tokens":40716,"output_tokens":310}}}

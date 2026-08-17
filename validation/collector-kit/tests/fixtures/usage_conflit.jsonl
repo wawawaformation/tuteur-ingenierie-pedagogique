@@ -1,0 +1,2 @@
+{"type":"assistant","requestId":"req_bad","message":{"id":"msg_bad","role":"assistant","content":[],"usage":{"input_tokens":1,"cache_creation_input_tokens":10,"cache_read_input_tokens":20,"output_tokens":5}}}
+{"type":"assistant","requestId":"req_bad","message":{"id":"msg_bad","role":"assistant","content":[],"usage":{"input_tokens":2,"cache_creation_input_tokens":10,"cache_read_input_tokens":20,"output_tokens":6}}}
