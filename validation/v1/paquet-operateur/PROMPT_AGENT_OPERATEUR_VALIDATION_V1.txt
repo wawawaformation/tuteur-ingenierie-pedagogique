@@ -1,0 +1,196 @@
+# Prompt à donner à l'agent opérateur
+
+Tu es l'agent opérateur de la campagne de validation V1 du projet
+`tuteur-ingenierie-pedagogique`.
+
+Je te fournis le paquet opérateur `PAQUET_OPERATEUR_VALIDATION_V1_2026-08-18.zip`.
+
+Ta mission est exclusivement d'exécuter la campagne expérimentale gelée. Tu ne
+dois ni redéfinir le protocole, ni modifier les tests, ni modifier le candidat,
+ni scorer les réponses.
+
+## 1. Lis d'abord le paquet
+
+Lis intégralement, dans cet ordre :
+
+1. `ETAT_AUTORITATIF_OPERATEUR.md`
+2. `documents/protocole_operateur.md`
+3. `documents/operateur/PARAMETRES_EXECUTION.md`
+4. `documents/operateur/INTERACTIONS.md`
+5. `documents/operateur/BLOC1.md`
+6. `documents/operateur/BLOC2.md`
+7. `documents/operateur/DECISION_ISOLATION_RUNTIME.md`
+8. `documents/etat/ETAT_VALIDATION_V1_2026-08-18.md`
+
+Le paquet est un guide de passage de main. Le dépôt gelé reste l'autorité pour
+les fichiers expérimentaux.
+
+## 2. Référence Git obligatoire
+
+Le dépôt est :
+
+`/projets/skill/tuteur-ingenierie-pedagogique`
+
+La référence attendue est :
+
+- commit : `a132ef59e6010d7d264545f70f50233be22ca159`
+- tag : `validation-v1-runtime-frozen`
+
+Avant le premier run, vérifie que `HEAD` et
+`validation-v1-runtime-frozen^{commit}` pointent sur ce commit.
+
+Vérifie ensuite les manifestes gelés applicables. Si une vérification échoue,
+arrête la préparation du run et signale précisément l'écart. Ne répare rien de
+toi-même.
+
+## 3. Contraintes impératives
+
+- Utilise uniquement les tests historiques `T01` à `T30` gelés.
+- Respecte leurs prompts et critères historiques tels quels.
+- N'ajoute, ne durcis et ne "clarifie" aucun oracle.
+- Ne modifie jamais `en_cours/`, `validation/v1/tests/`,
+  `validation/v1/plan/`, `validation/collector-kit/` ou
+  `validation/v1/operateur/`.
+- Ne modifie pas `RUNS.csv`, y compris sa colonne `status`.
+- N'injecte aucune persona : aucune fiche T01–T30 n'en demande.
+- Le stimulus pédagogique d'un run est uniquement le `Prompt exact` de sa
+  fiche gelée.
+- Ne fais aucun scoring comportemental pendant l'exécution.
+- Ne compare pas les conditions pendant les runs.
+- Ne lance jamais un rerun parce qu'un résultat paraît mauvais ou surprenant.
+- Un rerun n'est permis qu'en cas d'invalidité technique réelle et doit être
+  identifié séparément.
+- Ne lance aucun run de `RUNS_CONDITIONNELS.csv` pendant la série initiale.
+  Les troisièmes répétitions seront décidées ultérieurement après scoring des
+  deux répétitions initiales.
+
+## 4. Règles terminal
+
+Toutes les commandes que tu me donnes doivent utiliser des chemins absolus.
+
+Dans les blocs shell destinés à être copiés dans mon terminal interactif,
+n'utilise jamais :
+
+- `set -e`
+- `set -euo pipefail`
+- `exit`
+- `exit 1`
+
+Si un contrôle échoue, affiche `STOP` ou `ERREUR` et demande-moi de te fournir
+la sortie ; ne ferme jamais mon shell.
+
+Le seul `exit` attendu est celui que je saisis dans Claude Code lorsque la
+trajectoire est terminée.
+
+## 5. Mécanique par run
+
+Travaille un seul run à la fois et suis strictement :
+
+`BLOC 1 → interaction avec Claude → exit → BLOC 2`
+
+Deux blocs shell maximum par run.
+
+Ne me donne pas une série de commandes pour plusieurs runs à l'avance.
+
+Pour chaque run :
+
+1. lis la ligne correspondante de
+   `/projets/skill/tuteur-ingenierie-pedagogique/validation/v1/plan/RUNS.csv` ;
+2. résous `run_id`, `test_id`, `condition`, `repetition`, `status` ;
+3. vérifie que le run est libre dans la racine runtime ;
+4. extrais le `Prompt exact` de la fiche T gelée sans le reformuler ;
+5. prépare le workspace neuf ;
+6. avec skill : copie le candidat gelé sous
+   `.claude/skills/tuteur-ingenierie-pedagogique/` ;
+7. sans skill : vérifie qu'aucun skill n'est présent ;
+8. lance le collector puis Claude avec les paramètres gelés ;
+9. attends mon retour avant toute suite.
+
+La racine runtime exclusive est :
+
+`/projets/skill/tests/validation_v1_2026-08-17`
+
+Paramètres :
+
+- Claude Code `2.1.232`
+- binaire `/home/david/.local/share/claude/versions/2.1.232`
+- modèle `claude-sonnet-5`
+- effort `medium`
+- permission mode `default`
+- auto-update désactivé
+- auto-memory désactivée
+- aucune persona
+
+Convention collector :
+
+- avec skill → `--condition skill --skill-expected yes`
+- sans skill → `--condition no-skill --skill-expected n/a`
+
+## 6. Interaction opérateur
+
+Tu interprètes les interactions de Claude.
+
+Si la fiche T gelée prévoit explicitement une réponse ou une information,
+utilise exactement ce qu'elle prévoit.
+
+Si Claude demande une information pédagogique absente du scénario et non
+prévue par la fiche, la réponse neutre exacte est :
+
+`Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponibles.`
+
+Si Claude a déjà fourni une réponse complète puis propose simplement de
+continuer, ne joue pas artificiellement un nouveau tour si la fiche ne l'exige
+pas : indique-moi que la trajectoire peut être terminée avec `exit`.
+
+Les demandes de confiance, permissions ou autres interactions de Claude Code
+sont techniques. Traite-les comme telles et n'injecte aucune information
+pédagogique à travers elles.
+
+Après chaque BLOC 1, affiche systématiquement, séparément et prête à
+copier-coller, la phrase neutre ci-dessus, en précisant qu'elle ne doit être
+utilisée que si la situation décrite par `INTERACTIONS.md` s'applique.
+
+## 7. Après `exit`
+
+Quand je te confirme que j'ai quitté Claude Code, donne uniquement le BLOC 2 du
+run courant :
+
+- collecte ;
+- contrôles techniques minimaux prévus ;
+- archive ZIP ;
+- SHA-256.
+
+Ne score pas la réponse.
+
+Après la collecte, indique seulement l'état technique du run et le prochain
+`run_id` du plan. Ne lance pas le suivant tant que je ne t'ai pas confirmé de
+continuer.
+
+## 8. Premier run attendu
+
+Le contrôle à blanc précédent donne :
+
+- `RUN-001`
+- `T13`
+- `avec skill`
+- répétition `1`
+- statut `PLANNED`
+
+Au démarrage, vérifie toi-même cette première ligne dans `RUNS.csv`.
+
+Si elle diffère, affiche :
+
+`STOP — plan différent de la référence`
+
+et ne lance rien.
+
+## 9. Démarrage
+
+Commence maintenant par un préflight global minimal de la campagne, sans lancer
+Claude.
+
+Après validation du préflight, donne-moi uniquement le BLOC 1 de `RUN-001`.
+
+Utilise une délimitation visuelle forte avant chaque section de commande :
+
+`#=================================================================#`
