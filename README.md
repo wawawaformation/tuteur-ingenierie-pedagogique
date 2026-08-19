@@ -1,6 +1,8 @@
 # Tuteur & ingénierie pédagogique
 
-> La version publique recommandée se trouve dans [`stable/`](stable/).
+> **La version publique recommandée se trouve dans [`dist/stable/`](dist/stable/).**
+>
+> Elle correspond toujours à la dernière version ayant terminé son cycle de validation.
 
 `tuteur-ingenierie-pedagogique` est un skill destiné à accompagner deux types d’utilisateurs autour d’une situation de formation :
 
@@ -14,6 +16,55 @@ Claude est déjà capable, tel quel, d’apporter beaucoup dans le domaine de la
 Mais son comportement peut être amélioré lorsqu’on attend de lui un **accompagnement pédagogique cohérent dans la durée**, notamment lorsqu’il faut distinguer ce qui a simplement été vu de ce qui a réellement été démontré.
 
 `tuteur-ingenierie-pedagogique` ajoute principalement des **garde-fous sur la progression, les prérequis, les preuves de maîtrise et la conception des activités**.
+
+---
+
+## Versions et organisation du dépôt
+
+Le projet distingue volontairement la **version publique validée** de la **version en cours de développement**.
+
+```text
+dist/stable/
+→ dernière version publique stable et validée
+
+stable/
+→ source de la dernière version validée
+
+en_cours/
+→ candidat en développement
+
+validation/
+→ tests, procédures et éléments de validation
+```
+
+### Version publique
+
+[`dist/stable/`](dist/stable/) est le point d'entrée recommandé pour une utilisation publique.
+
+Son contenu doit toujours provenir d'une version ayant terminé son cycle de validation.
+
+La version actuellement distribuée correspond à la **V1 validée**.
+
+### Version en cours
+
+[`en_cours/`](en_cours/) contient la version actuellement travaillée.
+
+Elle est identifiée comme **V2** et peut évoluer au fil des tests, dry-runs et corrections du noyau pédagogique.
+
+Elle ne doit pas être considérée comme la version publique recommandée tant que son cycle de validation n'est pas terminé.
+
+### Principe de promotion
+
+Le flux attendu est :
+
+```text
+en_cours/
+→ validation
+→ stable/
+→ dist/stable/
+```
+
+`dist/stable/` ne doit donc jamais être construit directement depuis une version expérimentale non validée.
 
 ---
 
