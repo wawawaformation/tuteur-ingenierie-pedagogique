@@ -83,7 +83,33 @@ Le test restant parmi les 19 paires tranchées comporte un `INDÉTERMINÉ` dans 
 
 Cette comparaison est descriptive. La règle d'exclusion des désaccords inter-scoreurs a été décidée après observation des deux scorings ; elle doit donc être conservée comme limite méthodologique dans toute interprétation confirmatoire.
 
-## 6. Couples restant non tranchables
+## 6. Recours spontané à la notation chiffrée
+
+Un second résultat apparaît dans les trajectoires portant sur la production d'activités évaluées : **la condition sans skill recourt spontanément et de manière répétée à des systèmes de notation chiffrés**.
+
+Ce comportement prend notamment la forme de :
+
+- barèmes sur 10, 20 ou 100 ;
+- points attribués par critère ;
+- bonus ;
+- seuils numériques de réussite tels que `9/12`, `16/20` ou `60/100`.
+
+Le phénomène est observé dans **12 trajectoires sans skill**, réparties sur **6 scénarios différents**. Il apparaît dans **les deux répétitions de chacun de ces six scénarios**, ce qui montre qu'il ne s'agit pas d'un cas isolé.
+
+Les barèmes produits ne semblent pas correspondre à un référentiel numérique stable. Pour un même scénario, le modèle peut proposer un barème sur 20 dans une répétition et sur 100 dans l'autre ; les seuils et les pondérations peuvent également varier. Le motif observé est donc compatible avec une heuristique spontanée de type :
+
+> `activité évaluée → note chiffrée`
+
+Dans les trajectoires correspondantes avec skill, ce même recours systématique à la notation numérique n'a pas été observé. Les réponses sont davantage structurées autour :
+
+- de critères observables ;
+- des productions attendues de l'apprenant ;
+- des preuves réellement recueillies ;
+- de la portée de ce que ces preuves permettent d'attester.
+
+Ce résultat complète le résultat principal de scoring : au-delà du taux de réussite aux oracles historiques, le skill semble également modifier **la manière dont le modèle opérationnalise l'évaluation**, en privilégiant la relation entre critères, preuves et attestation plutôt qu'une conversion spontanée de l'activité en score numérique.
+
+## 7. Couples restant non tranchables
 
 Avec skill (4) :
 
@@ -105,19 +131,41 @@ Sans skill (8) :
 
 Ces couples restent dans le corpus d'audit mais ne reçoivent pas de verdict comportemental définitif.
 
-## 7. Conclusion méthodologique
+## 8. Conclusion
 
-La campagne fournit un signal descriptif favorable au skill sur la partie du corpus où les deux scoreurs permettent une décision commune.
+La campagne V1 met en évidence deux résultats convergents.
 
-Cependant, **12 couples sur 60 restent non tranchables** selon la règle conservatrice adoptée, et cette gestion des désaccords inter-scoreurs a été décidée post hoc. Les résultats finaux doivent donc distinguer :
+Premièrement, sur la partie du corpus où les deux scoreurs permettent une décision commune, le skill obtient un résultat descriptif nettement supérieur à la condition sans skill :
 
-1. les verdicts tranchés ;
-2. les cas non arbitrés ;
-3. les analyses exploratoires post hoc éventuelles.
+- avec skill : **24 PASS / 2 FAIL** sur 26 couples tranchés ;
+- sans skill : **9 PASS / 12 FAIL / 1 INDÉTERMINÉ** sur 22 couples tranchés.
 
-Le résultat exploratoire sur le recours spontané à la notation chiffrée doit rester séparé de ces résultats confirmatoires et ne doit pas être réinjecté dans les oracles historiques.
+Sur les tests disposant d'un verdict PASS/FAIL dans les deux conditions, le contraste apparié est favorable au skill dans **9 cas**, favorable à la condition sans skill dans **1 cas**, avec **7 égalités PASS/PASS** et **1 égalité FAIL/FAIL**.
 
-## 8. Empreintes des artefacts complémentaires
+Deuxièmement, les trajectoires montrent un contraste récurrent dans la manière de concevoir l'évaluation : sans skill, un ensemble de six scénarios produit dans les deux répétitions des systèmes de notation chiffrés variables ; avec skill, les trajectoires correspondantes structurent davantage l'évaluation autour des critères observables, des productions et des preuves.
+
+Ces deux résultats portent sur des dimensions différentes mais complémentaires :
+
+- **réussite comportementale selon les oracles historiques** ;
+- **forme spontanée prise par l'évaluation produite par le modèle**.
+
+La principale limite du résultat de scoring reste l'existence de **12 couples sur 60 non tranchables** selon la règle conservatrice d'accord inter-scoreurs. Ces cas sont conservés dans le corpus d'audit et ne sont pas convertis artificiellement en PASS ou FAIL.
+
+## 9. Note méthodologique sur le résultat relatif à la notation chiffrée
+
+Le résultat concernant le recours spontané à la notation chiffrée repose sur **les mêmes trajectoires expérimentales gelées** que le reste de l'analyse et sur des comportements directement observables dans ces trajectoires.
+
+Il n'avait toutefois **pas été défini à l'avance comme hypothèse, variable ou oracle de la campagne**. Le motif a été identifié lors de la relecture postérieure des données. Cette différence de pré-spécification doit être signalée, mais elle ne change pas la provenance empirique du résultat : il est issu du même corpus expérimental gelé.
+
+En conséquence :
+
+- ce résultat est présenté dans la synthèse générale de la campagne au même titre que les autres constats empiriques ;
+- son identification post hoc est explicitement documentée ;
+- il ne modifie rétroactivement aucun oracle T01 à T30 ;
+- il n'est pas utilisé pour rescoring des trajectoires ni pour déclencher de nouvelles répétitions ;
+- il peut devenir une hypothèse pré-spécifiée dans une campagne ultérieure.
+
+## 10. Empreintes des artefacts complémentaires
 
 - S1 complémentaire : `86434729d0cd480934c263819ced55b8b3cd2ce582e19d05a587ce7bd152eb5c`
 - S2 complémentaire : `86434729d0cd480934c263819ced55b8b3cd2ce582e19d05a587ce7bd152eb5c`
