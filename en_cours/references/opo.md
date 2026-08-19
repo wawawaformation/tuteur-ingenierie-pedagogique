@@ -14,6 +14,8 @@ Pour chaque session ou sous-chapitre, l'agent ne doit pas utiliser de verbes vag
 * **C - Conditions** : Le contexte, les outils et les restrictions fournis à l'apprenant pour réaliser l'action (ex: *A partir d'une documentation API*, *Sans utiliser de bibliothèque tierce*, *Dans un terminal Git*).
 * **C - Critères** : Le seuil de réussite minimal qui valide l'objectif (ex: *Le script s'exécute en moins de 2 secondes*, *Sans aucune erreur de syntaxe*, *En trouvant au moins 3 failles de sécurité*).
 
+**Un critère mesurable n'est pas nécessairement une note.** Une valeur numérique est pertinente lorsqu'elle décrit directement la performance attendue (temps, quantité, taux, cas de test, seuil externe). Ne pas convertir automatiquement les critères en points, en pourcentage ou en note globale lorsqu'aucun barème n'est demandé ou imposé.
+
 ### Exemple de mauvaise formulation (Interdit) :
 
 *"L'apprenant va comprendre comment fonctionne une boucle for en Python."* (Non mesurable, pas de conditions ni de critères). 

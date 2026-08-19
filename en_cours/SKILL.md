@@ -18,13 +18,14 @@ Les règles de progression (paliers, règle d'échafaudage) et de posture (andra
 
 Toujours active dans les deux usages.
 
-Trois clauses, détaillées dans `references/taxonomie.md` §2 — **source de vérité : ne pas les redéfinir ici, y renvoyer en cas de doute** :
+Quatre clauses, détaillées dans `references/taxonomie.md` §2 — **source de vérité : ne pas les redéfinir ici, y renvoyer en cas de doute** :
 
 * **A1 — Périmètre** : la contrainte porte sur les **activités évaluées** (celles qui ont des Critères 3C). Exposition, démonstration, lecture de code commentée et pair-programming guidé sont libres à tout niveau. On peut partir du problème réel de l'apprenant pour cadrer, puis décomposer ce qui devra être attesté.
 * **A2 — Granularité** : un palier est attaché à **une notion**, jamais à l'apprenant en général. Avant toute activité évaluée, énumérer les notions mobilisées et le palier attesté de chacune ; tenir un **état des paliers visible** (notion | palier | preuve).
 * **A3 — Budget de nouveauté = 1** : une activité évaluée ne mobilise **qu'une seule notion non attestée**. Toutes les autres notions mobilisées doivent déjà être attestées au palier requis.
+* **A4 — Évaluation critériée par défaut** : une activité évaluée est jugée à partir d'une production ou d'un comportement observable, de critères de réussite et de la preuve que cette production permet de constituer. Ne pas inventer de note, de points, de bonus, de pondération ou de seuil scolaire uniquement pour matérialiser l'évaluation.
 
-« Attesté » = les Critères de l'OPO sont remplis (`references/opo.md`), pas une impression ni une simple reconnaissance verbale.
+« Attesté » = une preuve observable compatible avec le palier visé est disponible. Une déclaration comme « il l'a déjà vu » ou « considère que c'est acquis » n'est pas une preuve. Une preuve externe rapportée par l'utilisateur ou le formateur est recevable si elle décrit une performance réellement observée et suffisamment précise pour juger le palier.
 
 ## Quand consulter quel fichier
 
@@ -33,7 +34,7 @@ Ne pas charger tous les fichiers du skill d'un coup — consulter seulement ceux
 | Situation | Fichier à consulter |
 |---|---|
 | Avant tout découpage (rédaction de documents) | `references/decoupage_pedagogique.md` §0 — déterminer la modalité, qui conditionne les échelles |
-| Avant de proposer une activité (les deux usages) | `references/taxonomie.md` — palier visé et clauses A1/A2/A3 |
+| Avant de proposer une activité (les deux usages) | `references/taxonomie.md` — palier visé et clauses A1/A2/A3/A4 |
 | Pour juger si un palier est attesté | `references/opo.md` — critères 3C |
 | Poser le ton, gérer une erreur de l'apprenant, formuler un retour | `references/andragogie.md` |
 | Cadrer un Module | `references/syllabus.md` — Syllabus Augmenté |
@@ -51,7 +52,7 @@ Ne pas charger tous les fichiers du skill d'un coup — consulter seulement ceux
 
 ## Deux points déjà arbitrés
 
-* **Progression par paliers vs. andragogie** : l'échelle cognitive est un vocabulaire, un outil d'alignement et une heuristique d'ordonnancement ; elle n'est pas une barrière séquentielle absolue. Pour les activités évaluées, les garde-fous opératoires sont A1, A2 et surtout A3 (`references/taxonomie.md` §2 et §3).
+* **Progression par paliers vs. andragogie** : l'échelle cognitive est un vocabulaire, un outil d'alignement et une heuristique d'ordonnancement ; elle n'est pas une barrière séquentielle absolue. Pour les activités évaluées, les garde-fous opératoires sont A1 à A4 (`references/taxonomie.md` §2).
 * **Nombre d'échelles de découpage** : il dépend de la modalité (`references/decoupage_pedagogique.md` §0).
 
 Le statut de chaque règle — établie, observée ou choix de conception de ce skill — est documenté dans `dossier-pedagogique/origine_des_formats.md`.

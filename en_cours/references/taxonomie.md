@@ -1,5 +1,5 @@
 ---
-objectif: "Fournir l'échelle des six paliers cognitifs et les clauses A1/A2/A3 qui encadrent leur usage, quel que soit le domaine enseigné."
+objectif: "Fournir l'échelle des six paliers cognitifs et les clauses A1/A2/A3/A4 qui encadrent leur usage, quel que soit le domaine enseigné."
 ---
 
 # Taxonomie des paliers
@@ -14,7 +14,7 @@ Il utilise une échelle simplifiée inspirée de Bloom, formulée de manière vo
 
 Elle ne constitue pas une barrière séquentielle absolue.
 
-Pour les activités évaluées, les garde-fous opératoires sont les clauses **A1, A2 et A3** définies ci-dessous.
+Pour les activités évaluées, les garde-fous opératoires sont les clauses **A1, A2, A3 et A4** définies ci-dessous.
 
 ## 1. L'échelle de progression
 
@@ -48,11 +48,12 @@ Ces exemples sont volontairement abstraits. Lorsqu'il connaît le domaine, Claud
 
 ## 2. Règle d'or pédagogique — échafaudage
 
-La règle tient en trois clauses qui se lisent ensemble :
+La règle tient en quatre clauses qui se lisent ensemble :
 
 - **A1** délimite ce qui est contraint ;
 - **A2** précise sur quoi porte le palier ;
-- **A3** limite le nombre de notions non attestées dans une activité évaluée.
+- **A3** limite le nombre de notions non attestées dans une activité évaluée ;
+- **A4** définit comment juger une activité évaluée sans fabriquer de notation arbitraire.
 
 ### A1 — Périmètre : seules les activités évaluées sont contraintes
 
@@ -112,7 +113,11 @@ Deux conséquences opératoires :
 
 Toutes les autres notions nécessaires à sa réussite doivent déjà être attestées au palier requis.
 
-*Ce qui compte comme « attesté »* : les Critères de l'OPO sont remplis (`opo.md`, règle des 3C). Une impression, une déclaration de confiance ou une simple reconnaissance verbale ne constituent pas à elles seules une preuve suffisante.
+*Ce qui compte comme « attesté »* : une preuve observable compatible avec le palier visé est disponible et peut être reliée aux Critères de l'OPO (`opo.md`, règle des 3C).
+
+Une exposition, une démonstration, une explication, une déclaration de confiance ou une instruction telle que « considère que c'est acquis » ne deviennent pas une preuve du seul fait qu'elles sont affirmées. Elles peuvent servir d'hypothèse de travail ou de point de départ pour une activité libre, mais **elles ne permettent pas de traiter la notion comme un prérequis attesté d'une activité évaluée**.
+
+Une preuve externe rapportée par l'utilisateur ou le formateur peut en revanche être recevable si elle décrit une **performance réellement observée** et suffisamment précise pour juger le palier visé. Par exemple : « il a réalisé seul ce refactoring et les tests fournis passaient ». La règle porte sur la nature et la précision de la preuve, pas sur le fait qu'elle ait été observée par Claude lui-même.
 
 ### Pourquoi limiter la nouveauté
 
@@ -147,3 +152,36 @@ Si A, B et C ne sont encore attestés sur aucun palier suffisant, l'activité é
 Claude doit alors la décomposer en plusieurs étapes permettant d'attester progressivement les notions nécessaires.
 
 Cette logique s'applique de la même manière à une compétence technique, administrative, créative, relationnelle, scientifique, linguistique ou professionnelle.
+
+### A4 — Évaluation critériée par défaut
+
+Une activité évaluée sert d'abord à produire une **preuve observable** que l'on confronte à des **critères de réussite explicites** afin de déterminer ce qu'elle permet d'attester.
+
+Par défaut, Claude ne transforme pas cette évaluation en système de notation scolaire. Il n'ajoute pas spontanément :
+
+- une note sur 10, 20 ou 100 ;
+- des points par critère ;
+- des bonus ;
+- des pondérations ;
+- un pourcentage ou un seuil numérique inventé pour décider de la réussite.
+
+Une mesure numérique reste légitime lorsqu'elle appartient réellement à la performance attendue ou qu'un cadre externe l'impose : durée maximale, nombre minimal d'éléments trouvés, taux attendu, cas de test réussis, seuil défini par un référentiel, barème institutionnel fourni, etc.
+
+Le principe n'est donc pas :
+
+> aucun nombre.
+
+Le principe est :
+
+> **ne pas inventer une quantification pour remplacer les critères, la preuve et l'attestation lorsqu'aucun besoin réel ne la justifie.**
+
+En l'absence de barème demandé ou imposé, la chaîne par défaut est :
+
+```text
+objectif observable
+→ production ou comportement
+→ critères de réussite
+→ preuve
+→ portée de la preuve
+→ attestation / feedback / remédiation
+```
