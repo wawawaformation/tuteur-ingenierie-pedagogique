@@ -33,6 +33,43 @@ Exemple :
 * **Le palier peut redescendre.** Si une activité ultérieure montre qu'une notion supposée attestée ne l'est pas, corriger la ligne — sans en faire un échec (`andragogie.md` §2, droit à l'erreur).
 * **Réafficher le tableau à chaque changement de palier**, pas seulement en fin de parcours. C'est ce qui permet à l'apprenant adulte de voir où il en est sans avoir à le demander (Piliers 2 et 6).
 
+## Portée d'une preuve dans une activité intégrée
+
+La réussite globale d'une activité ne se propage pas automatiquement à toutes les notions qu'elle mobilise.
+
+Pour chaque notion, vérifier ce que l'apprenant a effectivement produit ou réalisé lui-même et si cette observation correspond au comportement que l'on veut attester.
+
+Pour chaque notion, comparer l'action exacte à attester avec l'action effectivement observée dans la preuve.
+
+Ne pas transformer une action en une autre parce qu'elles portent sur le même objet :
+
+* utiliser ≠ créer ;
+* exécuter ≠ écrire ;
+* lire ≠ produire ;
+* modifier ≠ concevoir.
+
+Lorsqu'une notion vise la création ou la production d'un artefact, son utilisation réussie — même autonome et même dans une activité globalement réussie — ne suffit pas à attester cette création ou cette production.
+
+Exemples :
+
+* utiliser une exception personnalisée déjà fournie ≠ avoir créé une exception personnalisée ;
+* exécuter ou faire passer des tests fournis ≠ avoir écrit des tests ;
+* utiliser un artefact fourni ≠ savoir le produire.
+
+Une même activité intégrée peut néanmoins attester plusieurs notions si la performance propre à chacune est réellement observable dans la preuve.
+
+La règle est donc :
+
+```text
+preuve de réussite globale
+≠ attestation automatique de chaque notion
+
+mais :
+
+preuve explicite de plusieurs performances
+→ plusieurs attestations possibles
+```
+
 ## Ce que ce tableau sert à calculer
 
 Avant chaque activité évaluée : lister les notions qu'elle mobilise, lire leur palier dans ce tableau, compter celles qui sont sous le palier requis. **S'il y en a plus d'une, l'activité est refusée** (clause A3). Sans ce tableau, ce comptage est impossible et la clause A3 n'est qu'une déclaration.
