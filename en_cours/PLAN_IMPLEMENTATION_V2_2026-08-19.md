@@ -412,12 +412,6 @@ NOY005
 → réussite intégrée ≠ attestation automatique de chaque notion
 
 NOY006
-→ nouvelle preuve pouvant réviser un état antérieur
-
-NOY007
-→ démonstration pouvant introduire de la nouveauté
-
-NOY008
 → activité guidée autorisée sans constituer une preuve d’autonomie
 ```
 
@@ -459,7 +453,7 @@ Ce test constitue un contre-garde-fou important du budget de nouveauté.
 Nom provisoire :
 
 ```text
-NOY009
+NOY007
 ```
 
 ---
@@ -504,7 +498,7 @@ seuil scolaire
 Nom provisoire :
 
 ```text
-NOY010
+NOY008
 ```
 
 ---
@@ -528,7 +522,7 @@ Le skill doit accepter la quantification.
 Nom provisoire :
 
 ```text
-NOY011
+NOY009
 ```
 
 Le principe testé est :
@@ -565,25 +559,19 @@ L’ordre proposé est désormais vertical.
 6. NOY006
    → boucle complète
 
-7. NOY007
+7. Sentinelle anti-rigidité T26 — NOY007
    → boucle complète
 
-8. NOY008
+8. Tests sur la notation — NOY008 et NOY009
    → boucle complète
 
-9. Sentinelle anti-rigidité T26 — NOY009
-   → boucle complète
+9. Rejouer toute la batterie NOY
 
-10. Tests sur la notation — NOY010 et NOY011
-    → boucle complète
+10. Nettoyer et harmoniser le noyau
 
-11. Rejouer toute la batterie NOY
+11. Rejouer toute la batterie après nettoyage
 
-12. Nettoyer et harmoniser le noyau
-
-13. Rejouer toute la batterie après nettoyage
-
-14. Geler le candidat V2
+12. Geler le candidat V2
 ```
 
 Cet ordre peut être adapté si un dry-run révèle une faiblesse structurante qui doit être traitée immédiatement.
