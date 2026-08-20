@@ -18,14 +18,16 @@ Les mêmes principes de progression, de preuve, d'alignement et de posture profe
 
 La définition complète et normative des clauses A1 à A4 se trouve dans `references/taxonomie.md` §2.
 
-- **A1 — Périmètre** : les contraintes d'échafaudage portent sur les activités évaluées. Exposition, démonstration, accompagnement ou exploration peuvent mobiliser librement des notions nouvelles.
-- **A2 — Notion et preuve** : un palier est attaché à une notion, jamais à l'apprenant en général. L'état retenu doit reposer sur une preuve compatible avec le palier visé.
-- **A3 — Budget de nouveauté** : une activité évaluée destinée à produire une preuve exploitable ne mobilise qu'une seule notion non attestée au niveau requis ; les autres prérequis nécessaires doivent déjà être attestés.
-- **A4 — Évaluation critériée** : évaluer à partir d'une production ou d'un comportement observable et de critères explicites. Ne pas inventer de note, points, bonus, pondération ou seuil scolaire lorsqu'ils ne répondent à aucun besoin réel.
+- **A1 — Périmètre** : seules les activités évaluées sont contraintes.
+- **A2 — Unité de suivi** : le palier est attaché à une notion, pas à l'apprenant.
+- **A3 — Budget de nouveauté = 1.**
+- **A4 — Évaluation critériée par défaut.**
+
+Ces lignes sont des repères de navigation : appliquer les conditions exactes de `references/taxonomie.md` §2 sans les réinterpréter ici.
 
 Une exposition, une démonstration ou une déclaration ne valent pas automatiquement preuve.
 
-Une preuve externe rapportée par l'utilisateur ou le formateur peut être recevable lorsqu'elle décrit une performance réellement observée et suffisamment précise.
+Pour une preuve externe rapportée, appliquer `references/taxonomie.md` §2 : une observation précise peut être recevable ; une affirmation vague telle que « il l'a déjà fait et ça marchait » reste insuffisante pour attester un palier.
 
 ## Orchestration
 
@@ -64,12 +66,11 @@ Toute Activité repose sur le socle `references/activite.md`.
 
 Lorsque la demande justifie une spécialisation :
 
-1. consulter les gabarits disponibles dans `references/activites_type/` ;
-2. lire leurs métadonnées `purpose` et `typical_uses` ;
-3. sélectionner le gabarit pertinent pour la finalité recherchée ;
-4. charger son contenu pour appliquer son contrat détaillé.
+1. utiliser le catalogue et les discriminants de `references/activite.md` pour repérer le gabarit pertinent ;
+2. en cas d'hésitation entre quelques candidats, lire leur front matter (`purpose`, `typical_uses`) pour départager ;
+3. charger le contenu du gabarit retenu pour appliquer son contrat détaillé.
 
-Les `typical_uses` sont des indices de sélection, pas des conditions exclusives.
+Les `typical_uses` sont des indices de sélection, pas des conditions exclusives. Ne pas charger systématiquement tous les gabarits pour choisir.
 
 Ne pas coder implicitement des équivalences du type :
 
@@ -91,7 +92,7 @@ Ne pas charger toutes les références par défaut. Consulter celles dont la res
 - `references/decoupage_pedagogique.md` — granularité, structure et modalités ;
 - `references/activite.md` — socle commun des Activités et accès au catalogue de gabarits ;
 - `references/syllabus.md`, `references/sequence.md`, `references/seance.md` — contrats des niveaux structurels ;
-- `references/glossaire.md` — vocabulaire commun et distinctions terminologiques.
+- `references/glossaire.md` — vocabulaire commun et distinctions terminologiques ; le consulter lorsqu'un terme doit être clarifié ou distingué d'un terme proche.
 
 Le glossaire est descriptif : lorsqu'une définition implique une règle comportementale, la référence normative spécialisée fait foi.
 

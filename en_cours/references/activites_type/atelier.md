@@ -71,7 +71,7 @@ Décrire en toutes lettres ce que l'apprenant doit remettre : contenu attendu et
 
 Expliciter également les critères permettant à l'apprenant et au formateur de juger la réussite ou la performance attendue.
 
-Les critères portent sur la performance réellement visée. Ils ne sont pas transformés spontanément en points, note ou barème scolaire.
+Les critères portent sur la performance réellement visée. Pour toute notation ou quantification, appliquer `../taxonomie.md` §2, clause A4.
 
 ## Deux volets à ne jamais fusionner
 

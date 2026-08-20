@@ -114,7 +114,7 @@ Par exemple, selon l'objectif visé, observer si l'apprenant parvient à :
 
 Ne pas évaluer la « qualité de l'introspection » de manière vague ou subjective.
 
-Ne pas transformer automatiquement ces critères en note, points ou barème scolaire.
+Pour toute notation ou quantification, appliquer `../taxonomie.md` §2, clause A4.
 
 ## Usages autour d'un jury ou d'un livrable
 
@@ -153,3 +153,5 @@ L'objectif n'est pas de fabriquer un discours artificiel pour le jury, mais d'ai
 6. **Palier fondé sur la performance** : ne jamais attribuer un palier au Recul lui-même. Une reformulation peut relever du palier 2 ; une analyse, une justification ou un arbitrage peuvent relever d'autres paliers selon ce qui est effectivement demandé et observable.
 
 7. **Projection lorsque pertinente** : si la finalité de l'activité le justifie, aider l'apprenant à transformer son analyse en enseignement utilisable dans une situation future.
+
+8. **Non-divulgation si évalué** : une réponse modèle, des attendus détaillés ou des éléments d'appréciation réservés au formateur ne sont pas révélés avant la production de l'apprenant.

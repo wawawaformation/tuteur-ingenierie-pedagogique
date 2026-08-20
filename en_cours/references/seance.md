@@ -12,7 +12,7 @@ Une Séance est une unité de travail organisée au sein d'une Séquence (`decou
 ## Structure
 
 1. **Intitulé et place dans la séquence** — une ligne pour la séance amont, une pour la séance aval. Rien de plus : la fiche de séance ne rejoue pas le programme du module.
-2. **Objectif(s) de la séance** — formuler un ou plusieurs OPO selon les 3C (`opo.md`). La séance garde un cap pédagogique cohérent. Chaque OPO doit correspondre à une performance réellement travaillée dans la séance et à une preuve permettant d'en vérifier l'atteinte. Ne pas multiplier les objectifs au point de rendre le déroulé ou l'évaluation illisible.
+2. **Objectif(s) de la séance** — formuler un ou plusieurs OPO selon les 3C (`opo.md`). La séance garde un cap pédagogique cohérent. Chaque OPO doit correspondre à une performance réellement travaillée dans la séance et à une preuve permettant d'en vérifier l'atteinte.
 3. **Ancrage / Pourquoi** (2 à 5 min) — le problème concret que la séance permet de résoudre. C'est ici que l'ouverture peut se faire par une démonstration de haut niveau : la clause A1 (`taxonomie.md` §2) l'autorise explicitement, puisqu'aucun palier n'est encore évalué.
 4. **Apport** — le contenu nécessaire au déroulement, rédigé et pas seulement annoncé. Une fiche de séance qui liste des titres sans fournir les éléments utiles n'est pas directement exploitable.
 5. **Déroulé** — ordonner les temps de la séance et fournir des durées indicatives lorsque cela aide au pilotage.

@@ -98,7 +98,7 @@ Prévoir une courte lecture du résultat permettant à l'apprenant ou au formate
 - les notions qui méritent une reprise ou une vérification ;
 - les parties du parcours vers lesquelles revenir en priorité.
 
-Ne pas convertir automatiquement le résultat en note, en pourcentage de réussite scolaire ou en seuil arbitraire.
+Pour toute notation, quantification ou seuil global, appliquer `../taxonomie.md` §2, clause A4.
 
 ## Checklist auto-cochée — complément possible
 
@@ -128,4 +128,4 @@ Cette checklist renseigne ce que l'apprenant pense savoir faire ; elle ne consti
 
 6. **Exposition maîtrisée** : les réponses attendues et les feedbacks correctifs ne sont pas révélés avant que l'apprenant ait répondu.
 
-7. **Absence de notation scolaire spontanée** : aucun système de points, note ou seuil global n'est ajouté sans raison externe ou demande explicite.
+7. **Évaluation critériée** : respecter `../taxonomie.md` §2, clause A4 pour toute notation, quantification ou seuil global.

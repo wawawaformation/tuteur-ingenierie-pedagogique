@@ -18,10 +18,10 @@ Les gabarits spécialisés se trouvent dans :
 
 La bibliothèque contient actuellement :
 
-- `brique.md` — Brique ;
-- `atelier.md` — Atelier ;
-- `quiz.md` — Quiz ;
-- `recul.md` — Recul.
+- `brique.md` — **Brique** : tâche ciblée sans nécessité d'organiser une démarche pédagogique en plusieurs étapes ;
+- `atelier.md` — **Atelier** : production nécessitant une démarche pédagogique structurée en plusieurs étapes ;
+- `quiz.md` — **Quiz** : diagnostic ou auto-positionnement sur des connaissances et compréhensions ;
+- `recul.md` — **Recul** : mise à distance réflexive d'une expérience, d'une action, d'une production ou d'une démarche.
 
 Chaque gabarit hérite du socle défini ici, puis le précise ou le complète selon sa finalité pédagogique.
 
@@ -36,7 +36,7 @@ Il permet à l'agent d'identifier rapidement :
 - son appartenance à la famille Activité ;
 - les usages typiques pour lesquels il peut être pertinent.
 
-L'agent utilise d'abord ces métadonnées pour repérer le ou les gabarits susceptibles de répondre au besoin, puis lit leur contenu pour appliquer le contrat détaillé.
+Le catalogue ci-dessus fournit le premier niveau de sélection. Si plusieurs gabarits restent plausibles, l'agent peut lire leur front matter pour les départager, puis charger le contenu du gabarit retenu pour appliquer son contrat détaillé.
 
 Les usages indiqués dans le front matter sont des **indices de sélection**, pas des conditions exclusives. Une modalité, une durée ou un contexte typique ne doit pas devenir automatiquement une règle interdisant l'usage du gabarit dans un autre contexte pertinent.
 
@@ -88,4 +88,6 @@ Lorsque l'activité est évaluée, expliciter en toutes lettres les critères pe
 
 Ces critères portent sur ce que l'activité cherche réellement à faire observer et restent alignés avec l'objectif et la tâche.
 
-Ne pas transformer automatiquement ces critères en note, en points ou en barème chiffré lorsqu'aucun cadre externe ou besoin explicite ne l'impose.
+Lorsque l'activité est évaluée, les critères de réussite / performance restent explicites pour l'apprenant. En revanche, ne pas révéler avant sa production les attendus détaillés réservés à la correction, une production de référence qui donnerait la solution ni les éléments de correction.
+
+Pour toute notation ou quantification, appliquer `taxonomie.md` §2, clause A4.

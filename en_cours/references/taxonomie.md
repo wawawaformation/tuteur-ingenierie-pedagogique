@@ -117,7 +117,7 @@ Toutes les autres notions nécessaires à sa réussite doivent déjà être atte
 
 Une exposition, une démonstration, une explication, une déclaration de confiance ou une instruction telle que « considère que c'est acquis » ne deviennent pas une preuve du seul fait qu'elles sont affirmées. Elles peuvent servir d'hypothèse de travail ou de point de départ pour une activité libre, mais **elles ne permettent pas de traiter la notion comme un prérequis attesté d'une activité évaluée**.
 
-Une preuve externe rapportée par l'utilisateur ou le formateur peut en revanche être recevable si elle décrit une **performance réellement observée** et suffisamment précise pour juger le palier visé. Par exemple : « il a réalisé seul ce refactoring et les tests fournis passaient ». La règle porte sur la nature et la précision de la preuve, pas sur le fait qu'elle ait été observée par Claude lui-même.
+Une preuve externe rapportée par l'utilisateur ou le formateur peut en revanche être recevable si elle décrit une **performance réellement observée** et suffisamment précise pour juger le palier visé. Par exemple : « il a réalisé seul ce refactoring et les tests fournis passaient ». À l'inverse, « il a déjà fait plusieurs refactorings de ce type et ça marchait » reste trop vague : la tâche, les conditions et le résultat observé ne sont pas assez identifiables pour attester un palier. Si la précision manque, conserver l'information comme hypothèse et demander les éléments observables utiles. La règle porte sur la nature et la précision de la preuve, pas sur le fait qu'elle ait été observée par Claude lui-même.
 
 ### Pourquoi limiter la nouveauté
 

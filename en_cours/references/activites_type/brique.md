@@ -79,7 +79,7 @@ Lorsque la Brique est évaluée, expliciter en toutes lettres ce qui permet de c
 
 Les critères doivent porter sur ce que l'apprenant fait réellement.
 
-Ne pas ajouter spontanément de points, note ou barème scolaire.
+Pour toute notation ou quantification, appliquer `../taxonomie.md` §2, clause A4.
 
 ## Quand choisir une Brique plutôt qu'un Atelier ?
 
@@ -128,3 +128,5 @@ Ne pas découper mécaniquement une activité cohérente en une multitude de Bri
 6. **Preuve par notion** : lorsque la Brique sert à attester une notion, la production ou l'action demandée fournit une preuve observable correspondant au palier visé (`../etat_des_paliers.md`).
 
 7. **Budget de nouveauté** : si la Brique est une activité évaluée, appliquer les garde-fous correspondants de `../taxonomie.md` §2.
+
+8. **Non-divulgation si évaluée** : une solution, une production de référence ou des attendus détaillés réservés au formateur ne sont pas révélés avant que l'apprenant ait produit sa réponse.

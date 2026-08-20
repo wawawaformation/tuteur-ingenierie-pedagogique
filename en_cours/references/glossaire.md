@@ -66,15 +66,13 @@ Sa durée ou sa modalité ne le définissent pas.
 
 Activité principalement destinée au diagnostic et à l'auto-positionnement.
 
-Lorsque le QCM est pertinent, le format par défaut est le choix unique avec correction expliquée après chaque réponse.
-
-Voir `activites_type/quiz.md` pour les règles détaillées.
+Voir `activites_type/quiz.md` pour son contrat et ses comportements par défaut.
 
 ### Recul réflexif
 
 Activité de réflexivité : l'apprenant met à distance une expérience, une action ou une production pour l'expliciter, l'analyser, en tirer des enseignements et éventuellement les transférer.
 
-Le Recul n'a pas de palier propre.
+Le gabarit n'est associé à aucun niveau cognitif unique ; voir `activites_type/recul.md` et `etat_des_paliers.md`.
 
 ## Éléments d'une Activité
 
@@ -205,7 +203,7 @@ Les termes employés peuvent varier selon les référentiels ; conserver leur vo
 
 Attribution d'une note, de points ou d'un score à une performance. C'est une modalité possible de restitution d'une évaluation, pas l'évaluation elle-même.
 
-Le skill n'en ajoute pas spontanément sans demande ou contrainte du dispositif.
+Pour les règles opérationnelles de quantification du skill, voir `taxonomie.md` §2, clause A4.
 
 ### Feedback
 
@@ -256,7 +254,7 @@ Participants réunis dans un même lieu physique.
 
 Participants ne se trouvant pas nécessairement dans un même lieu. Il peut être synchrone ou asynchrone.
 
-L'attention peut y être plus fragile selon la durée, l'environnement, les sollicitations numériques et l'interaction ; adapter le rythme et la variété au contexte.
+L'attention peut y être plus sensible à la durée, à l'environnement, aux sollicitations numériques et au niveau d'interaction.
 
 ### Individuel / collectif
 
@@ -266,7 +264,7 @@ Mode d'organisation du travail, indépendant des axes présentiel/distanciel et 
 
 Organisation dans laquelle un travail réalisé en amont prépare une activité ultérieure d'application, d'approfondissement ou de confrontation.
 
-Elle ne se réduit pas à consulter une ressource. Une Brique peut servir de travail préparatoire, sans être réservée à la classe inversée.
+Elle articule un travail préparatoire avec une activité ultérieure ; ce travail peut notamment prendre la forme d'une Brique, sans que la Brique soit propre à la classe inversée.
 
 ## Approches pédagogiques
 
@@ -292,7 +290,7 @@ Le Recul est le gabarit principalement consacré à cette démarche.
 
 Effort mental mobilisé pour traiter une situation.
 
-En conception pédagogique, éviter notamment d'accumuler simultanément trop d'éléments nouveaux lorsque cela nuit à l'apprentissage.
+Une accumulation simultanée d'éléments nouveaux peut augmenter cette charge et gêner l'apprentissage.
 
 ### Auto-régulation de l'apprentissage
 
@@ -328,7 +326,7 @@ Les deux niveaux se recouvrent parfois dans la pratique.
 
 Document décrivant des activités, compétences, attendus ou modalités d'évaluation servant de référence.
 
-Le skill respecte sa structure et sa terminologie plutôt que de lui imposer sa propre nomenclature.
+Sa structure et sa terminologie varient selon le document source et l'organisme qui l'emploie.
 
 ### Bloc de compétences
 
@@ -354,9 +352,7 @@ Capacité à réaliser une action ou une opération dans une situation donnée.
 
 ### Savoir-être
 
-Comportement ou attitude pertinente dans une situation professionnelle.
-
-Pour l'évaluer, privilégier des comportements observables et contextualisés plutôt qu'un jugement général sur la personne.
+Comportement ou attitude pertinente dans une situation professionnelle, observable dans un contexte donné.
 
 ### Lecture structurante d'un référentiel
 
