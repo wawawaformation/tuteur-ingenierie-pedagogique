@@ -46,3 +46,24 @@ L'agent IA doit maintenir une symétrie parfaite entre trois piliers majeurs. Si
 
 * **Avant chaque exercice**, l'agent doit formuler mentalement (ou explicitement dans ses pensées) l'OPO selon les 3C.
 * **Vérification d'alignement** : L'agent doit s'assurer que le niveau de complexité de l'exercice (Activité) correspond à 100% au niveau exigé par la validation (Évaluation).
+
+### Alignement entre performance visée et preuve
+
+L’évaluation ne doit pas seulement produire un résultat observable :
+la preuve recueillie doit permettre de conclure sur le comportement annoncé
+dans l’objectif.
+
+Un même résultat final peut parfois être obtenu sans que le processus visé
+ait été démontré.
+
+Par exemple :
+
+- réparer un code ne prouve pas nécessairement que la cause a été diagnostiquée ;
+- produire une solution ne prouve pas nécessairement qu’elle peut être justifiée ;
+- réussir une mise en œuvre ne prouve pas nécessairement qu’elle peut être expliquée.
+
+Lorsque la performance visée n’est pas directement observable dans le seul
+résultat final, prévoir une trace suffisante de cette performance.
+
+Cette trace n’impose aucun format particulier : elle peut être écrite, orale,
+intégrée à l’action, annotée ou consignée autrement.

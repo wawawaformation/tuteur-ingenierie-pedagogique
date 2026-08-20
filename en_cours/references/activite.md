@@ -37,3 +37,4 @@ Le **critère de réussite** est le mécanisme d'évaluation par défaut. Ne pas
 * La production attendue et les critères d'acceptation ne sortent jamais avant que l'apprenant ait produit.
 * Si l'activité est **évaluée**, elle est soumise aux clauses A3 et A4. Si elle est un temps de démonstration ou de pair-programming guidé, elle ne l'est pas (clause A1) — mais elle ne fait alors monter aucun palier.
 * En l'absence d'exigence externe ou utilisateur, vérifier la réussite par les **critères d'acceptation et la preuve produite**, pas par un total de points inventé.
+* Vérifier que la preuve recueillie permet réellement de conclure sur le comportement visé ; un résultat correct ne suffit pas si ce comportement peut rester invisible dans le résultat final (`opo.md` §2).
