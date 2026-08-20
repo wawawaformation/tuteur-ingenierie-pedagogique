@@ -4,58 +4,249 @@
 >
 > Elle correspond toujours à la dernière version ayant terminé son cycle de validation.
 
-`tuteur-ingenierie-pedagogique` est un skill destiné à accompagner deux types d’utilisateurs autour d’une situation de formation :
+`tuteur-ingenierie-pedagogique` est un skill destiné à deux usages complémentaires :
 
-* **le formateur**, qui conçoit et ajuste des activités de formation ;
-* **l’apprenant**, qui découvre, pratique, consolide et progresse.
+- **tutorat direct d’un apprenant adulte** ;
+- **assistance à l’ingénierie pédagogique pour un formateur ou concepteur**.
 
-L’objectif est d’aider Claude à mieux tenir compte de **ce qui est réellement attesté chez l’apprenant** avant de décider de ce qu’il peut lui demander ensuite.
+Il ne cherche pas à remplacer le jugement du formateur ni à imposer une méthode pédagogique universelle. Il apporte surtout des **garde-fous explicites** pour rendre la progression plus traçable, les activités évaluées plus interprétables et la conception pédagogique plus cohérente.
 
-Claude est déjà capable, tel quel, d’apporter beaucoup dans le domaine de la formation : expliquer, proposer des exercices, structurer une séance ou accompagner ponctuellement un apprenant.
+---
 
-Mais son comportement peut être amélioré lorsqu’on attend de lui un **accompagnement pédagogique cohérent dans la durée**, notamment lorsqu’il faut distinguer ce qui a simplement été vu de ce qui a réellement été démontré.
+## Les trois fonctions principales
 
-`tuteur-ingenierie-pedagogique` ajoute principalement des **garde-fous sur la progression, les prérequis, les preuves de maîtrise et la conception des activités**.
+### 1. Suivre une progression par notion, palier et preuve
+
+Le skill évite d’attribuer un niveau global à l’apprenant.
+
+Il raisonne plutôt ainsi :
+
+```text
+notion
+→ palier visé ou attesté
+→ preuve disponible
+→ décision pédagogique
+```
+
+Une notion peut avoir été expliquée, reconnue, appliquée avec aide ou mobilisée de manière autonome : ces situations ne constituent pas les mêmes preuves.
+
+Le skill cherche donc à distinguer :
+
+- ce qui a simplement été exposé ;
+- ce qui est déclaré ;
+- ce qui a réellement été observé ;
+- ce que cette observation permet d’attester.
+
+---
+
+### 2. Concevoir des activités évaluées interprétables
+
+Une activité évaluée doit permettre de comprendre ce que signifie sa réussite ou son échec.
+
+Le skill contrôle notamment la chaîne :
+
+```text
+objectif
+→ tâche
+→ production ou performance observable
+→ critères
+→ preuve
+→ conclusion
+```
+
+Il protège également la valeur diagnostique de l’activité : plusieurs notions non attestées ne doivent pas être introduites silencieusement dans une même activité évaluée.
+
+L’objectif n’est pas de rendre les activités faciles, mais de faire en sorte qu’un résultat puisse être interprété.
+
+---
+
+### 3. Structurer la conception avec une bibliothèque de gabarits pédagogiques
+
+Le skill s’appuie sur un socle commun `Activité` et sur une bibliothèque de gabarits spécialisés :
+
+```text
+Activité
+├── Brique
+├── Atelier
+├── Quiz
+└── Recul
+```
+
+Chaque gabarit précise sa finalité et des usages typiques. Ces indications orientent le choix sans enfermer le format dans une modalité unique.
+
+L’architecture est pensée de manière agentique : les gabarits jouent un rôle proche de **tools mis à disposition de l’agent**.
+
+```text
+description / métadonnées
+→ aide au choix
+
+contenu du gabarit
+→ contrat d’utilisation
+
+SKILL.md
+→ orchestration
+```
+
+Il s’agit d’une **analogie d’architecture** : les gabarits ne sont pas techniquement des tool calls.
+
+---
+
+## Deux modes d’utilisation
+
+### Tutorat direct
+
+Le skill peut accompagner un apprenant dans la conversation.
+
+Il aide notamment à :
+
+- partir d’un problème ou d’un objectif réel ;
+- identifier ce qui est déjà attesté ;
+- distinguer les notions mobilisées ;
+- proposer une progression compatible avec l’état connu ;
+- expliquer, guider et faire pratiquer ;
+- utiliser les productions comme éléments d’observation ;
+- ajuster la suite à partir des résultats obtenus.
+
+### Ingénierie pédagogique
+
+Le skill peut assister un formateur ou concepteur pour :
+
+- formuler des objectifs pédagogiques observables ;
+- identifier prérequis, notions et compétences mobilisées ;
+- construire des Modules, Séquences, Séances et Activités ;
+- choisir un gabarit d’Activité pertinent ;
+- expliciter brief, production attendue et critères ;
+- préserver la séparation entre ce qui est donné à l’apprenant et ce qui relève de la correction ;
+- maintenir l’alignement entre objectif, tâche, preuve et conclusion.
+
+---
+
+## Architecture pédagogique
+
+Le découpage interne de référence est :
+
+```text
+Module
+└── Séquence
+    ├── Séance
+    │   └── Activité
+    └── Activité directement rattachée si pertinent
+```
+
+`Activité` constitue la granularité la plus fine.
+
+Cette structure n’est pas présentée comme une taxonomie universelle : les appellations peuvent varier selon les organismes et référentiels.
+
+Le skill distingue également deux axes de modalité indépendants :
+
+```text
+synchrone / asynchrone
+≠
+présentiel / distanciel
+```
+
+Une modalité influence la conception, mais ne détermine pas automatiquement la granularité ni le gabarit à utiliser.
+
+---
+
+## Principaux garde-fous
+
+### Exposition ≠ preuve
+
+Voir une notion, lire une explication ou suivre une démonstration ne suffit pas à conclure que l’apprenant sait la mobiliser.
+
+### Le palier appartient à la notion
+
+Le skill évite les formulations globales du type :
+
+> « l’apprenant est niveau 3 »
+
+Le palier est attaché à une notion précise et doit être relié à une preuve compatible avec ce qui est attesté.
+
+### Budget de nouveauté
+
+Pour une activité évaluée, le skill protège la valeur diagnostique en évitant de cumuler plusieurs notions non attestées.
+
+### La portée d’une preuve est limitée à ce qui a réellement été observé
+
+Par exemple :
+
+```text
+utiliser ≠ créer
+exécuter ≠ écrire
+lire ≠ produire
+```
+
+Une production complexe ne prouve pas automatiquement toutes les capacités qu’elle mobilise.
+
+### Pas de notation arbitraire
+
+Une évaluation n’implique pas nécessairement une note.
+
+Le skill n’ajoute pas spontanément de points, de score ou de barème scolaire lorsqu’aucun système de notation réel n’est fourni ou demandé.
+
+---
+
+## L’élément déclencheur
+
+Le projet est né d’une situation rencontrée pendant un apprentissage en développement IA agentique.
+
+Après une première découverte des **middlewares dans LangChain** et l’utilisation d’un middleware simple, une activité autonome proposée ensuite exigeait simultanément plusieurs éléments encore nouveaux ou insuffisamment travaillés :
+
+- l’héritage ;
+- un décorateur spécifique ;
+- une clé de redirection de graphe.
+
+La progression paraissait respecter :
+
+```text
+théorie → pratique
+```
+
+mais elle confondait en réalité **exposition** et **maîtrise attestée**.
+
+Si l’activité échouait, il devenait difficile de déterminer quelle notion était réellement en cause.
+
+Le projet est parti de cette idée :
+
+> **éviter qu’un tuteur IA construise la suite d’un apprentissage sur des acquis supposés plutôt que sur des preuves suffisamment précises.**
 
 ---
 
 ## Versions et organisation du dépôt
 
-Le projet distingue volontairement la **version publique validée** de la **version en cours de développement**.
+Le dépôt sépare volontairement la version publique validée du candidat en cours de validation.
 
 ```text
 dist/stable/
-→ dernière version publique stable et validée
+→ dernière version publique distribuée et validée
 
 stable/
 → source de la dernière version validée
 
 en_cours/
-→ candidat en développement
+→ candidat V2
 
 validation/
-→ tests, procédures et éléments de validation
+→ protocoles, scénarios, non-régression et artefacts de validation
+
+docs/
+→ documentation de conception et de validation
 ```
 
 ### Version publique
 
-[`dist/stable/`](dist/stable/) est le point d'entrée recommandé pour une utilisation publique.
-
-Son contenu doit toujours provenir d'une version ayant terminé son cycle de validation.
+[`dist/stable/`](dist/stable/) reste le point d’entrée recommandé pour un usage public.
 
 La version actuellement distribuée correspond à la **V1 validée**.
 
-### Version en cours
+### Candidat V2
 
-[`en_cours/`](en_cours/) contient la version actuellement travaillée.
+[`en_cours/`](en_cours/) contient le candidat V2.
 
-Elle est identifiée comme **V2** et peut évoluer au fil des tests, dry-runs et corrections du noyau pédagogique.
+Son architecture runtime est stabilisée, mais il ne devient pas pour autant la version publique tant que son cycle de validation et sa promotion explicite ne sont pas terminés.
 
-Elle ne doit pas être considérée comme la version publique recommandée tant que son cycle de validation n'est pas terminé.
-
-### Principe de promotion
-
-Le flux attendu est :
+Le flux de publication reste :
 
 ```text
 en_cours/
@@ -64,301 +255,66 @@ en_cours/
 → dist/stable/
 ```
 
-`dist/stable/` ne doit donc jamais être construit directement depuis une version expérimentale non validée.
-
 ---
 
-## Côté formateur
+## Validation
 
-Le skill aide le formateur à concevoir des activités compatibles avec l’état d’apprentissage connu de l’apprenant.
+Le projet conserve ses protocoles, scénarios, décisions et artefacts dans [`validation/`](validation/).
 
-Il peut notamment l’aider à :
+La validation distingue deux usages :
 
-* identifier les notions mobilisées par une activité ;
-* distinguer les notions déjà attestées de celles qui ne le sont pas encore ;
-* raisonner sur le niveau atteint **notion par notion**, plutôt qu’attribuer un niveau global à l’apprenant ;
-* éviter de cumuler plusieurs nouveautés dans une même activité évaluée ;
-* identifier les prérequis nécessaires ;
-* formuler des objectifs pédagogiques observables ;
-* aligner objectif, activité et preuve attendue ;
-* définir des conditions et des critères permettant d’observer la réussite ;
-* distinguer une preuve de maîtrise d’une simple impression ou déclaration ;
-* construire des syllabus, séquences, séances, ateliers, activités ou quiz à partir de formats structurés ;
-* adapter la suite d’une progression aux résultats réellement observés.
+- lors de la conception d’un comportement, une comparaison **avec skill / sans skill** peut être utilisée lorsqu’elle est informative ;
+- une fois le comportement stabilisé, la **non-régression du candidat** est exécutée avec skill.
 
-Le skill n’a pas vocation à remplacer le jugement ou l’expérience du formateur.
+Les contrats propres au produit — par exemple l’héritage du socle `Activité` ou la représentation du catalogue de gabarits — sont contrôlés directement sur le candidat, car un témoin sans skill ne connaît pas ces contrats.
 
-Il sert plutôt de **garde-fou et d’appui à la décision pédagogique**.
-
----
-
-## Côté apprenant
-
-Le skill peut également accompagner directement un apprenant adulte.
-
-Dans ce contexte, il cherche à éviter qu’une notion soit considérée comme acquise simplement parce qu’elle a déjà été expliquée, montrée ou utilisée une fois.
-
-Il peut notamment :
-
-* partir du problème rencontré par l’apprenant ;
-* chercher ce qu’il sait déjà réellement faire ;
-* décomposer une tâche en notions mobilisées ;
-* proposer une activité compatible avec l’état connu de ces notions ;
-* expliquer ou illustrer une notion ;
-* proposer un exercice ;
-* utiliser une production de l’apprenant comme élément d’observation ;
-* identifier plus précisément ce qui bloque ;
-* proposer une remédiation ciblée ;
-* adapter la suite du travail aux résultats obtenus.
-
-L’objectif est notamment d’éviter de placer l’apprenant en autonomie sur une activité dont plusieurs prérequis sont encore inconnus ou non attestés.
-
----
-
-## L’élément déclencheur
-
-Le projet est né d’une situation très concrète pendant mon propre apprentissage en développement IA agentique.
-
-Nous venions de découvrir les **middlewares dans LangChain**.
-
-Le principe avait été abordé rapidement, puis nous avions utilisé un middleware très simple, `PIIMiddleware`, afin de comprendre à quoi ce mécanisme pouvait servir.
-
-À ce stade, j’avais essentiellement :
-
-* découvert le concept ;
-* vu son fonctionnement général ;
-* utilisé rapidement un middleware simple.
-
-Juste après, Claude me propose un **travail autonome** autour des middlewares.
-
-Le problème n’était pas le travail autonome en lui-même.
-
-Le problème était ce que cette activité supposait déjà de savoir faire.
-
-Pour la réaliser, je devais simultanément manipuler plusieurs éléments nouveaux ou insuffisamment travaillés :
-
-* **l’héritage** ;
-* **un décorateur spécifique** ;
-* **une clé de redirection de graphe**.
-
-Claude avait bien respecté, en apparence, la logique :
-
-> théorie → pratique
-
-Mais quelque chose manquait entre les deux.
-
-Avoir **vu** un middleware et avoir utilisé un exemple simple ne démontrait pas que toutes les notions nécessaires à la réalisation suivante étaient maîtrisées.
-
-Une notion peut avoir été :
-
-* simplement présentée ;
-* manipulée avec aide ;
-* utilisée dans un exemple ;
-* réussie une première fois ;
-* réussie plusieurs fois en autonomie.
-
-Ces situations ne constituent pas les mêmes preuves.
-
-Et lorsque plusieurs notions non attestées sont introduites simultanément dans une activité, un autre problème apparaît : si l’apprenant échoue, il devient difficile de savoir **ce qui a réellement bloqué**.
-
-C’est ce décalage qui a déclenché le projet.
-
-L’idée initiale peut se résumer ainsi :
-
-> **éviter qu’un tuteur IA confonde exposition à une notion et maîtrise réelle, puis construise la suite de l’apprentissage sur cette confusion.**
-
----
-
-## Les principaux garde-fous
-
-Le skill s’appuie actuellement sur quelques principes centraux.
-
-### Un état par notion
-
-Il n’attribue pas un niveau global du type :
-
-> « l’apprenant est niveau 3 »
-
-Le niveau ou palier est attaché à une **notion précise**.
-
-Un apprenant peut par exemple être autonome sur les classes PHP tout en ayant encore besoin d’aide sur l’héritage.
-
----
-
-### Une preuve plutôt qu'une impression
-
-Une affirmation comme :
-
-> « Je suis très à l’aise avec les interfaces PHP »
-
-est une information utile, mais ne constitue pas à elle seule une preuve de maîtrise.
-
-Le skill cherche à distinguer :
-
-* ce qui est déclaré ;
-* ce qui a été observé ;
-* les conditions dans lesquelles la réalisation a eu lieu ;
-* ce que cette observation permet réellement d’attester.
-
----
-
-### Exposition ≠ maîtrise
-
-Voir une notion, lire une explication ou suivre un exemple ne suffit pas à conclure que l’apprenant sait la mobiliser seul.
-
-Le skill conserve cette distinction lorsqu’il prépare la suite de l’apprentissage.
-
----
-
-### Budget de nouveauté
-
-Pour une **activité évaluée**, le skill cherche à ne mobiliser qu’une seule notion non encore attestée.
-
-L’objectif n’est pas de simplifier artificiellement toutes les activités.
-
-Il s’agit surtout de conserver leur **valeur diagnostique**.
-
-Si une activité évaluée dépend simultanément de trois notions inconnues et que l’apprenant échoue, il devient difficile de déterminer laquelle nécessite réellement une remédiation.
-
----
-
-### Alignement entre objectif, activité et preuve
-
-Le skill cherche à maintenir une cohérence entre :
-
-```text
-objectif
-   ↓
-activité demandée
-   ↓
-production ou comportement observable
-   ↓
-preuve
-   ↓
-critères de réussite
-```
-
-Si l’objectif consiste par exemple à savoir **produire** quelque chose, une simple question de restitution ne constitue pas nécessairement une preuve suffisante de cette capacité.
-
----
-
-## Deux usages principaux
-
-### Tutorat en direct
-
-Claude accompagne directement un apprenant dans la conversation.
-
-Il utilise alors l’état connu des notions et les productions observées pour adapter progressivement son aide.
-
-### Ingénierie pédagogique
-
-Claude peut aussi aider à produire des objets pédagogiques structurés, notamment :
-
-* syllabus ;
-* séquences ;
-* séances ;
-* ateliers ;
-* activités ;
-* quiz ;
-* objectifs pédagogiques opérationnels ;
-* activités de recul métacognitif.
-
-Les formats et règles associés sont définis dans les fichiers de référence du skill.
+La validation cherche à établir des comportements observables et reproductibles. Elle ne prétend pas démontrer qu’une théorie pédagogique est universellement vraie.
 
 ---
 
 ## Périmètre
 
-`tuteur-ingenierie-pedagogique` se concentre principalement sur :
+Le skill se concentre principalement sur :
 
-* la progression individuelle d’un apprenant ;
-* les notions et prérequis mobilisés ;
-* les preuves disponibles ;
-* le choix du niveau de difficulté ;
-* les objectifs pédagogiques ;
-* la conception d’activités ;
-* l’évaluation de productions ou comportements observables ;
-* la remédiation ;
-* la structuration de livrables d’ingénierie pédagogique.
+- la progression individuelle ;
+- les notions, prérequis, paliers et preuves ;
+- les objectifs pédagogiques ;
+- la conception d’activités ;
+- l’évaluation de productions ou comportements observables ;
+- la remédiation ;
+- la structuration de dispositifs et livrables pédagogiques ;
+- l’exploitation de référentiels lorsque le contexte en fournit un.
 
-Il intervient donc surtout autour de questions comme :
+Il n’a pas vocation à devenir un assistant généraliste couvrant l’ensemble du métier de formateur.
 
-> **Que sait déjà réellement faire l’apprenant ?**
-> **Quelles notions cette activité mobilise-t-elle ?**
-> **Que peut-on raisonnablement lui demander maintenant ?**
-> **Quelle production permettra d’observer sa progression ?**
+Restent notamment hors périmètre :
 
----
-
-## Hors périmètre
-
-Le skill ne cherche pas à couvrir l’ensemble du métier de formateur ni toutes les dimensions de l’accompagnement humain.
-
-Sont notamment hors de son périmètre :
-
-* la **gestion et la dynamique de groupe** ;
-* l’animation des relations entre apprenants ;
-* la gestion des conflits ;
-* les problèmes de comportement ou de discipline ;
-* la posture relationnelle du formateur face à un apprenant ;
-* la qualité de la relation **apprenant–formateur** ;
-* l’accompagnement psychosocial ou personnel ;
-* les problématiques psychologiques ;
-* la gestion de situations individuelles sensibles ;
-* les problématiques RH ;
-* la gestion administrative d’un organisme de formation.
-
-`tuteur-ingenierie-pedagogique` n’a donc pas vocation à devenir un **assistant généraliste du métier de formateur**.
-
-Son objectif reste volontairement plus étroit : améliorer certains comportements de l’agent liés à **la conception pédagogique et à la progression individuelle**.
+- gestion et dynamique de groupe ;
+- conflits et discipline ;
+- accompagnement psychosocial ou psychologique ;
+- problématiques RH ;
+- gestion administrative d’un organisme de formation.
 
 ---
 
 ## Attention — RGPD et données personnelles
 
-Le skill **ne gère pas lui-même les problématiques de conformité RGPD**.
+Le skill ne gère pas lui-même la conformité RGPD.
 
-Son utilisation peut conduire à manipuler des informations concernant un apprenant :
+Son usage peut conduire à manipuler des informations sur la progression, les difficultés, les productions ou les observations relatives à un apprenant.
 
-* niveau ;
-* difficultés ;
-* progression ;
-* productions ;
-* observations ;
-* éléments de suivi.
-
-Ces informations peuvent constituer des données personnelles.
-
-Il appartient donc à l’utilisateur de veiller notamment à :
-
-* ne transmettre que les informations nécessaires ;
-* éviter les données nominatives lorsqu’elles ne sont pas utiles ;
-* anonymiser ou pseudonymiser autant que possible ;
-* éviter de transmettre des données sensibles ;
-* respecter les procédures de protection des données de son organisation ;
-* vérifier les conditions de traitement des données par les outils utilisés.
+Il appartient donc à l’utilisateur de limiter les données transmises, d’anonymiser ou pseudonymiser lorsque possible, d’éviter les données sensibles et de respecter les procédures de son organisation.
 
 > **Le skill ne doit pas être considéré comme un système de gestion de dossiers d’apprenants ni comme une solution assurant, à lui seul, la conformité RGPD.**
 
 ---
 
-## Attention — les fichiers du skill ne sont pas des supports de formation
+## Les fichiers du skill ne sont pas des supports de formation
 
-Les fichiers présents dans `tuteur-ingenierie-pedagogique` sont principalement conçus pour **guider le comportement d’un agent IA**.
+Les fichiers runtime servent avant tout à **guider le comportement d’un agent IA**.
 
-Ils contiennent notamment :
+Ils contiennent des règles, garde-fous, structures de décision, critères et contrats de production.
 
-* des règles ;
-* des garde-fous ;
-* des distinctions conceptuelles ;
-* des structures de décision ;
-* des critères d’observation ;
-* des formats de sortie.
-
-Ils ne sont donc **pas conçus comme des supports destinés à former directement des formateurs**.
-
-Pris tels quels, certains documents peuvent être trop denses ou trop structurés pour un usage pédagogique humain.
+Ils peuvent servir de matière à un support destiné à des humains, mais nécessitent alors un travail de sélection et d’adaptation.
 
 > **Le skill est un outil pour agents, pas un manuel de formation pour formateurs.**
-
-Les contenus peuvent naturellement servir de matière à un support de formation, mais ils nécessiteraient alors un travail de sélection, de simplification et d’adaptation.

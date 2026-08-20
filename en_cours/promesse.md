@@ -1,6 +1,6 @@
-# Promesse du candidat
+# Promesse du candidat V2
 
-Ce document constitue la **spécification fonctionnelle** de la version candidate du skill.
+Ce document constitue la **spécification fonctionnelle** de la version candidate V2 du skill `tuteur-ingenierie-pedagogique`.
 
 La promesse est volontairement limitée aux comportements pour lesquels le skill cherche à modifier une décision pédagogique de l'agent par rapport à une génération plausible mais insuffisamment diagnostique.
 
@@ -8,7 +8,7 @@ Le skill ne promet pas d'améliorer globalement toute production pédagogique.
 
 ## Promesse centrale
 
-> **Amener l'agent à prendre ses décisions d'apprentissage et d'évaluation à partir du point de départ réellement établi de l'apprenant, notion par notion, afin de préserver la valeur diagnostique des activités plutôt que de supposer les acquis ou d'empiler des difficultés.**
+> **Amener l'agent à prendre ses décisions d'apprentissage et d'évaluation à partir du point de départ réellement établi de l'apprenant, notion par notion et preuve par preuve, afin de préserver la valeur diagnostique des activités et l'alignement entre ce qui est visé, demandé, observé et conclu.**
 
 ---
 
@@ -29,24 +29,27 @@ L'objectif n'est pas de poser davantage de questions, mais de **ne pas prendre u
 
 ---
 
-## P02 — Raisonner par notion et par preuve
+## P02 — Raisonner par notion, palier et preuve
 
 L'agent doit raisonner sur l'état des **notions effectivement mobilisées**, et non attribuer un niveau global à l'apprenant.
 
-Il doit distinguer :
+Il doit distinguer notamment :
 
 - exposition à une notion ;
 - accompagnement dans sa mise en œuvre ;
 - déclaration ou impression de compréhension ;
-- preuve observable compatible avec le niveau que l'on souhaite attester.
+- performance réellement observable ;
+- preuve compatible avec le palier que l'on souhaite attester.
 
-Une notion n'est considérée comme maîtrisée au niveau demandé que lorsqu'une preuve compatible avec ce niveau est disponible.
+Une notion n'est attestée à un palier donné que lorsqu'une preuve compatible avec ce palier est disponible.
 
 Conséquences attendues :
 
 - une démonstration ou un accompagnement guidé ne valent pas automatiquement preuve autonome ;
+- une déclaration n'est pas, à elle seule, une preuve attestée ;
 - un quiz de compréhension ne prouve pas à lui seul une capacité de production ;
-- une activité évaluée doit être conçue à partir de ce qui est réellement attesté ;
+- le canal utilisé pour produire une preuve — écrit, oral ou autre — ne détermine pas à lui seul son palier : c'est l'acte observable qui compte ;
+- une preuve externe rapportée peut être recevable si la tâche, les conditions et le résultat observé sont suffisamment précis pour juger le palier visé ;
 - une nouvelle preuve peut conduire à réviser l'état précédemment retenu.
 
 **Tests de référence :** T06, T07, T14, T24.
@@ -55,18 +58,19 @@ Conséquences attendues :
 
 ## P03 — Préserver la valeur diagnostique d'une activité évaluée
 
-Avant de proposer une activité évaluée, l'agent doit identifier les notions nécessaires à sa réussite et distinguer celles qui sont attestées de celles qui sont nouvelles au niveau demandé.
+Avant de proposer une activité évaluée, l'agent doit identifier les notions nécessaires à sa réussite et distinguer celles qui sont attestées de celles qui ne le sont pas encore au niveau demandé.
 
-Pour une activité évaluée visant à produire une preuve exploitable, le **budget de nouveauté est limité à une notion nouvelle**.
+Pour une activité évaluée, le **budget de nouveauté est limité à une notion non attestée**.
 
 L'agent doit notamment :
 
 - accepter une activité comportant une seule nouveauté lorsque les autres prérequis nécessaires sont attestés ;
 - ne pas confondre nouvelle tâche et nouvelle notion ;
-- refuser ou découper une activité qui empile plusieurs notions non attestées ;
+- refuser, découper ou échafauder une activité qui empile plusieurs notions non attestées ;
 - résister à une demande de difficulté artificielle si cette difficulté détruit la valeur diagnostique de l'activité ;
 - fournir en échafaudage les éléments qui ne sont pas eux-mêmes l'objet de l'évaluation ;
-- permettre une activité de synthèse intégrée lorsque les briques nécessaires ont préalablement été attestées.
+- permettre une activité de synthèse intégrée lorsque les notions nécessaires ont préalablement été attestées ;
+- limiter la portée d'une preuve à ce qui a réellement été observé.
 
 Le principe n'est donc pas :
 
@@ -76,23 +80,38 @@ Le principe est :
 
 > **une activité ne doit pas être utilisée pour conclure sur une maîtrise si son échec ou sa réussite ne permet plus d'identifier ce qui est réellement démontré.**
 
+La portée d'une preuve doit rester précise :
+
+```text
+utiliser ≠ créer
+exécuter ≠ écrire
+lire ≠ produire
+```
+
 **Tests ancres historiques :** T09, T24, T27.
 
 ---
 
-## P04 — Aligner ce qui est visé, demandé et utilisé comme preuve
+## P04 — Aligner objectif, tâche, production, critères, preuve et conclusion
 
 L'agent doit maintenir la cohérence entre :
 
-1. ce que l'apprenant est censé apprendre ou démontrer ;
-2. ce que l'activité lui demande effectivement de faire ;
-3. ce que l'on utilisera pour conclure sur son niveau ou sa réussite.
+```text
+objectif
+→ tâche
+→ production ou performance observable
+→ critères
+→ preuve
+→ conclusion
+```
 
 Il doit notamment :
 
 - ne pas utiliser une tâche de production autonome pour prétendre évaluer uniquement une compréhension ;
 - ne pas utiliser une preuve de reconnaissance ou de restitution pour attester une capacité de production ;
-- expliciter ou corriger un décalage entre objectif, tâche et critère ;
+- faire correspondre les critères à la performance réellement attendue ;
+- expliciter ou corriger un décalage entre objectif, tâche, production, critères et preuve ;
+- ne conclure qu'à hauteur de ce que la preuve permet réellement d'attester ;
 - choisir une forme d'évaluation compatible avec ce que l'on cherche réellement à établir.
 
 **Tests de référence :** T12, T14.
@@ -121,19 +140,85 @@ Ils ne doivent pas interdire l'utilisation d'une situation complexe, d'une analy
 
 L'agent doit répondre au besoin demandé sans élargir inutilement la production.
 
+## G05 — Ne pas inventer de notation arbitraire
+
+Une évaluation n'implique pas nécessairement une note.
+
+Lorsque aucun barème, score, système de points ou règle de notation réelle n'est fourni ou demandé, l'agent ne doit pas en créer spontanément.
+
+## G06 — Préserver la valeur de l'évaluation avant production
+
+Lorsque l'activité est évaluée, les critères de réussite ou de performance restent explicites pour l'apprenant, mais les éléments réservés à la correction, une production de référence donnant la solution ou les attendus détaillés de correction ne doivent pas être révélés avant sa production.
+
 ---
 
-# Principes de qualité hors promesse différentielle
+# Principes d'architecture et de qualité hors promesse différentielle
 
-Les éléments suivants restent souhaitables dans le skill, mais ne sont **pas revendiqués comme constituant à eux seuls sa valeur différentielle** :
+Les éléments suivants appartiennent au fonctionnement attendu du candidat V2, mais ne sont **pas revendiqués comme constituant à eux seuls sa valeur différentielle**.
+
+## Granularité
+
+Le découpage interne de référence est :
+
+```text
+Module
+└── Séquence
+    ├── Séance
+    │   └── Activité
+    └── Activité directement rattachée si pertinent
+```
+
+`Activité` est la granularité la plus fine.
+
+Ce découpage est un cadre interne de travail, pas une taxonomie universelle : les appellations peuvent varier selon les organismes ou référentiels.
+
+## Modalités
+
+Deux axes doivent rester distincts :
+
+```text
+synchrone / asynchrone
+≠
+présentiel / distanciel
+```
+
+La modalité influence la conception, mais ne détermine pas automatiquement la granularité ou le gabarit.
+
+## Gabarits d'Activité
+
+`Activité` constitue le socle commun.
+
+Les spécialisations actuellement disponibles sont :
+
+```text
+Brique
+Atelier
+Quiz
+Recul
+```
+
+Leur finalité et leurs usages typiques servent à orienter le choix sans créer d'équivalences rigides du type :
+
+```text
+court → Brique
+asynchrone → Atelier
+présentiel → Séance
+difficile → Atelier
+```
+
+Les gabarits sont des contrats de production spécialisés ; ils ne sont pas des niveaux concurrents de `Module`, `Séquence`, `Séance` ou `Activité`.
+
+## Autres qualités attendues
+
+Restent également souhaitables :
 
 - posture professionnelle et non infantilisante ;
 - ancrage dans des situations concrètes ;
-- choix pertinent entre Activité, Atelier, Quiz, Séance ou autre granularité ;
-- adaptation à la modalité synchrone ou asynchrone ;
-- stabilité des gabarits de production.
+- stabilité des formats de production ;
+- utilisation d'un référentiel lorsqu'il est pertinent et disponible ;
+- vocabulaire adapté au contexte de formation.
 
-Ils peuvent faire l'objet de tests de non-régression ou de conformité, mais leur réussite ne suffit pas à démontrer l'apport propre du skill.
+Ces éléments peuvent faire l'objet de tests de non-régression ou de conformité, mais leur réussite ne suffit pas à démontrer l'apport propre du skill.
 
 ---
 
@@ -147,6 +232,7 @@ La question centrale est :
 
 Le comportement recherché est :
 
+```text
 Demande
    ↓
 Point de départ utile
@@ -159,12 +245,15 @@ Nouveautés nécessaires
    ↓
 Valeur diagnostique de l'activité
    ↓
-Alignement objectif / tâche / preuve
+Alignement objectif / tâche / production / critères / preuve
    ↓
-Décision pédagogique
+Conclusion et décision pédagogique
+```
 
 et non :
 
+```text
 Demande
    ↓
 Génération immédiate d'une activité plausible
+```
