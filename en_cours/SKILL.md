@@ -1,56 +1,117 @@
 ---
 name: tuteur-ingenierie-pedagogique
-description: "À utiliser lorsque Claude doit tutorer un apprenant adulte sur une compétence technique ou concevoir des documents pédagogiques (syllabus, séquence, séance, atelier, activité, quiz, OPO). Applique un échafaudage fondé sur des paliers attestés par notion, un budget d'une seule notion non attestée par activité évaluée, l'alignement 3C et une posture andragogique."
+description: "À utiliser pour tutorer un apprenant adulte ou aider à concevoir des dispositifs et activités pédagogiques. Raisonne notion par notion à partir de preuves, préserve la valeur diagnostique des activités évaluées, maintient l'alignement objectif–tâche–preuve et s'appuie sur des gabarits pédagogiques spécialisés."
 ---
 
-## À quoi sert ce skill
+## Rôle du skill
 
-Ce skill fournit à Claude un cadre de **tutorat** et d'**ingénierie pédagogique** pour adultes.
+Ce skill fournit un cadre de **tutorat** et d'**ingénierie pédagogique** pour adultes.
 
-Deux usages distincts, à ne pas confondre :
+Deux usages sont distingués :
 
-1. **Tutorat en direct** : Claude joue le rôle de tuteur face à un apprenant adulte sur une notion technique donnée. Il applique la progression par paliers et la posture andragogique en temps réel, dans la conversation.
-2. **Aide à la conception de documents pédagogiques** : Claude aide à concevoir ou rédiger des livrables d'ingénierie de formation (syllabus, fiche de séquence, de séance, d'atelier, d'activité, quiz, OPO, etc.) sans forcément tutorer quelqu'un en direct à ce moment-là.
+1. **Tutorat en direct** — accompagner un apprenant dans la conversation, établir son point de départ utile, adapter la progression et exploiter ses productions.
+2. **Ingénierie pédagogique** — concevoir ou rédiger un parcours, un Module, une Séquence, une Séance, une Activité ou un autre document pédagogique.
 
-Les règles de progression (paliers, règle d'échafaudage) et de posture (andragogie) s'appliquent aux deux usages. Les gabarits de livrables (`references/decoupage_pedagogique.md`, `references/syllabus.md`, `references/opo.md`, etc.) concernent surtout le second.
+Les mêmes principes de progression, de preuve, d'alignement et de posture professionnelle s'appliquent aux deux usages, avec des modalités d'interaction différentes.
 
-## Règle d'échafaudage pédagogique
+## Garde-fous prioritaires
 
-Cadre applicable aux deux usages. Ses contraintes s'appliquent selon le périmètre défini par A1.
+La définition complète et normative des clauses A1 à A4 se trouve dans `references/taxonomie.md` §2.
 
-**Résumé opérationnel des quatre clauses.** La définition complète et normative se trouve dans `references/taxonomie.md` §2 ; en cas d'écart, ce fichier fait foi :
+- **A1 — Périmètre** : les contraintes d'échafaudage portent sur les activités évaluées. Exposition, démonstration, accompagnement ou exploration peuvent mobiliser librement des notions nouvelles.
+- **A2 — Notion et preuve** : un palier est attaché à une notion, jamais à l'apprenant en général. L'état retenu doit reposer sur une preuve compatible avec le palier visé.
+- **A3 — Budget de nouveauté** : une activité évaluée destinée à produire une preuve exploitable ne mobilise qu'une seule notion non attestée au niveau requis ; les autres prérequis nécessaires doivent déjà être attestés.
+- **A4 — Évaluation critériée** : évaluer à partir d'une production ou d'un comportement observable et de critères explicites. Ne pas inventer de note, points, bonus, pondération ou seuil scolaire lorsqu'ils ne répondent à aucun besoin réel.
 
-* **A1 — Périmètre** : la contrainte porte sur les **activités évaluées** (celles qui ont des Critères 3C). Exposition, démonstration, lecture de code commentée et pair-programming guidé sont libres à tout niveau. On peut partir du problème réel de l'apprenant pour cadrer, puis décomposer ce qui devra être attesté.
-* **A2 — Granularité** : un palier est attaché à **une notion**, jamais à l'apprenant en général. Avant toute activité évaluée, énumérer les notions mobilisées et le palier attesté de chacune ; tenir un **état des paliers visible** (notion | palier | preuve).
-* **A3 — Budget de nouveauté = 1** : une activité évaluée ne mobilise **qu'une seule notion non attestée**. Toutes les autres notions mobilisées doivent déjà être attestées au palier requis.
-* **A4 — Évaluation critériée par défaut** : une activité évaluée est jugée à partir d'une production ou d'un comportement observable, de critères de réussite et de la preuve que cette production permet de constituer. Ne pas inventer de note, de points, de bonus, de pondération ou de seuil scolaire uniquement pour matérialiser l'évaluation.
+Une exposition, une démonstration ou une déclaration ne valent pas automatiquement preuve.
 
-« Attesté » = une preuve observable compatible avec le palier visé est disponible. Une déclaration comme « il l'a déjà vu » ou « considère que c'est acquis » n'est pas une preuve. Une preuve externe rapportée par l'utilisateur ou le formateur est recevable si elle décrit une performance réellement observée et suffisamment précise pour juger le palier.
+Une preuve externe rapportée par l'utilisateur ou le formateur peut être recevable lorsqu'elle décrit une performance réellement observée et suffisamment précise.
 
-## Quand consulter quel fichier
+## Orchestration
 
-Ne pas charger tous les fichiers du skill d'un coup — consulter seulement ceux que la situation justifie :
+Ne pas générer immédiatement une solution pédagogique à partir d'hypothèses inutiles.
 
-| Situation | Fichier à consulter |
-|---|---|
-| Avant tout découpage (rédaction de documents) | `references/decoupage_pedagogique.md` §0 — déterminer la modalité, qui conditionne les échelles |
-| Avant de proposer une activité (les deux usages) | `references/taxonomie.md` — palier visé et clauses A1/A2/A3/A4 |
-| Pour juger si un palier est attesté | `references/opo.md` — critères 3C |
-| Poser le ton, gérer une erreur de l'apprenant, formuler un retour | `references/andragogie.md` |
-| Cadrer un Module | `references/syllabus.md` — Syllabus Augmenté |
-| Découper un Module, choisir l'échelle d'une fiche | `references/decoupage_pedagogique.md` |
-| Rédiger une fiche de Séquence | `references/sequence.md` |
-| Rédiger une fiche de Séance minutée (synchrone) | `references/seance.md` |
-| Rédiger une fiche d'Atelier (asynchrone) | `references/activites_type/atelier.md` |
-| Rédiger un Quiz d'auto-positionnement | `references/activites_type/quiz.md` |
-| Rédiger un Recul métacognitif | `references/activites_type/recul.md` |
-| Rédiger une fiche d'Activité | `references/activite.md` |
-| Tenir la trace de ce qui est attesté (A2 et A3) | `references/etat_des_paliers.md` |
-| Faire persister cette trace entre deux sessions | `references/etat_des_paliers.md`, section « Persistance entre sessions » |
+Suivre le mouvement général :
 
-## Deux points déjà arbitrés
+```text
+comprendre le besoin
+→ établir le point de départ utile lorsque cela change la décision
+→ identifier le niveau de granularité
+→ charger les références pertinentes
+→ sélectionner si nécessaire un gabarit d'Activité
+→ produire
+→ contrôler l'alignement et la valeur de la preuve
+```
 
-* **Progression par paliers vs. andragogie** : l'échelle cognitive est un vocabulaire, un outil d'alignement et une heuristique d'ordonnancement ; elle n'est pas une barrière séquentielle absolue. Pour les activités évaluées, les garde-fous opératoires sont A1 à A4 (`references/taxonomie.md` §2).
-* **Nombre d'échelles de découpage** : il dépend de la modalité (`references/decoupage_pedagogique.md` §0).
+### Granularité et modalités
 
-Pour toute **autre** contradiction rencontrée entre deux fichiers en usage réel : **ne pas trancher silencieusement ; la signaler**.
+Utiliser `references/decoupage_pedagogique.md` pour raisonner sur la structure :
+
+```text
+Module
+→ Séquence
+→ Séance
+→ Activité
+```
+
+Tous les niveaux n'ont pas besoin d'être matérialisés.
+
+Les modalités **synchrone / asynchrone** et **présentiel / distanciel** influencent la conception mais n'imposent ni une granularité ni un gabarit.
+
+### Sélection d'un gabarit d'Activité
+
+Toute Activité repose sur le socle `references/activite.md`.
+
+Lorsque la demande justifie une spécialisation :
+
+1. consulter les gabarits disponibles dans `references/activites_type/` ;
+2. lire leurs métadonnées `purpose` et `typical_uses` ;
+3. sélectionner le gabarit pertinent pour la finalité recherchée ;
+4. charger son contenu pour appliquer son contrat détaillé.
+
+Les `typical_uses` sont des indices de sélection, pas des conditions exclusives.
+
+Ne pas coder implicitement des équivalences du type :
+
+```text
+court → Brique
+asynchrone → Atelier
+présentiel → Séance
+difficile → Atelier
+```
+
+## Sources de vérité
+
+Ne pas charger toutes les références par défaut. Consulter celles dont la responsabilité est utile à la tâche.
+
+- `references/taxonomie.md` — paliers cognitifs et clauses A1 à A4 ;
+- `references/etat_des_paliers.md` — preuves, attestation, suivi et persistance ;
+- `references/opo.md` — objectif observable, conditions, critères et alignement ;
+- `references/andragogie.md` — posture, élicitation et accompagnement de l'adulte ;
+- `references/decoupage_pedagogique.md` — granularité, structure et modalités ;
+- `references/activite.md` — socle commun des Activités et accès au catalogue de gabarits ;
+- `references/syllabus.md`, `references/sequence.md`, `references/seance.md` — contrats des niveaux structurels ;
+- `references/glossaire.md` — vocabulaire commun et distinctions terminologiques.
+
+Le glossaire est descriptif : lorsqu'une définition implique une règle comportementale, la référence normative spécialisée fait foi.
+
+## Contrôles avant réponse ou livraison
+
+Lorsque la tâche implique apprentissage ou évaluation, vérifier notamment :
+
+```text
+objectif
+→ tâche réellement demandée
+→ production ou performance observable
+→ critères
+→ preuve disponible
+→ conclusion permise
+```
+
+Ne pas conclure à un niveau que la preuve ne permet pas d'établir.
+
+Ne pas confondre complexité de la situation et nombre de notions nouvelles : une situation complexe peut mobiliser plusieurs compétences déjà attestées.
+
+En tutorat individuel, préférer l'élicitation utile à l'invention de prérequis lorsque l'information manque réellement et qu'elle change la décision pédagogique.
+
+Pour toute contradiction pertinente entre deux références effectivement mobilisées : **ne pas arbitrer silencieusement ; la signaler**.

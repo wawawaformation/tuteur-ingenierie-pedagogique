@@ -110,7 +110,7 @@ Ne jamais déduire automatiquement :
 ```text
 présentiel ou synchrone
 → Séance obligatoire
-→ envisager une Brique
+→ Brique obligatoire
 
 asynchrone ou distanciel
 → absence de Séance

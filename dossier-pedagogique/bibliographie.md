@@ -1,67 +1,115 @@
 ---
-objectif: "Donner, pour chaque cadre théorique cité dans le skill, une source vérifiable et le fichier qu'elle soutient."
+objectif: "Donner des sources vérifiables pour les principaux cadres et notions établis mobilisés dans le skill."
 ---
 
 # Bibliographie
 
-Ce fichier ne contient aucune règle du skill — il source celles qui existent déjà ailleurs. Pour le statut de chaque règle (établi / observé / choix), voir [`origine_des_formats.md`](origine_des_formats.md) ; ce fichier-ci ne fait qu'y ajouter des liens vérifiables.
+Ce fichier documente les sources externes citées ou mobilisées dans le projet.
 
-## Taxonomie des paliers cognitifs
+Il ne contient aucune règle du skill. Pour distinguer ce qui est **établi**, **observé** ou **choisi**, voir [`origine_des_formats.md`](origine_des_formats.md).
 
-**Soutient** : [`taxonomie.md`](../references/taxonomie.md) §1 (l'échelle des six paliers).
+Les liens vers les fichiers du candidat pointent vers `en_cours/`, mais `dossier-pedagogique/` reste une documentation humaine hors runtime.
 
-Bloom (1956) a posé la taxonomie originale ; Anderson & Krathwohl (2001) l'ont révisée en verbes d'action — c'est cette version révisée que `taxonomie.md` reprend.
+## Taxonomie cognitive
 
-- Krathwohl, D. R. (2002). *A Revision of Bloom's Taxonomy: An Overview* — l'article de synthèse écrit par l'un des deux auteurs de la révision. <https://cmapspublic2.ihmc.us/rid=1Q2PTM7HL-26LTFBX-9YN8/Krathwohl%202002.pdf>
-- University of Illinois Chicago, *Bloom's Taxonomy of Educational Objectives* — présentation pédagogique courte des six niveaux et de leurs verbes. <https://teaching.uic.edu/cate-teaching-guides/syllabus-course-design/blooms-taxonomy-of-educational-objectives/>
+**Soutient** : [`taxonomie.md`](../en_cours/references/taxonomie.md).
 
-## Andragogie — les six piliers
+Le skill utilise la taxonomie de Bloom révisée comme vocabulaire de performance cognitive, sans en faire une progression obligatoire et rigide.
 
-**Soutient** : [`andragogie.md`](../references/andragogie.md) (posture, ton, callouts).
+- Krathwohl, D. R. (2002). *A Revision of Bloom's Taxonomy: An Overview*. Theory Into Practice, 41(4), 212–218. DOI : https://doi.org/10.1207/s15430421tip4104_2
 
-Knowles (à partir de 1968) a distingué l'apprentissage adulte (andragogie) de l'apprentissage de l'enfant (pédagogie), autour de six principes.
+## Andragogie
 
-- Andragogy in Practice: *Applying a Theoretical Framework to Team Science Training in Biomedical Research* — synthèse publiée (NCBI/PMC) des six principes, avec tableau récapitulatif. <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11008574/>
-- Fortress Learning, *What Are the Knowles 6 Principles of Andragogy?* — présentation pédagogique de chaque pilier avec exemples. <https://www.fortresslearning.edu.au/blog/the-keys-to-adult-learning-knowles-6-principles-of-andragogy-explained>
+**Soutient** : [`andragogie.md`](../en_cours/references/andragogie.md).
 
-## Les 3C d'un objectif pédagogique
+Les principes utilisés autour de l'expérience de l'adulte, de son autonomie, de l'utilité perçue et de son implication s'inscrivent dans l'andragogie développée par Malcolm Knowles.
 
-**Soutient** : [`opo.md`](../references/opo.md) §1 (Comportement / Conditions / Critères).
+- Knowles, M. S., Holton III, E. F., Swanson, R. A. (2015). *The Adult Learner*, 8e éd., Routledge. https://routledgetextbooks.com/textbooks/9780415739023/default.php
 
-Le formalisme vient de Mager (1962), sous le nom Performance / Conditions / Criterion — traduit ici en Comportement / Conditions / Critères. Ce n'est pas la même chose que l'alignement constructif de Biggs, qui porte sur autre chose (voir ci-dessous) — les deux étaient fondus en une seule attribution avant correction de `origine_des_formats.md`.
+## Point de départ et élicitation
 
-- NYS Education Department, *Writing Performance Objectives* — présentation directe des trois éléments (performance, conditions, critère), avec exemples. <https://www.acces.nysed.gov/bpss/writing-performance-objectives>
-- Wikipedia, *Robert F. Mager* — pour situer l'auteur et *Preparing Instructional Objectives* (1962). <https://en.wikipedia.org/wiki/Robert_F._Mager>
+**Soutient** : [`andragogie.md`](../en_cours/references/andragogie.md) et [`etat_des_paliers.md`](../en_cours/references/etat_des_paliers.md).
 
-## Alignement objectif / activité / évaluation
+Deux cadres éclairent l'intérêt de connaître ce que l'apprenant sait déjà avant d'adapter l'accompagnement.
 
-**Soutient** : [`opo.md`](../references/opo.md) §2 (le triangle OPO / Activité / Évaluation).
+- Ausubel, D. P. (1968). *Educational Psychology: A Cognitive View*. Holt, Rinehart and Winston. https://search.worldcat.org/title/441295
+- Vygotsky, L. S. (1978). *Mind in Society: Development of Higher Psychological Processes*. Harvard University Press. DOI : https://doi.org/10.2307/j.ctvjf9vz4
 
-Biggs (1996) a nommé « alignement constructif » la cohérence entre ce qu'on vise, ce qu'on fait faire, et ce qu'on évalue.
+Le comportement précis d'élicitation retenu dans le skill reste un choix de conception.
 
-- Structural Learning, *Constructive Alignment: A Teacher's Guide to Biggs' Model* — explique le principe et son exemple type de désalignement (objectif ambitieux, évaluation par QCM de restitution). <https://www.structural-learning.com/post/constructive-alignment>
-- Queen Mary Academy, *Constructive alignment* — présentation courte avec citation directe de Biggs (1999). <https://www.qmul.ac.uk/queenmaryacademy/educators/resources/curriculum-design/constructive-alignment/>
+## Objectif pédagogique opérationnel
 
-## Élicitation en tutorat individuel
+**Soutient** : [`opo.md`](../en_cours/references/opo.md).
 
-**Soutient** : [`andragogie.md`](../references/andragogie.md) §3, [`etat_des_paliers.md`](../references/etat_des_paliers.md) (le plafond au palier 2).
+Le repère Performance / Conditions / Criterion vient de Robert Mager et est traduit dans le skill en comportement / conditions / critères.
 
-Deux cadres distincts de celui de Knowles, de nature cognitive : Ausubel sur ce qui permet à une notion nouvelle de s'accrocher, Vygotsky sur ce qu'il est utile de savoir avant de viser un niveau.
+- Mager, R. F. (1962). *Preparing Instructional Objectives*. Fearon Publishers. Notice ERIC : https://eric.ed.gov/?id=ED018143
+- Smithsonian Libraries, notice de l'édition 1997, détaillant notamment Performance / Conditions / Criterion : https://www.si.edu/object/siris_sil_612712
 
-- SimplyPsychology, *Expository Teaching: Ausubel Theory of Learning* — la citation « le facteur le plus important... » et le mécanisme de subsomption. <https://www.simplypsychology.org/expository-method-of-teaching.html>
-- SimplyPsychology, *Zone of Proximal Development* — définition de la ZPD et son lien (plus tardif) avec le terme « scaffolding ». <https://www.simplypsychology.org/zone-of-proximal-development.html>
+## Alignement pédagogique
 
-## Budget de nouveauté (clause A3)
+**Soutient** : [`opo.md`](../en_cours/references/opo.md).
 
-**Soutient** : [`taxonomie.md`](../references/taxonomie.md) §2 (le mécanisme derrière la clause A3 — le seuil « = 1 » reste un choix de ce skill, pas une valeur imposée par la théorie).
+L'alignement constructif porte sur la cohérence entre résultats visés, activités d'apprentissage et évaluation.
 
-Sweller (1988) : la mémoire de travail a une capacité limitée ; une surcharge dégrade l'apprentissage plutôt que de l'accélérer.
+- Biggs, J. (1996). *Enhancing Teaching Through Constructive Alignment*. Higher Education, 32, 347–364. DOI : https://doi.org/10.1007/BF00138871
 
-- NSW Department of Education, *Cognitive Load Theory: Research that teachers really need to understand* — revue de littérature complète, avec la distinction charge intrinsèque / extrinsèque / géniale. <https://education.nsw.gov.au/content/dam/main-education/about-us/educational-data/cese/2017-cognitive-load-theory.pdf>
-- Structural Learning, *Cognitive Load Theory: 12 Strategies to Reduce Overload* — version plus courte, orientée pratique de classe. <https://www.structural-learning.com/post/cognitive-load-theory-a-teachers-guide>
+La chaîne plus détaillée utilisée par le skill — objectif → tâche → production/performance → critères → preuve → conclusion — est une opérationnalisation propre au produit.
 
-## Ce que cette bibliographie ne couvre pas
+## Charge cognitive
 
-Les gabarits [`atelier.md`](../references/atelier.md), [`quiz.md`](../references/quiz.md), [`recul.md`](../references/recul.md), [`seance.md`](../references/seance.md), [`sequence.md`](../references/sequence.md), [`activite.md`](../references/activite.md) et [`etat_des_paliers.md`](../references/etat_des_paliers.md) ne viennent pas de la littérature : ils formalisent soit un dispositif observé, soit un choix de ce skill.
+**Soutient** : [`taxonomie.md`](../en_cours/references/taxonomie.md), notamment le mécanisme invoqué derrière A3.
 
-Leur statut respectif reste dans [`origine_des_formats.md`](origine_des_formats.md), pas ici — cette bibliographie ne référence que ce qui a une source externe vérifiable.
+- Sweller, J. (1988). *Cognitive Load During Problem Solving: Effects on Learning*. Cognitive Science, 12(2), 257–285. DOI : https://doi.org/10.1207/s15516709cog1202_4
+
+La théorie soutient l'attention portée à la surcharge cognitive ; elle ne fixe pas le seuil `budget de nouveauté = 1`, qui reste un choix du skill.
+
+## Réflexivité et apprentissage expérientiel
+
+**Soutient** : [`activites_type/recul.md`](../en_cours/references/activites_type/recul.md) et l'entrée « Réflexivité » du [`glossaire.md`](../en_cours/references/glossaire.md).
+
+- Kolb, D. A. (1984). *Experiential Learning: Experience as the Source of Learning and Development*. Prentice-Hall. https://search.worldcat.org/fr/title/9555621
+- Code du travail, art. D6313-3-2 — l'AFEST prévoit des phases réflexives distinctes des mises en situation, permettant d'observer et d'analyser les écarts entre attendus, réalisations et acquis afin de consolider et expliciter les apprentissages : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038022325
+
+Ces sources soutiennent la valeur de la mise à distance et de l'analyse de l'expérience ; le gabarit `Recul` reste une implémentation propre au skill.
+
+## Fonctions de l'évaluation
+
+**Soutient** : l'entrée « Évaluation » du [`glossaire.md`](../en_cours/references/glossaire.md).
+
+La terminologie française distingue notamment :
+
+- évaluation diagnostique ;
+- évaluation formative ;
+- évaluation sommative.
+
+- Ministère de l'Éducation nationale, vocabulaire de l'éducation et de la formation, Bulletin officiel n° 33 du 13 septembre 2007 : https://www.education.gouv.fr/bo/BoAnnexes/2007/33/33.pdf
+
+Le skill les distingue principalement par leur finalité. Une évaluation sommative peut être certificative lorsqu'elle contribue à une validation institutionnelle.
+
+## Formation à distance
+
+**Soutient** : les distinctions de modalité présentes dans [`decoupage_pedagogique.md`](../en_cours/references/decoupage_pedagogique.md) et [`glossaire.md`](../en_cours/references/glossaire.md).
+
+Le Code du travail distingue explicitement la formation à distance et prévoit notamment information sur les activités à effectuer, durée moyenne, assistance technique et pédagogique et évaluations jalonnant ou concluant la formation.
+
+- Code du travail, art. D6313-3-1 : https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000038014097/
+
+Cette source ne justifie aucune équivalence du type `distanciel → asynchrone` ou `distanciel → gabarit particulier`.
+
+## Ce que cette bibliographie ne prétend pas sourcer
+
+Les éléments suivants sont principalement des **contrats du produit**, des observations ou des choix de conception :
+
+- le seuil `budget de nouveauté = 1` ;
+- les clauses A1 à A4 dans leur formulation précise ;
+- le suivi `notion → palier → preuve` ;
+- la structure interne Module → Séquence → Séance → Activité ;
+- les gabarits Brique, Atelier, Quiz et Recul dans leur forme exacte ;
+- le nombre et l'ordre des sections de l'Atelier ;
+- le QCM à choix unique comme comportement par défaut du Quiz lorsque pertinent ;
+- l'architecture socle + gabarits spécialisés ;
+- le front matter `kind / inherits / purpose / typical_uses` ;
+- l'absence de notation spontanée comme garde-fou du skill.
+
+Leur provenance et leur statut sont documentés dans [`origine_des_formats.md`](origine_des_formats.md).
