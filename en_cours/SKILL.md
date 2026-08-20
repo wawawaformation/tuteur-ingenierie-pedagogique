@@ -16,9 +16,9 @@ Les règles de progression (paliers, règle d'échafaudage) et de posture (andra
 
 ## Règle d'échafaudage pédagogique
 
-Toujours active dans les deux usages.
+Cadre applicable aux deux usages. Ses contraintes s'appliquent selon le périmètre défini par A1.
 
-Quatre clauses, détaillées dans `references/taxonomie.md` §2 — **source de vérité : ne pas les redéfinir ici, y renvoyer en cas de doute** :
+**Résumé opérationnel des quatre clauses.** La définition complète et normative se trouve dans `references/taxonomie.md` §2 ; en cas d'écart, ce fichier fait foi :
 
 * **A1 — Périmètre** : la contrainte porte sur les **activités évaluées** (celles qui ont des Critères 3C). Exposition, démonstration, lecture de code commentée et pair-programming guidé sont libres à tout niveau. On peut partir du problème réel de l'apprenant pour cadrer, puis décomposer ce qui devra être attesté.
 * **A2 — Granularité** : un palier est attaché à **une notion**, jamais à l'apprenant en général. Avant toute activité évaluée, énumérer les notions mobilisées et le palier attesté de chacune ; tenir un **état des paliers visible** (notion | palier | preuve).
@@ -41,20 +41,16 @@ Ne pas charger tous les fichiers du skill d'un coup — consulter seulement ceux
 | Découper un Module, choisir l'échelle d'une fiche | `references/decoupage_pedagogique.md` |
 | Rédiger une fiche de Séquence | `references/sequence.md` |
 | Rédiger une fiche de Séance minutée (synchrone) | `references/seance.md` |
-| Rédiger une fiche d'Atelier (asynchrone) | `references/atelier.md` |
-| Rédiger un Quiz d'auto-positionnement | `references/quiz.md` |
-| Rédiger un Recul métacognitif | `references/recul.md` |
+| Rédiger une fiche d'Atelier (asynchrone) | `references/activites_type/atelier.md` |
+| Rédiger un Quiz d'auto-positionnement | `references/activites_type/quiz.md` |
+| Rédiger un Recul métacognitif | `references/activites_type/recul.md` |
 | Rédiger une fiche d'Activité | `references/activite.md` |
 | Tenir la trace de ce qui est attesté (A2 et A3) | `references/etat_des_paliers.md` |
 | Faire persister cette trace entre deux sessions | `references/etat_des_paliers.md`, section « Persistance entre sessions » |
-| Savoir ce qui est observé, établi ou choisi | `dossier-pedagogique/origine_des_formats.md` |
-| Vérifier une source, citer un cadre théorique | `dossier-pedagogique/bibliographie.md` |
 
 ## Deux points déjà arbitrés
 
 * **Progression par paliers vs. andragogie** : l'échelle cognitive est un vocabulaire, un outil d'alignement et une heuristique d'ordonnancement ; elle n'est pas une barrière séquentielle absolue. Pour les activités évaluées, les garde-fous opératoires sont A1 à A4 (`references/taxonomie.md` §2).
 * **Nombre d'échelles de découpage** : il dépend de la modalité (`references/decoupage_pedagogique.md` §0).
-
-Le statut de chaque règle — établie, observée ou choix de conception de ce skill — est documenté dans `dossier-pedagogique/origine_des_formats.md`.
 
 Pour toute **autre** contradiction rencontrée entre deux fichiers en usage réel : **ne pas trancher silencieusement ; la signaler**.

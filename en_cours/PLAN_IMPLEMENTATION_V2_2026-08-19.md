@@ -97,9 +97,14 @@ Ils restent intégrés à la batterie NOY : il n'existe pas de batterie GAB sép
 
 ## 3. Compléter la couverture NOY sur les gabarits
 
-Ajouter deux ou trois NOY dédiés aux gabarits existants.
+La couverture gabarits est portée par quatre NOY complémentaires, tous exécutés en condition A uniquement :
 
-Ils sont exécutés en condition A uniquement.
+```text
+NOY008 → contrat / héritage du socle Activité
+NOY009 → routage / absence d'enfermement modal
+NOY010 → exposition / séparation apprenant-formateur
+NOY011 → découvrabilité / représentation du catalogue
+```
 
 ### 3.1. NOY008 — Socle Activité + spécialisation
 
@@ -154,19 +159,43 @@ Vérifier notamment que la solution, les attendus détaillés ou la grille de co
 
 Ce test reprend l'angle historique de T28 sous la forme d'un contrat de gabarit A-only.
 
+
+### 3.4. NOY011 — Découvrabilité du catalogue et représentation de l'architecture
+
+Protéger :
+
+```text
+catalogue
+→ identifier les vrais gabarits d'Activité
+
+architecture
+→ distinguer Module / Séquence / Séance / Activité
+
+héritage
+→ comprendre que les gabarits spécialisés
+  sont des formes d'Activité
+```
+
+Le test vérifie également que les contextes d'usage sont présentés comme des possibilités et non comme une table rigide `modalité → gabarit`.
+
+NOY011 protège directement la capacité de l'agent à se représenter et présenter sa propre « boîte à outils » pédagogique.
+
 ---
 
 ## 4. Baseline des nouveaux NOY avant modification
 
-Avant toute restructuration des gabarits, exécuter sur le candidat actuel :
+Les quatre nouveaux NOY ont été exécutés sur le candidat actuel avant restructuration des gabarits :
 
 ```text
-NOY008 — A
-NOY009 — A
-NOY010 — A
+NOY008 — A = FAIL
+NOY009 — A = FAIL
+NOY010 — A = PASS
+NOY011 — A = FAIL
 ```
 
-Conserver les résultats comme état de départ.
+Ces résultats constituent l'état de départ.
+
+Le PASS de NOY010 est conservé tel quel comme comportement correct à protéger. Les FAIL de NOY008, NOY009 et NOY011 constituent des défauts observés avant modification.
 
 Aucune condition B′ n'est nécessaire.
 
@@ -263,7 +292,7 @@ Les gabarits spécialisés ne sont pas des niveaux concurrents :
 
 ```text
 Activité
-├── activité simple
+├── Brique
 ├── Atelier
 ├── Quiz
 ├── Recul
@@ -295,7 +324,7 @@ La modalité et le contexte orientent le choix et la mise en œuvre d'un gabarit
 
 ## 7. Faire de `activite.md` le socle commun
 
-Relire ensemble :
+Relire ensemble les contrats actuellement dispersés dans :
 
 ```text
 references/activite.md
@@ -307,6 +336,10 @@ references/recul.md
 et extraire uniquement ce qui existe déjà réellement comme socle commun.
 
 Ne pas inventer une nouvelle fiche idéale.
+
+`references/activite.md` doit devenir le **contrat commun du niveau Activité** et ne plus désigner en même temps un format particulier d'activité courte.
+
+Le contenu spécifique à l'activité élémentaire doit être séparé du socle et devenir un gabarit spécialisé `brique`.
 
 Le socle doit être déterminé à partir de l'existant et couvrir les éléments fondamentaux d'une activité, notamment lorsque présents dans les formats actuels :
 
@@ -323,6 +356,51 @@ Principe :
 
 > Toute activité repose sur un socle commun minimal. Les gabarits spécialisés héritent de ce socle et peuvent le compléter, le préciser ou l'adapter selon leur finalité pédagogique.
 
+### 7.1. Organisation physique de la bibliothèque
+
+Créer une bibliothèque dédiée aux gabarits d'Activité :
+
+```text
+references/
+├── activite.md
+├── activites_type/
+│   ├── brique.md
+│   ├── atelier.md
+│   ├── quiz.md
+│   └── recul.md
+├── sequence.md
+├── seance.md
+├── syllabus.md
+├── opo.md
+├── taxonomie.md
+└── ...
+```
+
+Répartition des responsabilités :
+
+```text
+references/activite.md
+→ socle commun / contrat de base du niveau Activité
+
+references/activites_type/*
+→ spécialisations d'Activité
+→ catalogue des gabarits disponibles
+```
+
+`Séquence`, `Séance`, `Syllabus` et les autres objets de structuration restent hors de `activites_type/` : ils ne sont pas des gabarits d'Activité.
+
+Ce déplacement est architectural, pas cosmétique. Il doit rendre explicite la relation :
+
+```text
+Activité
+├── Brique
+├── Atelier
+├── Quiz
+└── Recul
+```
+
+Lors du déplacement, tous les liens internes doivent être mis à jour dans le même lot et l'absence de référence cassée doit être contrôlée.
+
 ---
 
 ## 8. Transformer les gabarits existants en ressources auto-descriptives
@@ -330,10 +408,10 @@ Principe :
 Concerne uniquement les gabarits déjà présents en V2 :
 
 ```text
-activite.md
-atelier.md
-quiz.md
-recul.md
+references/activites_type/brique.md
+references/activites_type/atelier.md
+references/activites_type/quiz.md
+references/activites_type/recul.md
 ```
 
 Définir un front matter cohérent et léger.
@@ -542,6 +620,7 @@ Après chaque lot lié aux gabarits, rejouer :
 NOY008
 NOY009
 NOY010
+NOY011
 +
 les NOY001–007 susceptibles d'être impactés
 ```
@@ -586,6 +665,7 @@ NOY007
 NOY008
 NOY009
 NOY010
+NOY011
 ```
 
 Exécuter la non-régression :
@@ -605,7 +685,7 @@ Les dry-runs B′ ayant servi à construire les NOY comportementaux restent des 
 La V2 peut être gelée lorsque :
 
 - NOY001 à NOY007 restent PASS ;
-- NOY008 à NOY010 sont stabilisés et PASS ;
+- NOY008 à NOY011 sont stabilisés et PASS ;
 - aucun lien runtime nécessaire n'est cassé ;
 - aucune contradiction normative connue n'est laissée silencieusement ;
 - le découpage `Module → Séquence → Séance → Activité` est cohérent dans le paquet ;
@@ -657,18 +737,20 @@ Ne pas résoudre cette question doctrinale en V2.
 
 ```text
 1. Figer la spécification V2 et le présent plan
-2. Concevoir NOY008 à NOY010 sur les gabarits
-3. Jouer NOY008 à NOY010 en A sur le candidat actuel
+2. Concevoir NOY008 à NOY011 sur les gabarits
+3. Jouer NOY008 à NOY011 en A sur le candidat actuel
 4. Vérifier une par une les anomalies de la revue structurelle
 5. Corriger les P0/P1 confirmées
 6. Stabiliser Module → Séquence → Séance → Activité
 7. Définir le socle commun Activité depuis l'existant
-8. Ajouter les métadonnées aux gabarits existants
-9. Alléger le routage de SKILL.md
-10. Ajouter le glossaire et épurer le noyau
-11. Rejouer les NOY concernés après chaque petit lot
-12. Harmoniser les défauts P2
-13. Mettre à jour les deux README
-14. Rejouer NOY001 à NOY010 en A
-15. Contrôle final et gel du candidat V2
+8. Créer `references/activites_type/`, isoler le gabarit `brique` et y regrouper les gabarits existants
+9. Mettre à jour tous les liens internes et vérifier l'absence de référence cassée
+10. Ajouter les métadonnées aux gabarits existants
+11. Alléger le routage de SKILL.md
+12. Ajouter le glossaire et épurer le noyau
+13. Rejouer les NOY concernés après chaque petit lot
+14. Harmoniser les défauts P2
+15. Mettre à jour les deux README
+16. Rejouer NOY001 à NOY011 en A
+17. Contrôle final et gel du candidat V2
 ```

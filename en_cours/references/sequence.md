@@ -4,8 +4,8 @@ objectif: "Structurer une fiche de Séquence : articulation entre activités, sa
 
 # GABARIT : Fiche de Séquence
 
-**Soumis à A1/A2/A3** — voir `taxonomie.md` pour les garde-fous.
-Niveau 2 du découpage (`decoupage_pedagogique.md` §0). Durée selon la modalité : 2 à 4 h encadrées en présentiel, 8 à 15 h en asynchrone (la seconde inclut le temps de production du livrable).
+**Les activités évaluées organisées dans la Séquence sont soumises aux garde-fous applicables de `taxonomie.md` §2.**
+Niveau 2 du découpage (`decoupage_pedagogique.md` §0). Sa durée dépend du contexte de formation et des activités qu'elle articule ; elle ne définit pas le niveau Séquence.
 
 La fiche de Séquence liste des **intentions et des articulations**. Elle ne contient pas le texte des activités : c'est le piège principal de ce niveau, et il produit des documents illisibles de 40 pages.
 
@@ -15,22 +15,26 @@ La fiche de Séquence liste des **intentions et des articulations**. Elle ne con
 2. **Compétence travaillée** — une phrase, un verbe d'action.
 3. **Objectifs opérationnels** — la liste des verbes d'action visés, alignés sur les paliers (`taxonomie.md` §1). Les 3C complets se rédigent au niveau de chaque activité, pas ici : à ce niveau, une liste de verbes suffit, à condition qu'ils soient tous des verbes de la grille.
 4. **Prérequis mobilisés** — les notions **supposées** déjà attestées, et à quel palier. C'est une hypothèse de conception, pas une preuve (`etat_des_paliers.md`, `andragogie.md` §3) : elle doit être vérifiée avant usage, pas alimentée telle quelle dans l'état des paliers. En tutorat individuel, cette vérification se fait par élicitation en dialogue (question ouverte, exemple demandé) ; en collectif ou en asynchrone, par le point 5.
-5. **Auto-positionnement** — une checklist auto-cochée et un quiz non noté (`quiz.md`), assortis d'une phrase du type « il est normal de ne pas tout cocher ». C'est l'approximation collective de ce qu'un dialogue individuel ferait mieux.
+5. **Auto-positionnement** — une checklist auto-cochée et un quiz non noté (`activites_type/quiz.md`), assortis d'une phrase du type « il est normal de ne pas tout cocher ». C'est l'approximation collective de ce qu'un dialogue individuel ferait mieux.
 6. **Deux fils conducteurs au choix** — proposer au moins deux cas pratiques possibles plutôt qu'un chemin imposé (Pilier 2, autonomie). Les deux doivent mener aux mêmes objectifs ; seul le contexte métier change.
 7. **Enchaînement des activités** — le corps de la séquence. Un intitulé par activité, son palier visé, sa durée, son livrable. **Un intitulé, pas un énoncé.**
 8. **Livrables attendus** de la séquence entière.
-9. **Recul** — un ou deux temps de reformulation en fin de parcours (`recul.md`).
+9. **Recul** — un ou deux temps de reformulation en fin de parcours (`activites_type/recul.md`).
 10. **Livrable de clôture** — le document qui sera réutilisé dans les séquences suivantes, s'il y en a un. Préciser qu'il est évolutif et non figé.
 11. **Transition** — ce que la séquence suivante va faire de ce qui vient d'être produit.
 
-## Encapsulation des activités selon la modalité
+## Organisation des Séances et des Activités
 
-| | Chaîne de découpage | Formats du bas de l'échelle |
-|---|---|---|
-| **Synchrone / présentiel** | Séquence → **Séance** → Activité | Activités courtes (`activite.md`) dans le déroulé minuté d'une Séance (`seance.md`) |
-| **Asynchrone / plateforme** | Séquence → Activité | Atelier (`atelier.md`), Quiz (`quiz.md`), Recul (`recul.md`), rattachés directement à la Séquence |
+Une Séquence peut articuler :
 
-**Cas non tranché, à signaler plutôt qu'à résoudre en silence** : une production évaluée qui nécessite une méthode en plusieurs étapes (le principe d'un Atelier) ne tient pas forcément dans une seule unité encadrée (une Séance). En présentiel, un tel format se traite soit comme plusieurs Séances consécutives, soit comme une Séance élargie. Le choix appartient au formateur ; ne pas le trancher implicitement en réduisant l'activité pour la faire rentrer dans un calibre horaire, qui n'est pas le critère de niveau.
+- des **Séances** regroupant plusieurs temps ou activités lorsqu'un déroulé commun est utile ;
+- des **Activités directement rattachées à la Séquence**, par exemple pour un travail autonome ou une intersession.
+
+Ce choix d'organisation ne se déduit pas automatiquement des modalités synchrone / asynchrone ou présentiel / distanciel.
+
+Les formes d'Activité disponibles — notamment Brique (`activites_type/brique.md`), Atelier (`activites_type/atelier.md`), Quiz (`activites_type/quiz.md`) et Recul (`activites_type/recul.md`) — peuvent être adaptées à plusieurs modalités selon leur finalité pédagogique.
+
+Une activité longue ou en plusieurs étapes peut se dérouler dans une seule Séance, s'étendre sur plusieurs Séances ou être rattachée directement à la Séquence. Le choix appartient au formateur et au contexte ; ne pas réduire artificiellement l'activité pour la faire entrer dans un calibre horaire.
 
 ## Contrôles avant de livrer la fiche
 

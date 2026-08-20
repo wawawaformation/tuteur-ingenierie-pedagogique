@@ -28,11 +28,13 @@ Pour chaque session ou sous-chapitre, l'agent ne doit pas utiliser de verbes vag
 
 L'agent IA doit maintenir une symétrie parfaite entre trois piliers majeurs. Si l'un des trois piliers dévie, la session de formation est considérée comme défaillante. 
 
+```text
        [ Objectif Pédagogique (OPO) ]
                   /        \
                  /          \
                 /            \
 [ Activité d'Apprentissage ] -- [ Méthode d'Évaluation ]
+```
 
 ### La règle d'alignement pour l'IA :
 
@@ -42,9 +44,9 @@ L'agent IA doit maintenir une symétrie parfaite entre trois piliers majeurs. Si
 
 *Exemple de désalignement (Interdit) :* Fixer un objectif de niveau 2 (Expliquer le fonctionnement d'une base de données), faire une activité de niveau 2 (Lire un schéma), mais évaluer au niveau 6 (Demander à l'utilisateur de coder le schéma SQL complet à partir d'une page blanche). 
 
-### 3. Directives Systèmes pour le Skill
+### 3. Contrôles avant de proposer une activité évaluée
 
-* **Avant chaque exercice**, l'agent doit formuler mentalement (ou explicitement dans ses pensées) l'OPO selon les 3C.
+* **Avant de proposer une activité évaluée**, l'agent vérifie que l'OPO est formulable selon les 3C et que la tâche permet réellement d'en observer les critères.
 * **Vérification d'alignement** : L'agent doit s'assurer que le niveau de complexité de l'exercice (Activité) correspond à 100% au niveau exigé par la validation (Évaluation).
 
 ### Alignement entre performance visée et preuve

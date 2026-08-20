@@ -104,7 +104,7 @@ Une activité peut ensuite prendre différentes formes documentées par des gaba
 
 ```text
 Activité
-├── activité simple
+├── Brique
 ├── Atelier
 ├── Quiz
 ├── Recul
@@ -125,7 +125,7 @@ La bibliothèque est conçue pour être évolutive, mais la V2 consolide uniquem
 
 Toute activité repose sur un **socle commun minimal**.
 
-Les gabarits spécialisés — Activité simple, Atelier, Quiz, Recul, etc. — héritent de ce socle et peuvent le **compléter, le préciser ou l'adapter** selon leur finalité pédagogique.
+Les gabarits spécialisés — Brique, Atelier, Quiz, Recul, etc. — héritent de ce socle et peuvent le **compléter, le préciser ou l'adapter** selon leur finalité pédagogique.
 
 Le socle commun doit rendre explicites, selon le contexte et avec le niveau de détail adapté :
 

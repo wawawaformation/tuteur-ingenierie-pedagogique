@@ -1,40 +1,91 @@
 ---
-objectif: "Structurer une fiche d'Activité courte, un seul palier visé."
+objectif: "Définir le socle commun de toute Activité pédagogique et orienter vers ses gabarits spécialisés."
 ---
 
-# GABARIT : Fiche d'Activité
+# ACTIVITÉ — Socle commun
 
-**Soumis à A1/A2/A3/A4** — voir `taxonomie.md` pour les garde-fous.
-La brique la plus fine du découpage : celle qui remplit les lignes « Activité » du déroulé minuté d'une Séance (`seance.md`). Durée indicative : 5 à 15 min — ce n'est pas le critère qui la distingue de l'Atelier.
+Une Activité est la granularité la plus fine du découpage pédagogique : c'est ce que l'apprenant doit effectivement faire.
 
-**Différence avec un Atelier** (`atelier.md`) : une Activité vise **un seul palier**, produit **un seul livrable minuscule** et ne propose pas de méthode en plusieurs étapes. Si la tâche nécessite une section « Méthode proposée », ce n'est plus une Activité mais un Atelier.
+Elle peut être intégrée à une Séance ou rattachée directement à une Séquence. Sa durée, sa modalité ou sa forme ne définissent pas sa nature.
 
-## Deux volets, jamais fusionnés en un seul document
+## Spécialisation
 
-### Volet remis à l'apprenant
+Ce fichier définit le socle commun à toute Activité.
 
-1. **Intention** — une phrase : à quoi sert ce qu'il va faire.
-2. **Consigne** — l'action attendue, avec un verbe de la grille (`taxonomie.md` §1).
-3. **Matériel de départ** — le fichier, le jeu de données, l'extrait, la maquette fournis. Un exercice aussi bref ne commence pas sur une page blanche.
-4. **Contraintes** — les Conditions au sens `opo.md` : ce qui est fourni, ce qui est interdit, le format attendu.
-5. **Critère de réussite** — une phrase que l'apprenant peut appliquer seul.
+Les gabarits spécialisés se trouvent dans :
 
-Les points 2, 4 et 5 forment ensemble l'OPO en 3C. Le jargon « 3C » n'a pas à apparaître dans l'énoncé.
+`references/activites_type/`
 
-Le **critère de réussite** est le mécanisme d'évaluation par défaut. Ne pas lui ajouter spontanément un barème de points, une note globale ou un seuil scolaire. Une mesure numérique n'est utilisée que si elle décrit réellement la performance attendue ou si un cadre externe l'impose (`taxonomie.md`, clause A4).
+La bibliothèque contient actuellement :
 
-### Volet conservé par le formateur
+- `brique.md` — Brique ;
+- `atelier.md` — Atelier ;
+- `quiz.md` — Quiz ;
+- `recul.md` — Recul.
 
-1. **Palier visé** — un seul (`taxonomie.md` §1).
-2. **Notion nouvelle** — **une seule**, nommée explicitement (clause A3). Toutes les autres notions mobilisées doivent déjà figurer comme attestées dans `etat_des_paliers.md`.
-3. **Production attendue** — la réponse ou le code de référence.
-4. **Critères d'acceptation** — ce qui fait passer la ligne de l'état des paliers, et rien de plus large.
-5. **Erreur fréquente attendue et sa reformulation** — ce que le groupe va probablement rater, avec la phrase de diagnostic prête à l'emploi : jamais « c'est faux », mais une question qui fait voir le défaut (`andragogie.md` §2).
+Chaque gabarit hérite du socle défini ici, puis le précise ou le complète selon sa finalité pédagogique.
 
-## Contrôles
+### Rôle du front matter
 
-* Le critère de réussite du volet apprenant teste **exactement** le palier visé du volet formateur, ni plus haut ni plus bas (`opo.md` §2).
-* La production attendue et les critères d'acceptation ne sortent jamais avant que l'apprenant ait produit.
-* Si l'activité est **évaluée**, elle est soumise aux clauses A3 et A4. Si elle est un temps de démonstration ou de pair-programming guidé, elle ne l'est pas (clause A1) — mais elle ne fait alors monter aucun palier.
-* En l'absence d'exigence externe ou utilisateur, vérifier la réussite par les **critères d'acceptation et la preuve produite**, pas par un total de points inventé.
-* Vérifier que la preuve recueillie permet réellement de conclure sur le comportement visé ; un résultat correct ne suffit pas si ce comportement peut rester invisible dans le résultat final (`opo.md` §2).
+Le front matter de chaque gabarit fait partie de son contrat de découverte et de sélection.
+
+Il permet à l'agent d'identifier rapidement :
+
+- la nature du gabarit ;
+- sa finalité principale ;
+- son appartenance à la famille Activité ;
+- les usages typiques pour lesquels il peut être pertinent.
+
+L'agent utilise d'abord ces métadonnées pour repérer le ou les gabarits susceptibles de répondre au besoin, puis lit leur contenu pour appliquer le contrat détaillé.
+
+Les usages indiqués dans le front matter sont des **indices de sélection**, pas des conditions exclusives. Une modalité, une durée ou un contexte typique ne doit pas devenir automatiquement une règle interdisant l'usage du gabarit dans un autre contexte pertinent.
+
+## Éléments communs
+
+Tout gabarit d'Activité comporte les éléments suivants.
+
+### Titre
+
+Nommer clairement l'activité.
+
+Le titre doit permettre de comprendre rapidement ce que l'apprenant va rencontrer ou réaliser.
+
+### Chapeau
+
+Immédiatement après le titre, introduire l'activité par une accroche courte, concrète et engageante.
+
+Le chapeau donne envie d'entrer dans la tâche et en fait percevoir l'intérêt.
+
+Il ne résume pas toute la fiche et ne répète pas simplement l'objectif.
+
+### Intention / objectif
+
+Indiquer clairement ce que l'activité cherche à faire travailler ou à faire produire à l'apprenant.
+
+Lorsque l'activité vise un objectif pédagogique opérationnel, celui-ci reste aligné avec les principes définis dans `opo.md`.
+
+### Durée estimée
+
+Donner une estimation adaptée à l'activité.
+
+Cette durée est un repère de préparation et de pilotage. Elle ne constitue ni une limite stricte ni un critère permettant de déterminer le type d'Activité.
+
+### Consigne / tâche à réaliser
+
+Formuler clairement ce que l'apprenant doit faire.
+
+La consigne doit rendre l'action attendue compréhensible sans supprimer les choix, recherches ou ambiguïtés qui font partie de l'activité.
+
+### Production, réponse ou action attendue
+
+Indiquer ce que l'apprenant doit produire, répondre ou réaliser à l'issue de l'activité.
+
+La forme dépend de l'activité : document, réponse, réalisation, démonstration, choix argumenté, action observable ou autre production pertinente.
+
+### Critère(s) de réussite / performance
+
+Lorsque l'activité est évaluée, expliciter en toutes lettres les critères permettant de juger la réussite ou la performance attendue.
+
+Ces critères portent sur ce que l'activité cherche réellement à faire observer et restent alignés avec l'objectif et la tâche.
+
+Ne pas transformer automatiquement ces critères en note, en points ou en barème chiffré lorsqu'aucun cadre externe ou besoin explicite ne l'impose.
