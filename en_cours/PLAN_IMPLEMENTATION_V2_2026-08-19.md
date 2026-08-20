@@ -518,7 +518,7 @@ Le skill doit accepter la quantification.
 Nom retenu :
 
 ```text
-NOY008 — Accepter une quantification légitime
+Quantification légitime — contre-garde-fou conservé hors batterie principale
 ```
 
 Le principe testé est :
@@ -558,16 +558,14 @@ L’ordre proposé est désormais vertical.
 7. NOY007 — évaluation sans notation arbitraire
    → boucle complète
 
-8. NOY008 — quantification légitime
-   → boucle complète
 
-9. Rejouer toute la batterie NOY
+8. Rejouer toute la batterie NOY
 
-10. Nettoyer et harmoniser le noyau
+9. Nettoyer et harmoniser le noyau
 
-11. Rejouer toute la batterie après nettoyage
+10. Rejouer toute la batterie après nettoyage
 
-12. Geler le candidat V2
+11. Geler le candidat V2
 ```
 
 Cet ordre peut être adapté si un dry-run révèle une faiblesse structurante qui doit être traitée immédiatement.
