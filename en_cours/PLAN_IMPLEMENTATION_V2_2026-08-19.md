@@ -450,11 +450,7 @@ ne pas sur-détecter une simple variation
 
 Ce test constitue un contre-garde-fou important du budget de nouveauté.
 
-Nom provisoire :
-
-```text
-NOY007
-```
+Nom provisoire retiré de la batterie principale après replay T26 : le comportement attendu passe désormais avec et sans skill.
 
 ---
 
@@ -495,10 +491,10 @@ pondérations
 seuil scolaire
 ```
 
-Nom provisoire :
+Nom retenu :
 
 ```text
-NOY008
+NOY007 — Évaluer sans notation arbitraire
 ```
 
 ---
@@ -519,10 +515,10 @@ Exemples :
 
 Le skill doit accepter la quantification.
 
-Nom provisoire :
+Nom retenu :
 
 ```text
-NOY009
+NOY008 — Accepter une quantification légitime
 ```
 
 Le principe testé est :
@@ -559,10 +555,10 @@ L’ordre proposé est désormais vertical.
 6. NOY006
    → boucle complète
 
-7. Sentinelle anti-rigidité T26 — NOY007
+7. NOY007 — évaluation sans notation arbitraire
    → boucle complète
 
-8. Tests sur la notation — NOY008 et NOY009
+8. NOY008 — quantification légitime
    → boucle complète
 
 9. Rejouer toute la batterie NOY
