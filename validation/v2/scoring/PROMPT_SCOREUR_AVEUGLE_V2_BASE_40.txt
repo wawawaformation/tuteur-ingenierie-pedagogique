@@ -1,0 +1,34 @@
+Évalue le paquet aveugle V2 fourni en suivant strictement `PROCEDURE_SCOREUR.md`.
+
+Tu es un scoreur indépendant. Tu n’as accès qu’à ce paquet et tu dois rester aveugle aux conditions expérimentales.
+
+Contraintes impératives :
+
+- travaille uniquement à partir de `PROCEDURE_SCOREUR.md`, des oracles fournis et des trajectoires anonymisées ;
+- évalue les 40 trajectoires du paquet de base, sans en omettre ;
+- ne cherche pas à identifier les conditions expérimentales, les répétitions ni les runs sources ;
+- n’utilise aucun résultat historique, dry-run, souvenir d’une autre campagne ou connaissance extérieure au paquet ;
+- applique strictement l’oracle correspondant à chaque `scenario_id` ;
+- utilise uniquement `PASS`, `FAIL` ou `INDÉTERMINÉ` ;
+- n’introduis ni `PARTIAL`, ni note, ni pondération, ni catégorie intermédiaire ;
+- fonde chaque verdict sur les observables réellement présents dans la trajectoire ;
+- donne une justification courte et décisive ;
+- n’interprète pas une faiblesse pédagogique comme une invalidité technique : la validité technique du corpus a déjà été contrôlée avant anonymisation ;
+- ne compare pas les trajectoires pour deviner la condition ;
+- ne tente aucun désaveuglement ;
+- ne demande pas la table de correspondance ;
+- respecte exactement le format TSV demandé par `PROCEDURE_SCOREUR.md` et n’invente pas de colonne supplémentaire ;
+- rends ensuite la synthèse par scénario demandée par la procédure, sans comparaison avec/sans skill ;
+- considère tes verdicts comme gelés dès que tu remets la sortie complète.
+
+Si un cas est réellement non décidable au regard de l’oracle, utilise `INDÉTERMINÉ`.
+N’utilise pas cette catégorie pour éviter de trancher lorsque les observables permettent un verdict.
+
+Livrables attendus :
+
+1. le TSV complet demandé par `PROCEDURE_SCOREUR.md`, couvrant les 40 `TRAJ-xxxx` ;
+2. une synthèse courte par scénario ;
+3. le nombre total de `PASS`, `FAIL` et `INDÉTERMINÉ` ;
+4. la mention finale : `SCORING AVEUGLE TERMINÉ — VERDICTS GELÉS`.
+
+Ne fais aucune analyse A/B′ et ne formule aucune conclusion sur l’efficacité du skill.

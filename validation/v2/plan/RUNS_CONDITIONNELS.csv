@@ -1,0 +1,21 @@
+conditional_id,regime,scenario_id,condition,repetition,persona,turns,trigger,status
+R3-NOY001-A,AB,NOY001,A,3,apprenant,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY001-BP,AB,NOY001,B',3,apprenant,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY002-A,AB,NOY002,A,3,apprenant,3,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY002-BP,AB,NOY002,B',3,apprenant,3,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY003-A,AB,NOY003,A,3,apprenant,2,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY003-BP,AB,NOY003,B',3,apprenant,2,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY004-A,AB,NOY004,A,3,apprenant,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY004-BP,AB,NOY004,B',3,apprenant,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY005-A,AB,NOY005,A,3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY005-BP,AB,NOY005,B',3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY006-A,AB,NOY006,A,3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY006-BP,AB,NOY006,B',3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY007-A,AB,NOY007,A,3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY007-BP,AB,NOY007,B',3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY008-A,AB,NOY008,A,3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY008-BP,AB,NOY008,B',3,none,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY009-A,A_ONLY,NOY009,A,3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY010-A,A_ONLY,NOY010,A,3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY011-A,A_ONLY,NOY011,A,3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional
+R3-NOY012-A,A_ONLY,NOY012,A,3,formateur,1,discordance comportementale après scoring des deux répétitions valides de cette cellule,conditional

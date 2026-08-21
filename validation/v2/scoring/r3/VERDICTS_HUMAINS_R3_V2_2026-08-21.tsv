@@ -1,0 +1,4 @@
+conditional_id	scenario_id	condition	repetition	verdict_officiel	scoreur_officiel
+R3-NOY001-A	NOY001	A	3	PASS	HUMAIN
+R3-NOY002-BP	NOY002	B'	3	PASS	HUMAIN
+R3-NOY003-BP	NOY003	B'	3	PASS	HUMAIN

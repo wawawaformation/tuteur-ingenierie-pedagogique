@@ -1,0 +1,51 @@
+# Randomisation préparée — campagne V2 — 40 runs
+
+> **Statut : PRÉ-GEL — aucun run officiel autorisé.**
+
+Graine déterministe : `20260821`
+Méthode : `random.Random(seed).shuffle(cells)` avec Python 3 ; les 40 cellules sont mélangées ensemble avant attribution des `RUN-V2-001..040`.
+
+Les identifiants de run n’encodent ni scénario, ni condition, ni répétition.
+
+## Ordre préparé
+
+RUN-V2-001 — NOY005 — sans skill — répétition 1 — régime AB
+RUN-V2-002 — NOY009 — avec skill — répétition 2 — régime A_ONLY
+RUN-V2-003 — NOY006 — avec skill — répétition 2 — régime AB
+RUN-V2-004 — NOY003 — avec skill — répétition 1 — régime AB
+RUN-V2-005 — NOY002 — sans skill — répétition 2 — régime AB
+RUN-V2-006 — NOY007 — sans skill — répétition 2 — régime AB
+RUN-V2-007 — NOY001 — sans skill — répétition 1 — régime AB
+RUN-V2-008 — NOY003 — avec skill — répétition 2 — régime AB
+RUN-V2-009 — NOY006 — avec skill — répétition 1 — régime AB
+RUN-V2-010 — NOY001 — avec skill — répétition 1 — régime AB
+RUN-V2-011 — NOY006 — sans skill — répétition 1 — régime AB
+RUN-V2-012 — NOY004 — avec skill — répétition 1 — régime AB
+RUN-V2-013 — NOY008 — avec skill — répétition 2 — régime AB
+RUN-V2-014 — NOY001 — avec skill — répétition 2 — régime AB
+RUN-V2-015 — NOY002 — sans skill — répétition 1 — régime AB
+RUN-V2-016 — NOY008 — sans skill — répétition 2 — régime AB
+RUN-V2-017 — NOY004 — sans skill — répétition 1 — régime AB
+RUN-V2-018 — NOY012 — avec skill — répétition 2 — régime A_ONLY
+RUN-V2-019 — NOY011 — avec skill — répétition 1 — régime A_ONLY
+RUN-V2-020 — NOY010 — avec skill — répétition 1 — régime A_ONLY
+RUN-V2-021 — NOY007 — avec skill — répétition 2 — régime AB
+RUN-V2-022 — NOY007 — sans skill — répétition 1 — régime AB
+RUN-V2-023 — NOY008 — sans skill — répétition 1 — régime AB
+RUN-V2-024 — NOY009 — avec skill — répétition 1 — régime A_ONLY
+RUN-V2-025 — NOY004 — sans skill — répétition 2 — régime AB
+RUN-V2-026 — NOY007 — avec skill — répétition 1 — régime AB
+RUN-V2-027 — NOY001 — sans skill — répétition 2 — régime AB
+RUN-V2-028 — NOY002 — avec skill — répétition 2 — régime AB
+RUN-V2-029 — NOY003 — sans skill — répétition 1 — régime AB
+RUN-V2-030 — NOY006 — sans skill — répétition 2 — régime AB
+RUN-V2-031 — NOY004 — avec skill — répétition 2 — régime AB
+RUN-V2-032 — NOY011 — avec skill — répétition 2 — régime A_ONLY
+RUN-V2-033 — NOY003 — sans skill — répétition 2 — régime AB
+RUN-V2-034 — NOY005 — avec skill — répétition 1 — régime AB
+RUN-V2-035 — NOY005 — sans skill — répétition 2 — régime AB
+RUN-V2-036 — NOY010 — avec skill — répétition 2 — régime A_ONLY
+RUN-V2-037 — NOY012 — avec skill — répétition 1 — régime A_ONLY
+RUN-V2-038 — NOY005 — avec skill — répétition 2 — régime AB
+RUN-V2-039 — NOY008 — avec skill — répétition 1 — régime AB
+RUN-V2-040 — NOY002 — avec skill — répétition 1 — régime AB

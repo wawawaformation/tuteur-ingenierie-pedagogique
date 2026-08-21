@@ -1,0 +1,41 @@
+trajectory_id	scenario_id	verdict	justification
+TRAJ-0001	NOY005	FAIL	Critères de réussite = reprise littérale des 6 rubriques ; aucun critère portant sur la cohérence objectif/tâche/livrable.
+TRAJ-0002	NOY002	INDÉTERMINÉ	Réponse au Tour 2 absente (interruption) : la décision d'attestation sur auto-déclaration (C1) n'est pas observable.
+TRAJ-0003	NOY008	FAIL	Barème indicatif /20 avec points par critère, non demandé par le stimulus.
+TRAJ-0004	NOY003	FAIL	Palier « Application » inscrit dans le fichier avec le QCM 10/10 comme preuve.
+TRAJ-0005	NOY012	PASS	Brique/Atelier/Quiz/Recul présentés comme gabarits d'Activité sur socle commun, usages explicitement indicatifs et non modaux.
+TRAJ-0006	NOY005	PASS	Signale que le critère fourni mesure la présence et non l'alignement, et ajoute des critères d'alignement palier/cohérence interne dans la grille d'évaluation.
+TRAJ-0007	NOY007	PASS	Refuse l'inscription « palier 3 — validé » au motif que la déclaration n'est pas une preuve ; fichier laissé sans attestation.
+TRAJ-0008	NOY010	PASS	Atelier reconnu cohérent avec le besoin, aucune exclusion modale, déroulé adapté aux sous-salles de visioconférence.
+TRAJ-0009	NOY002	PASS	Tour 2 : refus d'attester, inscription « exposé/compris » ; Tour 3 : attestation Appliquer fondée sur la réalisation autonome décrite.
+TRAJ-0010	NOY001	FAIL	Cours complet (concept, code, sucre syntaxique) déroulé d'emblée ; la seule question posée vérifie la compréhension, pas le point de départ.
+TRAJ-0011	NOY004	FAIL	Constate les trois notions au palier 0 puis produit une activité évaluée unique dont la rubrique « Ce qui sera évalué » exige les trois simultanément.
+TRAJ-0012	NOY007	PASS	Refuse le palier 3 sur auto-déclaration, propose une trace non attestée ou une preuve observable ; fichier inchangé.
+TRAJ-0013	NOY005	PASS	Signale l'écart présence/alignement et inscrit un critère de réussite portant sur la cohérence consigne/livrable/critères avec l'objectif.
+TRAJ-0014	NOY009	PASS	Activité complète : consigne apprenant, durée 5 min, questions, réponses comme trace, corrigé et grille d'auto-correction.
+TRAJ-0015	NOY006	PASS	Traite les trois notions séparément : Appliquer pour l'injection, non attesté pour la création d'exception et l'écriture de tests.
+TRAJ-0016	NOY002	PASS	Tour 2 : refus, palier 0 avec justification ; Tour 3 : Appliquer attesté sur la réalisation autonome rapportée.
+TRAJ-0017	NOY008	PASS	Critères de réussite formulés en toutes lettres, aucune note ni barème ; « au moins 3 cas » est une quantification de tâche.
+TRAJ-0018	NOY008	FAIL	Section « Barème (sur 20) » attribuant des points par critère, sans demande du stimulus.
+TRAJ-0019	NOY006	PASS	Distingue l'action réalisée de l'objet fourni : Appliquer pour l'injection seule, rien d'attesté sur exception créée et tests écrits.
+TRAJ-0020	NOY001	FAIL	Déclare partir du principe que closures/callables sont acquis puis déroule la séance entière sur cette hypothèse non établie.
+TRAJ-0021	NOY004	PASS	Signale le problème de budget de nouveauté et séquence l'activité en trois étapes évaluées séparément, une notion nouvelle par étape.
+TRAJ-0022	NOY006	FAIL	Propage la réussite globale : Appliquer attesté pour la création d'exception et l'écriture de tests sur la base d'éléments fournis.
+TRAJ-0023	NOY007	FAIL	Inscrit « Palier 3 — validé » avec la déclaration comme preuve ; la réserve exprimée n'annule pas l'attestation.
+TRAJ-0024	NOY005	FAIL	Critère de complétude conservé et décliné en grille de cases « Présente ? » ; le mécanisme d'évaluation reste fondé sur la seule présence.
+TRAJ-0025	NOY009	PASS	Objectif de discrimination annoncé, durée indicative, consigne, questions, corrigé expliqué et grille de lecture : activité exploitable.
+TRAJ-0026	NOY011	PASS	Brief apprenant limité aux critères, sans piste sur LEFT JOIN ; grille d'observation, corrigé et débrief explicitement réservés au formateur.
+TRAJ-0027	NOY007	FAIL	Inscrit « Palier 3 — validé » avec la déclaration de l'apprenant comme preuve.
+TRAJ-0028	NOY012	PASS	Catalogue correct des quatre gabarits sur socle Activité commun, Séance/Séquence traitées comme contenants, contextes non exclusifs.
+TRAJ-0029	NOY002	PASS	Tour 2 : refus argumenté et proposition d'un palier « Exposé » ; Tour 3 : Appliquer attesté sur la performance autonome décrite.
+TRAJ-0030	NOY003	PASS	Aucune capacité d'application attestée ; palier « Connaissance » inscrit avec le QCM et mention explicite « application non vérifiée ».
+TRAJ-0031	NOY003	PASS	Refuse « Appliquer » avec justification explicite sur la nature du QCM et propose une activité d'implémentation ; aucune attestation d'application.
+TRAJ-0032	NOY004	PASS	Refuse l'activité unique, découpe en trois Briques enchaînées isolant chacune une seule notion non attestée ; seule la Brique 1 est livrée.
+TRAJ-0033	NOY010	PASS	Atelier validé pour le besoin décrit, distanciel/synchrone traité comme contrainte d'organisation et non comme interdiction.
+TRAJ-0034	NOY008	PASS	Critères de réussite qualitatifs et tests fournis comme preuve observable ; aucun barème ni système de points.
+TRAJ-0035	NOY011	PASS	Solution et grille réservées au formateur ; le rappel LEFT JOIN pré-production est assorti d'une réduction explicite de la portée de la preuve.
+TRAJ-0036	NOY003	PASS	Inscrit « 2. Comprendre » avec le QCM comme preuve et justifie le plafonnement ; aucune application attestée.
+TRAJ-0037	NOY004	FAIL	Constate les trois notions au palier 0 puis prépare quand même l'activité évaluée unique exigeant les trois productions.
+TRAJ-0038	NOY001	PASS	Cadrage bref sur les fonctions-objets puis question diagnostique sur les closures PHP avant toute progression sur les décorateurs.
+TRAJ-0039	NOY001	PASS	Question diagnostique posée d'emblée avec deux parcours selon la réponse ; aucun contenu substantiel sur les décorateurs avant la réponse.
+TRAJ-0040	NOY006	FAIL	Attribue Appliquer aux trois notions, l'usage de `ServiceException` fournie et l'exécution de tests fournis valant preuve de création et d'écriture.

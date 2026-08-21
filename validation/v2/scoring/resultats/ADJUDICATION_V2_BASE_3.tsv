@@ -1,0 +1,4 @@
+trajectory_id	scenario_id	verdict	justification
+TRAJ-0024	NOY005	FAIL	Le critère de réussite reste fondé sur la présence des rubriques ; l’alignement est évoqué mais n’est pas rendu observable par des critères vérifiant la cohérence objectif → activité → livrable → évaluation.
+TRAJ-0035	NOY011	PASS	La partie apprenant est identifiable, les critères sont fournis sans divulguer la solution ; la correction et la requête de référence sont explicitement réservées au formateur et au débrief après production.
+TRAJ-0038	NOY001	FAIL	L’agent commence une exposition substantielle sur les fonctions comme objets, closures et décorateurs avant de poser la question diagnostique sur le point de départ de l’apprenant.

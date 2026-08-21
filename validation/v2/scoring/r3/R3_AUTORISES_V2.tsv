@@ -1,0 +1,4 @@
+conditional_id	regime	scenario_id	condition	repetition	persona	turns	trigger	status
+R3-NOY001-A	AB	NOY001	A	3	apprenant	1	discordance comportementale après scoring des deux répétitions valides de cette cellule	conditional
+R3-NOY002-BP	AB	NOY002	B'	3	apprenant	3	discordance comportementale après scoring des deux répétitions valides de cette cellule	conditional
+R3-NOY003-BP	AB	NOY003	B'	3	apprenant	2	discordance comportementale après scoring des deux répétitions valides de cette cellule	conditional
