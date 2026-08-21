@@ -1,13 +1,13 @@
-# Tuteur & ingénierie pédagogique — candidat V2
+# Tuteur & ingénierie pédagogique — V2 stable
 
-Ce dossier contient le **candidat V2** du skill `tuteur-ingenierie-pedagogique`.
+Ce dossier contient la *** version V2 *** stable du skill tuteur-ingenierie-pedagogique.
 
 Il est destiné au tutorat d’adultes et à l’assistance à l’ingénierie pédagogique. Son rôle n’est pas de remplacer le jugement du formateur, mais de fournir à l’agent des garde-fous et des ressources lui permettant de raisonner de façon plus cohérente sur la progression, l’évaluation et la conception des activités.
 
-> **Ce candidat n’est pas encore la version publique recommandée.**
->
-> La version publique reste celle distribuée dans `../dist/stable/` tant que la promotion V2 n’a pas été explicitement réalisée.
-
+> La V2 est désormais la version publique recommandée.
+> Elle est distribuée dans dist/stable/tuteur-ingenierie-pedagogique_v2/ ainsi que sous forme d’archive dist/stable/tuteur-ingenierie-pedagogique_v2.zip.
+> La V1 est conservée dans dist/stable/ à des fins d’historique et de traçabilité.
+> La campagne de validation expérimentale de la V2 est documentée dans validation/v2/.
 ---
 
 ## Les trois fonctions principales
