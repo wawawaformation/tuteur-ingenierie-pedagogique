@@ -22,6 +22,13 @@ Les artefacts de ce dossier comprennent notamment :
 - fiche utilité/coût ;
 - manifests et archives.
 
+## Documents de synthèse (points d'entrée prioritaires)
+
+- `RAPPORT_FINAL_VALIDATION_V2_2026-08-21.md` : verdict expérimental complet ("CANDIDAT STABILISABLE"), table promesse → scénario → résultat, limites méthodologiques explicites.
+- `FICHE_SYNTHESE_UTILITE_COUT_V2_2026-08-21.md` : lecture pratique utilité/coût (~2,49× tokens), point de vigilance NOY001.
+
+Ne pas résumer "V2 validée" sans mentionner les réserves explicites de ces documents (NOY001 imparfaitement stable, G01-G04 non revalidées, généricité inter-métiers non démontrée).
+
 ## Règle de conservation
 
 Traiter ces artefacts comme historiques et auditables.
