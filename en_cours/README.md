@@ -1,12 +1,12 @@
-# Tuteur & ingénierie pédagogique — candidat V2
+# Tuteur & ingénierie pédagogique — candidat V3
 
-Ce dossier contient le **candidat V2** du skill `tuteur-ingenierie-pedagogique`.
+Ce dossier contient le **candidat V3** du skill `tuteur-ingenierie-pedagogique`.
 
 Il est destiné au tutorat d’adultes et à l’assistance à l’ingénierie pédagogique. Son rôle n’est pas de remplacer le jugement du formateur, mais de fournir à l’agent des garde-fous et des ressources lui permettant de raisonner de façon plus cohérente sur la progression, l’évaluation et la conception des activités.
 
 > **Ce candidat n’est pas encore la version publique recommandée.**
 >
-> La version publique reste celle distribuée dans `../dist/stable/` tant que la promotion V2 n’a pas été explicitement réalisée.
+> La version publique reste celle distribuée dans `../dist/stable/` tant que la promotion V3 n’a pas été explicitement réalisée.
 
 ---
 
@@ -238,7 +238,7 @@ Le glossaire n’est pas une seconde source normative.
 
 ## Statut de validation
 
-Le runtime V2 a été restructuré et soumis à des revues statiques de cohérence.
+Le runtime V3 a été restructuré et soumis à des revues statiques de cohérence.
 
 La validation comportementale reste nécessaire avant promotion publique.
 

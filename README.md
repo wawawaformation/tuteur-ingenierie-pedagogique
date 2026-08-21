@@ -225,7 +225,7 @@ stable/
 → source de la dernière version validée
 
 en_cours/
-→ candidat V2
+→ candidat V3
 
 validation/
 → protocoles, scénarios, non-régression et artefacts de validation
@@ -238,11 +238,11 @@ docs/
 
 [`dist/stable/`](dist/stable/) reste le point d’entrée recommandé pour un usage public.
 
-La version actuellement distribuée correspond à la **V1 validée**.
+La version actuellement distribuée correspond à la **V2 validée**.
 
-### Candidat V2
+### Candidat V3
 
-[`en_cours/`](en_cours/) contient le candidat V2.
+[`en_cours/`](en_cours/) contient le candidat V3.
 
 Son architecture runtime est stabilisée, mais il ne devient pas pour autant la version publique tant que son cycle de validation et sa promotion explicite ne sont pas terminés.
 
