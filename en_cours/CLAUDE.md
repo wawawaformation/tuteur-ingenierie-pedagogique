@@ -4,8 +4,9 @@ Ce dossier est la **zone de développement du candidat courant**.
 
 ## État actuel
 
-- `VERSION` indique actuellement **V3**.
-- `promesse.md` indique actuellement **« À déterminer »**.
+- `VERSION` indique actuellement **V2.1**.
+- `promesse.md` porte la spécification fonctionnelle du candidat V2.1.0 : promesse centrale + P02–P04, garanties G01–G06. P01 en est explicitement exclu et relève de la future promesse tutorat V3.
+- `base_de_travail.md` est la feuille de route actuelle de la trajectoire V2 → V2.1 → V3 ; elle fait foi pour le séquencement du travail.
 - Le contenu de `en_cours/` n'est pas la version publique recommandée.
 - La version publique reste dans `../dist/stable/` jusqu'à promotion explicite.
 
@@ -18,7 +19,7 @@ Avant de modifier `SKILL.md` ou une référence :
 3. identifier les scénarios de non-régression potentiellement affectés ;
 4. préserver la cohérence entre orchestration et contrats des références.
 
-Ne pas recopier automatiquement les objectifs ou conclusions de V2 dans V3. La V3 doit acquérir sa propre promesse avant qu'une validation confirmatoire puisse être interprétée proprement.
+Le candidat V2.1 repart physiquement de la V2 stable. Les acquis de la V3 expérimentale ne sont reportés qu'après le tri explicite décrit dans `base_de_travail.md` — ne pas les recopier automatiquement.
 
 ## Architecture du runtime
 
@@ -60,7 +61,7 @@ Lorsqu'un changement touche l'évaluation ou la progression, vérifier notamment
 - pas de notation arbitraire par défaut ;
 - critères apprenant visibles sans révéler prématurément solution/correction décisive.
 
-Ces points décrivent l'héritage actuel du projet ; ils ne doivent pas être déclarés comme promesse V3 tant que `promesse.md` ne les a pas explicitement retenus.
+Ces points sont désormais repris explicitement dans la promesse V2.1.0 (`promesse.md`, P02–P04 et garanties G01–G06).
 
 ## Publication
 
