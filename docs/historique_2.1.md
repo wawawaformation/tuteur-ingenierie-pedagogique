@@ -4,6 +4,16 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-23 — Implémentation de la règle de préséance / dérogation locale (G02)
+
+Exécution stricte de `docs/v2.1/PLAN_IMPLEMENTATION_PRESEANCE_V2.1_2026-08-23_CORRIGE.md`. Comble l'écart entre G02 (`en_cours/promesse.md`) et le runtime, en s'appuyant sur les scénarios `NOY014_1`/`NOY014_2` déjà copiés dans `validation/v2.1/non_regression/`. Aucun NOY, oracle ou fixture modifié.
+
+- `en_cours/SKILL.md`, l. 120 (section « Contrôles avant réponse ou livraison ») : la ligne « ne pas arbitrer silencieusement ; la signaler » est remplacée par un bloc unique de préséance — une référence spécialisée dont le périmètre s'applique et qui signale explicitement déroger à une règle générale du skill prévaut, pour ce seul périmètre ; sans dérogation explicite, la règle générale prévaut ; une dérogation locale ne s'étend jamais implicitement. La clause de signalement des contradictions est conservée à l'identique, comme cas résiduel subordonné à « reste non résolue ».
+- `SKILL.md` est retenu comme **source normative** de ce mécanisme (pas un simple routage) : c'est une règle d'orchestration documentaire, et aucune référence de domaine (`decoupage_pedagogique.md`, `etat_des_paliers.md`, etc.) n'est compétente pour l'arbitrage inter-documents.
+- Choix terminologique : « règle générale du skill », le mot « noyau » étant absent du runtime (présent seulement dans `promesse.md`, `base_de_travail.md` et les fiches NOY014).
+- Contrôles statiques CS-P1 à CS-P8 passés par relecture (voir le rapport d'implémentation pour le détail). Risque principal identifié et non traité préventivement : `SKILL.md` l. 99 (« la référence normative spécialisée fait foi ») pourrait être lue comme une préséance générale des spécialisées, ce qui ferait échouer NOY014_1 — à vérifier par le run avant toute correction.
+- Statut : non testé. Séquence prévue : contrôle statique de `Activité = granularité la plus fine`, C0, NOY014_1, NOY014_2, smoke tests attestation, non-régression complète (16 scénarios).
+
 ## 2026-08-23 — Rapport d'implémentation et alignement de `promesse.md`
 
 - Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_V2.1_2026-08-23.md` : compte rendu structuré de l'implémentation M1-M7 (fichiers modifiés, règle précédente/modification/raison par fichier, résultats CS1-CS6, écarts par rapport au plan, ambiguïté sur NOY006, risques de régression à surveiller).

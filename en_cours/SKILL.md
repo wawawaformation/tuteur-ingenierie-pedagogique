@@ -117,4 +117,4 @@ Ne pas confondre complexité de la situation et nombre de notions nouvelles : un
 
 En tutorat individuel, préférer l'élicitation utile à l'invention de prérequis lorsque l'information manque réellement et qu'elle change la décision pédagogique.
 
-Pour toute contradiction pertinente entre deux références effectivement mobilisées : **ne pas arbitrer silencieusement ; la signaler**.
+**Préséance entre règles.** Lorsque des règles effectivement mobilisées entrent en conflit, une référence spécialisée dont le périmètre s'applique et qui **signale explicitement déroger** à une règle générale du skill prévaut — pour ce seul périmètre. En l'absence d'une telle dérogation explicite, la règle générale prévaut. Une dérogation locale ne modifie pas la règle générale et ne s'étend à aucun autre périmètre. Si une contradiction pertinente reste non résolue par cette règle : **ne pas arbitrer silencieusement ; la signaler**.
