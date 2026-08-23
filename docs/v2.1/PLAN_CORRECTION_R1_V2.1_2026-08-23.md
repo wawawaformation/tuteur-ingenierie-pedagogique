@@ -1,3 +1,8 @@
+> **[Note ajoutée le 2026-08-23, postérieure à l'exécution — CADUC]**
+> Ce plan a été exécuté puis invalidé. La correction proposée ici (et son extension à la l. 120) n'a pas rendu `NOY014_1` PASS : le correctif a été reverté et la préséance renvoyée à la refactorisation générale du noyau.
+> Cause : le discriminateur voulu repose sur un marqueur de dérogation que le runtime ne définit pas, et la fixture négative le satisfait en substance sans le porter littéralement — aucune reformulation en prose ne pouvait donc suffire.
+> Voir `RAPPORT_CYCLE_R1_V2.1_2026-08-23.md`. Ce document est conservé comme trace du raisonnement écarté, pas comme plan exécutable.
+
 # Plan de correction — R1 (`SKILL.md` l. 99)
 
 **Projet :** `tuteur-ingenierie-pedagogique`

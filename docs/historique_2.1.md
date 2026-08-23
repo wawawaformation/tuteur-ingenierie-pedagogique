@@ -23,6 +23,7 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 - Cause racine consolidée : le pôle « règle générale du skill » de `SKILL.md` l. 120 est non résolvable au runtime (« noyau » absent de `SKILL.md` et `references/` ; la règle générale vit elle-même dans `references/`), et surtout le « marqueur uniforme » exigé par `base_de_travail.md` §18 n'a jamais été défini dans le runtime.
 - Correctif appliqué sur `SKILL.md` l. 99 et l. 120, 8 contrôles statiques passés, puis **invalidé par le rerun** : NOY014_1 reste FAIL (2 runs), NOY014_2 PASS, C0 sans régression. Sur les 5 runs avec fixture, la sortie est `Micro-activité` dans 100 % des cas, avec ou sans marqueur : **l'effet du marqueur est nul**, donc le PASS de NOY014_2 est vacuous. Cela corrige la conclusion du dry-run sans réécrire son rapport.
 - Décision : **revert** de `SKILL.md` (retour à l'état de `01e9ca1`) et renvoi de la préséance à la refactorisation générale du noyau. `PLAN_CORRECTION_R1_V2.1_2026-08-23.md` marqué caduc. Aucun oracle, NOY ou fixture modifié ; aucun fichier du noyau modifié à l'état final.
+- **Régularisation Git postérieure (2026-08-23)** : `RAPPORT_CYCLE_R1_V2.1_2026-08-23.md` et le bandeau « CADUC » de `PLAN_CORRECTION_R1_V2.1_2026-08-23.md` avaient été omis du commit `633173d`. Ils sont committés à part, sans modification de leur contenu, pour clore le cycle R1 avant l'ouverture du refactoring.
 
 ## 2026-08-23 — Dry-run pré-refactorisation : R1 confirmé, cycle correctif décidé
 
