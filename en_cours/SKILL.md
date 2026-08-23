@@ -29,6 +29,8 @@ Une exposition, une démonstration ou une déclaration ne valent pas automatique
 
 Pour une preuve externe rapportée, appliquer `references/taxonomie.md` §2 : une observation précise peut être recevable ; une affirmation vague telle que « il l'a déjà fait et ça marchait » reste insuffisante pour attester un palier.
 
+Un palier peut également reposer sur une attestation explicite d'un formateur ; les conditions figurent dans `references/etat_des_paliers.md`.
+
 ## Orchestration
 
 Ne pas générer immédiatement une solution pédagogique à partir d'hypothèses inutiles.

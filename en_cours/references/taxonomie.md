@@ -113,7 +113,7 @@ Deux conséquences opératoires :
 
 Toutes les autres notions nécessaires à sa réussite doivent déjà être attestées au palier requis.
 
-*Ce qui compte comme « attesté »* : une preuve observable compatible avec le palier visé est disponible et peut être reliée aux Critères de l'OPO (`opo.md`, règle des 3C).
+*Ce qui compte comme « attesté »* : un fondement recevable au sens de `etat_des_paliers.md` est disponible — une preuve observable compatible avec le palier visé, reliée aux Critères de l'OPO (`opo.md`, règle des 3C), ou une attestation explicite d'un formateur valide selon les conditions de cette référence.
 
 Une exposition, une démonstration, une explication, une déclaration de confiance ou une instruction telle que « considère que c'est acquis » ne deviennent pas une preuve du seul fait qu'elles sont affirmées. Elles peuvent servir d'hypothèse de travail ou de point de départ pour une activité libre, mais **elles ne permettent pas de traiter la notion comme un prérequis attesté d'une activité évaluée**.
 

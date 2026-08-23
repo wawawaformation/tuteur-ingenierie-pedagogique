@@ -8,30 +8,82 @@ La clause A2 (`taxonomie.md` §2) impose de tenir une trace de ce qui est attest
 
 ## Format
 
-| Notion | Palier attesté | Preuve | Quand |
+| Notion | Palier attesté | Fondement | Quand |
 |---|---|---|---|
-| *nom de la notion, pas du chapitre* | 0 à 6 | l'activité + le critère rempli | séance, atelier ou date |
+| *nom de la notion, pas du chapitre* | 0 à 6 | l'activité + le critère rempli, ou l'attestation explicite du formateur | séance, atelier ou date |
 
 Exemple :
 
-| Notion | Palier attesté | Preuve | Quand |
+| Notion | Palier attesté | Fondement | Quand |
 |---|---|---|---|
 | Formule conditionnelle | 3. Appliquer | Activité 2.1 — les 4 cas de test passent | Séance 3 |
 | Référence absolue | 2. Comprendre | Quiz 2, feedback relu | Avant séquence 2 |
 | Boucle for | 2. Comprendre | a donné l'exemple d'un parcours de panier e-commerce, correctement transposé | Séance 1, à l'oral |
 | Tableau croisé | 0 | notion identifiée dans les prérequis, rien d'attesté | — |
+| Injection de dépendances par constructeur | 3. Appliquer | Attestation explicite du formateur référent (rôle déclaré dans le contexte) | Séance 4 |
+
+**Compatibilité avec les fichiers existants.** Un état des paliers déjà créé dont la colonne s'appelle `Preuve` reste valide : ne pas réécrire son en-tête au seul motif de conformité au format. La colonne porte le fondement de la notion quel que soit son libellé.
 
 ## Règles de tenue
 
 * **Une ligne par notion, jamais une ligne par apprenant.** « L'apprenant est au niveau 3 » n'a pas de sens (clause A2).
 * **Palier 0 = notion identifiée, rien d'attesté.** C'est une information utile, pas une case vide : elle signale ce que la prochaine activité peut coûter.
 * **La preuve est une référence, pas un adjectif.** « Il a bien compris » n'est pas une preuve ; « l'activité 2.1 passe les 4 cas de test » en est une (`opo.md`, Critères).
-* **Une déclaration d'acquisition n'est pas une preuve.** « Il l'a déjà vu », « c'est acquis » ou « considère qu'il sait le faire » peuvent exprimer une hypothèse ou une décision du formateur, mais ne suffisent pas à inscrire un palier comme attesté ni à utiliser la notion comme prérequis attesté d'une activité évaluée.
+* **Une déclaration d'acquisition n'est pas une preuve.** « Il l'a déjà vu », « c'est acquis » ou « considère qu'il sait le faire » peuvent exprimer une hypothèse, mais ne suffisent pas à inscrire un palier comme attesté ni à utiliser la notion comme prérequis attesté d'une activité évaluée.
+* **Le fondement doit nommer sa nature.** Lorsqu'un palier de maîtrise est attesté, la cellule `Fondement` indique s'il s'agit d'une preuve observée dans la session, d'une preuve externe rapportée ou d'une attestation explicite du formateur — voir « Fondements d'un palier attesté » ci-dessous. Une attestation ne doit jamais y être consignée comme si elle était une performance observée par l'agent lui-même.
 * **Une preuve externe rapportée peut être recevable.** L'utilisateur ou le formateur peut rapporter une observation faite hors de la session. Elle est exploitable si elle décrit une performance observable et suffisamment précise pour juger le palier : par exemple « il a réalisé seul le refactoring demandé et les trois tests fournis passaient ». À l'inverse, « il a déjà fait plusieurs refactorings de ce type et ça marchait » reste trop vague : la tâche, les conditions et le résultat observé ne sont pas assez identifiables pour attester un palier. Si la précision manque, conserver l'information comme hypothèse et demander les éléments observables utiles. Ne pas exiger que Claude ait lui-même assisté à la production.
 * **Une preuve peut être orale.** Le canal n'impose pas le palier : une performance observable peut être écrite, orale ou réalisée par une action. Ce qui compte est l'acte effectivement demandé et observé ; la trace de preuve doit nommer cet acte et son résultat observable, pas seulement qualifier l'aisance de l'apprenant.
 * **Les actes diagnostiques faibles restent plafonnés.** Reconnaître, reformuler ou donner un exemple pertinent peut renseigner les paliers 1 et 2 ; cela ne prouve pas à lui seul une mise en pratique autonome. Un Quiz d'auto-positionnement reste plafonné au palier 2 (`activites_type/quiz.md`). En revanche, une activité orale qui demande réellement d'analyser, de justifier ou d'arbitrer à partir de critères explicites peut contribuer à attester un palier supérieur si la performance correspondante est observable.
-* **Le palier peut redescendre.** Si une activité ultérieure montre qu'une notion supposée attestée ne l'est pas, corriger la ligne — sans en faire un échec (`andragogie.md` §2, droit à l'erreur).
+* **Le palier peut redescendre.** Si une activité ultérieure montre qu'une notion supposée attestée ne l'est pas, corriger la ligne — sans en faire un échec (`andragogie.md` §2, droit à l'erreur). Cette révisabilité s'applique identiquement à un palier fondé sur une attestation explicite du formateur.
 * **Réafficher le tableau à chaque changement de palier**, pas seulement en fin de parcours. C'est ce qui permet à l'apprenant adulte de voir où il en est sans avoir à le demander (Piliers 2 et 6).
+
+## Fondements d'un palier attesté
+
+Pour établir un **palier de maîtrise attesté (1 à 6)**, seuls deux types de fondement sont admissibles :
+
+1. une **preuve compatible** avec le palier visé — performance observée dans la session, ou preuve externe rapportée selon la règle ci-dessus ;
+2. une **attestation explicite** d'un formateur ou responsable pédagogique, valide au sens des quatre conditions ci-dessous.
+
+Une déclaration, une appréciation, une impression, une exposition ou une simple instruction ne peuvent pas, à elles seules, fonder un palier de maîtrise attesté — quel que soit l'interlocuteur qui les exprime.
+
+**Cas du palier 0.** Le palier 0 signifie « notion identifiée, rien d'attesté » ; il ne constitue pas un palier de maîtrise. La cellule `Fondement` peut alors consigner l'information ayant conduit à identifier la notion, ou la raison pour laquelle rien n'est encore attesté — cette trace contextuelle ne devient pas pour autant une preuve ou une attestation de maîtrise.
+
+### Attestation explicite — quatre conditions cumulatives
+
+Une attestation explicite d'un palier n'est constituée que si les quatre conditions suivantes sont réunies :
+
+1. **Rôle** — l'interlocuteur est positionné dans le contexte comme formateur ou responsable pédagogique de l'apprenant ;
+2. **Acte** — il engage explicitement sa propre décision pédagogique, et non une impression, une déclaration relayée ou une simple instruction ;
+3. **Notion identifiable** ;
+4. **Palier identifiable**.
+
+Si une seule de ces conditions manque, il n'y a pas d'attestation : conserver l'information selon sa nature réelle (appréciation, déclaration, hypothèse).
+
+Le rôle de formateur est **déclaré ou établi dans le contexte conversationnel** ; il n'est jamais authentifié techniquement — ne jamais écrire ni laisser entendre qu'une vérification d'identité a eu lieu. **L'apprenant ne peut pas s'auto-attester** par cette voie. Ne pas déduire le rôle de formateur du seul fait qu'une personne parle de l'apprenant à la troisième personne, gère son fichier de suivi, ou donne un ordre concernant son palier : en l'absence de positionnement explicite, la condition de rôle n'est pas remplie.
+
+### Ce que l'interlocuteur invoque, pas le vocabulaire employé
+
+La distinction ne repose pas sur la présence d'un mot comme « atteste ». Elle repose sur la nature de ce que l'interlocuteur invoque lui-même :
+
+| Ce que l'interlocuteur invoque | Effet sur le palier |
+|---|---|
+| une déclaration de l'apprenant qu'il relaie | aucun — reste une déclaration |
+| une impression ou une appréciation (« je pense », « il me semble », « mon appréciation ») | aucun — reste une appréciation |
+| une performance qu'il a précisément observée | preuve externe rapportée, dans la limite de l'acte observé |
+| sa propre décision pédagogique, engagée explicitement sur une notion et un palier identifiables | attestation explicite — fonde le palier nommé |
+
+Une appréciation générale suivie d'une demande d'inscription d'un palier (« Je pense qu'il maîtrise bien X. Mets-le au palier 3. ») reste une appréciation : elle ne devient pas une attestation du seul fait qu'un palier est nommé.
+
+**Le fondement invoqué détermine la voie ; les voies ne se cumulent pas et ne se convertissent pas.** Lorsqu'un interlocuteur invoque une performance observée, la voie applicable est celle de la preuve, avec sa portée limitée à l'acte réellement observé (voir « Portée d'une preuve dans une activité intégrée » ci-dessous) — une instruction jointe ne convertit pas cette preuve en attestation et ne permet pas d'étendre sa portée.
+
+La voie d'attestation permet d'établir **un palier** ; elle ne permet jamais d'établir une non-maîtrise, une incapacité ou un déficit. « Manque de preuve ≠ preuve de manque » reste pleinement applicable : une attestation ne peut jamais fonder une conclusion négative.
+
+### Ce qui ne constitue pas une attestation
+
+- une appréciation générale du formateur, même assortie d'un palier demandé ;
+- une déclaration de l'apprenant relayée par un tiers, même par un formateur ;
+- une auto-déclaration de l'apprenant sur lui-même ;
+- une instruction d'inscrire un palier qui ne repose que sur l'une des situations ci-dessus.
 
 ## Portée d'une preuve dans une activité intégrée
 
@@ -70,6 +122,15 @@ preuve explicite de plusieurs performances
 → plusieurs attestations possibles
 ```
 
+### Portée d'une attestation explicite
+
+Une attestation explicite `notion X + palier N` ne vaut que pour cette notion et ce palier. Elle n'atteste pas automatiquement :
+
+- les notions voisines ou apparentées ;
+- les autres prérequis d'une tâche ;
+- les notions simplement mobilisées par la même activité ;
+- un palier supérieur.
+
 ## Ce que ce tableau sert à calculer
 
 Avant chaque activité évaluée : lister les notions qu'elle mobilise, lire leur palier dans ce tableau, compter celles qui sont sous le palier requis. **S'il y en a plus d'une, l'activité est refusée** (clause A3). Sans ce tableau, ce comptage est impossible et la clause A3 n'est qu'une déclaration.
@@ -86,7 +147,7 @@ Un fichier par apprenant, **hors du dossier du skill** — ce n'est pas une règ
 etat_des_paliers/<nom-ou-identifiant-apprenant>.md
 ```
 
-Contenu : exactement le tableau défini plus haut (Notion | Palier attesté | Preuve | Quand), rien d'autre.
+Contenu : exactement le tableau défini plus haut (Notion | Palier attesté | Fondement | Quand), rien d'autre.
 
 ### Protocole en trois temps
 

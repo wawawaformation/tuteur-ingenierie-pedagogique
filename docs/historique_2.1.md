@@ -4,6 +4,22 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-23 — Rapport d'implémentation et alignement de `promesse.md`
+
+- Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_V2.1_2026-08-23.md` : compte rendu structuré de l'implémentation M1-M7 (fichiers modifiés, règle précédente/modification/raison par fichier, résultats CS1-CS6, écarts par rapport au plan, ambiguïté sur NOY006, risques de régression à surveiller).
+- `en_cours/promesse.md` aligné sur la doctrine effectivement implémentée dans le noyau : rôle de formateur/responsable pédagogique déclaré ou établi dans le contexte (pas authentifié) ; une demande d'inscription fondée sur une appréciation, une impression ou une déclaration relayée ne devient pas une attestation ; règle de non-cumul explicitée pour P02 (une performance observée relève de la voie preuve, une instruction jointe ne la convertit pas en attestation) ; révisabilité étendue à tout fondement ; P03 précise qu'un palier attesté par voie d'attestation explicite est utilisable normalement comme prérequis, y compris pour le budget de nouveauté (arbitrage A2) ; G02 précise que la règle de dérogation locale ne crée pas de nouveau gate.
+
+## 2026-08-23 — Implémentation du noyau V2.1 (M1-M7, non testée)
+
+Exécution stricte de `docs/v2.1/PLAN_IMPLEMENTATION_V2.1_2026-08-23_REVISE_3.md`. Aucun oracle NOY ni aucune fixture modifiés ; aucun dry-run lancé.
+
+- `en_cours/references/etat_des_paliers.md` : ajout de la section « Fondements d'un palier attesté » (deux fondements admissibles pour un palier de maîtrise 1-6 — preuve compatible ou attestation explicite valide à quatre conditions cumulatives ; cas du palier 0 distingué ; discriminateur sémantique par ce que l'interlocuteur invoque ; règle de non-cumul/non-conversion ; borne de polarité ; contre-exemples explicites). Retrait de l'incise « ou une décision du formateur » de la règle sur la déclaration d'acquisition. Extension de la portée limitée et de la révisabilité à l'attestation. Renommage de la colonne `Preuve` en `Fondement` (en-têtes et exemple), avec règle explicite de compatibilité pour les fichiers existants nommés `Preuve`.
+- `en_cours/references/taxonomie.md` : la définition de « attesté » (clause A3) reconnaît les deux fondements en pointant vers `etat_des_paliers.md`, sans dupliquer les conditions. Les règles existantes (exposition/déclaration ≠ preuve, preuve externe rapportée) restent strictement inchangées.
+- `en_cours/references/glossaire.md` : définition non circulaire de « Attestation » ; nouvelle entrée « Fondement » ; précision dans « Déclaration » la distinguant de l'attestation explicite.
+- `en_cours/SKILL.md` : une ligne de renvoi vers `etat_des_paliers.md` pour l'attestation explicite, sans dupliquer les conditions.
+
+Validation comportementale (smoke tests NOY012_2/NOY012_1/NOY006, contre-tests C1-C5, non-régression complète) volontairement non réalisée à ce stade — prévue après revue du diff par l'utilisateur.
+
 ## 2026-08-23 — Plan d'implémentation du noyau V2.1
 
 - Ajout de `docs/v2.1/PLAN_IMPLEMENTATION_V2.1_2026-08-23_REVISE_3.md` : analyse du noyau actuel au regard de NOY012_1, NOY012_2, NOY013 et de la synthèse des dry-runs. Localise les trois règles bloquantes (`etat_des_paliers.md` l. 29, `taxonomie.md` l. 116, `glossaire.md` « Attestation »), pose un discriminateur sémantique (fondement invoqué par le formateur, pas le mot « atteste »), et détaille les modifications M1–M7 fichier par fichier.

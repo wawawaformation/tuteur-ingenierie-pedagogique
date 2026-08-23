@@ -153,7 +153,7 @@ Cela ne démontre pas à lui seul ce que l'apprenant sait faire.
 
 Ce qu'une personne affirme au sujet de la maîtrise de l'apprenant.
 
-Une déclaration peut orienter le diagnostic mais n'est pas, à elle seule, une preuve attestée.
+Une déclaration peut orienter le diagnostic mais n'est pas, à elle seule, une preuve attestée. Elle se distingue de l'attestation explicite d'un formateur, qui engage sa propre décision pédagogique plutôt que de relayer une affirmation (voir `etat_des_paliers.md`).
 
 ### Preuve
 
@@ -163,7 +163,17 @@ La preuve doit correspondre à la performance réellement associée au palier vi
 
 ### Attestation
 
-Décision de considérer une preuve comme suffisamment recevable pour attribuer ou confirmer un palier à une notion.
+Acte explicite par lequel un formateur ou responsable pédagogique déclaré dans le contexte engage sa décision pédagogique pour attribuer ou confirmer une notion à un palier identifiable.
+
+Les conditions normatives figurent dans `etat_des_paliers.md`.
+
+### Fondement
+
+Ce sur quoi repose l'état enregistré d'une notion.
+
+Pour un palier de maîtrise attesté (1 à 6), deux types sont admis : une preuve compatible, ou une attestation explicite valide. Pour le palier 0, la cellule peut consigner l'information ayant conduit à identifier la notion, sans que cette information constitue une preuve ou une attestation de maîtrise.
+
+Voir `etat_des_paliers.md`.
 
 ## Évaluation
 
