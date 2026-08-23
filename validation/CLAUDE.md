@@ -53,3 +53,5 @@ Ne pas les modifier pour refléter le candidat courant. Une nouvelle version doi
 ## Données lourdes
 
 Les workspaces et traces d'exécution peuvent vivre hors du dépôt lorsque la procédure le prévoit. Le dépôt doit conserver les artefacts pérennes nécessaires à la compréhension, à l'audit et à la reproductibilité.
+
+Les dry runs et runs de validation utilisent une session Linux dédiée (`claude-test`), systématiquement réinitialisée, pour garantir un workspace neuf et une fixture non contaminée.

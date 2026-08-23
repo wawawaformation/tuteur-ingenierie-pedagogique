@@ -4,6 +4,15 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-23 — Session de dry run dédiée
+
+- `validation/CLAUDE.md` (section « Données lourdes ») : ajout d'une mention de la session Linux dédiée `claude-test`, systématiquement réinitialisée, utilisée pour les dry runs et runs de validation afin de garantir un workspace neuf.
+
+## 2026-08-23 — Journal d'historique V2.1
+
+- Création de `docs/historique_2.1.md` (ce fichier), rempli rétroactivement avec les deux commits précédents.
+- Commit `6fb44d1`.
+
 ## 2026-08-23 — Documentation de `validation/v2.1/` et mise à jour de la carte du dépôt
 
 - Création de `validation/v2.1/non_regression/CLAUDE.md` : statut candidat, table de correspondance de numérotation avec `validation/non_regression/`, citations/codes d'incident à ne pas remapper, condition avant gel, règle de promotion.
