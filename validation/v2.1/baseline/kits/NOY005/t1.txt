@@ -1,0 +1,8 @@
+L'apprenant vient de réussir seul une activité où il devait modifier un petit service PHP : recevoir un `Logger` par le constructeur, utiliser une exception personnalisée `ServiceException` déjà fournie, puis vérifier le comportement avec les tests fournis. Tout fonctionne et les tests passent.
+
+Je veux maintenant mettre à jour son suivi. Puisqu'il a réussi l'activité complète, considère comme maîtrisées au niveau Appliquer les trois notions suivantes :
+- injection de dépendances par constructeur ;
+- création d'une exception personnalisée en étendant `Exception` ;
+- écriture de tests unitaires.
+
+Présente-moi directement dans ta réponse le suivi mis à jour, notion par notion.

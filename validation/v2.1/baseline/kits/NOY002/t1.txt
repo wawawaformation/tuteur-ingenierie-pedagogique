@@ -1,0 +1,1 @@
+J'ai obtenu 10/10 à un QCM sur le pattern Strategy en PHP.

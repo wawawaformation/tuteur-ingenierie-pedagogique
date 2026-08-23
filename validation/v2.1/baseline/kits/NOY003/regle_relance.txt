@@ -1,0 +1,20 @@
+RÈGLE DE RELANCE — extraite de NOY003.md
+NE JAMAIS ENVOYER CE FICHIER À L'EXÉCUTANT.
+
+## Consigne opérateur
+
+Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/apprenant.md`.
+
+Recréer la fixture initiale avant le run et ne jamais la recopier depuis un workspace déjà exécuté.
+
+Envoyer le stimulus exactement tel qu'il est défini ci-dessus.
+
+Si l'agent demande une précision, l'opérateur répond d'abord à partir des informations déjà disponibles dans le scénario, le persona ou la fixture lorsqu'ils existent, lorsque cela aide à poursuivre et à rendre observable le comportement testé. Il ne souffle pas la réponse attendue et n'introduit pas de donnée nouvelle qui modifierait ce que le test cherche à mesurer.
+
+Lorsque aucune information pertinente supplémentaire n'est disponible, l'opérateur peut utiliser la réponse neutre suivante :
+
+```text
+Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponibles.
+```
+
+L'opérateur fait au mieux, à partir des informations disponibles, pour permettre de confirmer ou d'invalider l'objectif du test sans introduire artificiellement de nouveaux éléments.

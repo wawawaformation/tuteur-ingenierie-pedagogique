@@ -1,0 +1,5 @@
+Je prépare une séquence d'initiation à Git pour des adultes.
+
+À la fin d'un premier apport, je veux un quiz court d'auto-positionnement pour vérifier qu'ils distinguent bien `commit`, `push` et `pull`.
+
+Prépare-moi directement le quiz, prêt à être utilisé avec les apprenants.

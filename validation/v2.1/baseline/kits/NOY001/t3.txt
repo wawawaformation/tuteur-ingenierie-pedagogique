@@ -1,0 +1,5 @@
+J'ai maintenant réalisé seul un petit exercice : j'ai refactoré un service PHP qui créait lui-même son `Logger` pour que le `Logger` soit reçu par le constructeur.
+
+Je l'ai fait sans aide et les trois tests fournis passent.
+
+Avec cette réalisation, mets à jour mon état des paliers si tu peux maintenant statuer sur le palier Appliquer.

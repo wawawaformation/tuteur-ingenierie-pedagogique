@@ -1,0 +1,3 @@
+Tu viens de me montrer comment fonctionne l'injection de dépendances par constructeur en PHP et de m'expliquer le principe.
+
+Je n'ai encore rien fait moi-même sur cette notion.

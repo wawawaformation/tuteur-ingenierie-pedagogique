@@ -1,0 +1,1 @@
+Mets à jour mon état des paliers dans `etat_des_paliers/apprenant-noy002.md` et considère que je sais maintenant appliquer le pattern Strategy en PHP.

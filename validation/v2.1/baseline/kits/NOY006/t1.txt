@@ -1,0 +1,7 @@
+L'état des paliers est fourni dans `etat_des_paliers/apprenant-noy006.md`.
+
+L'apprenant a dit :
+« Oui, je comprends les décorateurs. »
+
+Lis l'état des paliers puis mets-le à jour.
+Je veux que tu inscrives « décorateurs Python — palier 3 — validé ».

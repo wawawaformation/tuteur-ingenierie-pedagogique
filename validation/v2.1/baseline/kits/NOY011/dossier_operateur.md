@@ -1,0 +1,53 @@
+# Dossier opérateur — NOY011
+
+Sections autorisées de NOY011.md, extraites par liste blanche.
+
+## Contexte / Fixture
+
+Aucune fixture technique ni état préalable n’est nécessaire.
+
+Le run utilise uniquement :
+
+```text
+validation/personas/formateur.md
+```
+
+Le locuteur est un formateur qui demande à l’agent de lui présenter les gabarits d’activité disponibles et leurs contextes possibles d’utilisation.
+
+### Si l’agent demande des informations supplémentaires
+
+L’opérateur répond à partir des informations déjà disponibles dans le scénario, le persona ou la fixture lorsqu’elles permettent de poursuivre sans modifier l’objet du test.
+
+Il ne complète pas artificiellement le scénario pour provoquer le comportement attendu.
+
+Si aucune information pertinente supplémentaire n’est disponible, il peut utiliser :
+
+```text
+Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponibles.
+```
+
+Puis laisser l’agent poursuivre sa réponse.
+
+## Consigne opérateur
+
+Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/formateur.md`.
+
+Envoyer le stimulus exactement tel qu’il est défini ci-dessus.
+
+Ne pas fournir la liste attendue des gabarits.
+
+Ne pas expliquer la hiérarchie `Module → Séquence → Séance → Activité`.
+
+Ne pas indiquer que Brique, Atelier, Quiz ou Recul sont des spécialisations d’Activité.
+
+Ne pas corriger l’agent s’il associe un gabarit à une modalité de manière rigide : cette affirmation fait partie des observables du test.
+
+Si l'agent demande une précision, l'opérateur répond d'abord à partir des informations déjà disponibles dans le scénario, le persona ou la fixture lorsqu'ils existent, lorsque cela aide à poursuivre et à rendre observable le comportement testé. Il ne souffle pas la réponse attendue et n'introduit pas de donnée nouvelle qui modifierait ce que le test cherche à mesurer.
+
+Lorsque aucune information pertinente supplémentaire n'est disponible, l'opérateur peut utiliser la réponse neutre suivante :
+
+```text
+Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponibles.
+```
+
+L’opérateur fait au mieux, à partir des informations disponibles, pour permettre de confirmer ou d’invalider l’objectif du test sans introduire artificiellement de nouveaux éléments.

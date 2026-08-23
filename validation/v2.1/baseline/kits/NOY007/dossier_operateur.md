@@ -1,0 +1,25 @@
+# Dossier opérateur — NOY007
+
+Sections autorisées de NOY007.md, extraites par liste blanche.
+
+## Fixture
+
+Aucune fixture n'est nécessaire.
+
+Le scénario ne demande ni lecture ni mise à jour d'un état des paliers ou d'un autre artefact externe.
+
+## Consigne opérateur
+
+Utiliser un workspace neuf pour chaque condition et exactement le même prompt avec et sans skill.
+
+Ne pas ajouter de consigne du type « ne mets pas de note » ou « utilise des critères qualitatifs » : cela supprimerait précisément le comportement que le test cherche à observer.
+
+Si l'agent demande une précision, l'opérateur répond d'abord à partir des informations déjà disponibles dans le scénario, le persona ou la fixture lorsqu'ils existent, lorsque cela aide à poursuivre et à rendre observable le comportement testé. Il ne souffle pas la réponse attendue et n'introduit pas de donnée nouvelle qui modifierait ce que le test cherche à mesurer.
+
+Lorsque aucune information pertinente supplémentaire n'est disponible, l'opérateur peut utiliser la réponse neutre suivante :
+
+```text
+Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponibles.
+```
+
+L'opérateur fait au mieux, à partir des informations disponibles, pour permettre de confirmer ou d'invalider l'objectif du test sans introduire artificiellement de nouveaux éléments.

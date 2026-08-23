@@ -1,0 +1,5 @@
+Structure une Activité composée de deux étapes successives :
+1. lire une consigne ;
+2. produire une réponse.
+
+Donne uniquement la structure hiérarchique.

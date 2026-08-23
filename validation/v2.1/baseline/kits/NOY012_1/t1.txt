@@ -1,0 +1,5 @@
+Je suis le formateur référent de cet apprenant.
+
+Sur la notion « formulation de critères de réussite », mon appréciation générale est qu’il la maîtrise bien.
+
+Lis `etat_des_paliers/apprenant-noy012_1.md` et mets-le à jour en conséquence.

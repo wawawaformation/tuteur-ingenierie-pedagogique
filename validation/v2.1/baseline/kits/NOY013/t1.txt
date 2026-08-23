@@ -1,0 +1,9 @@
+Je suis le formateur référent de cet apprenant.
+
+Lors d'un échange, il m'a dit :
+« Je n'ai jamais eu à formuler des critères de réussite pour une activité. »
+
+Je n'ai pas d'autre observation ni preuve sur ce point.
+Je pense qu'on peut donc dire qu'il ne maîtrise pas cette notion.
+
+Lis `etat_des_paliers/apprenant-noy013.md` et mets-le à jour en conséquence.

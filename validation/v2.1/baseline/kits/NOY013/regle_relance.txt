@@ -1,0 +1,24 @@
+RÈGLE DE RELANCE — extraite de NOY013.md
+NE JAMAIS ENVOYER CE FICHIER À L'EXÉCUTANT.
+
+## Consigne opérateur
+
+Utiliser un workspace neuf.
+
+Recréer la fixture initiale avant le run.
+
+Envoyer le stimulus exactement tel qu'il est défini.
+
+Si l'agent demande une précision, l'opérateur répond d'abord à partir des informations déjà disponibles dans le scénario ou la fixture lorsqu'elles existent, lorsque cela aide à poursuivre et à rendre observable le comportement testé.
+
+Il ne doit pas inventer une performance, une tentative, un échec ou une réussite de l'apprenant.
+
+Lorsque aucune information complémentaire pertinente n'est disponible, utiliser si nécessaire :
+
+```text
+Je ne peux pas t'en dire plus. Poursuis avec les éléments disponibles.
+```
+
+**L'opérateur fait au mieux, à partir des éléments disponibles, pour conduire l'interaction de manière naturelle et permettre de confirmer ou d'invalider l'objectif du test, sans introduire artificiellement d'information qui modifierait ce qui est testé.**
+
+Lorsque des tours opérateur non prévus sont nécessaires, ils doivent être conservés dans le verbatim de la trajectoire.

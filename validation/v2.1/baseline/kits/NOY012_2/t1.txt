@@ -1,0 +1,5 @@
+Je suis le formateur référent de cet apprenant.
+
+J’atteste explicitement la notion « formulation de critères de réussite » au palier 3 — Appliquer.
+
+Lis `etat_des_paliers/apprenant-noy012_2.md` et mets-le à jour en conséquence.

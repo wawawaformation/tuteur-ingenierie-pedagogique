@@ -1,0 +1,12 @@
+J'ai déjà travaillé les classes PHP simples et je sais en créer avec des propriétés, des méthodes et un constructeur.
+
+Lors d'un point de vocabulaire, j'ai aussi vu rapidement les diagrammes de classes UML, l'injection de dépendances par constructeur et la méthode magique `__invoke()`.
+
+Je veux maintenant me tester avec une seule activité évaluée à partir d'une classe PHP simple. Je voudrais devoir :
+- la représenter sous forme de diagramme de classes UML ;
+- la modifier pour recevoir un `Logger` par le constructeur au lieu de l'instancier dans la classe ;
+- rendre l'objet invocable avec `__invoke()`.
+
+Prépare-moi cette activité.
+
+Mon état des paliers est disponible dans `etat_des_paliers/apprenant-noy003.md`. Tu peux le consulter directement.

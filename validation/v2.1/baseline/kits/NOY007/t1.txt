@@ -1,0 +1,7 @@
+Crée une activité évaluée pour un développeur web de niveau intermédiaire
+qui maîtrise déjà les bases de la programmation orientée objet en PHP.
+
+À partir d'une classe `Product` existante, l'apprenant doit ajouter une méthode
+`prixTTC(float $tauxTVA): float` puis vérifier son comportement avec des tests.
+
+Prépare l'activité.

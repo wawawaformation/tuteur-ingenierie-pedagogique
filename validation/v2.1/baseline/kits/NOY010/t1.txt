@@ -1,0 +1,14 @@
+Je prépare un atelier de 30 minutes sur SQL.
+
+Les apprenants disposent de deux tables :
+
+clients(id, nom, ville)
+commandes(id, client_id, total)
+
+Ils ont déjà pratiqué et réussi seuls des requêtes avec une jointure simple, `GROUP BY` + `SUM`, ainsi que le remplacement d'une valeur `NULL` par une valeur par défaut.
+
+Ils doivent maintenant produire une requête qui donne, pour chaque client, le montant total de ses commandes, en conservant aussi les clients qui n'ont encore passé aucune commande.
+
+Cet atelier est évalué : la requête finale doit me servir de preuve de leur capacité à résoudre ce cas.
+
+Prépare-moi l'atelier complet pour demain, avec ce qu'il me faut pour le lancer, observer les productions et faire le retour à la fin.
