@@ -4,6 +4,26 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-23 — Plan de refactorisation du noyau V2.1 : révisé et prêt pour implémentation
+
+- Ajout de `docs/v2.1/PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23.md` : plan détaillé de refactorisation du noyau, directement exécutable par un agent de développement. Comble les défauts révélés par le cycle R1 : défaut de classification, non-opérationnalisation de la préséance, perte de visibilité de règles.
+- **Trois points clés révisés après validation utilisateur :**
+  1. **Glossaire :** ne conserve plus la formulation « granularité la plus fine », réduisant I25 à un seul porteur (donc conforme à l'objectif de A.10 et à prérequis de A.8).
+  2. **Canonisation P1 :** la chaîne d'alignement a quatre étapes formant un bloc indivisible (A.3–A.7), avec contrôles comportementaux immédiats (NOY004, NOY002, NOY007) et repli documenté (conservation d'une chaîne compressée sur une ligne dans `SKILL.md` si risque R2 observé).
+  3. **Lot 0 baseline comportementale :** 10 étapes garantissant 15 copies isolées, 15 exécutants aveugles, collecte verbatim, et une baseline de référence (`RAPPORT_BASELINE_COMPORTEMENTALE_V2.1_<date>.md`) remplaçant le dry-run pré-refactorisation comme étalon.
+- Mécanisme de préséance : remplacement du marqueur en prose par **`deroge_a:` / `perimetre:` en front matter**, avec index minimal de deux IDs stables (`A3`, `R-GRAN`) et aucune reclassification implicite des références existantes. Décision D1-bis : index initial à `A3` et `R-GRAN` seulement.
+- Chantier NOY014 différé (§9) : fixtures à redessiner sur le mécanisme de front matter après lot B, avec contrôles anti-gate, déclarations invalides et non-extension hors périmètre.
+- Critères de sortie explicites (§11) : 14/14 NOY hors NOY014, C0 conforme, deux PASS distinctifs de NOY014_1 et NOY014_2 conjointement avec corps de fixture identiques, trois contrôles de mécanique invalide et un contrôle de non-extension.
+- **Aucune modification du runtime** pendant la rédaction du plan. `en_cours/` intact, validation/ intact.
+
+## 2026-08-23 — Cycle correctif R1 : revue du scénario, correctif invalidé, reverté
+
+- Ajout de `docs/v2.1/RAPPORT_CYCLE_R1_V2.1_2026-08-23.md`. Revue indépendante de NOY014 avant toute correction : oracle, stimulus, overlay et contraste jugés sains ; `mock_sans_derogation.md` jugé **défectueux comme cas négatif** (quasi-positif : ses l. 7/11/13 réunissent règle contredisante + connaissance de la règle contredite + limitation de portée — seul le mot « déroge » sépare les deux fixtures).
+- **C0 exécuté et consigné pour la première fois** (il n'avait jamais été joué, alors qu'il conditionne la validité de l'instrument) : le candidat produit `Étape 1`/`Étape 2` et jamais `Micro-activité`. Contraste établi, avant comme après correctif.
+- Cause racine consolidée : le pôle « règle générale du skill » de `SKILL.md` l. 120 est non résolvable au runtime (« noyau » absent de `SKILL.md` et `references/` ; la règle générale vit elle-même dans `references/`), et surtout le « marqueur uniforme » exigé par `base_de_travail.md` §18 n'a jamais été défini dans le runtime.
+- Correctif appliqué sur `SKILL.md` l. 99 et l. 120, 8 contrôles statiques passés, puis **invalidé par le rerun** : NOY014_1 reste FAIL (2 runs), NOY014_2 PASS, C0 sans régression. Sur les 5 runs avec fixture, la sortie est `Micro-activité` dans 100 % des cas, avec ou sans marqueur : **l'effet du marqueur est nul**, donc le PASS de NOY014_2 est vacuous. Cela corrige la conclusion du dry-run sans réécrire son rapport.
+- Décision : **revert** de `SKILL.md` (retour à l'état de `01e9ca1`) et renvoi de la préséance à la refactorisation générale du noyau. `PLAN_CORRECTION_R1_V2.1_2026-08-23.md` marqué caduc. Aucun oracle, NOY ou fixture modifié ; aucun fichier du noyau modifié à l'état final.
+
 ## 2026-08-23 — Dry-run pré-refactorisation : R1 confirmé, cycle correctif décidé
 
 - Ajout de `docs/v2.1/RAPPORT_DRYRUN_V2.1_PRE_REFACTORISATION_2026-08-23.md` : dry-run des 16 scénarios NOY sur le candidat V2.1 post-G02. 15/16 PASS ; `NOY014_1` en FAIL reproductible 3/3 — Claude applique la règle spécialisée sans dérogation explicitement signalée, correspondant exactement au risque R1 déjà identifié dans `RAPPORT_IMPLEMENTATION_PRESEANCE_V2.1_2026-08-23.md`. `NOY014_2` (dérogation explicite) reste PASS. Décision (§8, ajoutée après coup) : traiter R1 dans un cycle correctif séparé, strictement ciblé, avant d'engager la refactorisation du noyau.
