@@ -34,14 +34,14 @@ dist/stable/
 → V1 est conservée pour historique
 
 en_cours/
-→ candidat V3
+→ candidat V2.1 (noyau V2 allégé + attestation explicite du formateur)
 → non public
-→ promesse V3 encore à déterminer
+→ promesse V2.1.0 définie ; la future promesse tutorat V3 reste à déterminer
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.
 
-`en_cours/promesse.md` fait foi pour la promesse du candidat courant. Tant qu'elle indique « À déterminer », ne pas extrapoler silencieusement la promesse V2 vers V3.
+`en_cours/promesse.md` fait foi pour la promesse du candidat courant. `en_cours/base_de_travail.md` fait foi pour le séquencement de la trajectoire V2 → V2.1 → V3. Ne pas extrapoler silencieusement la future promesse tutorat V3 à partir de celle de V2.1 tant qu'elle n'a pas été explicitement écrite et validée.
 
 Le dépôt actuel ne contient pas de dossier racine `stable/`. Certains documents historiques peuvent décrire un flux incluant ce niveau : ne pas créer ni supposer ce dossier sans décision explicite.
 
@@ -60,6 +60,10 @@ validation/
 
 validation/non_regression/
 → scénarios NOY autoritatifs actuellement présents
+
+validation/v2.1/non_regression/
+→ scénarios NOY candidats pour V2.1, pas encore autoritatifs
+→ numérotation propre à ce dossier, distincte de validation/non_regression/ (voir son CLAUDE.md)
 
 validation/collector-kit/
 → instrumentation générique de collecte
@@ -82,7 +86,9 @@ Avant de modifier un comportement, identifier le document autoritatif correspond
 - Runtime candidat : `en_cours/SKILL.md` et `en_cours/references/`.
 - Version du candidat : `en_cours/VERSION`.
 - Promesse du candidat : `en_cours/promesse.md`.
-- Scénarios NOY : `validation/non_regression/`.
+- Feuille de route du candidat : `en_cours/base_de_travail.md`.
+- Scénarios NOY autoritatifs : `validation/non_regression/`.
+- Scénarios NOY candidats V2.1 : `validation/v2.1/non_regression/`.
 - Campagne V2 historique : `validation/v2/`.
 - Distribution publique : `dist/stable/`.
 
