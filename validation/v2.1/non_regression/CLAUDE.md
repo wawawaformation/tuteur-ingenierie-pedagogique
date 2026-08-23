@@ -23,9 +23,12 @@ Ce dossier repart de `NOY001`, alors que `validation/non_regression/` va de `NOY
 | NOY009 | NOY010 | repris à l'identique |
 | NOY010 | NOY011 | repris à l'identique |
 | NOY011 | NOY012 | repris à l'identique |
-| NOY012 | — | nouveau candidat V2.1 (appréciation générale du formateur ≠ attestation explicite d'un palier) |
+| NOY012_1 | — | nouveau candidat V2.1 (appréciation générale du formateur ≠ attestation explicite d'un palier) |
+| NOY012_2 | — | nouveau candidat V2.1 (attestation explicite du formateur = fondement suffisant d'un palier) |
 | NOY013 | — | nouveau candidat V2.1 (manque de preuve ≠ preuve de manque) |
 | — | NOY001 | volontairement exclu : P01 est sorti du noyau, ne protège plus V2.1 |
+
+`NOY012_1` et `NOY012_2` remplacent un `NOY012` initial à deux tours, scindé après contre-revue : le Tour 2 (attestation explicite) restait exposé à une simple cohérence conversationnelle avec le Tour 1 (appréciation générale). Voir `observation_conclusion_recommandation_dry_run.md` §3.
 
 ## Citations et codes d'incident préservés sous l'ancienne numérotation
 
@@ -36,7 +39,9 @@ Certaines mentions internes pointent délibérément vers un artefact externe ou
 
 ## Avant de geler
 
-`NOY012` et `NOY013` doivent être stabilisés (au moins un run et une méta-discussion) avant de considérer V2.1 prête pour la non-régression décrite dans `en_cours/base_de_travail.md` §9 (condition A uniquement, une répétition, tout FAIL rejoué ×2 avant diagnostic).
+`NOY012_1`, `NOY012_2` et `NOY013` doivent être stabilisés (au moins un run et une méta-discussion) avant de considérer V2.1 prête pour la non-régression décrite dans `en_cours/base_de_travail.md` §9 (condition A uniquement, une répétition, tout FAIL rejoué ×2 avant diagnostic).
+
+D'après les dry-runs déjà réalisés (`observation_conclusion_recommandation_dry_run.md`) : `NOY012_1` et `NOY013` sont stabilisés et déjà satisfaits par le candidat actuel (PASS). `NOY012_2` est stabilisé mais échoue encore sur le candidat actuel (FAIL) : c'est le comportement que le changement fonctionnel V2.1 (attestation explicite du formateur) doit corriger avant que ce scénario puisse passer.
 
 ## Promotion
 
