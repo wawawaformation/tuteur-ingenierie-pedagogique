@@ -4,6 +4,12 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-23 — Dry-run pré-refactorisation : R1 confirmé, cycle correctif décidé
+
+- Ajout de `docs/v2.1/RAPPORT_DRYRUN_V2.1_PRE_REFACTORISATION_2026-08-23.md` : dry-run des 16 scénarios NOY sur le candidat V2.1 post-G02. 15/16 PASS ; `NOY014_1` en FAIL reproductible 3/3 — Claude applique la règle spécialisée sans dérogation explicitement signalée, correspondant exactement au risque R1 déjà identifié dans `RAPPORT_IMPLEMENTATION_PRESEANCE_V2.1_2026-08-23.md`. `NOY014_2` (dérogation explicite) reste PASS. Décision (§8, ajoutée après coup) : traiter R1 dans un cycle correctif séparé, strictement ciblé, avant d'engager la refactorisation du noyau.
+- Ajout de `docs/v2.1/PLAN_CORRECTION_R1_V2.1_2026-08-23.md` : plan de correction limité à `en_cours/SKILL.md` l. 99 (« la référence normative spécialisée fait foi » → « c'est la référence normative spécialisée qui porte cette règle, pas le glossaire »), sans toucher l. 120 (bloc de préséance G02), ni les oracles/fixtures NOY014. Vérification prévue ciblée sur `NOY014_1`/`NOY014_2` uniquement, non-régression complète différée à après la refactorisation.
+- Aucun fichier du noyau modifié à ce stade ; le plan est en attente d'exécution.
+
 ## 2026-08-23 — Implémentation de la règle de préséance / dérogation locale (G02)
 
 Exécution stricte de `docs/v2.1/PLAN_IMPLEMENTATION_PRESEANCE_V2.1_2026-08-23_CORRIGE.md`. Comble l'écart entre G02 (`en_cours/promesse.md`) et le runtime, en s'appuyant sur les scénarios `NOY014_1`/`NOY014_2` déjà copiés dans `validation/v2.1/non_regression/`. Aucun NOY, oracle ou fixture modifié.
