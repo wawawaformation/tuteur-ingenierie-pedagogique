@@ -40,16 +40,35 @@ PLAN = {
   "C0":       ("CONTROLE_STABILISATION_NOY014.md", ["### Stimulus exact"], None, None),
 }
 
+def etats_fence(lignes):
+    """Pour chaque ligne, indique si elle se trouve DANS un bloc ```...``` déjà
+    ouvert (état calculé avant traitement de la ligne elle-même).
+
+    Un titre Markdown situé à l'intérieur d'une fixture citée en bloc de code
+    (ex. `# État des paliers` dans un bloc ```markdown) n'est alors jamais pris
+    pour une borne de section ou pour la fin de la zone de recherche d'un bloc.
+    """
+    etats, dans = [], False
+    for l in lignes:
+        etats.append(dans)
+        if l.strip().startswith("```"):
+            dans = not dans
+    return etats
+
 def bloc_apres(lignes, titre, langue=None):
     """Retourne le contenu du premier bloc de code suivant `titre`."""
     try:
         i = next(k for k, l in enumerate(lignes) if l.rstrip() == titre)
     except StopIteration:
         sys.exit("titre introuvable : %r" % titre)
+    fences = etats_fence(lignes)
     # Une section peut contenir plusieurs blocs (p. ex. le chemin en ```text
     # puis le contenu en ```markdown) : on retient le premier de la langue voulue.
+    # Un titre à l'intérieur d'un bloc de code déjà ouvert ne borne jamais la
+    # recherche : ce n'est pas un titre de section, c'est du contenu cité.
     fin = next((k for k in range(i + 1, len(lignes))
-                if lignes[k].startswith("## ") or lignes[k].startswith("# ")), len(lignes))
+                if not fences[k] and (lignes[k].startswith("## ") or lignes[k].startswith("# "))),
+               len(lignes))
     while i < fin and lignes[i].strip() != ("```" + langue if langue else "```"):
         i += 1
     if i >= fin:
@@ -66,15 +85,68 @@ def section(lignes, titre):
         i = next(k for k, l in enumerate(lignes) if l.rstrip() == titre)
     except StopIteration:
         return None
-    # Arrêt au prochain titre de niveau INFÉRIEUR OU ÉGAL : sinon une section
-    # `###` déborde sur les sections `##` suivantes.
-    def est_borne(ligne):
-        if not ligne.startswith("#"):
+    fences = etats_fence(lignes)
+    # Arrêt au prochain titre de niveau INFÉRIEUR OU ÉGAL, hors bloc de code :
+    # sinon une section `###` déborde sur les sections `##` suivantes, et un
+    # titre cité à l'intérieur d'une fixture (```markdown ... # État des
+    # paliers ... ```) coupe la section avant la fence fermante.
+    def est_borne(k):
+        ligne = lignes[k]
+        if fences[k] or not ligne.startswith("#"):
             return False
         n = len(ligne) - len(ligne.lstrip("#"))
         return n <= niveau and ligne[n:n + 1] == " "
-    j = next((k for k in range(i + 1, len(lignes)) if est_borne(lignes[k])), len(lignes))
+    j = next((k for k in range(i + 1, len(lignes)) if est_borne(k)), len(lignes))
     return "\n".join(lignes[i:j]).rstrip() + "\n"
+
+MOTIFS_INTERDITS_OPERATEUR = (r"\boracle\b",)
+
+# Substitut opératoire d'un paragraphe expurgé. Ne révèle pas l'oracle : dit
+# seulement à l'opérateur qu'il vient de heurter une décision qu'il n'est pas
+# autorisé à prendre, et lui donne la sortie prévue pour ce cas (AMBIGU_OPERATEUR
+# plutôt que deviner). Générique par construction : s'applique à tout motif
+# interdit présent, pas seulement au cas NOY005 qui l'a révélé.
+INSTRUCTION_NEUTRALISEE = (
+    "Si la décision requiert de savoir si le contenu déjà produit suffit au "
+    "regard d'un critère évaluatif volontairement masqué à l'opérateur, rends "
+    "AMBIGU_OPERATEUR plutôt que de supposer."
+)
+
+def expurge(texte, motifs=MOTIFS_INTERDITS_OPERATEUR):
+    """Remplace, paragraphe par paragraphe, tout passage citant un motif
+    interdit à l'opérateur aveugle (p. ex. « oracle ») par une instruction
+    opératoire neutralisée.
+
+    Une consigne opérateur autoritative peut, par construction, être rédigée
+    pour un opérateur humain qui connaît le test (ex. NOY005 : « si l'agent a
+    déjà produit assez d'éléments pour appliquer l'oracle »). Cette clause
+    reste vraie et inchangée dans la fiche ; elle n'est simplement jamais
+    transmise telle quelle à l'opérateur du harnais, qui doit rester aveugle à
+    l'oracle. La retirer sans rien mettre à la place ferait disparaître le
+    signal que cette décision existe ; le substitut neutre le préserve sans
+    révéler l'oracle. Ne modifie ni ne réécrit la fiche source : ne touche que
+    ce qui est recopié dans le dossier généré pour l'opérateur.
+    """
+    lignes = texte.split("\n")
+    fences = etats_fence(lignes)
+    paragraphes, courant, retires = [], [], []
+    for i, l in enumerate(lignes):
+        if l.strip() == "" and not fences[i]:
+            paragraphes.append(courant); courant = []
+        else:
+            courant.append(l)
+    paragraphes.append(courant)
+    gardes, neutralise_pose = [], False
+    for p in paragraphes:
+        bloc = "\n".join(p)
+        if any(re.search(m, bloc, re.I) for m in motifs):
+            retires.append(bloc)
+            if not neutralise_pose:
+                gardes.append(INSTRUCTION_NEUTRALISEE)
+                neutralise_pose = True
+            continue
+        gardes.append(bloc)
+    return "\n\n".join(g for g in gardes if g.strip()), retires
 
 def relance(lignes):
     """Extrait la relance neutre autorisée par la fiche, si elle en prévoit une."""
@@ -137,8 +209,20 @@ for scen, (fiche, titres, persona, fixture) in sorted(PLAN.items()):
 
         # Dossier de l'opérateur du harnais : liste blanche de sections, dans
         # l'ordre du document. Ni oracle, ni invariant, ni observables, ni
-        # verdict, ni résultat antérieur.
-        dossier = [x for x in (section(lignes, t) for t in AUTORISEES) if x]
+        # verdict, ni résultat antérieur. Une clause autoritative qui nommerait
+        # l'oracle à l'intérieur d'une section par ailleurs autorisée (ex.
+        # NOY005, « Consigne opérateur ») est retirée paragraphe par
+        # paragraphe par `expurge`, jamais dans la fiche source.
+        toutes_retirees = []
+        dossier = []
+        for t in AUTORISEES:
+            s = section(lignes, t)
+            if not s:
+                continue
+            garde, retirees = expurge(s)
+            if garde.strip():
+                dossier.append(garde)
+            toutes_retirees.extend((t, p) for p in retirees)
         vus, uniques = set(), []
         for bloc_txt in dossier:
             if bloc_txt not in vus:
@@ -146,8 +230,37 @@ for scen, (fiche, titres, persona, fixture) in sorted(PLAN.items()):
         io.open(os.path.join(d, "dossier_operateur.md"), "w", encoding="utf-8").write(
             "# Dossier opérateur — %s\n\nSections autorisées de %s, extraites par liste blanche.\n\n%s"
             % (scen, fiche, "\n".join(uniques)))
+        if toutes_retirees:
+            # Trace d'audit, jamais envoyée à l'opérateur ni à l'exécutant :
+            # ce que la génération a dû retirer d'une section par ailleurs
+            # autorisée, et pourquoi.
+            io.open(os.path.join(d, "redactions.txt"), "w", encoding="utf-8").write(
+                "REDACTIONS — %s\nParagraphes retirés du dossier opérateur car ils citent un motif "
+                "interdit à l'opérateur aveugle (%s).\nNE JAMAIS ENVOYER CE FICHIER À L'OPÉRATEUR NI À "
+                "L'EXÉCUTANT.\n\n%s"
+                % (scen, ", ".join(MOTIFS_INTERDITS_OPERATEUR),
+                   "\n\n".join("[%s]\n%s" % (t, p) for t, p in toutes_retirees)))
     meta = ["scenario=%s" % scen, "fiche=%s" % fiche, "tours=%d" % len(titres),
             "persona=%s" % (persona or ""), "fixture=%s" % (fixture[1] if fixture else "")]
     io.open(os.path.join(d, "meta.env"), "w", encoding="utf-8").write("\n".join(meta) + "\n")
     print("%-10s tours=%d persona=%-14s fixture=%-40s relance=%s" %
           (scen, len(titres), persona or "-", (fixture[1] if fixture else "-"), "oui" if r else "non"))
+
+# Contrôle automatique : les fences Markdown de chaque dossier_operateur.md
+# généré doivent être équilibrées. Un déséquilibre indique qu'une section a
+# été coupée au milieu d'un bloc de code cité (le défaut visé par cette
+# fonction de vérification).
+deseq = []
+for scen in sorted(PLAN):
+    chemin = os.path.join(KITS, scen, "dossier_operateur.md")
+    if not os.path.exists(chemin):
+        continue
+    n = io.open(chemin, encoding="utf-8").read().count("\n```")
+    if n % 2 != 0:
+        deseq.append((scen, n))
+if deseq:
+    sys.exit("FENCES DÉSÉQUILIBRÉES : %s" %
+             ", ".join("%s (%d fences)" % (s, n) for s, n in deseq))
+print("contrôle fences dossier_operateur.md : %d/%d équilibrées" %
+      (sum(1 for s in PLAN if os.path.exists(os.path.join(KITS, s, "dossier_operateur.md"))) - len(deseq),
+       sum(1 for s in PLAN if os.path.exists(os.path.join(KITS, s, "dossier_operateur.md")))))

@@ -15,7 +15,6 @@ Le locuteur est le **PERSONA-FORMATEUR-FPA** : un formateur en formation qui s'a
 Aucun PERSONA-WEB n'est injecté dans ce scénario.
 
 Le contenu reste dans le domaine naturel de cette persona : conception d'activité, fiche activité, livrable et critères de réussite.
-
 ## Consigne opérateur
 
 Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/formateur.md`.

@@ -11,7 +11,6 @@ Le locuteur est le développeur web intermédiaire lui-même. Il s'adresse direc
 Aucun PERSONA-FORMATEUR-FPA ne doit être injecté dans ce scénario.
 
 Le pattern Strategy reste cohérent avec le profil du persona : bases de la POO PHP acquises, mais montée en compétence sur des mécanismes de conception plus structurants.
-
 ## Fixture technique
 
 Avant le lancement du run, le workspace contient :
@@ -23,7 +22,15 @@ etat_des_paliers/apprenant-noy002.md
 avec le contenu initial exact :
 
 ```markdown
+# État des paliers — apprenant-noy002
 
+| Notion | Palier attesté | Preuve | Quand |
+|---|---|---|---|
+```
+
+La fixture ne contient initialement aucune attestation sur le pattern Strategy en PHP.
+
+Elle doit être recréée depuis cette version de référence avant le run et ne doit jamais être copiée depuis un workspace déjà exécuté.
 ## Consigne opérateur
 
 Utiliser un workspace neuf pour le run avec skill.

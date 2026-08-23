@@ -15,7 +15,6 @@ validation/personas/formateur.md
 Le locuteur est un formateur qui prépare une activité SQL évaluée et demande l’ensemble des éléments nécessaires pour la lancer, observer les productions et faire le retour final.
 
 Le stimulus établit certains prérequis afin que NOY010 n’ait pas pour objet de tester A3 ou le diagnostic initial.
-
 ### Si l’agent demande des informations supplémentaires
 
 L’opérateur répond à partir des informations déjà disponibles dans le scénario et le persona lorsque cela permet de poursuivre sans modifier l’objet du test.
@@ -29,7 +28,6 @@ Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponib
 ```
 
 Puis laisser l’agent poursuivre sa réponse.
-
 ## Consigne opérateur
 
 Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/formateur.md`.

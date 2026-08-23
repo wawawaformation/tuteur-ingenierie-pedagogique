@@ -13,7 +13,6 @@ validation/personas/formateur.md
 ```
 
 Le locuteur est un formateur qui demande un objet pédagogique directement exploitable.
-
 ## Consigne opérateur
 
 Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/formateur.md`.

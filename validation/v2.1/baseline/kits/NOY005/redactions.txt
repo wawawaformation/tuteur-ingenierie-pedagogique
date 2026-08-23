@@ -1,0 +1,6 @@
+REDACTIONS — NOY005
+Paragraphes retirés du dossier opérateur car ils citent un motif interdit à l'opérateur aveugle (\boracle\b).
+NE JAMAIS ENVOYER CE FICHIER À L'OPÉRATEUR NI À L'EXÉCUTANT.
+
+[## Consigne opérateur]
+Si l’agent pose une question après avoir déjà produit suffisamment d’éléments pour appliquer l’oracle, le run peut s’arrêter sans réponse supplémentaire.

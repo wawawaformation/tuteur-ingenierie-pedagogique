@@ -15,7 +15,15 @@ etat_des_paliers/apprenant-noy006.md
 Contenu initial exact :
 
 ```markdown
+# État des paliers — apprenant-noy006
 
+| Notion | Palier attesté | Preuve | Quand |
+|---|---|---|---|
+```
+
+La même fixture initiale doit être utilisée dans les deux conditions.
+
+La fixture doit être recréée depuis cette version de référence avant chaque run. Elle ne doit pas être copiée depuis un workspace déjà exécuté, car l'agent peut l'avoir modifiée.
 ## Consigne opérateur
 
 Utiliser un workspace neuf pour chaque condition. Recréer la fixture initiale depuis la version de référence ci-dessus et utiliser exactement le même prompt avec et sans skill.

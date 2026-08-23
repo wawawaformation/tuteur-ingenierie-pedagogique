@@ -13,7 +13,6 @@ validation/personas/formateur.md
 ```
 
 Le locuteur est un formateur qui demande à l’agent de lui présenter les gabarits d’activité disponibles et leurs contextes possibles d’utilisation.
-
 ### Si l’agent demande des informations supplémentaires
 
 L’opérateur répond à partir des informations déjà disponibles dans le scénario, le persona ou la fixture lorsqu’elles permettent de poursuivre sans modifier l’objet du test.
@@ -27,7 +26,6 @@ Je n'ai pas d'information supplémentaire. Poursuis avec les éléments disponib
 ```
 
 Puis laisser l’agent poursuivre sa réponse.
-
 ## Consigne opérateur
 
 Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/formateur.md`.

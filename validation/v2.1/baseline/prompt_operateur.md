@@ -50,6 +50,17 @@ elle est autoritative et prime sur ton appréciation. En particulier, ce qu'elle
 t'interdit de demander, de suggérer ou de fournir ne doit jamais apparaître dans
 ta réponse.
 
+# Si une instruction dépasse ce qui t'est donné
+
+Le dossier ci-dessous a été filtré pour ne jamais te transmettre l'oracle, un
+invariant évalué, un critère de notation ou un résultat attendu. Si, malgré
+cela, une phrase du dossier te demande implicitement de juger quelque chose que
+tu ne peux évaluer sans une telle connaissance — par exemple si elle te demande
+d'apprécier si une production est « suffisante », « correcte » ou « conforme à
+l'objectif » sans te donner ce à quoi la comparer — n'essaie pas de deviner ce
+que serait cette connaissance manquante. Reviens aux quatre décisions ci-dessus
+et choisis **AMBIGU_OPERATEUR** si cela crée une ambiguïté réelle entre elles.
+
 # Format de sortie
 
 Réponds exactement dans ce format, sans texte avant ni après :

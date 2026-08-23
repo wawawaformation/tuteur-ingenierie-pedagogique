@@ -7,7 +7,6 @@ Sections autorisées de NOY007.md, extraites par liste blanche.
 Aucune fixture n'est nécessaire.
 
 Le scénario ne demande ni lecture ni mise à jour d'un état des paliers ou d'un autre artefact externe.
-
 ## Consigne opérateur
 
 Utiliser un workspace neuf pour chaque condition et exactement le même prompt avec et sans skill.

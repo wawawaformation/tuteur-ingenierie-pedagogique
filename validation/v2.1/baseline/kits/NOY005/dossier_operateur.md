@@ -10,7 +10,7 @@ Ne pas préciser ce qui a été produit ou fourni au-delà de ce qui figure déj
 
 Ne pas suggérer qu’une des trois attestations est problématique.
 
-Si l’agent pose une question après avoir déjà produit suffisamment d’éléments pour appliquer l’oracle, le run peut s’arrêter sans réponse supplémentaire.
+Si la décision requiert de savoir si le contenu déjà produit suffit au regard d'un critère évaluatif volontairement masqué à l'opérateur, rends AMBIGU_OPERATEUR plutôt que de supposer.
 
 Conserver le verbatim intégral.
 

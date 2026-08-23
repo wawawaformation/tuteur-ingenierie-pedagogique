@@ -28,15 +28,21 @@ SID=$(cat "$RUN/session_id.txt")
 PERSONA=""
 [ -f "$RUN/workspace/persona.md" ] && PERSONA="$RUN/workspace/persona.md"
 
+# Retourne le code retour du tour. RC=0 : succès. RC=65 : intégrité du
+# candidat violée. Tout autre code non nul : incident technique — dans les
+# deux derniers cas, la décision d'arbitrage n'est PAS consignée comme
+# tranchée : elle reste à refaire, le tour n'a jamais réellement eu lieu.
 envoyer_tour() {
   "$REPO/scripts/run_isole.sh" tour "$RUN" "$1" "$SID" "$PERSONA" \
     > "$RUN/verbatim/relance_reponse.txt" 2> "$RUN/verbatim/relance_stderr.txt"
-  echo "$?" > "$RUN/verbatim/relance_rc.txt"
+  local rc=$?
+  echo "$rc" > "$RUN/verbatim/relance_rc.txt"
   # Les fixtures finales ont pu changer sous l'effet de ce tour.
   if [ -d "$RUN/fixtures_finales" ]; then
     ( cd "$RUN/workspace" && find etat_des_paliers -type f 2>/dev/null |
       while read -r f; do cp "$f" "$RUN/fixtures_finales/$f"; done )
   fi
+  return $rc
 }
 
 case "$DECISION" in
@@ -47,14 +53,24 @@ case "$DECISION" in
   ;;
 --envoyer)
   cp "$KIT/relance.txt" "$RUN/verbatim/relance_stimulus.txt"
-  envoyer_tour "$KIT/relance.txt"
+  envoyer_tour "$KIT/relance.txt"; RC_RELANCE=$?
+  if [ "$RC_RELANCE" -ne 0 ]; then
+    echo "INCIDENT (code $RC_RELANCE) pendant l'envoi de la relance — décision NON consignée." >&2
+    echo "Le scénario reste en attente ; relancer la commande une fois le problème diagnostiqué." >&2
+    exit 3
+  fi
   printf 'decision=RELANCE_NEUTRE (arbitrage humain)\n' > "$RUN/DECISION_OPERATEUR.txt"
   echo "relance neutre envoyée pour $SCEN"
   ;;
 --repondre)
   [ -n "$ARG" ] || { echo "--repondre exige un texte" >&2; exit 2; }
   printf '%s\n' "$ARG" > "$RUN/verbatim/relance_stimulus.txt"
-  envoyer_tour "$RUN/verbatim/relance_stimulus.txt"
+  envoyer_tour "$RUN/verbatim/relance_stimulus.txt"; RC_RELANCE=$?
+  if [ "$RC_RELANCE" -ne 0 ]; then
+    echo "INCIDENT (code $RC_RELANCE) pendant l'envoi de la réponse — décision NON consignée." >&2
+    echo "Le scénario reste en attente ; relancer la commande une fois le problème diagnostiqué." >&2
+    exit 3
+  fi
   printf 'decision=REPONDRE_AVEC_CONTEXTE (arbitrage humain)\ntexte=%s\n' "$ARG" > "$RUN/DECISION_OPERATEUR.txt"
   echo "réponse d'opérateur envoyée pour $SCEN"
   ;;
@@ -65,3 +81,9 @@ esac
 
 mv "$RUN/DECISION_OPERATEUR_REQUISE.md" "$RUN/DECISION_OPERATEUR_TRANCHEE.md"
 python3 "$REPO/scripts/extraire_fichiers_lus.py" "$RUN" > "$RUN/verbatim/fichiers_lus.txt" 2>/dev/null
+
+# Arbitrage effectivement tranché (aucun `exit` d'incident au-dessus n'a été
+# atteint) : le scénario est désormais terminé, au même titre qu'une collecte
+# résolue directement par run_baseline.sh. Réutilise le libellé déjà écrit
+# dans DECISION_OPERATEUR.txt plutôt que le nom du flag CLI.
+printf 'scenario=%s\n%s\n' "$SCEN" "$(head -1 "$RUN/DECISION_OPERATEUR.txt")" > "$RUN/COLLECTE_COMPLETE"

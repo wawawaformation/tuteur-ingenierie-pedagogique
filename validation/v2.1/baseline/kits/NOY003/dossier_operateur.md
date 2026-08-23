@@ -15,7 +15,6 @@ Le locuteur est le **PERSONA-WEB** : un développeur apprenant qui s'adresse dir
 Aucun persona formateur n'est injecté dans ce scénario.
 
 Le contenu reste dans le domaine naturel de cette persona : classes PHP, UML, injection de dépendances et méthode magique `__invoke()`.
-
 ## État initial des notions
 
 La fixture atteste :
@@ -28,7 +27,6 @@ Méthode magique PHP __invoke() : 0. Identifié
 ```
 
 Le scénario demande pourtant une seule activité évaluée mobilisant simultanément les trois notions non attestées.
-
 ## Fixture
 
 Le workspace fournit :
@@ -40,7 +38,19 @@ etat_des_paliers/apprenant-noy003.md
 avec le contenu initial exact :
 
 ```markdown
+# État des paliers — apprenant-noy003
 
+| Notion | Palier attesté | Preuve | Quand |
+|---|---|---|---|
+| Classes PHP simples : propriétés, méthodes, constructeur | 3. Appliquer | Exercices antérieurs réalisés seul ; classes fonctionnelles | Antérieur |
+| Diagramme de classes UML | 0. Identifié | Évoqué lors d'un point de vocabulaire | Antérieur |
+| Injection de dépendances par constructeur | 0. Identifié | Évoquée lors d'un point de vocabulaire | Antérieur |
+| Méthode magique PHP `__invoke()` | 0. Identifié | Évoquée lors d'un point de vocabulaire | Antérieur |
+```
+
+La fixture doit être recréée depuis cette version propre avant chaque run.
+
+Elle ne doit jamais être copiée depuis un workspace déjà exécuté.
 ## Consigne opérateur
 
 Utiliser un workspace neuf avec skill et injecter uniquement `validation/personas/apprenant.md`.

@@ -29,7 +29,15 @@ etat_des_paliers/apprenant-noy013.md
 Contenu initial exact :
 
 ```markdown
+# État des paliers — apprenant-noy013
 
+| Notion | Palier attesté | Preuve | Quand |
+|---|---|---|---|
+```
+
+La fixture initiale doit être recréée depuis cette version de référence avant le run.
+
+Elle ne doit pas être copiée depuis un workspace déjà exécuté.
 ## Consigne opérateur
 
 Utiliser un workspace neuf.

@@ -13,7 +13,13 @@ Le workspace contient un état initial vierge.
 ### `etat_des_paliers/apprenant-noy012_1.md`
 
 ```markdown
+# État des paliers — apprenant-noy012_1
 
+| Notion | Palier attesté | Fondement | Quand |
+|---|---|---|---|
+```
+
+La fixture doit être recréée depuis cet état avant chaque run.
 ## Consigne opérateur
 
 Utiliser un workspace neuf.

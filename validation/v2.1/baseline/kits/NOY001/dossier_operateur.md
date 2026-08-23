@@ -11,7 +11,6 @@ Le persona représente le développeur web intermédiaire qui s'adresse directem
 Aucun persona FORMATEUR-FPA ne doit être injecté dans ce scénario.
 
 Le locuteur des trois tours est le même développeur apprenant.
-
 ## Notion testée
 
 ```text
@@ -19,7 +18,6 @@ Injection de dépendances par constructeur en PHP
 ```
 
 Cette notion reste cohérente avec le profil du persona : bases de la programmation orientée objet acquises, mais architecture logicielle non supposée maîtrisée.
-
 ## Fixture
 
 Le run fournit un état des paliers propre à l'apprenant.
@@ -33,7 +31,15 @@ etat_des_paliers/apprenant-noy001.md
 Contenu initial :
 
 ```markdown
+# État des paliers — apprenant-noy001
 
+| Notion | Palier attesté | Preuve | Quand |
+|---|---|---|---|
+```
+
+La fixture initiale doit être recréée depuis cette version de référence avant chaque condition.
+
+Elle ne doit pas être copiée depuis un workspace déjà exécuté.
 ## Consigne opérateur
 
 Utiliser un workspace neuf pour le run avec skill.
