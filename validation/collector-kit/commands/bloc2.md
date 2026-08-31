@@ -25,7 +25,7 @@ Le nom du skill a déjà été enregistré lors du `start` du Bloc 1 ; il n’a 
 ## Commandes
 
 ```bash
-python3 /projets/skill/tuteur-ingenierie-pedagogique/validation/collector-kit/collect_run.py collect \
+python3 /projets/skill/tuteur-ingenierie-pedagogique-v2/validation/collector-kit/collect_run.py collect \
   --run-id RUN-ID \
   --output-root /projets/skill/tests/runs
 

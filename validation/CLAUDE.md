@@ -54,4 +54,22 @@ Ne pas les modifier pour refléter le candidat courant. Une nouvelle version doi
 
 Les workspaces et traces d'exécution peuvent vivre hors du dépôt lorsque la procédure le prévoit. Le dépôt doit conserver les artefacts pérennes nécessaires à la compréhension, à l'audit et à la reproductibilité.
 
-Les dry runs et runs de validation utilisent une session Linux dédiée (`claude-test`), systématiquement réinitialisée, pour garantir un workspace neuf et une fixture non contaminée.
+Les dry runs et runs de validation exécutés via `collector-kit` utilisent une session Linux dédiée (`claude-test`), systématiquement réinitialisée, pour garantir un workspace neuf et une fixture non contaminée.
+
+Cette convention ne s'applique pas au harnais de baseline comportementale (`scripts/run_baseline.sh` et `scripts/run_isole.sh`, `validation/v2.1/baseline/`) : celui-ci s'exécute **sous le compte `david`**, avec sa propre isolation par run (`CLAUDE_CONFIG_DIR` dédié, candidat en lecture seule avec empreinte SHA-256), indépendante du compte système. Ne pas tenter de le faire tourner sous `claude-test` sans revoir ses dépendances (binaire figé et identifiants sous `/home/david/`).
+
+### Transfert des artefacts depuis `claude-test` (runs via `collector-kit`)
+
+`claude-test` et `david` ne partagent aucun accès direct : `/home/claude-test` est en `drwxr-x---` (david ne peut pas y lire) et `/projets/skill/tests/` appartient à david sans écriture pour les autres (claude-test ne peut pas y écrire).
+
+Le transfert passe donc par un point de dépôt neutre :
+
+```text
+/projets/tests/inbox     (drwxrwxrwt, sticky)
+```
+
+- les runs et la collecte s'exécutent **entièrement sous `claude-test`** : `collect_run.py` doit être lancé par ce compte pour que `--claude-root` (`~/.claude/projects` par défaut) pointe sur la bonne trace de session ;
+- `--output-root` et `--prompt-file` sont dirigés vers l'espace de `claude-test`, jamais vers `/projets/skill/tests/` ;
+- `claude-test` **dépose** les archives de run dans `inbox/` ; david les classe ensuite dans `/projets/skill/tests/archives/`.
+
+Ne pas résoudre ce cloisonnement en ajoutant david au groupe `claude-test` : l'isolation entre le compte de test et le compte de travail fait partie du dispositif.

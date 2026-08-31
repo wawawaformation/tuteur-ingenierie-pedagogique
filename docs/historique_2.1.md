@@ -4,6 +4,15 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-08-31 — Environnement d'exécution `claude-test` (collector-kit) et correction du collector
+
+Concerne uniquement les runs exécutés via `collector-kit` (utilisé pour les dry-runs NOY012/NOY013). **Sans effet sur le harnais de baseline** (`scripts/run_baseline.sh`), qui reste sous le compte `david` avec sa propre isolation par run — voir entrée « Lot 0 » ci-dessous. Aucun run lancé dans ce lot.
+
+- `validation/collector-kit/commands/bloc1.md` et `bloc2.md` : correction de 3 chemins obsolètes vers `collect_run.py` (`/projets/skill/tuteur-ingenierie-pedagogique/` → `…-v2/`). Le chemin cité n'existait pas : l'opérateur aurait échoué dès la première commande du bloc 1.
+- `validation/CLAUDE.md`, section « Données lourdes » : documentation du transfert des artefacts depuis `claude-test` pour les runs `collector-kit`, avec rappel explicite que le harnais de baseline n'est pas concerné. Les comptes `claude-test`/`david` sont cloisonnés (`/home/claude-test` en `drwxr-x---`, `/projets/skill/tests/` non inscriptible par `claude-test`), donc ni pull ni push direct n'est possible. Le transfert passe par un point de dépôt neutre `/projets/tests/inbox` (sticky) : `claude-test` dépose, `david` classe dans `archives/`. Décision explicite de ne pas fusionner les groupes, l'isolation faisant partie du dispositif.
+- Précisé que `collect_run.py` doit tourner sous `claude-test` pour que `--claude-root` (défaut `~/.claude/projects`) pointe sur la bonne trace de session, et que `--output-root` / `--prompt-file` visent l'espace de `claude-test`.
+- Rien ajouté au collector-kit lui-même : son `CLAUDE.md` interdit d'y introduire une règle propre à ce skill lorsqu'elle peut rester dans le protocole de campagne.
+
 ## 2026-08-23 — Lot 0 : durcissement du harnais de baseline (deux tours de revue)
 
 Deux tours de revue du harnais de baseline (`scripts/run_baseline.sh`, `scripts/relance_operateur.sh`, `scripts/generer_kits_baseline.py`), avant tout lancement officiel. **Aucun run de baseline exécuté. `en_cours/` et les 16 fiches NOY strictement inchangés.**

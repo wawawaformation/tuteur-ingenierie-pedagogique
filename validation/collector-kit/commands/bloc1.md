@@ -48,7 +48,7 @@ EOF
 
 cd /projets/skill/tests/tests_avec_skill_A
 
-python3 /projets/skill/tuteur-ingenierie-pedagogique/validation/collector-kit/collect_run.py start \
+python3 /projets/skill/tuteur-ingenierie-pedagogique-v2/validation/collector-kit/collect_run.py start \
   --run-id RUN-ID \
   --scenario-id SCENARIO-ID \
   --condition skill \
@@ -76,7 +76,7 @@ EOF
 
 cd /projets/skill/tests/tests_sans_skill_B
 
-python3 /projets/skill/tuteur-ingenierie-pedagogique/validation/collector-kit/collect_run.py start \
+python3 /projets/skill/tuteur-ingenierie-pedagogique-v2/validation/collector-kit/collect_run.py start \
   --run-id RUN-ID \
   --scenario-id SCENARIO-ID \
   --condition no-skill \
