@@ -4,7 +4,7 @@ objectif: "Structurer une fiche de Séquence : articulation entre activités, sa
 
 # GABARIT : Fiche de Séquence
 
-**Les activités évaluées organisées dans la Séquence sont soumises aux garde-fous applicables de `taxonomie.md` §2.**
+**Les activités évaluées organisées dans la Séquence sont soumises aux garde-fous applicables de `activite_evaluee.md`.**
 Niveau 2 du découpage (`decoupage_pedagogique.md` §0). Sa durée dépend du contexte de formation et des activités qu'elle articule ; elle ne définit pas le niveau Séquence.
 
 La fiche de Séquence liste des **intentions et des articulations**. Elle ne contient pas le texte des activités : c'est le piège principal de ce niveau, et il produit des documents illisibles de 40 pages.
@@ -39,6 +39,6 @@ Une activité longue ou en plusieurs étapes peut se dérouler dans une seule S�
 ## Contrôles avant de livrer la fiche
 
 1. **Progression sur l'ensemble** : les paliers visés par les activités montent globalement (`taxonomie.md` §1). Un plateau est acceptable, un retour en arrière non signalé ne l'est pas.
-2. **Budget de nouveauté activité par activité** (`taxonomie.md` §2, clause A3), pas seulement au niveau de la séquence : c'est là que le défaut se cache.
+2. **Budget de nouveauté activité par activité** (`activite_evaluee.md`, clause A3), pas seulement au niveau de la séquence : c'est là que le défaut se cache.
 3. **Alignement** : chaque objectif du point 3 est bien travaillé par au moins une activité et vérifié par au moins un critère (`opo.md` §2). Un objectif listé mais jamais évalué est un objectif décoratif.
 4. **Granularité respectée** : aucun énoncé d'activité, aucun code, aucun minutage dans cette fiche.

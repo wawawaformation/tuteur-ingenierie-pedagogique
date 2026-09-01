@@ -16,7 +16,7 @@ Le Recul est une **Activité réflexive**. Il amène l'apprenant à revenir sur 
 
 Il ne vise pas en priorité la production d'un nouvel artefact technique. La production attendue est plutôt une **trace de réflexivité** : écrite, orale ou sous une autre forme adaptée au contexte.
 
-**Lorsque ce Recul est utilisé comme activité évaluée au sens de `../taxonomie.md` §2, les garde-fous correspondants s'appliquent.**
+**Lorsque ce Recul est utilisé comme activité évaluée au sens de `../activite_evaluee.md`, les garde-fous correspondants s'appliquent.**
 
 ## Intention / objectif
 
@@ -114,7 +114,7 @@ Par exemple, selon l'objectif visé, observer si l'apprenant parvient à :
 
 Ne pas évaluer la « qualité de l'introspection » de manière vague ou subjective.
 
-Pour toute notation ou quantification, appliquer `../taxonomie.md` §2, clause A4.
+Pour toute notation ou quantification, appliquer `../activite_evaluee.md`, clause A4.
 
 ## Usages autour d'un jury ou d'un livrable
 

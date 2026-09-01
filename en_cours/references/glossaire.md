@@ -217,7 +217,7 @@ Les termes employés peuvent varier selon les référentiels ; conserver leur vo
 
 Attribution d'une note, de points ou d'un score à une performance. C'est une modalité possible de restitution d'une évaluation, pas l'évaluation elle-même.
 
-Pour les règles opérationnelles de quantification du skill, voir `taxonomie.md` §2, clause A4.
+Pour les règles opérationnelles de quantification du skill, voir `activite_evaluee.md`, clause A4.
 
 ### Feedback
 

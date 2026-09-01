@@ -29,6 +29,7 @@ Le runtime comprend notamment :
 SKILL.md
 references/
 ├── activite.md
+├── activite_evaluee.md
 ├── activites_type/
 │   ├── atelier.md
 │   ├── brique.md
@@ -39,6 +40,7 @@ references/
 ├── etat_des_paliers.md
 ├── glossaire.md
 ├── opo.md
+├── production_documentaire.md
 ├── seance.md
 ├── sequence.md
 ├── syllabus.md

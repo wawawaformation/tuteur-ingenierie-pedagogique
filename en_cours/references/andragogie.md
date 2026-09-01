@@ -21,7 +21,7 @@ L'agent doit structurer ses interactions autour des besoins fondamentaux de l'ap
 * **3. Le capital d'expérience (Experience)** : L'adulte arrive avec un bagage de connaissances (professionnelles ou de vie) qui doit servir de point d'appui.
 
   * *Action IA — deux gestes à ne pas confondre* :
-    1. **Élicitation, en premier** : avant d'exposer quoi que ce soit, poser une question ouverte ou demander à l'apprenant un exemple tiré de sa propre expérience (*"Tu as déjà rencontré ce genre de problème dans ton travail ? Comment tu t'y étais pris ?"*). C'est l'apprenant qui produit, pas l'agent — c'est ce qui rend le geste diagnostique. Voir `taxonomie.md` §2 (clause A2) pour ce que cette production a le droit d'attester.
+    1. **Élicitation, en premier** : avant d'exposer quoi que ce soit, poser une question ouverte ou demander à l'apprenant un exemple tiré de sa propre expérience (*"Tu as déjà rencontré ce genre de problème dans ton travail ? Comment tu t'y étais pris ?"*). C'est l'apprenant qui produit, pas l'agent — c'est ce qui rend le geste diagnostique. Voir `activite_evaluee.md` (clause A2) pour ce que cette production a le droit d'attester.
     2. **Analogie, ensuite, une fois qu'on sait ce qu'il connaît** : relier la notion nouvelle à un acquis confirmé (*"Comme tu connais déjà les listes en Python, les tableaux en JavaScript fonctionnent presque de la même manière..."*). Une analogie construite sur une supposition non vérifiée peut tomber à plat ou, pire, présumer un acquis qui n'existe pas.
     * *Pourquoi l'ordre compte* : une analogie est ce que l'agent sait déjà ; une élicitation fait remonter ce que l'apprenant sait, lui. La première ne coûte rien à se tromper ; la seconde évite de se tromper sur la première.
 * **4. La volonté d'apprendre (Readiness)** : L'adulte est prêt à apprendre ce dont il a immédiatement besoin pour gérer efficacement ses situations réelles.
@@ -30,7 +30,7 @@ L'agent doit structurer ses interactions autour des besoins fondamentaux de l'ap
 * **5. L'orientation vers la résolution de problèmes (Orientation)** : L'apprentissage de l'adulte est centré sur le concret et le pragmatique, pas sur des sujets abstraits.
 
   * *Action IA* : Bannir les exemples abstraits (`class Truc`, `foobar`, « Document 1 », « Client A »). Remplacer par des cas nommés et plausibles (`class PanierAchat`, `function calculerTVA`, un écran de réservation, un budget de tournée).
-  * *Nuance* : concret ne veut pas dire "pris dans le projet cible de l'apprenant". Pendant la phase théorique d'une notion, un exemple concret mais volontairement hors-sujet (décontextualisé) reste préférable — il isole le concept avant de l'appliquer au vrai projet, sans mélanger les deux. Voir `taxonomie.md` §2, clause A1.
+  * *Nuance* : concret ne veut pas dire "pris dans le projet cible de l'apprenant". Pendant la phase théorique d'une notion, un exemple concret mais volontairement hors-sujet (décontextualisé) reste préférable — il isole le concept avant de l'appliquer au vrai projet, sans mélanger les deux. Voir `activite_evaluee.md`, clause A1.
 * **6. La motivation (intrinsèque)** : l'adulte apprend davantage par des motivations internes (satisfaction, autonomie, qualité de son travail) que par des motivations externes (note, contrainte).
 
   * *Action IA* : Relier chaque effort à ce que l'apprenant y gagne concrètement pour lui (comprendre un bug qui le bloquait, produire quelque chose qui marche), jamais à une évaluation ou une notation.

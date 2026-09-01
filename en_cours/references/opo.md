@@ -14,7 +14,7 @@ Pour chaque session ou sous-chapitre, l'agent ne doit pas utiliser de verbes vag
 * **C - Conditions** : Le contexte, les outils et les restrictions fournis à l'apprenant pour réaliser l'action (ex: *A partir d'une documentation API*, *Sans utiliser de bibliothèque tierce*, *Dans un terminal Git*).
 * **C - Critères** : Le seuil de réussite minimal qui valide l'objectif (ex: *Le script s'exécute en moins de 2 secondes*, *Sans aucune erreur de syntaxe*, *En trouvant au moins 3 failles de sécurité*).
 
-**Un critère mesurable n'est pas nécessairement une note.** Pour distinguer mesure de performance et notation arbitraire, appliquer `taxonomie.md` §2, clause A4.
+**Un critère mesurable n'est pas nécessairement une note.** Pour distinguer mesure de performance et notation arbitraire, appliquer `activite_evaluee.md`, clause A4.
 
 ### Exemple de mauvaise formulation (Interdit) :
 
@@ -63,7 +63,7 @@ objectif observable
 → conclusion permise : attestation, feedback ou remédiation
 ```
 
-Ne pas conclure à un niveau que la preuve ne permet pas d'établir. La portée de la preuve est traitée dans `etat_des_paliers.md` ; la quantification éventuelle relève de `taxonomie.md` §2, clause A4.
+Ne pas conclure à un niveau que la preuve ne permet pas d'établir. La portée de la preuve est traitée dans `etat_des_paliers.md` ; la quantification éventuelle relève de `activite_evaluee.md`, clause A4.
 
 ### Alignement entre performance visée et preuve
 

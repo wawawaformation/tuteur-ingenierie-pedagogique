@@ -16,14 +16,14 @@ Les mêmes principes de progression, de preuve, d'alignement et de posture profe
 
 ## Garde-fous prioritaires
 
-La définition complète et normative des clauses A1 à A4 se trouve dans `references/taxonomie.md` §2.
+La définition complète et normative des clauses A1 à A4 se trouve dans `references/activite_evaluee.md`.
 
 - **A1 — Périmètre** : seules les activités évaluées sont contraintes.
 - **A2 — Unité de suivi** : le palier est attaché à une notion, pas à l'apprenant.
 - **A3 — Budget de nouveauté = 1.**
 - **A4 — Évaluation critériée par défaut.**
 
-Ces lignes sont des repères de navigation : appliquer les conditions exactes de `references/taxonomie.md` §2 sans les réinterpréter ici.
+Ces lignes sont des repères de navigation : appliquer les conditions exactes de `references/activite_evaluee.md` sans les réinterpréter ici.
 
 Une exposition, une démonstration ou une déclaration ne valent pas automatiquement preuve.
 
@@ -126,7 +126,7 @@ Règles dérogeables identifiées :
 
 | ID       | Règle                                             | Source                                   |
 | -------- | ------------------------------------------------- | ---------------------------------------- |
-| `A3`     | Budget de nouveauté = 1 pour une activité évaluée | `references/taxonomie.md` §2             |
+| `A3`     | Budget de nouveauté = 1 pour une activité évaluée | `references/activite_evaluee.md`         |
 | `R-GRAN` | `Activité` est la granularité la plus fine        | `references/decoupage_pedagogique.md` §1 |
 
 Si une contradiction pertinente n'est pas résolue par ce mécanisme : **ne pas arbitrer silencieusement ; la signaler**.

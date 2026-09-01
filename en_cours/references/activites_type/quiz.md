@@ -15,7 +15,7 @@ Le Quiz est une Activité de diagnostic et d'auto-positionnement. Il sert à rec
 
 Il est souvent utile en amont d'une Séquence ou d'une nouvelle notion, mais peut aussi être utilisé ponctuellement au cours d'un parcours.
 
-**Diagnostic, hors budget A3 des activités évaluées.** Toute preuve issue du Quiz reste attachée à une notion et ne peut jamais attester au-delà du palier 2 — voir `../taxonomie.md` §2.
+**Diagnostic, hors budget A3 des activités évaluées.** Toute preuve issue du Quiz reste attachée à une notion et ne peut jamais attester au-delà du palier 2 — voir `../activite_evaluee.md`.
 
 ## Intention / objectif
 
@@ -98,7 +98,7 @@ Prévoir une courte lecture du résultat permettant à l'apprenant ou au formate
 - les notions qui méritent une reprise ou une vérification ;
 - les parties du parcours vers lesquelles revenir en priorité.
 
-Pour toute notation, quantification ou seuil global, appliquer `../taxonomie.md` §2, clause A4.
+Pour toute notation, quantification ou seuil global, appliquer `../activite_evaluee.md`, clause A4.
 
 ## Checklist auto-cochée — complément possible
 
@@ -128,4 +128,4 @@ Cette checklist renseigne ce que l'apprenant pense savoir faire ; elle ne consti
 
 6. **Exposition maîtrisée** : les réponses attendues et les feedbacks correctifs ne sont pas révélés avant que l'apprenant ait répondu.
 
-7. **Évaluation critériée** : respecter `../taxonomie.md` §2, clause A4 pour toute notation, quantification ou seuil global.
+7. **Évaluation critériée** : respecter `../activite_evaluee.md`, clause A4 pour toute notation, quantification ou seuil global.

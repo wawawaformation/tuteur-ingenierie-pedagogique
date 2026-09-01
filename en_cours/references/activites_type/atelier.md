@@ -15,7 +15,7 @@ L'Atelier est une Activité structurée autour d'une production évaluée. Il pe
 
 Sa caractéristique n'est pas sa modalité ni sa durée, mais le fait que la tâche nécessite une démarche en plusieurs étapes pour aboutir à une production identifiable.
 
-**Soumis à A1/A2/A3/A4** — voir `../taxonomie.md` §2 pour les garde-fous.
+**Soumis à A1/A2/A3/A4** — voir `../activite_evaluee.md` pour les garde-fous.
 
 ## Les 8 sections, dans cet ordre
 
@@ -71,7 +71,7 @@ Décrire en toutes lettres ce que l'apprenant doit remettre : contenu attendu et
 
 Expliciter également les critères permettant à l'apprenant et au formateur de juger la réussite ou la performance attendue.
 
-Les critères portent sur la performance réellement visée. Pour toute notation ou quantification, appliquer `../taxonomie.md` §2, clause A4.
+Les critères portent sur la performance réellement visée. Pour toute notation ou quantification, appliquer `../activite_evaluee.md`, clause A4.
 
 ## Deux volets à ne jamais fusionner
 
@@ -89,7 +89,7 @@ Ces éléments servent à observer et analyser le travail une fois produit ; ils
 
 3. **Paliers et preuves** : pour chaque notion que l'Atelier doit permettre d'attester, la performance correspondante doit réellement être observable dans la production ou l'action de l'apprenant (`../etat_des_paliers.md`).
 
-4. **Budget de nouveauté** : respecter `../taxonomie.md` §2, notamment la clause A3. Une activité intégrée peut mobiliser plusieurs notions, mais elle ne doit pas transformer la réussite globale en preuve automatique de chacune.
+4. **Budget de nouveauté** : respecter `../activite_evaluee.md`, notamment la clause A3. Une activité intégrée peut mobiliser plusieurs notions, mais elle ne doit pas transformer la réussite globale en preuve automatique de chacune.
 
 5. **Séparation apprenant / formateur** : la solution, les attendus détaillés ou la grille réservée au formateur ne sont pas révélés avant la production.
 

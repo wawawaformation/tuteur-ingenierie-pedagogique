@@ -176,7 +176,7 @@ Il n’a pas de palier propre : la valeur de preuve dépend de la performance r�
 
 ## Garde-fous du noyau
 
-Les conditions exactes sont définies dans `references/taxonomie.md`.
+Les conditions exactes sont définies dans `references/activite_evaluee.md`.
 
 Le noyau utilise notamment quatre repères :
 
@@ -187,7 +187,7 @@ A3 — Budget de nouveauté = 1
 A4 — Pas de notation arbitraire
 ```
 
-Ces intitulés sont des repères de navigation. La formulation normative complète reste celle de `references/taxonomie.md`.
+Ces intitulés sont des repères de navigation. La formulation normative complète reste celle de `references/activite_evaluee.md`.
 
 Autres principes importants :
 
@@ -205,6 +205,7 @@ Autres principes importants :
 SKILL.md
 references/
 ├── activite.md
+├── activite_evaluee.md
 ├── activites_type/
 │   ├── atelier.md
 │   ├── brique.md
@@ -215,6 +216,7 @@ references/
 ├── etat_des_paliers.md
 ├── glossaire.md
 ├── opo.md
+├── production_documentaire.md
 ├── seance.md
 ├── sequence.md
 ├── syllabus.md
@@ -224,7 +226,8 @@ references/
 Rôles principaux :
 
 - `SKILL.md` : orchestration et garde-fous prioritaires ;
-- `taxonomie.md` : règles normatives A1 à A4 ;
+- `taxonomie.md` : échelle des paliers cognitifs ;
+- `activite_evaluee.md` : règles normatives A1 à A4 ;
 - `etat_des_paliers.md` : suivi notion / palier / preuve ;
 - `opo.md` : objectifs pédagogiques opérationnels ;
 - `decoupage_pedagogique.md` : granularité et articulation des niveaux ;

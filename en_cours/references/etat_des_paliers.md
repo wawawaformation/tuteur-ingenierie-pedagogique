@@ -4,7 +4,7 @@ objectif: "Donner le format de la trace qui rend vérifiables les clauses A2 et 
 
 # GABARIT : État des paliers
 
-La clause A2 (`taxonomie.md` §2) impose de tenir une trace de ce qui est attesté, sinon « formellement validé » redevient une impression. Ce fichier en donne le format. Ce n'est pas un document pédagogique remis à qui que ce soit : c'est l'artefact de suivi qui rend les clauses A2 et A3 calculables.
+La clause A2 (`activite_evaluee.md`) impose de tenir une trace de ce qui est attesté, sinon « formellement validé » redevient une impression. Ce fichier en donne le format. Ce n'est pas un document pédagogique remis à qui que ce soit : c'est l'artefact de suivi qui rend les clauses A2 et A3 calculables.
 
 ## Format
 
@@ -133,11 +133,11 @@ Une attestation explicite `notion X + palier N` ne vaut que pour cette notion et
 
 ## Ce que ce tableau sert à calculer
 
-Avant chaque activité évaluée : lister les notions mobilisées, lire leur palier ici, compter celles qui sont sous le palier requis. Le seuil applicable est celui de la clause A3 (`taxonomie.md` §2). Sans ce tableau, ce comptage est impossible.
+Avant chaque activité évaluée : lister les notions mobilisées, lire leur palier ici, compter celles qui sont sous le palier requis. Le seuil applicable est celui de la clause A3 (`activite_evaluee.md`). Sans ce tableau, ce comptage est impossible.
 
 ## Persistance entre sessions
 
-Le format ci-dessus vit dans la conversation. Sans protocole, il disparaît à la fin de la session — exactement le défaut que la clause A2 (`taxonomie.md` §2) interdit de tolérer. Le protocole suivant s'applique quand l'agent tourne dans un environnement avec accès fichiers (Claude Code, un projet local) ; en environnement purement conversationnel sans accès fichiers, ce protocole ne s'applique pas et la limite reste réelle (voir dernier point).
+Le format ci-dessus vit dans la conversation. Sans protocole, il disparaît à la fin de la session — exactement le défaut que la clause A2 (`activite_evaluee.md`) interdit de tolérer. Le protocole suivant s'applique quand l'agent tourne dans un environnement avec accès fichiers (Claude Code, un projet local) ; en environnement purement conversationnel sans accès fichiers, ce protocole ne s'applique pas et la limite reste réelle (voir dernier point).
 
 ### Convention de fichier
 

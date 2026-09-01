@@ -4,6 +4,18 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Lot D : split de `taxonomie.md` en échelle + garde-fous A1-A4 (étapes D.1-D.5)
+
+Exécution du LOT D de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md` (P3), débloqué par la levée de la décision D2 (correction de la borne de périmètre du même jour). Doctrine inchangée, relocalisation uniquement.
+
+- Nouveau `en_cours/references/activite_evaluee.md` : clauses A1-A4 (garde-fous des activités évaluées), copiées sans reformulation depuis l'ancien §2 de `taxonomie.md`. `taxonomie.md` ne garde que l'échelle des paliers (§1) et pointe vers le nouveau fichier.
+- **Écart signalé avant exécution** : le plan annonçait 8 renvois sur 7 fichiers ; la mesure réelle était de 27 occurrences sur 12 fichiers (SKILL.md + 11 références). Signalé à l'utilisateur, qui a choisi d'exécuter au périmètre réel plutôt que de reporter à nouveau.
+- **Bug détecté et corrigé en cours d'exécution** : la première passe n'avait pas supprimé le contenu A1-A4 de `taxonomie.md`, le dupliquant temporairement avec le nouveau fichier. Détecté par grep et par CS8 avant tout contrôle ou run comportemental ; corrigé avant tout verdict.
+- `en_cours/CLAUDE.md` et `en_cours/README.md` (hors runtime, non chargés par `run_isole.sh`) mis à jour par cohérence directe — leur description de `taxonomie.md` devenait fausse suite au déplacement.
+- Contrôle D.4 : 0 renvoi orphelin, 28 occurrences de `activite_evaluee.md`. CS8 conforme à l'état pré-lot, CS9 OK. CS7 (« ancrages taxonomie.md §2 ») retombe à 0 par construction — attendu, ce contrôle datait d'avant le Lot D et est remplacé par D.4 sur cet axe.
+- **Non-régression complète (D.5) : 14/14 PASS + C0 conforme**, aucune régression. Vigilance spécifique sur les 6 scénarios mobilisant A1-A4 (NOY001/002/003/005/006/007) : tous confirmés s'appuyer correctement sur le contenu relocalisé.
+- Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_LOT_D_V2.1_2026-09-01.md`.
+
 ## 2026-09-01 — Cosmétique : README à jour, renumérotation P01-P03 de la promesse
 
 - `README.md` : `en_cours/` disait « candidat V3 », corrigé en « candidat V2.1 » (VERSION/CLAUDE.md faisaient déjà foi). Mention d'un dossier racine `stable/` inexistant retirée (structure + flux de publication).

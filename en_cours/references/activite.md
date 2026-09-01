@@ -91,4 +91,4 @@ Ces critères portent sur ce que l'activité cherche réellement à faire observ
 
 Lorsque l'activité est évaluée, les critères de réussite / performance restent explicites pour l'apprenant. En revanche, ne pas révéler avant sa production les attendus détaillés réservés à la correction, une production de référence qui donnerait la solution ni les éléments de correction.
 
-Pour toute notation ou quantification, appliquer `taxonomie.md` §2, clause A4.
+Pour toute notation ou quantification, appliquer `activite_evaluee.md`, clause A4.
