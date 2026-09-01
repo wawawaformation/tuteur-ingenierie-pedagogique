@@ -4,6 +4,14 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Baseline comportementale V2.1 exécutée et scorée (lot 0, étapes 0.4-0.9)
+
+`./scripts/run_baseline.sh` lancé sous `david` : 15 runs (C0 + 14 NOY, `NOY014_1`/`NOY014_2` hors baseline) joués dans des copies isolées avec relance opérateur Sonnet aveugle, tous `COLLECTE_COMPLETE`, aucune anomalie, aucun scénario suspendu. `en_cours/` vérifié strictement identique à HEAD (`01e9ca1`) avant et après.
+
+Scoring effectué manuellement (étape 0.7) contre les oracles de `validation/v2.1/non_regression/` : **14/14 PASS + C0 conforme**, aucun rerun nécessaire (étape 0.8 sans objet). `NOY012_2` — le scénario que l'implémentation M1-M7 de l'attestation formateur visait spécifiquement à corriger — confirmé PASS, sans régression sur les scénarios voisins à risque (`NOY001`, `NOY006`, `NOY012_1`).
+
+Ajout de `docs/v2.1/RAPPORT_BASELINE_COMPORTEMENTALE_V2.1_2026-09-01.md` (étape 0.9) : commit et intégrité de `en_cours/`, SHA-256 des 15 copies isolées (identiques entre elles et à `en_cours/`), verbatim complet et clause d'oracle appliquée pour chacun des 15 runs, statut « run de référence » pour l'ensemble (environnement `david`/`CLAUDE_CONFIG_DIR` isolé, distinct de la session de développement), rappel du motif de suspension de `NOY014` (R1-b, R1-e), aucune dette d'instrumentation majeure constatée. Ce rapport remplace `RAPPORT_DRYRUN_V2.1_PRE_REFACTORISATION_2026-08-23.md` comme référence de non-régression pour les lots suivants.
+
 ## 2026-08-31 — Environnement d'exécution `claude-test` (collector-kit) et correction du collector
 
 Concerne uniquement les runs exécutés via `collector-kit` (utilisé pour les dry-runs NOY012/NOY013). **Sans effet sur le harnais de baseline** (`scripts/run_baseline.sh`), qui reste sous le compte `david` avec sa propre isolation par run — voir entrée « Lot 0 » ci-dessous. Aucun run lancé dans ce lot.
