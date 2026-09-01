@@ -1,5 +1,9 @@
 # Tuteur & ingénierie pédagogique
 
+<img src="docs/assets/koabana-logo.svg" alt="Koabana" width="64" />
+
+*Koabana — les acquis en action, les preuves à l'appui.*
+
 > **La version publique recommandée se trouve dans [`dist/stable/`](dist/stable/).**
 >
 > Elle correspond toujours à la dernière version ayant terminé son cycle de validation.
