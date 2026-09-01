@@ -1,5 +1,5 @@
 ---
-perimetre: MOCK-GRANULARITE
+deroge_a: [R-GRAN]
 ---
 
 # Référence spécialisée de test — MOCK-GRANULARITE

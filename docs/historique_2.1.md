@@ -4,6 +4,17 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Chantier §9 : instrumentation NOY014 — mécanisme partiellement démontré, un FAIL réel identifié
+
+Exécution du chantier §9 de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md` (instrument seul, **aucun fichier de `en_cours/` modifié**). Plan préalable : `docs/v2.1/PLAN_CHANTIER_NOY014_V2.1_2026-09-01.md`.
+
+- Fixtures `mock_sans_derogation.md`/`mock_avec_derogation.md` réinstrumentées sur le mécanisme front matter (`perimetre:`/`deroge_a:`), corps de texte rendus strictement identiques. 3 nouvelles fixtures ajoutées (déclarations invalides ×2, périmètre neutre). Nouveau `CONTROLES_COMPLEMENTAIRES_NOY014.md`.
+- Nouveau wrapper technique `tmp/run_check_noy014.sh` (non versionné) : injecte `references/mock.md` dans le skill isolé et recalcule le manifeste SHA-256, sans modifier `run_isole.sh` (recette figée).
+- **6 runs joués : 5 PASS/conforme, 1 FAIL.** PASS : NOY014_1 (sans dérogation → noyau, après relance), NOY014_2 (dérogation valide → règle spécialisée appliquée), C0-bis (périmètre neutre → comportement inchangé), les deux déclarations invalides (aucune dérogation, noyau tient). Anti-gate (relecture NOY009) conforme.
+- **FAIL sur le contrôle de non-extension hors périmètre (D3)** : une dérogation valide de `mock.md` s'est appliquée à une tâche ne mentionnant pas son périmètre déclaré. Le mécanisme de préséance posé au Lot B fonctionne sur les branches déjà couvertes mais **ne borne pas encore effectivement une dérogation à son périmètre**. Aucune correction tentée dans ce chantier (instrument seul ; une correction toucherait `SKILL.md`, donc hors périmètre, et poserait une question de conception — éviter de réintroduire un verbe de gate proscrit par R5).
+- Conséquence : le point 5 des critères de sortie §11 du plan AMENDE_V2 (mécanisme de préséance intégralement démontré) **n'est pas atteint**. `NOY014_1`/`NOY014_2` restent suspendus du décompte officiel. Le Lot D et la V3 tutorat restent conditionnés à la résolution de ce FAIL.
+- Ajout de `docs/v2.1/RAPPORT_CHANTIER_NOY014_V2.1_2026-09-01.md`.
+
 ## 2026-09-01 — Lot C : relocalisation des règles mal placées (étapes C.1-C.4)
 
 Exécution du LOT C de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Deux relocalisations, aucune doctrine modifiée.

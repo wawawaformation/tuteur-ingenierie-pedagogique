@@ -1,5 +1,6 @@
 ---
 perimetre: MOCK-GRANULARITE
+deroge_a: [Z99]
 ---
 
 # Référence spécialisée de test — MOCK-GRANULARITE

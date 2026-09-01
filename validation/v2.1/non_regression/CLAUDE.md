@@ -43,6 +43,10 @@ Certaines mentions internes pointent délibérément vers un artefact externe ou
 
 D'après les dry-runs déjà réalisés (`observation_conclusion_recommandation_dry_run.md`) : `NOY012_1` et `NOY013` sont stabilisés et déjà satisfaits par le candidat actuel (PASS). `NOY012_2` est stabilisé mais échoue encore sur le candidat actuel (FAIL) : c'est le comportement que le changement fonctionnel V2.1 (attestation explicite du formateur) doit corriger avant que ce scénario puisse passer.
 
+## NOY014 — suspendu du décompte officiel
+
+`NOY014_1` et `NOY014_2` (préséance entre règles) sont **suspendus** de la batterie de non-régression officielle depuis le Lot 0 (jamais comptés dans les 14/14 PASS des lots 0/A/B/C). Réinstrumentés le 2026-09-01 sur le mécanisme front matter (`perimetre:`/`deroge_a:`) posé au Lot B, avec 5 contrôles complémentaires dans `CONTROLES_COMPLEMENTAIRES_NOY014.md`. Voir `docs/v2.1/PLAN_CHANTIER_NOY014_V2.1_2026-09-01.md`. Réintégration au décompte officiel conditionnée aux points 5-8 des critères de sortie de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md` §11.
+
 ## Promotion
 
 Ce dossier n'est pas la batterie autoritative. Une promotion vers `validation/non_regression/` doit rester une décision explicite, pas une copie automatique — et devra alors résoudre le décalage de numérotation documenté ci-dessus.
