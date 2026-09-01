@@ -2,7 +2,7 @@
 
 <img src="docs/assets/koabana-logo.svg" alt="Koabana" width="64" />
 
-*Koabana — les acquis en action, les preuves à l'appui.*
+*Koabana skill — Tutorat et ingénierie pédagogique*
 
 > **La version publique recommandée se trouve dans [`dist/stable/`](dist/stable/).**
 >
