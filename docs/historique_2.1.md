@@ -4,6 +4,19 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Lot B : périmètre et préséance déclarés en front matter (étapes B.1-B.6)
+
+Exécution du LOT B de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Change la **doctrine d'implémentation** de la préséance, pas la doctrine G02 elle-même. Aucun oracle, fixture ou kit modifié.
+
+- `en_cours/SKILL.md` l. 99 : suppression de « fait foi » et « spécialisée », qui portaient une transposition implicite de *lex specialis* ; la phrase est bornée au seul axe glossaire/norme et renvoie à la section dédiée (P5).
+- `en_cours/SKILL.md` : le bloc « Préséance entre règles » quitte les contrôles de livraison (P12) et devient une section `## Périmètre et préséance`. Une dérogation n'existe plus que si le fichier la **déclare** (`deroge_a:` + `perimetre:` en front matter, identifiant pris dans un index fermé) — plus rien à inférer à l'exécution (P6, P7). Clause de signalement conservée mot pour mot.
+- `en_cours/references/decoupage_pedagogique.md` : suffixe `*(règle R-GRAN)*` ajouté, proposition de la règle inchangée. `en_cours/references/activite.md` : puce sur la dérogation déclarée ajoutée au rôle du front matter.
+- Neutralité vérifiée : aucune référence du runtime ne porte `deroge_a:` après le lot ; le mécanisme est posé mais activé nulle part.
+- Contrôles statiques : les 8 contrôles obligatoires de B.2/B.3/B.4 conformes ; CS6 à 0 occurrence et CS9 « OK » (B.5).
+- **Non-régression comportementale (B.6) : 14/14 PASS et C0 conforme**, aucun incident technique, aucun rerun. Conforme à la baseline. Runs joués et scorés par un sous-agent Sonnet dédié, contre les oracles de `validation/v2.1/non_regression/`.
+- `NOY014_1`/`NOY014_2` non joués (consigne explicite de B.6 : leurs fixtures signalent la dérogation en prose, plus en front matter — elles ne testent plus le mécanisme cible et devront être réinstrumentées dans un cycle séparé).
+- Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_LOT_B_V2.1_2026-09-01.md` : détail des étapes, contrôles, verdicts, un écart de procédure consigné (C0 joué après B.4 et non après B.3 seule) et la réserve de portée (aucun run n'exerce le chemin « dérogation déclarée valide »).
+
 ## 2026-09-01 — Matériau de fond « psychologie cognitive » et axes de travail V3
 
 Sans effet sur le runtime ni sur la promesse V2.1 : documentation hors noyau, pour l'écriture ultérieure de la promesse minimale V3.

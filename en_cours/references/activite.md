@@ -34,7 +34,8 @@ Il permet à l'agent d'identifier rapidement :
 - la nature du gabarit ;
 - sa finalité principale ;
 - son appartenance à la famille Activité ;
-- les usages typiques pour lesquels il peut être pertinent.
+- les usages typiques pour lesquels il peut être pertinent ;
+- une éventuelle dérogation déclarée et son périmètre.
 
 Le catalogue ci-dessus fournit le premier niveau de sélection. Si plusieurs gabarits restent plausibles, l'agent peut lire leur front matter pour les départager, puis charger le contenu du gabarit retenu pour appliquer son contrat détaillé.
 

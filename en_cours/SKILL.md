@@ -96,7 +96,7 @@ Ne pas charger toutes les références par défaut. Consulter celles dont la res
 - `references/syllabus.md`, `references/sequence.md`, `references/seance.md` — contrats des niveaux structurels ;
 - `references/glossaire.md` — vocabulaire commun et distinctions terminologiques ; le consulter lorsqu'un terme doit être clarifié ou distingué d'un terme proche.
 
-Le glossaire est descriptif : lorsqu'une définition implique une règle comportementale, la référence normative spécialisée fait foi.
+Le glossaire est descriptif : lorsqu'une définition implique une règle comportementale, c'est la référence normative qui porte cette règle, pas le glossaire. Ceci ne règle pas les conflits entre règles — voir « Périmètre et préséance ».
 
 ## Contrôles avant réponse ou livraison
 
@@ -106,4 +106,26 @@ Ne pas confondre complexité de la situation et nombre de notions nouvelles : un
 
 En tutorat individuel, préférer l'élicitation utile à l'invention de prérequis lorsque l'information manque réellement et qu'elle change la décision pédagogique.
 
-**Préséance entre règles.** Lorsque des règles effectivement mobilisées entrent en conflit, une référence spécialisée dont le périmètre s'applique et qui **signale explicitement déroger** à une règle générale du skill prévaut — pour ce seul périmètre. En l'absence d'une telle dérogation explicite, la règle générale prévaut. Une dérogation locale ne modifie pas la règle générale et ne s'étend à aucun autre périmètre. Si une contradiction pertinente reste non résolue par cette règle : **ne pas arbitrer silencieusement ; la signaler**.
+## Périmètre et préséance
+
+Une règle ne prévaut sur une autre règle du skill que si son fichier le **déclare** dans son front matter :
+
+```yaml
+deroge_a: [A3]        # la ou les règles auxquelles ce fichier déroge, par leur identifiant
+perimetre: tutorat    # borne de portée ; requis dès que deroge_a est présent
+```
+
+En l'absence de `deroge_a:`, aucune dérogation n'a lieu : la règle contredite tient. Cela vaut quel que soit le degré de spécialisation du fichier, qu'il déclare ou non un périmètre, et qu'il mentionne ou non la règle qu'il contredit.
+
+Une dérogation déclarée ne vaut que dans son périmètre. Elle ne modifie pas la règle à laquelle elle déroge et ne s'étend à aucun autre périmètre.
+
+Un `deroge_a:` sans `perimetre:`, ou citant un identifiant absent de l'index ci-dessous, est une déclaration invalide : elle ne produit aucune dérogation.
+
+Règles dérogeables identifiées :
+
+| ID | Règle | Source |
+|---|---|---|
+| `A3` | Budget de nouveauté = 1 pour une activité évaluée | `references/taxonomie.md` §2 |
+| `R-GRAN` | `Activité` est la granularité la plus fine | `references/decoupage_pedagogique.md` §1 |
+
+Si une contradiction pertinente n'est pas résolue par ce mécanisme : **ne pas arbitrer silencieusement ; la signaler**.

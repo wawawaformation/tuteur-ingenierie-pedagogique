@@ -66,7 +66,7 @@ Gabarit associé : `seance.md`.
 
 ### Activité
 
-L'Activité est la granularité la plus fine : la tâche effectivement proposée à l'apprenant.
+L'Activité est la granularité la plus fine : la tâche effectivement proposée à l'apprenant. *(règle `R-GRAN`)*
 
 Elle peut être intégrée dans une Séance ou rattachée directement à une Séquence.
 
