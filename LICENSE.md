@@ -8,6 +8,12 @@ Le projet **tuteur-ingenierie-pedagogique**, sauf mention contraire, est mis à 
 
 **Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0).**
 
+## Exception : scripts d'outillage et de test
+
+Les scripts d'outillage et de test — `scripts/` et `validation/collector-kit/` — ne sont **pas** couverts par la CC BY-SA : ce sont du code, pas du contenu. Ils sont mis à disposition sous licence **GNU GPL v3.0 ou ultérieure**. Voir `scripts/LICENSE`.
+
+Cette exception s'applique à partir de la campagne V2 : c'est à partir de cette version que le projet s'est doté d'un outillage scripté significatif.
+
 ## Vous êtes autorisé à
 
 - **Partager** — copier et redistribuer le contenu par tous moyens et sous tous formats ;

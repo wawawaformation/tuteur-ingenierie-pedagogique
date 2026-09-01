@@ -1,0 +1,29 @@
+# Licence — GNU GPL v3.0 ou ultérieure
+
+Copyright © 2026 David LEGRAND
+
+mail: contact@david-legrand.fr
+
+Sauf mention contraire, les scripts d'outillage et de test du projet **tuteur-ingenierie-pedagogique** — ce dossier (`scripts/`) et `validation/collector-kit/` — sont mis à disposition selon les termes de la licence :
+
+**GNU General Public License v3.0 ou ultérieure (GPL-3.0-or-later).**
+
+Identifiant SPDX : `GPL-3.0-or-later`.
+
+## Pourquoi une licence distincte du reste du dépôt
+
+Le reste du projet (`SKILL.md`, `references/`, documentation) est du contenu, sous CC BY-SA 4.0 (voir `../LICENSE.md`). Ces fichiers-ci sont du code exécutable — Creative Commons déconseille explicitement l'usage de ses licences pour du logiciel. Le GPL est le choix classique pour ce type de fichier, et garantit que les améliorations apportées à l'outillage de test restent, elles aussi, ouvertes.
+
+## Ce que ça implique
+
+- **Utiliser, étudier, modifier, redistribuer** ces scripts, y compris à des fins commerciales.
+- Toute redistribution, modifiée ou non, doit rester sous GPL v3.0 ou ultérieure et donner accès au code source.
+- Aucune garantie n'est fournie.
+
+## Texte officiel
+
+Texte juridique complet :
+
+https://www.gnu.org/licenses/gpl-3.0.html
+
+En cas de différence entre ce fichier et le texte officiel de la licence, **le texte juridique officiel prévaut**.

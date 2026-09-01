@@ -217,6 +217,17 @@ Le projet est parti de cette idée :
 
 ---
 
+## Sources et origine
+
+Le contenu du skill s'appuie sur deux types de sources :
+
+- des **sources externes** — formation de Formateur Pour Adultes (FPA), ouvrages de référence en sciences de l'éducation et en ingénierie pédagogique ;
+- l'**expérience propre de l'auteur** — formateur, accompagnement de stagiaires, conception pédagogique.
+
+Le détail — ce qui relève d'un cadre établi, d'une observation ou d'un choix de conception propre au produit — est documenté dans [`dossier-pedagogique/`](dossier-pedagogique/), notamment [`origine_des_formats.md`](dossier-pedagogique/origine_des_formats.md) et [`bibliographie.md`](dossier-pedagogique/bibliographie.md).
+
+---
+
 ## Versions et organisation du dépôt
 
 Le dépôt sépare volontairement la version publique validée du candidat en cours de validation.
