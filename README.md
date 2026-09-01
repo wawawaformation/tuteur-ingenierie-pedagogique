@@ -221,11 +221,8 @@ Le dépôt sépare volontairement la version publique validée du candidat en co
 dist/stable/
 → dernière version publique distribuée et validée
 
-stable/
-→ source de la dernière version validée
-
 en_cours/
-→ candidat V3
+→ candidat V2.1
 
 validation/
 → protocoles, scénarios, non-régression et artefacts de validation
@@ -240,9 +237,9 @@ docs/
 
 La version actuellement distribuée correspond à la **V2 validée**.
 
-### Candidat V3
+### Candidat V2.1
 
-[`en_cours/`](en_cours/) contient le candidat V3.
+[`en_cours/`](en_cours/) contient le candidat V2.1.
 
 Son architecture runtime est stabilisée, mais il ne devient pas pour autant la version publique tant que son cycle de validation et sa promotion explicite ne sont pas terminés.
 
@@ -251,7 +248,6 @@ Le flux de publication reste :
 ```text
 en_cours/
 → validation
-→ stable/
 → dist/stable/
 ```
 

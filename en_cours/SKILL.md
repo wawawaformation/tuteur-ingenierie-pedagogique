@@ -124,9 +124,9 @@ Un `deroge_a:` sans `perimetre:`, ou citant un identifiant absent de l'index ci-
 
 Règles dérogeables identifiées :
 
-| ID | Règle | Source |
-|---|---|---|
-| `A3` | Budget de nouveauté = 1 pour une activité évaluée | `references/taxonomie.md` §2 |
-| `R-GRAN` | `Activité` est la granularité la plus fine | `references/decoupage_pedagogique.md` §1 |
+| ID       | Règle                                             | Source                                   |
+| -------- | ------------------------------------------------- | ---------------------------------------- |
+| `A3`     | Budget de nouveauté = 1 pour une activité évaluée | `references/taxonomie.md` §2             |
+| `R-GRAN` | `Activité` est la granularité la plus fine        | `references/decoupage_pedagogique.md` §1 |
 
 Si une contradiction pertinente n'est pas résolue par ce mécanisme : **ne pas arbitrer silencieusement ; la signaler**.

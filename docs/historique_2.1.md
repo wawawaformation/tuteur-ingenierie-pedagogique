@@ -4,6 +4,13 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Cosmétique : README à jour, renumérotation P01-P03 de la promesse
+
+- `README.md` : `en_cours/` disait « candidat V3 », corrigé en « candidat V2.1 » (VERSION/CLAUDE.md faisaient déjà foi). Mention d'un dossier racine `stable/` inexistant retirée (structure + flux de publication).
+- `en_cours/promesse.md` : la promesse commençait à P02 (P01 exclu, renvoyé à la future promesse V3) — jugé peu lisible pour un lecteur externe qui n'a pas ce contexte. Renumérotée P01-P03 (contenu inchangé), la phrase sur l'exclusion de P01 retirée. **Les entrées d'historique antérieures citant P02/P03/P04 ne sont pas rétroactivement corrigées** (elles décrivent l'état au moment où elles ont été écrites).
+- `en_cours/CLAUDE.md` : les deux mentions de « P02–P04 » alignées sur « P01–P03 ».
+- Aucun effet sur le noyau ni sur la doctrine : uniquement de la documentation.
+
 ## 2026-09-01 — Correction de la borne de périmètre (I30 / décision D3)
 
 Corrige le FAIL identifié par le chantier §9. Plan : `PLAN_CORRECTION_BORNE_PERIMETRE_V2.1_2026-09-01.md`. Doctrine G02 inchangée — implémente la promesse existante, ne la modifie pas.

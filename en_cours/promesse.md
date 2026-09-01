@@ -6,15 +6,13 @@ La promesse est volontairement limitée aux comportements pour lesquels le skill
 
 Le skill ne promet pas d'améliorer globalement toute production pédagogique.
 
-La numérotation historique est conservée. **P01 n'appartient plus à la promesse générale du noyau V2.1.0** ; son enseignement sera repris dans la future promesse spécifique au tutorat V3.
-
 ## Promesse centrale
 
 > **Amener l'agent à raisonner ses décisions d'apprentissage et d'évaluation notion par notion, à partir de ce qui est réellement attesté et des sources disponibles, afin de préserver la valeur diagnostique des activités et l'alignement entre ce qui est visé, demandé, observé et conclu.**
 
 ---
 
-## P02 — Raisonner par notion, palier, preuve et attestation
+## P01 — Raisonner par notion, palier, preuve et attestation
 
 L'agent doit raisonner sur l'état des **notions effectivement mobilisées**, et non attribuer un niveau global à l'apprenant.
 
@@ -72,7 +70,7 @@ Conséquences attendues :
 
 ---
 
-## P03 — Préserver la valeur diagnostique d'une activité évaluée
+## P02 — Préserver la valeur diagnostique d'une activité évaluée
 
 Avant de proposer une activité évaluée, l'agent doit identifier les notions nécessaires à sa réussite et distinguer celles qui sont attestées de celles qui ne le sont pas encore au niveau demandé.
 
@@ -111,7 +109,7 @@ modifier ≠ concevoir
 
 ---
 
-## P04 — Aligner objectif, tâche, production, critères, preuve et conclusion
+## P03 — Aligner objectif, tâche, production, critères, preuve et conclusion
 
 L'agent doit maintenir la cohérence entre :
 

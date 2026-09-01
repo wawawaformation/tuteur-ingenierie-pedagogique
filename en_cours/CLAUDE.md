@@ -5,7 +5,7 @@ Ce dossier est la **zone de développement du candidat courant**.
 ## État actuel
 
 - `VERSION` indique actuellement **V2.1**.
-- `promesse.md` porte la spécification fonctionnelle du candidat V2.1.0 : promesse centrale + P02–P04, garanties G01–G06. P01 en est explicitement exclu et relève de la future promesse tutorat V3.
+- `promesse.md` porte la spécification fonctionnelle du candidat V2.1.0 : promesse centrale + P01–P03, garanties G01–G06.
 - `base_de_travail.md` est la feuille de route actuelle de la trajectoire V2 → V2.1 → V3 ; elle fait foi pour le séquencement du travail.
 - Le contenu de `en_cours/` n'est pas la version publique recommandée.
 - La version publique reste dans `../dist/stable/` jusqu'à promotion explicite.
@@ -61,7 +61,7 @@ Lorsqu'un changement touche l'évaluation ou la progression, vérifier notamment
 - pas de notation arbitraire par défaut ;
 - critères apprenant visibles sans révéler prématurément solution/correction décisive.
 
-Ces points sont désormais repris explicitement dans la promesse V2.1.0 (`promesse.md`, P02–P04 et garanties G01–G06).
+Ces points sont désormais repris explicitement dans la promesse V2.1.0 (`promesse.md`, P01–P03 et garanties G01–G06).
 
 ## Publication
 
