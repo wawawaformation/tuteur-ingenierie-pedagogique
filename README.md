@@ -250,7 +250,7 @@ docs/
 
 [`dist/stable/`](dist/stable/) reste le point d’entrée recommandé pour un usage public.
 
-La version actuellement distribuée correspond à la **V2 validée**.
+La version actuellement distribuée correspond à la **V2.1 validée**. V1 et V2 restent conservées pour historique.
 
 ### Candidat V2.1
 

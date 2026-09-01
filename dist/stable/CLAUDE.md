@@ -5,7 +5,8 @@ Ce dossier est la **zone de distribution publique validée**.
 Il contient actuellement :
 
 - V1, conservée pour historique ;
-- V2, version publique recommandée ;
+- V2, conservée pour historique ;
+- V2.1, version publique recommandée ;
 - les archives ZIP correspondantes.
 
 ## Règle principale
