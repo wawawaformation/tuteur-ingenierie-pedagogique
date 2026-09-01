@@ -20,27 +20,31 @@ Ensemble organisé de la progression proposée à un apprenant. Il peut comprend
 
 Grande unité regroupant plusieurs Séquences autour d'un ensemble cohérent d'objectifs ou de compétences.
 
+Sa place dans le découpage pédagogique est définie dans `decoupage_pedagogique.md` §1.
+
 ### Séquence
 
-Ensemble cohérent d'apprentissages. Elle peut contenir des Séances et/ou des Activités directement rattachées.
+Ensemble cohérent d'apprentissages, pouvant contenir des Séances et/ou des Activités directement rattachées.
+
+Sa place dans le découpage pédagogique est définie dans `decoupage_pedagogique.md` §1.
 
 ### Séance
 
-Unité organisée au sein d'une Séquence lorsqu'il est utile de regrouper et piloter plusieurs moments d'apprentissage.
+Unité organisée au sein d'une Séquence pour regrouper et piloter plusieurs moments d'apprentissage.
 
-Elle peut travailler un ou plusieurs OPO cohérents. Elle n'est synonyme ni de synchrone ni de présentiel.
+Sa place dans le découpage pédagogique est définie dans `decoupage_pedagogique.md` §1.
 
 ### Activité
 
-Granularité la plus fine : ce que l'apprenant doit effectivement faire.
+Ce que l'apprenant doit effectivement faire.
 
-Elle peut appartenir à une Séance ou être directement rattachée à une Séquence.
+Sa position dans le découpage et son articulation avec les autres niveaux sont définies dans `decoupage_pedagogique.md` §1.
 
 ### Granularité
 
 Niveau auquel un élément pédagogique est organisé ou décrit.
 
-Durée, difficulté et modalité ne déterminent pas automatiquement la granularité.
+Les règles de non-déduction à partir de la durée, de la difficulté ou de la modalité sont définies dans `decoupage_pedagogique.md` §2.
 
 ## Gabarits d'Activité
 
@@ -231,9 +235,7 @@ L'auto-perception de l'apprenant constitue une information, pas automatiquement 
 
 Cohérence entre l'objectif, ce que l'apprenant fait réellement et ce qui permet d'évaluer cette performance.
 
-Repère utilisé par le skill :
-
-Objectif → tâche → production/performance → critères → preuve → conclusion.
+La chaîne d'alignement de référence et ses contrôles sont définis dans `opo.md`.
 
 ## Modalités et organisation
 
@@ -246,7 +248,7 @@ Deux axes indépendants sont distingués :
 temporel : synchrone / asynchrone ;  
 spatial : présentiel / distanciel.
 
-Ils ne déterminent ni la granularité ni le gabarit.
+Les règles d'indépendance de ces axes sont définies dans `decoupage_pedagogique.md` §2.
 
 ### Synchrone
 
@@ -385,7 +387,7 @@ Contrat minimal partagé par plusieurs gabarits. `activite.md` constitue le socl
 
 Métadonnées placées en tête d'un gabarit pour aider l'agent à le découvrir et le sélectionner.
 
-Les `typical_uses` indiquent des usages pertinents mais ne constituent pas des conditions exclusives.
+Le statut des `typical_uses` est défini dans `activite.md`.
 
 ### Source normative
 

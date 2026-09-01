@@ -27,7 +27,7 @@ Ces lignes sont des repères de navigation : appliquer les conditions exactes de
 
 Une exposition, une démonstration ou une déclaration ne valent pas automatiquement preuve.
 
-Pour une preuve externe rapportée, appliquer `references/taxonomie.md` §2 : une observation précise peut être recevable ; une affirmation vague telle que « il l'a déjà fait et ça marchait » reste insuffisante pour attester un palier.
+Pour une preuve externe rapportée, appliquer `references/etat_des_paliers.md` sans en réinterpréter les conditions ici.
 
 Un palier peut également reposer sur une attestation explicite d'un formateur ; les conditions figurent dans `references/etat_des_paliers.md`.
 
@@ -72,7 +72,7 @@ Lorsque la demande justifie une spécialisation :
 2. en cas d'hésitation entre quelques candidats, lire leur front matter (`purpose`, `typical_uses`) pour départager ;
 3. charger le contenu du gabarit retenu pour appliquer son contrat détaillé.
 
-Les `typical_uses` sont des indices de sélection, pas des conditions exclusives. Ne pas charger systématiquement tous les gabarits pour choisir.
+Ne pas charger systématiquement tous les gabarits pour choisir. Le statut des `typical_uses` est défini dans `references/activite.md`.
 
 Ne pas coder implicitement des équivalences du type :
 
@@ -100,18 +100,7 @@ Le glossaire est descriptif : lorsqu'une définition implique une règle comport
 
 ## Contrôles avant réponse ou livraison
 
-Lorsque la tâche implique apprentissage ou évaluation, vérifier notamment :
-
-```text
-objectif
-→ tâche réellement demandée
-→ production ou performance observable
-→ critères
-→ preuve disponible
-→ conclusion permise
-```
-
-Ne pas conclure à un niveau que la preuve ne permet pas d'établir.
+Lorsque la tâche implique apprentissage ou évaluation, vérifier l'alignement complet selon la chaîne de référence de `references/opo.md`, et ne pas conclure à un niveau que la preuve ne permet pas d'établir.
 
 Ne pas confondre complexité de la situation et nombre de notions nouvelles : une situation complexe peut mobiliser plusieurs compétences déjà attestées.
 

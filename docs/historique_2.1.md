@@ -4,6 +4,19 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Lot A : dé-duplication du noyau à doctrine constante (étapes A.1-A.12)
+
+Exécution du LOT A de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Aucune doctrine créée, modifiée ou supprimée : des paraphrases deviennent des pointeurs vers une source unique. Non commité (A.13 en attente).
+
+- `en_cours/SKILL.md`, `taxonomie.md` : suppression de deux paraphrases de « preuve externe rapportée », pointeurs vers `etat_des_paliers.md` (P2).
+- `en_cours/references/opo.md` : nouvelle chaîne d'alignement canonique (union des 4 variantes concurrentes de P1, y compris les maillons propres à `taxonomie.md` A4 et `SKILL.md`). `SKILL.md`, `taxonomie.md` A4 et `glossaire.md` transformés en pointeurs vers cette source unique.
+- `en_cours/references/glossaire.md` : définitions de Module/Séquence/Séance/Activité/Granularité et règle d'indépendance des axes de modalité réduites à un renvoi vers `decoupage_pedagogique.md` (prérequis de I25 à une seule source).
+- `en_cours/SKILL.md`, `glossaire.md`, `activite.md` : I26 (`typical_uses`) et I25 (« Activité = granularité la plus fine ») ramenés chacun à une seule source portante dans le runtime (`activite.md` et `decoupage_pedagogique.md` respectivement).
+- **~14 vérifications comportementales** exécutées pendant le lot (A.2 : NOY001 ; A.7 : NOY004/NOY002/NOY007 ; A.10 : C0 immédiat, point le plus à risque du lot ; A.12 : 10 scénarios) : **toutes conformes, aucune régression**, y compris sur le risque R2 (perte de visibilité) explicitement signalé par le plan comme le point le plus exposé.
+- Trois écarts entre les attendus numériques du plan (CS1, CS2, A.3) et la réalité mesurée, tous retracés à des erreurs de comptage de l'auteur du plan (pas des défauts d'exécution) et consignés en détail dans le rapport.
+- Contrôles intra-lot exécutés via `scripts/run_isole.sh` directement (pas `run_baseline.sh`, dont le garde-fou de propreté git est incompatible avec un état intermédiaire non commité) — brique explicitement prévue pour cet usage. Script utilitaire non versionné `tmp/run_check.sh` (`tmp/` ajouté au `.gitignore`).
+- Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_LOT_A_V2.1_2026-09-01.md` : détail complet étape par étape, verdicts et clause d'oracle par run, écarts documentés, contrôle statique CS1-CS9.
+
 ## 2026-09-01 — Baseline comportementale V2.1 exécutée et scorée (lot 0, étapes 0.4-0.9)
 
 `./scripts/run_baseline.sh` lancé sous `david` : 15 runs (C0 + 14 NOY, `NOY014_1`/`NOY014_2` hors baseline) joués dans des copies isolées avec relance opérateur Sonnet aveugle, tous `COLLECTE_COMPLETE`, aucune anomalie, aucun scénario suspendu. `en_cours/` vérifié strictement identique à HEAD (`01e9ca1`) avant et après.

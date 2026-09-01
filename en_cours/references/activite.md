@@ -4,7 +4,7 @@ objectif: "Définir le socle commun de toute Activité pédagogique et orienter 
 
 # ACTIVITÉ — Socle commun
 
-Une Activité est la granularité la plus fine du découpage pédagogique : c'est ce que l'apprenant doit effectivement faire.
+Une Activité est ce que l'apprenant doit effectivement faire. Sa position dans le découpage est définie dans `decoupage_pedagogique.md` §1.
 
 Elle peut être intégrée à une Séance ou rattachée directement à une Séquence. Sa durée, sa modalité ou sa forme ne définissent pas sa nature.
 

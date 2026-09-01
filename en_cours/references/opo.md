@@ -49,6 +49,22 @@ L'agent IA doit maintenir une symétrie parfaite entre trois piliers majeurs. Si
 * **Avant de proposer une activité évaluée**, l'agent vérifie que l'OPO est formulable selon les 3C et que la tâche permet réellement d'en observer les critères.
 * **Vérification d'alignement** : L'agent doit s'assurer que le niveau de complexité de l'exercice (Activité) correspond à 100% au niveau exigé par la validation (Évaluation).
 
+### Chaîne d'alignement de référence
+
+La chaîne complète, utilisée par tout le skill, est :
+
+```text
+objectif observable
+→ tâche réellement demandée
+→ production ou performance observable
+→ critères de réussite
+→ preuve
+→ portée de la preuve
+→ conclusion permise : attestation, feedback ou remédiation
+```
+
+Ne pas conclure à un niveau que la preuve ne permet pas d'établir. La portée de la preuve est traitée dans `etat_des_paliers.md` ; la quantification éventuelle relève de `taxonomie.md` §2, clause A4.
+
 ### Alignement entre performance visée et preuve
 
 L’évaluation ne doit pas seulement produire un résultat observable :
