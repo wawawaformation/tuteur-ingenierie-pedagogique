@@ -1,6 +1,4 @@
-# Tuteur & ingénierie pédagogique
-
-<img src="docs/assets/koabana-logo.svg" alt="Koabana" width="64" />
+# <img src="docs/assets/koabana-logo.svg" alt="Koabana" width="40" /> Tuteur & ingénierie pédagogique
 
 *Koabana skill — Tutorat et ingénierie pédagogique*
 
