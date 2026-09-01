@@ -13,6 +13,7 @@ Corrige le FAIL identifié par le chantier §9. Plan : `PLAN_CORRECTION_BORNE_PE
 - **Batterie complète (14 + C0) rejouée : 14/14 PASS, C0 conforme, aucune régression.** Recherche systématique de raisonnement sur les dérogations dans les 15 verbatims : aucune trace, aucun surcoût de gate introduit.
 - **Le point 5 des critères de sortie §11 du plan AMENDE_V2 est désormais atteint.** Débloque la reconsidération du Lot D (décision D2) et l'implémentation de V3 tutorat, dont `tutorat.md` dépendait précisément de ce mécanisme. Aucune de ces deux décisions n'est prise par ce commit.
 - Ajout de `docs/v2.1/RAPPORT_CORRECTION_BORNE_PERIMETRE_V2.1_2026-09-01.md`.
+- Complément après commit : la déclaration invalide « ID absent de l'index » avait été omise des contrôles ciblés initiaux. Rejouée seule : **PASS**, tranché dès le tour 1 (contre 2 tours avant correction) — clause indépendante du périmètre, non affectée par la modification.
 
 ## 2026-09-01 — Chantier §9 : instrumentation NOY014 — mécanisme partiellement démontré, un FAIL réel identifié
 

@@ -37,6 +37,8 @@ Rien retiré, rien d'autre modifié. La clause de signalement reste mot pour mot
 
 Aucun incident technique, aucune relance nécessaire au-delà du protocole prévu.
 
+**Complément après commit** : la déclaration invalide « ID absent de l'index » (`mock_derogation_id_invalide.md`) n'avait pas été incluse dans les contrôles ciblés initiaux — oubli signalé et corrigé séparément. Rejouée seule : **PASS**, tranché dès le tour 1 (contre 2 tours lors du chantier §9, avant la correction). L'ID `Z99` étant absent de l'index indépendamment de toute question de périmètre, ce verdict ne dépendait pas de la clause modifiée — confirmé.
+
 **Lecture qualitative du run NON_EXTENSION.** La réponse distingue explicitement « on m'a signalé cette référence » de « la tâche relève de son périmètre » — exactement la confusion qui produisait le FAIL initial. Elle traite au passage la tâche comme un gabarit Brique standard (Consigne → Production), sans y voir matière à créer un niveau structurel supplémentaire.
 
 ---
