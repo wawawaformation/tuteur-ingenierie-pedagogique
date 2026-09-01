@@ -172,6 +172,18 @@ P01 sera donc traité dans la **promesse tutorat V3**, pas comme une règle gén
 
 ---
 
+# Axes de travail V3
+
+Distinct de la liste de propriétés candidates du §12 : il s'agit ici de grands axes de travail, pas encore de règles ni de propriétés de promesse.
+
+- Travailler le volet tutorat.
+- Travailler les activités possibles (ex. : pouvoir ajouter une activité sans devoir modifier le noyau).
+- Travailler sur la psychologie cognitive et les biais cognitifs (voir [`dossier-pedagogique/psychologie_cognitive_formation_tutorat.md`](../dossier-pedagogique/psychologie_cognitive_formation_tutorat.md)).
+
+Cette liste n'est pas encore développée ni priorisée.
+
+---
+
 # 5. Les règles fortes du futur tutorat V3
 
 Ces idées viennent du travail expérimental déjà réalisé.
@@ -633,6 +645,8 @@ Parmi les candidates déjà identifiées :
 Cette liste n’est pas encore la promesse définitive.
 
 Elle doit être réduite au minimum réellement nécessaire.
+
+Matériau de fond disponible pour cette étape : [`dossier-pedagogique/psychologie_cognitive_formation_tutorat.md`](../dossier-pedagogique/psychologie_cognitive_formation_tutorat.md) (principes et biais cognitifs pouvant éclairer le choix des propriétés retenues).
 
 ---
 

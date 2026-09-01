@@ -4,6 +4,14 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Matériau de fond « psychologie cognitive » et axes de travail V3
+
+Sans effet sur le runtime ni sur la promesse V2.1 : documentation hors noyau, pour l'écriture ultérieure de la promesse minimale V3.
+
+- Ajout de `dossier-pedagogique/psychologie_cognitive_formation_tutorat.md` : 18 principes cognitifs de l'apprentissage et 12 biais cognitifs/métacognitifs, avec conséquences opérationnelles pour la conception d'activités et le comportement du tuteur.
+- `en_cours/base_de_travail.md` §12 : ajout d'un pointeur vers ce document, sans modification de la liste des propriétés candidates.
+- `en_cours/base_de_travail.md` : nouvelle section « Axes de travail V3 » (entre §4 et §5) — volet tutorat, extensibilité des activités sans modification du noyau, psychologie cognitive/biais. Distincte de la liste de propriétés candidates du §12 ; non encore développée ni priorisée.
+
 ## 2026-09-01 — Lot A : dé-duplication du noyau à doctrine constante (étapes A.1-A.12)
 
 Exécution du LOT A de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Aucune doctrine créée, modifiée ou supprimée : des paraphrases deviennent des pointeurs vers une source unique. Non commité (A.13 en attente).
