@@ -4,6 +4,16 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Non-régression finale V2.1 (gel, §9 de `base_de_travail.md`)
+
+Passe finale distincte des vérifications de lot : candidat gelé (HEAD `7020ec3`), harnais officiel `run_baseline.sh`, **deux passes complètes et indépendantes** des 15 scénarios (répétition exigée par §9, pas un simple run par scénario).
+
+- **14/14 scénarios reproductibles PASS/PASS, C0 conforme sur les deux passes, 0 discordance.** Aucun FAIL sur aucune passe, donc aucune reprise supplémentaire déclenchée.
+- Incident NOY009 (passe 1) : `AMBIGU_OPERATEUR` (5 questions de précision), résolu par la relance neutre pré-rédigée du kit, sans information nouvelle ; verdict PASS déjà acquis sur l'affirmation du tour 1.
+- Incident sans lien avec la campagne entre les deux passes : contamination transitoire de `en_cours/` (`v2.1.zip`, `v2.1/`) par une manipulation manuelle hors session, détectée par le garde-fou de propreté de `run_baseline.sh` (aucun run lancé sur candidat non conforme), confirmée et nettoyée par l'utilisateur avant la passe 2.
+- Avec cette passe, la construction de V2.1 décrite en §8 de `base_de_travail.md` est complète (version, P01 sorti, attestation intégrée, noyau allégé, non-régression finale à répétition). La promotion vers `dist/stable/` reste une décision explicite séparée, non prise ici.
+- Ajout de `docs/v2.1/RAPPORT_NON_REGRESSION_FINALE_V2.1_2026-09-01.md`.
+
 ## 2026-09-01 — Lot D : split de `taxonomie.md` en échelle + garde-fous A1-A4 (étapes D.1-D.5)
 
 Exécution du LOT D de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md` (P3), débloqué par la levée de la décision D2 (correction de la borne de périmètre du même jour). Doctrine inchangée, relocalisation uniquement.
