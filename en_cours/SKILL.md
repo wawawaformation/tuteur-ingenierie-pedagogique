@@ -118,7 +118,7 @@ perimetre: tutorat    # borne de portée ; requis dès que deroge_a est présent
 
 En l'absence de `deroge_a:`, aucune dérogation n'a lieu : la règle contredite tient. Cela vaut quel que soit le degré de spécialisation du fichier, qu'il déclare ou non un périmètre, et qu'il mentionne ou non la règle qu'il contredit.
 
-Une dérogation déclarée ne vaut que dans son périmètre. Elle ne modifie pas la règle à laquelle elle déroge et ne s'étend à aucun autre périmètre.
+Une dérogation déclarée ne vaut que dans son périmètre. Elle ne modifie pas la règle à laquelle elle déroge et ne s'étend à aucun autre périmètre. Le périmètre est une condition d'application, pas une étiquette : il est établi par le contexte de travail, jamais par la seule présence de la référence dans le skill. Lorsque le contexte de travail ne relève pas du périmètre déclaré, ou qu'il ne l'établit pas, la règle générale tient.
 
 Un `deroge_a:` sans `perimetre:`, ou citant un identifiant absent de l'index ci-dessous, est une déclaration invalide : elle ne produit aucune dérogation.
 

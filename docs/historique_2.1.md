@@ -4,6 +4,16 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Correction de la borne de périmètre (I30 / décision D3)
+
+Corrige le FAIL identifié par le chantier §9. Plan : `PLAN_CORRECTION_BORNE_PERIMETRE_V2.1_2026-09-01.md`. Doctrine G02 inchangée — implémente la promesse existante, ne la modifie pas.
+
+- `en_cours/SKILL.md`, section « Périmètre et préséance » : deux phrases ajoutées. Le périmètre devient explicitement une **condition d'application** (établie par le contexte de travail), jamais une étiquette déduite de la seule présence de la référence dans le skill ; à défaut, la règle générale tient. Aucun verbe de gate — patron calqué sur la règle d'absence de `deroge_a:` déjà démontrée.
+- Contrôles ciblés : **NON_EXTENSION bascule de FAIL à PASS**, sans casser la branche positive (**NOY014_2 reste PASS** — pas de sur-correction). NOY014_1, déclaration invalide et C0-bis restent conformes.
+- **Batterie complète (14 + C0) rejouée : 14/14 PASS, C0 conforme, aucune régression.** Recherche systématique de raisonnement sur les dérogations dans les 15 verbatims : aucune trace, aucun surcoût de gate introduit.
+- **Le point 5 des critères de sortie §11 du plan AMENDE_V2 est désormais atteint.** Débloque la reconsidération du Lot D (décision D2) et l'implémentation de V3 tutorat, dont `tutorat.md` dépendait précisément de ce mécanisme. Aucune de ces deux décisions n'est prise par ce commit.
+- Ajout de `docs/v2.1/RAPPORT_CORRECTION_BORNE_PERIMETRE_V2.1_2026-09-01.md`.
+
 ## 2026-09-01 — Chantier §9 : instrumentation NOY014 — mécanisme partiellement démontré, un FAIL réel identifié
 
 Exécution du chantier §9 de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md` (instrument seul, **aucun fichier de `en_cours/` modifié**). Plan préalable : `docs/v2.1/PLAN_CHANTIER_NOY014_V2.1_2026-09-01.md`.
