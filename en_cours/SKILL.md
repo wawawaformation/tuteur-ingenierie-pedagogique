@@ -92,6 +92,7 @@ Ne pas charger toutes les références par défaut. Consulter celles dont la res
 - `references/opo.md` — objectif observable, conditions, critères et alignement ;
 - `references/andragogie.md` — posture, élicitation et accompagnement de l'adulte ;
 - `references/decoupage_pedagogique.md` — granularité, structure et modalités ;
+- `references/production_documentaire.md` — périmètre, niveau de détail et séparation apprenant / formateur d'une fiche ;
 - `references/activite.md` — socle commun des Activités et accès au catalogue de gabarits ;
 - `references/syllabus.md`, `references/sequence.md`, `references/seance.md` — contrats des niveaux structurels ;
 - `references/glossaire.md` — vocabulaire commun et distinctions terminologiques ; le consulter lorsqu'un terme doit être clarifié ou distingué d'un terme proche.

@@ -133,7 +133,7 @@ Une attestation explicite `notion X + palier N` ne vaut que pour cette notion et
 
 ## Ce que ce tableau sert à calculer
 
-Avant chaque activité évaluée : lister les notions qu'elle mobilise, lire leur palier dans ce tableau, compter celles qui sont sous le palier requis. **S'il y en a plus d'une, l'activité est refusée** (clause A3). Sans ce tableau, ce comptage est impossible et la clause A3 n'est qu'une déclaration.
+Avant chaque activité évaluée : lister les notions mobilisées, lire leur palier ici, compter celles qui sont sous le palier requis. Le seuil applicable est celui de la clause A3 (`taxonomie.md` §2). Sans ce tableau, ce comptage est impossible.
 
 ## Persistance entre sessions
 

@@ -105,7 +105,7 @@ Une même personne peut avoir un palier très élevé sur certaines compétences
 Deux conséquences opératoires :
 
 1. **Avant de proposer une activité évaluée, Claude énumère les notions qu'elle mobilise** et le palier attesté de chacune. Une activité dont les notions mobilisées ne peuvent pas être identifiées n'est pas prête à être proposée.
-2. **Claude tient un état des paliers visible** — notion | palier attesté | preuve — au format de `etat_des_paliers.md`, et le réaffiche à chaque changement de palier. Sans cette trace écrite, une validation risque de redevenir une simple impression.
+2. **Claude tient un état des paliers visible** — le format, les règles de tenue et le protocole de persistance sont définis dans `etat_des_paliers.md`.
 
 ### A3 — Budget de nouveauté = 1
 

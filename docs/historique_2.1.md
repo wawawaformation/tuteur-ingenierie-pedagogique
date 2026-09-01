@@ -4,6 +4,17 @@ Journal court des étapes réalisées sur le candidat V2.1. Mis à jour avant ch
 
 ---
 
+## 2026-09-01 — Lot C : relocalisation des règles mal placées (étapes C.1-C.4)
+
+Exécution du LOT C de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Deux relocalisations, aucune doctrine modifiée.
+
+- Nouveau `en_cours/references/production_documentaire.md` : conventions de rédaction d'une fiche (périmètre, niveau de détail, séparation apprenant/formateur, callouts, réflexe andragogique), extraites de `decoupage_pedagogique.md` §4 (P11). `decoupage_pedagogique.md` §4 devient un renvoi ; `SKILL.md` référence la nouvelle source. Dispersion de I21 sur `activite.md`/`quiz.md` volontairement non nettoyée (hors périmètre du lot).
+- `taxonomie.md` (A2) et `etat_des_paliers.md` : dé-duplication du seuil de la clause A3, qui n'était pas défini par `etat_des_paliers.md` mais s'y trouvait re-narré (P10). `etat_des_paliers.md` renvoie désormais explicitement à `taxonomie.md` §2 pour ce seuil.
+- Contrôle statique (C.3) : CS6 = 0, CS9 = OK. Contrôle grep spécifique du plan (`"l'activité est refusée"` limité à `taxonomie.md`) non satisfaisable tel quel — cette formulation littérale n'a jamais existé dans `taxonomie.md`, seulement dans `etat_des_paliers.md` avant dé-duplication ; documenté sans correction, hors décision d'implémenteur (même famille que les écarts CS1/CS2/A.3 du lot A).
+- **Non-régression comportementale (C.3) : 3/3 PASS (NOY003, NOY007, NOY010) et C0 conforme**, aucun incident technique. Runs joués et scorés par un sous-agent Sonnet dédié. Un rerun isolé de NOY010 après C.1 seule (consigne du plan sur le risque I21) déjà conforme avant même C.2.
+- Écart d'instrumentation signalé sans correction : `validation/v2.1/baseline/kits/C0/dossier_operateur.md`, cité par le plan comme source de l'attendu C0, est absent du dépôt ; l'attendu a été pris à la source réellement autoritative référencée par le kit (`CONTROLE_STABILISATION_NOY014.md` §2).
+- Ajout de `docs/v2.1/RAPPORT_IMPLEMENTATION_LOT_C_V2.1_2026-09-01.md`.
+
 ## 2026-09-01 — Lot B : périmètre et préséance déclarés en front matter (étapes B.1-B.6)
 
 Exécution du LOT B de `PLAN_REFACTORISATION_NOYAU_V2.1_2026-08-23_AMENDE_V2.md`. Change la **doctrine d'implémentation** de la préséance, pas la doctrine G02 elle-même. Aucun oracle, fixture ou kit modifié.

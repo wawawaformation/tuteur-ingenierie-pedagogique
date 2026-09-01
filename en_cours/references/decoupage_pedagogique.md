@@ -140,28 +140,8 @@ modalités
 → adaptation de la mise en œuvre
 ```
 
-## 4. Directives pour la génération de fiches à la demande
+## 4. Production des fiches
 
-Lorsque l'utilisateur demande explicitement la rédaction d'une fiche, l'agent respecte le périmètre demandé.
-
-**Respecter la granularité.** Une demande de fiche de Séance ne doit pas devenir le programme détaillé de tout le Module. Une fiche de Séquence ne doit pas contenir les énoncés complets de toutes les activités.
-
-**Adapter le niveau de détail.**
-
-- une fiche de Séquence décrit les intentions, objectifs, articulations et activités prévues ;
-- une fiche de Séance fournit un déroulé suffisamment précis pour être piloté ;
-- une fiche d'Activité fournit la tâche, les conditions, les productions attendues et les critères nécessaires à sa réalisation et à son évaluation éventuelle.
-
-**Conserver la séparation apprenant / formateur lorsque nécessaire.** Une solution, une correction ou des attendus détaillés réservés au formateur ne doivent pas être révélés prématurément dans le document remis à l'apprenant.
-
-**Conventions de rédaction.** Les callouts disponibles sont :
-
-- **Bon à savoir** — contexte ou choix de conception utile ;
-- **Vigilance** — limite ou point d'attention ;
-- **Important** — objection prévisible ou information à ne pas manquer.
-
-Un callout n'est jamais obligatoire.
-
-**Garder le réflexe andragogique.** Le document doit rendre perceptible la finalité de l'apprentissage et laisser une autonomie adaptée au contexte, conformément à `andragogie.md`.
+Les conventions de production d'une fiche — périmètre, niveau de détail, séparation apprenant / formateur, callouts — sont définies dans `production_documentaire.md`.
 
 Les règles relatives aux paliers, aux preuves, au budget de nouveauté et aux activités évaluées restent définies par `taxonomie.md` et `etat_des_paliers.md`.
