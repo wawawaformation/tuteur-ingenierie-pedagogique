@@ -30,12 +30,12 @@ Dans l'état actuel du dépôt :
 ```text
 dist/stable/
 → distributions publiques validées
-→ V2 est la version publique recommandée
-→ V1 est conservée pour historique
+→ V2.1 est la version publique recommandée
+→ V1 et V2 sont conservées pour historique
 
 en_cours/
-→ candidat V2.1 (noyau V2 allégé + attestation explicite du formateur)
-→ non public
+→ contient le candidat V2.1 (noyau V2 allégé + attestation explicite du formateur), déjà validé et promu
+→ non public par principe, même après promotion
 → promesse V2.1.0 définie ; la future promesse tutorat V3 reste à déterminer
 ```
 

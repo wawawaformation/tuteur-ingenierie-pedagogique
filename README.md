@@ -250,11 +250,11 @@ docs/
 
 La version actuellement distribuée correspond à la **V2.1 validée**. V1 et V2 restent conservées pour historique.
 
-### Candidat V2.1
+### Développement en cours
 
-[`en_cours/`](en_cours/) contient le candidat V2.1.
+[`en_cours/`](en_cours/) est la zone de développement du prochain candidat.
 
-Son architecture runtime est stabilisée, mais il ne devient pas pour autant la version publique tant que son cycle de validation et sa promotion explicite ne sont pas terminés.
+Le candidat V2.1 qui y était développé a été validé et promu (voir ci-dessus) ; le contenu de `en_cours/` n'est jamais considéré comme public de son propre fait.
 
 Le flux de publication reste :
 

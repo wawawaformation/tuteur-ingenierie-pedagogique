@@ -1,12 +1,12 @@
-# Tuteur & ingénierie pédagogique — candidat V3
+# Tuteur & ingénierie pédagogique — V2.1
 
-Ce dossier contient le **candidat V3** du skill `tuteur-ingenierie-pedagogique`.
+Ce dossier contient la version **V2.1**, validée, du skill `tuteur-ingenierie-pedagogique`.
 
 Il est destiné au tutorat d’adultes et à l’assistance à l’ingénierie pédagogique. Son rôle n’est pas de remplacer le jugement du formateur, mais de fournir à l’agent des garde-fous et des ressources lui permettant de raisonner de façon plus cohérente sur la progression, l’évaluation et la conception des activités.
 
-> **Ce candidat n’est pas encore la version publique recommandée.**
+> **Version publique recommandée.**
 >
-> La version publique reste celle distribuée dans `../dist/stable/` tant que la promotion V3 n’a pas été explicitement réalisée.
+> Cette V2.1 a terminé son cycle de validation et remplace la V2 comme version publique recommandée. V1 et V2 restent conservées pour historique dans `../`.
 
 ---
 
@@ -241,19 +241,6 @@ Le glossaire n’est pas une seconde source normative.
 
 ## Statut de validation
 
-Le runtime V3 a été restructuré et soumis à des revues statiques de cohérence.
+Cette V2.1 a été validée par non-régression (14/14 PASS, reproductible sur deux passes indépendantes, C0 conforme) avant sa promotion.
 
-La validation comportementale reste nécessaire avant promotion publique.
-
-Les tests de non-régression du projet sont conservés hors du runtime, dans `../validation/`.
-
-La promotion suit le flux :
-
-```text
-en_cours/
-→ validation
-→ stable/
-→ dist/stable/
-```
-
-Aucune version située dans `en_cours/` ne doit être considérée comme publique avant cette promotion explicite.
+Les tests de non-régression du projet, ainsi que le runtime candidat qui a produit cette version, sont conservés dans le dépôt de développement, hors de cette distribution.

@@ -1,12 +1,12 @@
-# Tuteur & ingénierie pédagogique — candidat V3
+# Tuteur & ingénierie pédagogique — candidat V2.1
 
-Ce dossier contient le **candidat V3** du skill `tuteur-ingenierie-pedagogique`.
+Ce dossier contient le candidat **V2.1** du skill `tuteur-ingenierie-pedagogique`.
 
 Il est destiné au tutorat d’adultes et à l’assistance à l’ingénierie pédagogique. Son rôle n’est pas de remplacer le jugement du formateur, mais de fournir à l’agent des garde-fous et des ressources lui permettant de raisonner de façon plus cohérente sur la progression, l’évaluation et la conception des activités.
 
-> **Ce candidat n’est pas encore la version publique recommandée.**
+> **Ce dossier n’est pas la version publique.**
 >
-> La version publique reste celle distribuée dans `../dist/stable/` tant que la promotion V3 n’a pas été explicitement réalisée.
+> Ce candidat V2.1 a été validé et promu : la version publique recommandée se trouve désormais dans `../dist/stable/tuteur-ingenierie-pedagogique_v2.1/`.
 
 ---
 
@@ -241,9 +241,7 @@ Le glossaire n’est pas une seconde source normative.
 
 ## Statut de validation
 
-Le runtime V3 a été restructuré et soumis à des revues statiques de cohérence.
-
-La validation comportementale reste nécessaire avant promotion publique.
+Le candidat V2.1 a été validé par non-régression (14/14 PASS, reproductible sur deux passes indépendantes, C0 conforme) puis promu vers `dist/stable/`.
 
 Les tests de non-régression du projet sont conservés hors du runtime, dans `../validation/`.
 
@@ -252,8 +250,7 @@ La promotion suit le flux :
 ```text
 en_cours/
 → validation
-→ stable/
 → dist/stable/
 ```
 
-Aucune version située dans `en_cours/` ne doit être considérée comme publique avant cette promotion explicite.
+Le contenu de `en_cours/` n’est jamais considéré comme public de son propre fait ; seule une promotion explicite vers `dist/stable/` rend une version publique.
