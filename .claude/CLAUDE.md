@@ -34,14 +34,14 @@ dist/stable/
 → V1 et V2 sont conservées pour historique
 
 en_cours/
-→ contient le candidat V2.1 (noyau V2 allégé + attestation explicite du formateur), déjà validé et promu
-→ non public par principe, même après promotion
-→ promesse V2.1.0 définie ; la future promesse tutorat V3 reste à déterminer
+→ candidat V3 (hérite du socle V2.1 validé ; trois chantiers : activités, leviers cognitifs, tutorat)
+→ non public par principe
+→ promesse V3.0.0 candidate, non encore gelée
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.
 
-`en_cours/promesse.md` fait foi pour la promesse du candidat courant. `en_cours/base_de_travail.md` fait foi pour le séquencement de la trajectoire V2 → V2.1 → V3. Ne pas extrapoler silencieusement la future promesse tutorat V3 à partir de celle de V2.1 tant qu'elle n'a pas été explicitement écrite et validée.
+`en_cours/promesse.md` fait foi pour la promesse du candidat courant. `en_cours/base_de_travail.md` fait foi pour le séquencement de la trajectoire V2.1 → V3. Ne pas extrapoler silencieusement au-delà de ce que `promesse.md` énonce explicitement tant qu'elle n'a pas été gelée et validée.
 
 Le dépôt actuel ne contient pas de dossier racine `stable/`. Certains documents historiques peuvent décrire un flux incluant ce niveau : ne pas créer ni supposer ce dossier sans décision explicite.
 

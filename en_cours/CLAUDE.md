@@ -4,11 +4,11 @@ Ce dossier est la **zone de développement du candidat courant**.
 
 ## État actuel
 
-- `VERSION` indique actuellement **V2.1**.
-- `promesse.md` porte la spécification fonctionnelle du candidat V2.1.0 : promesse centrale + P01–P03, garanties G01–G06.
-- `base_de_travail.md` est la feuille de route actuelle de la trajectoire V2 → V2.1 → V3 ; elle fait foi pour le séquencement du travail.
+- `VERSION` indique actuellement **V3**.
+- `promesse.md` porte la spécification fonctionnelle candidate de la V3.0.0 : elle hérite du socle V2.1 (S01–S03, garanties conservées) et ajoute trois chantiers (ACT01–02, COG01–02, TUT01–04). Elle n'est pas encore gelée.
+- `base_de_travail.md` est la feuille de route actuelle de la trajectoire V2.1 → V3 ; elle fait foi pour le séquencement du travail.
 - Le contenu de `en_cours/` n'est pas la version publique recommandée.
-- La version publique reste dans `../dist/stable/` jusqu'à promotion explicite.
+- La version publique reste la V2.1 dans `../dist/stable/` jusqu'à promotion explicite de la V3.
 
 ## Règles de modification
 
@@ -19,7 +19,7 @@ Avant de modifier `SKILL.md` ou une référence :
 3. identifier les scénarios de non-régression potentiellement affectés ;
 4. préserver la cohérence entre orchestration et contrats des références.
 
-Le candidat V2.1 repart physiquement de la V2 stable. Les acquis de la V3 expérimentale ne sont reportés qu'après le tri explicite décrit dans `base_de_travail.md` — ne pas les recopier automatiquement.
+Le candidat V3 hérite du socle V2.1 validé ; il ne repart ni de la V2 ni de l'ancienne V3 expérimentale (voir `base_de_travail.md` §1). Les acquis de la V3 expérimentale ne sont reportés qu'après le tri explicite décrit dans `base_de_travail.md` — ne pas les recopier automatiquement.
 
 ## Architecture du runtime
 
@@ -63,7 +63,7 @@ Lorsqu'un changement touche l'évaluation ou la progression, vérifier notamment
 - pas de notation arbitraire par défaut ;
 - critères apprenant visibles sans révéler prématurément solution/correction décisive.
 
-Ces points sont désormais repris explicitement dans la promesse V2.1.0 (`promesse.md`, P01–P03 et garanties G01–G06).
+Ces points restent repris dans le socle hérité de la promesse V3.0.0 (`promesse.md`, S01–S03 et garanties conservées de la V2.1).
 
 ## Publication
 

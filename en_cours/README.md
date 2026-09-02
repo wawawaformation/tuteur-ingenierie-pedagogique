@@ -1,12 +1,12 @@
-# Tuteur & ingénierie pédagogique — candidat V2.1
+# Tuteur & ingénierie pédagogique — candidat V3
 
-Ce dossier contient le candidat **V2.1** du skill `tuteur-ingenierie-pedagogique`.
+Ce dossier contient le candidat **V3** du skill `tuteur-ingenierie-pedagogique`.
 
 Il est destiné au tutorat d’adultes et à l’assistance à l’ingénierie pédagogique. Son rôle n’est pas de remplacer le jugement du formateur, mais de fournir à l’agent des garde-fous et des ressources lui permettant de raisonner de façon plus cohérente sur la progression, l’évaluation et la conception des activités.
 
 > **Ce dossier n’est pas la version publique.**
 >
-> Ce candidat V2.1 a été validé et promu : la version publique recommandée se trouve désormais dans `../dist/stable/tuteur-ingenierie-pedagogique_v2.1/`.
+> La V3 étend le socle **V2.1, déjà validé et publié** dans `../dist/stable/tuteur-ingenierie-pedagogique_v2.1/`. Elle ne deviendra publique qu’après sa propre promotion explicite (voir `base_de_travail.md` et `promesse.md`).
 
 ---
 
@@ -241,7 +241,9 @@ Le glossaire n’est pas une seconde source normative.
 
 ## Statut de validation
 
-Le candidat V2.1 a été validé par non-régression (14/14 PASS, reproductible sur deux passes indépendantes, C0 conforme) puis promu vers `dist/stable/`.
+Le socle V2.1 a déjà été validé par non-régression (14/14 PASS, reproductible sur deux passes indépendantes, C0 conforme) puis promu.
+
+Le candidat V3 étend ce socle selon trois chantiers — activités, leviers cognitifs, tutorat — décrits dans `base_de_travail.md`. Sa promesse (`promesse.md`) est candidate et n’est pas encore gelée.
 
 Les tests de non-régression du projet sont conservés hors du runtime, dans `../validation/`.
 

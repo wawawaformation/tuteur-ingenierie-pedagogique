@@ -235,7 +235,7 @@ dist/stable/
 → dernière version publique distribuée et validée
 
 en_cours/
-→ candidat V2.1
+→ candidat V3
 
 validation/
 → protocoles, scénarios, non-régression et artefacts de validation
@@ -252,9 +252,9 @@ La version actuellement distribuée correspond à la **V2.1 validée**. V1 et V2
 
 ### Développement en cours
 
-[`en_cours/`](en_cours/) est la zone de développement du prochain candidat.
+[`en_cours/`](en_cours/) est la zone de développement du candidat courant.
 
-Le candidat V2.1 qui y était développé a été validé et promu (voir ci-dessus) ; le contenu de `en_cours/` n'est jamais considéré comme public de son propre fait.
+Le candidat V2.1 qui y était développé a été validé et promu (voir ci-dessus). `en_cours/` contient désormais le candidat **V3**, qui étend ce socle validé ; le contenu de `en_cours/` n'est jamais considéré comme public de son propre fait.
 
 Le flux de publication reste :
 
