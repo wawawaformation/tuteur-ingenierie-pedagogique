@@ -166,21 +166,19 @@ Application mécanique d'une recette
 
 # Statut de cette promesse
 
-Cette promesse est une **candidate stabilisée pour V3.1.0, prête pour la phase SPEC — pas encore gelée.**
+Cette promesse est **gelée pour V3.1.0**, le 2026-09-03, à l'issue du cycle complet prévu par `base_de_travail.md` §15 :
 
-Deux passes de revue (interne puis externe, vérifiées point par point plutôt qu'appliquées telles quelles) ont déjà couvert les points 1 et 2 ci-dessous. Restent à faire avant gel, dans cet ordre (`base_de_travail.md` §15) :
-
-1. ~~chaque propriété nouvelle (ACT01, ACT02) examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation~~ — fait ;
+1. ~~chaque propriété nouvelle (ACT01, ACT02) examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation~~ — fait, deux passes de revue (interne puis externe, vérifiées point par point) ;
 2. ~~doublons supprimés~~ — fait ;
-3. quelques scénarios courts et discriminants dérivés de la promesse, dans `validation/v3.1/non_regression/` — six créés, aucun encore joué sur le catalogue réel (cinq joués en exploratoire sur le socle seul, sans les nouveaux gabarits) ;
-4. les scénarios qui portent la charge de preuve de la fiabilité (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3` — voir le paragraphe ci-dessus) rejoués trois fois chacun une fois le catalogue réel disponible, pas une seule ; un test A / B′ reste par ailleurs possible en complément lorsqu'il apporte une information utile — vigilance particulière sur ACT01, dont `V31-ACT01-1` est déjà identifié comme le scénario le plus faible de la batterie (quasi tautologique une fois le catalogue en place) ;
-5. la promesse ajustée si nécessaire puis **gelée seulement à ce moment-là**, avant l'implémentation complète de V3.1.0 — pas avant.
+3. ~~sept scénarios courts et discriminants dérivés de la promesse, dans `validation/v3.1/non_regression/`~~ — faits ;
+4. ~~les quatre scénarios qui portent la charge de preuve de la fiabilité (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4`) rejoués trois fois chacun~~ — fait, sur une copie isolée du catalogue réel (fixture, candidat versionné non modifié) : **15 exécutions au total, 15/15 PASS**, unanimité (3/3) sur les quatre scénarios répétés. Aucune propriété n'a nécessité d'ajustement. Détail dans `validation/v3.1/non_regression/CLAUDE.md` et `docs/historique_3.md`. Test A / B′ resté sans objet, conformément à la décision documentée en tête de `validation/v3.1/non_regression/README.md` ;
+5. ~~la promesse ajustée si nécessaire puis gelée~~ — aucun ajustement nécessaire ; gelée telle quelle.
 
 La validation de V3.1.0 rejouera, en une seule passe pour la détection de régression (`base_de_travail.md` §13) :
 
 - les 15 scénarios de la baseline V2.1 ;
-- les scénarios V3.1.0, une fois joués et retenus.
+- les 7 scénarios V3.1.0 ci-dessus, désormais établis comme fiables.
 
-Cette passe unique de gel est distincte de la validation initiale de la fiabilité d'ACT01/ACT02 (point 4 ci-dessus), qui doit être établie **avant** que ces scénarios rejoignent la batterie rejouée en passe unique — on ne peut pas gager en une passe une propriété qui n'a jamais été montrée stable.
+Reste non couvert avant l'implémentation réelle du catalogue (candidat versionné, pas la copie de test) : les prérequis bloquants documentés dans `validation/v3.1/non_regression/README.md` (référencement dans `activite.md`, évolution de `SKILL.md` sur les métadonnées de sélection) doivent encore être appliqués au candidat lui-même — la validation ci-dessus porte sur une copie isolée, conformément à la voie (a) documentée.
 
 Une fois V3.1.0 validée et promue, `promesse.md` sera étendu en V3.2.0 (chantier 2 — leviers cognitifs et biais).

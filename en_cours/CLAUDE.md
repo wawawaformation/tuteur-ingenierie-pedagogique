@@ -6,7 +6,7 @@ Ce dossier est la **zone de développement du candidat courant**.
 
 - `VERSION` indique actuellement **V3.1**.
 - La V3 est séquencée en mineures indépendantes, gelées et promues l'une après l'autre : V3.1.0 (chantier 1) → V3.2.0 (chantier 2) → V3.3.0 (chantier 3, = V3 complète). Voir `base_de_travail.md` §4.1.
-- `promesse.md` porte la spécification fonctionnelle candidate de la mineure **V3.1.0** : elle hérite du socle V2.1 (S01–S03, garanties conservées) et engage le seul chantier 1 (ACT01–02, catalogue d'activités). Les chantiers 2 (COG01–02) et 3 (TUT01–04) ne sont pas encore engagés ; ils seront ajoutés au document lors des mineures V3.2.0 et V3.3.0. Stabilisée, prête pour la phase SPEC — pas encore gelée.
+- `promesse.md` porte la spécification fonctionnelle candidate de la mineure **V3.1.0** : elle hérite du socle V2.1 (S01–S03, garanties conservées) et engage le seul chantier 1 (ACT01–02, catalogue d'activités). Les chantiers 2 (COG01–02) et 3 (TUT01–04) ne sont pas encore engagés ; ils seront ajoutés au document lors des mineures V3.2.0 et V3.3.0. **Gelée le 2026-09-03** après validation complète (7 scénarios, 15 exécutions, 15/15 PASS sur une copie de test — voir `promesse.md` « Statut de cette promesse »). Le candidat versionné lui-même n'implémente pas encore le catalogue enrichi : prérequis bloquants restants dans `validation/v3.1/non_regression/README.md`.
 - `base_de_travail.md` est la feuille de route actuelle de la trajectoire V2.1 → V3 ; elle fait foi pour le séquencement du travail.
 - Le contenu de `en_cours/` n'est pas la version publique recommandée.
 - La version publique reste la V2.1 dans `../dist/stable/` jusqu'à promotion explicite de la V3.

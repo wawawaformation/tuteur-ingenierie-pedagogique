@@ -4,6 +4,24 @@ Journal court des étapes réalisées sur le candidat V3, toutes mineures confon
 
 ---
 
+## 2026-09-03 — Validation complète des 7 scénarios V3.1.0, promesse gelée
+
+À la demande de l'utilisateur (« on run »), les 7 scénarios ont été joués pour de vrai sur le catalogue candidat, pas seulement en exploratoire sur le socle V2.1 seul comme précédemment.
+
+**Environnement de test** : `en_cours/` dupliqué dans un répertoire scratch jetable ; les 4 gabarits actuels remplacés par leur version retravaillée (schéma homogène) et les 10 gabarits candidats validés (Tabou exclu) copiés dans `activites_type/` ; `activite.md` et `SKILL.md` patchés localement pour lever les deux premiers prérequis bloquants (référencement, métadonnées de sélection). **Candidat versionné non touché** — voie (a) documentée dans `README.md` (fixture par injection dans une copie isolée).
+
+**Exécution** : 15 runs via sous-agents vierges (aucun accès à cette conversation ni aux oracles), un par scénario simple, trois par scénario « charge de preuve » (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4`).
+
+**Résultat : 15/15 PASS.** Unanimité (3/3) sur les quatre scénarios répétés — Quiz, Planche météo, Brique et Rétrospective retenus systématiquement, avec un raisonnement explicite et non trivial à chaque fois (ex. distinction correcte Rétrospective/Planche météo/En un mot répétée identiquement sur les trois runs de `V31-ACT02-4`). Aucun ajustement de propriété nécessaire.
+
+- `en_cours/promesse.md`, « Statut de cette promesse » : réécrite en gelée, avec le détail des résultats et la distinction maintenue entre validation initiale (ce cycle) et gel de non-régression à passe unique (`base_de_travail.md` §13, futur).
+- `en_cours/CLAUDE.md`, `.claude/CLAUDE.md` : alignés sur le statut gelé.
+- `validation/v3.1/non_regression/CLAUDE.md` : tableau des résultats par scénario, méthode des runs documentée.
+
+**Ce qui reste non fait, distinct de la promesse** : le candidat versionné (`en_cours/`) n'implémente toujours pas le catalogue enrichi — la validation porte sur une copie de test, pas sur le candidat réel. Les prérequis bloquants doivent encore être appliqués pour de vrai avant toute non-régression officielle.
+
+---
+
 ## 2026-09-03 — Ajout `V31-ACT02-4` : les métadonnées ne sont pas une table de décision mécanique
 
 Question de l'utilisateur (« pas plus de sous ACT01 ou 02 pour confirmer l'exactitude de la promesse ? ») ayant fait relire ACT01/ACT02 intégralement contre les 6 fiches existantes. Un vrai trou trouvé, pas du remplissage : ACT02 promet explicitement que « les métadonnées constituent des indices de sélection, pas des conditions exclusives ni une table de décision mécanique » (`promesse.md` l. 103), mais aucune fiche ne le testait — toutes présentaient des métadonnées pointant proprement vers la bonne réponse. Second candidat plus faible identifié et écarté d'un commun accord : `granularité`/`étape pédagogique` citées comme critères de choix mais jamais testées comme facteur décisif — jugé moins urgent, pas traité.

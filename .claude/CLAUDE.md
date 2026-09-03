@@ -37,7 +37,8 @@ en_cours/
 → candidat V3, mineure V3.1.0 engagée (chantier 1 : catalogue d'activités)
 → hérite du socle V2.1 validé ; V3 séquencée en mineures indépendantes 3.1 → 3.2 → 3.3 (voir en_cours/base_de_travail.md §4.1)
 → non public par principe
-→ promesse V3.1.0 candidate, non encore gelée
+→ promesse V3.1.0 gelée (2026-09-03), validée par 7 scénarios / 15 exécutions / 15 PASS sur copie de test
+→ candidat versionné pas encore implémenté (prérequis bloquants documentés dans validation/v3.1/non_regression/README.md)
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.

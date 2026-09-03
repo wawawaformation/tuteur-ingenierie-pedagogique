@@ -4,9 +4,11 @@ Ce dossier contient la **batterie de non-régression candidate pour la mineure V
 
 ## Statut
 
-Sept scénarios candidats créés. Cinq ont été joués une fois en aveugle, de façon exploratoire (voir `docs/historique_3.md`) ; `V31-ACT01-3` et `V31-ACT02-4` (ajouts les plus récents) ne l'ont pas encore été. Voir `README.md` pour la batterie, `en_cours/base_de_travail.md` (§9, §13) et `en_cours/promesse.md` (V3.1.0, propriétés ACT01–02).
+**Sept scénarios candidats, tous joués et validés — promesse gelée le 2026-09-03.** 15 exécutions au total (1 par scénario simple, 3 par scénario « charge de preuve »), **15/15 PASS**. Détail en `## Avant de geler` ci-dessous. Voir `README.md` pour la batterie, `en_cours/base_de_travail.md` (§9, §13) et `en_cours/promesse.md` (V3.1.0, propriétés ACT01–02, section « Statut de cette promesse »).
 
-Aucun run n'est possible en l'état : les gabarits visés sont encore des brouillons dans `plus_tard/`. Les trois prérequis bloquants (énumération du catalogue, noms de champs du front matter dans `SKILL.md`, homogénéité du schéma) sont documentés dans `README.md`, section « Prérequis d'exécution ».
+**Méthode des runs** : les gabarits candidats n'étant pas encore intégrés au candidat versionné, les runs ont été joués sur une **copie isolée** (`en_cours/` dupliqué dans un répertoire de test, gabarits candidats de `plus_tard/` ajoutés, `activite.md` et `SKILL.md` patchés localement pour le référencement) — voie (a) documentée dans `README.md`, candidat versionné non modifié. Exécutants : sous-agents vierges, sans accès à cette conversation ni aux oracles, restreints au seul répertoire de test.
+
+Le candidat versionné (`en_cours/references/`, `en_cours/SKILL.md`) n'implémente toujours pas le catalogue enrichi : les prérequis bloquants (énumération du catalogue, noms de champs du front matter, homogénéité du schéma) documentés dans `README.md` restent à appliquer avant tout run sur le vrai candidat.
 
 ## Numérotation
 
@@ -25,13 +27,21 @@ Le gel de V3.1.0 rejoue, en une seule passe (`base_de_travail.md` §13.1–§13.
 
 Un FAIL déclenche des reprises ciblées sur le scénario concerné, pas un retour à deux passes complètes.
 
-## Avant de geler
+## Avant de geler — fait, résultats
 
-Les scénarios discriminants pour ACT01–02 sont créés mais **non stabilisés** : aucun n'a encore été joué sur le catalogue réel. La promesse V3.1.0 reste non gelée jusqu'à ce que les runs aient permis de confirmer, retirer ou ajuster les propriétés (`base_de_travail.md` §9 et §15).
+| Scénario | Runs | Verdict | Type retenu (constant) |
+|---|---|---|---|
+| `V31-ACT01-1` | 1/1 | PASS | Facettes |
+| `V31-ACT01-2` | 3/3 | PASS | Quiz |
+| `V31-ACT01-3` | 3/3 | PASS | Planche météo |
+| `V31-ACT02-1` | 1/1 | PASS | Étude de cas |
+| `V31-ACT02-2` | 1/1 | PASS | Simulation / mise en situation |
+| `V31-ACT02-3` | 3/3 | PASS | Brique |
+| `V31-ACT02-4` | 3/3 | PASS | Rétrospective |
 
-Point de vigilance issu de la rédaction : `V31-ACT01-1` est le scénario le plus faible de la batterie (quasi tautologique une fois le catalogue en place). La charge de preuve repose sur `V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4` et la paire `V31-ACT02-1`/`V31-ACT02-2`.
+**15/15 PASS.** Les quatre scénarios « charge de preuve » (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4`) sont unanimes sur leurs trois exécutions — la propriété de fiabilité qu'ils protègent est établie, pas seulement observée une fois. Aucune propriété n'a nécessité d'ajustement ou de retrait. Promesse gelée en conséquence (`promesse.md`, « Statut de cette promesse »).
 
-**Exigence de répétition, distincte de la règle de passe unique ci-dessus.** `V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3` et `V31-ACT02-4` protègent une propriété de **fiabilité** (`promesse.md`, tête du Chantier 1), pas seulement de capacité : chacun doit être rejoué trois fois (même stimulus, workspace neuf, majorité stable) avant de conclure à leur validité — un `PASS` isolé ne suffit pas. Cette exigence porte sur l'établissement initial de la propriété, avant qu'elle rejoigne la batterie de gel ci-dessus, qui elle ne sera rejouée qu'une fois.
+Point qui reste vrai malgré ces résultats : `V31-ACT01-1` demeure le scénario le moins discriminant de la batterie (un seul run, propriété quasi tautologique une fois le catalogue en place) — son `PASS` confirme l'absence de régression, il ne porte pas la charge de preuve.
 
 ## Promotion
 
