@@ -1,125 +1,94 @@
-# Promesse candidate V3.0.0
+# Promesse candidate V3.1.0
 
-Ce document constitue la **spécification fonctionnelle candidate** de la V3.0.0 du skill `tuteur-ingenierie-pedagogique`.
+Ce document constitue la **spécification fonctionnelle candidate** de la mineure V3.1.0 du skill `tuteur-ingenierie-pedagogique`.
 
-La V3 ne repart pas de zéro : elle **hérite du socle validé en V2.1** et cherche à l'étendre sans régression dans trois chantiers :
+V3.1.0 est la première mineure de la V3 (voir `base_de_travail.md` §4.1 pour le séquencement complet). Elle hérite du socle validé en V2.1 et engage un seul chantier :
 
-1. étoffer et mieux exploiter le catalogue d'activités ;
-2. mobiliser quelques leviers issus de la psychologie cognitive et des biais cognitifs ;
-3. renforcer le tutorat pour le rendre plus progressif et adaptatif.
+1. étoffer et mieux exploiter le catalogue d'activités.
 
-La promesse reste volontairement limitée à des comportements importants, observables et susceptibles de modifier une décision pédagogique.
+Les chantiers 2 (leviers cognitifs et biais) et 3 (tutorat) sont prévus par la feuille de route mais ne sont pas engagés par cette promesse ; ils feront l'objet des mineures V3.2.0 et V3.3.0.
 
-Le skill ne promet pas de produire un « tuteur parfait » ni d'améliorer globalement toute production pédagogique.
+La promesse reste volontairement limitée à des comportements importants, observables et susceptibles de modifier une décision pédagogique. Elle ne promet pas d'améliorer globalement toute production pédagogique.
 
 ---
 
 # Promesse centrale
 
-> **Conserver les acquis validés de la V2.1 et les étendre afin que l'agent puisse choisir parmi une boîte à outils pédagogique plus riche, mobiliser à bon escient quelques leviers cognitifs et conduire un tutorat plus progressif et adaptatif, à partir de l'objectif réel, des acquis disponibles et de ce que l'apprenant manifeste effectivement au fil de l'accompagnement.**
+> **Conserver les acquis validés de la V2.1 et les étendre afin que l'agent puisse identifier et choisir, parmi une boîte à outils pédagogique plus riche, l'activité la plus pertinente au regard de l'objectif, du contexte et du besoin pédagogique effectif.**
 
 ---
 
 # 0. Socle hérité de la V2.1
 
-La V2.1 constitue la **baseline comportementale** de la V3.
+La V2.1 constitue la **baseline comportementale** de V3.1.0.
 
-Ses acquis ne sont pas redéfinis par la présente promesse. Ils doivent être préservés par non-régression.
+Ses propriétés validées restent acquises et leur source normative demeure la V2.1 gelée (`SKILL.md` et `references/` du candidat, non-régressés) — cette promesse ne les redéfinit pas, elle les rappelle pour mémoire :
 
-La V3 conserve notamment les trois propriétés centrales de la V2.1 :
+- raisonnement notion → palier → fondement → attestation, avec déclaration ≠ preuve et manque de preuve ≠ preuve de manque ;
+- valeur diagnostique d'une activité évaluée préservée (budget de nouveauté, portée limitée d'une preuve) ;
+- alignement objectif → tâche → production → critères → preuve → conclusion ;
+- garde-fous validés (pas de notation arbitraire, pas de persistance inventée, dérogations locales résolues explicitement).
 
-## S01 — Raisonner par notion, palier, fondement et attestation
-
-L'agent raisonne sur les notions effectivement mobilisées et non sur un niveau global attribué à l'apprenant.
-
-Il continue notamment à distinguer :
-
-- exposition ;
-- accompagnement ;
-- déclaration ou impression ;
-- performance observable ;
-- observation précise rapportée ;
-- attestation explicite d'un formateur ou responsable pédagogique ;
-- fondement compatible avec le palier retenu.
-
-Restent notamment acquis :
-
-> **Déclaration ≠ preuve.**
-
-> **Manque de preuve ≠ preuve de manque.**
-
-> **Une preuve ne vaut que pour ce qu'elle montre réellement.**
-
-Une attestation explicite valide d'une notion à un palier nommé par un formateur ou responsable pédagogique déclaré ou établi comme tel dans le contexte reste un fondement recevable et révisable.
-
-## S02 — Préserver la valeur diagnostique d'une activité évaluée
-
-Pour une activité évaluée, l'agent continue à raisonner sur les notions nécessaires et sur leur état attesté.
-
-Le budget de nouveauté général de la V2.1 reste applicable hors dérogation spécialisée explicite.
-
-La portée d'une preuve reste limitée à l'acte réellement observable :
-
-```text
-utiliser ≠ créer
-exécuter ≠ écrire
-lire ≠ produire
-modifier ≠ concevoir
-```
-
-## S03 — Maintenir l'alignement pédagogique
-
-L'agent continue à maintenir la cohérence :
-
-```text
-objectif
-→ tâche
-→ production ou performance observable
-→ critères
-→ preuve
-→ conclusion
-```
-
-Il ne conclut qu'à hauteur de ce que les observables permettent réellement d'établir.
-
-## Garanties V2.1 conservées
-
-Les garanties de fonctionnement de la V2.1 restent également en vigueur :
-
-- ne pas inventer un état ou une persistance absente ;
-- résoudre explicitement les dérogations locales et les contradictions documentaires ;
-- ne pas transformer les paliers cognitifs en barrières absolues ;
-- respecter le périmètre demandé ;
-- ne pas inventer de notation arbitraire ;
-- préserver la valeur de l'évaluation avant production.
-
-Toute modification de ce socle doit être considérée comme une modification du noyau et être justifiée explicitement.
-
-La validation finale de la V3 devra vérifier la non-régression des comportements V2.1 concernés.
+Toute modification de ce socle doit être considérée comme une modification du noyau et être justifiée explicitement. La validation de V3.1.0 devra vérifier la non-régression des comportements V2.1 concernés.
 
 ---
 
 # Chantier 1 — Étoffer et mieux exploiter le catalogue d'activités
 
-## ACT01 — Mobiliser une boîte à outils pédagogique plus riche
+Les activités ajoutées ne sont pas des formats que l'agent improvise ou invente : ce sont des formats **courants, éprouvés par un formateur expérimenté**, mis à disposition pour que l'agent les mobilise directement plutôt que de reconstruire à chaque fois une structure équivalente par improvisation. La plupart existent déjà, sous des noms proches, dans les LMS courants (quiz, étude de cas, simulation…) — ce n'est donc pas un vocabulaire propre au skill, mais un vocabulaire partagé avec le terrain, auquel un formateur est déjà familiarisé.
 
-L'agent doit pouvoir mobiliser un catalogue d'activités plus varié afin de répondre à davantage de situations pédagogiques.
+La valeur n'est donc pas seulement « l'agent sait-il produire quelque chose de correct sans le gabarit » — un socle générique bien utilisé peut souvent s'en approcher, les runs exploratoires de V3.1.0 l'ont déjà montré (`Atelier` seul s'approche de `Facettes` ou d'`Étude de cas`) — mais « le gabarit lui permet-il de produire ce résultat de façon fiable et systématique, plutôt qu'une fois, avec un modèle capable, au prix d'une improvisation ». C'est cette fiabilité, pas la seule capacité brute, que les scénarios doivent viser.
 
-L'existence d'un type d'activité dans le catalogue ne constitue jamais, à elle seule, une raison de le choisir.
+**Ce que « fiable et systématique » implique pour la validation, précisément parce que c'est ce que la promesse engage.** Un scénario qui vérifie qu'un choix est correct une seule fois ne teste pas la fiabilité — il teste la capacité, ce que les runs exploratoires ont déjà fait sans qu'un gabarit existe. Vérifier la fiabilité suppose de rejouer le **même stimulus plusieurs fois** et de constater que le choix reste stable, plutôt que de varier selon le tirage du modèle.
+
+Cette exigence de répétition porte spécifiquement sur les scénarios qui protègent une propriété de fiabilité (les scénarios ACT01/ACT02 qui portent la charge de preuve — voir `validation/v3.1/non_regression/README.md`). Elle est **distincte** de la règle de passe unique du gel de non-régression (`base_de_travail.md` §13.2), qui porte sur la détection de régression d'une propriété déjà validée, pas sur la validation initiale d'une propriété nouvelle : le gel rejoue une fois une batterie déjà éprouvée ; la validation d'ACT01/ACT02 doit d'abord établir qu'elle est éprouvable. Repère minimal retenu : trois exécutions indépendantes du même stimulus, majorité stable pour conclure à la fiabilité — à ajuster si l'expérience montre que ce seuil est mal calibré.
+
+## Invariant d'architecture hérité de la V2.1
+
+La V2.1 permet déjà d'ajouter un gabarit d'activité sans introduire de règle générale nouvelle dans le noyau : `SKILL.md` décrit un mécanisme de sélection générique (lecture du front matter des candidats pour départager) et ne nomme aucun gabarit particulier.
+
+V3.1.0 ne revendique donc pas cette extensibilité comme une propriété nouvelle. Elle doit la **préserver** pendant l'enrichissement effectif du catalogue.
+
+Précision vérifiée sur le runtime : la découvrabilité repose aujourd'hui sur le catalogue énuméré de `references/activite.md`, présenté comme « premier niveau de sélection ». Référencer un nouveau gabarit à cet endroit relève du **référencement attendu** (`base_de_travail.md` §5.4), pas d'une règle générale ajoutée au noyau — mais cela reste une opération nécessaire, et le passage à un catalogue nettement plus fourni pose une question de conception à trancher pendant la mineure, non par cette promesse.
+
+Cet invariant relève principalement de la conception et de la revue du diff. Les scénarios de V3.1.0 peuvent toutefois vérifier indirectement qu'un nouveau gabarit reste découvrable et mobilisable sans traitement spécifique ajouté au noyau.
+
+---
+
+## ACT01 — Mobiliser le catalogue enrichi
+
+L'agent doit pouvoir mobiliser les activités ajoutées au catalogue V3.1.0 lorsqu'elles sont pertinentes pour la situation pédagogique.
+
+Les nouveaux gabarits ne bénéficient d'aucune priorité du seul fait de leur nouveauté. Ils rejoignent la même boîte à outils que les activités déjà présentes.
 
 Le catalogue reste :
 
 > **une boîte à outils, pas un parcours à dérouler.**
 
-Une nouvelle activité doit pouvoir enrichir cette boîte à outils sans imposer une nouvelle règle générale au noyau simplement pour devenir utilisable.
+L'existence d'un type d'activité dans le catalogue ne constitue jamais, à elle seule, une raison de le choisir.
 
 ### Observable attendu
 
-Face à des besoins pédagogiques différents, l'agent peut mobiliser des formes d'activités différentes lorsque leurs finalités sont réellement pertinentes.
+Face à une situation pour laquelle un nouveau gabarit V3.1.0 est plus pertinent que les activités historiques, l'agent peut l'identifier et le mobiliser.
+
+Face à une situation où ce nouveau gabarit n'est pas pertinent, il ne le choisit pas simplement parce qu'il est disponible.
+
+> **Note pour la phase SPEC :** la moitié positive de cet observable risque d'être satisfaite trivialement (un fichier pertinent existe, l'agent l'utilise). Le pouvoir discriminant tient surtout à la moitié négative — absence de biais de nouveauté — et au contraste A / B′, où un agent sans skill tend à inventer un format plutôt qu'à exploiter un catalogue existant. Les scénarios doivent viser ces deux angles.
+
+**Risque symétrique : le biais de familiarité, protégé par `V31-ACT01-3`.** Se rabattre sur un gabarit connu (`Atelier`, `Quiz`) par habitude, alors qu'un gabarit plus récent répond plus précisément au besoin, produit le même défaut que le biais de nouveauté — l'enrichissement du catalogue ne change alors rien en pratique. Exemple : un besoin de connaître l'état du moment de chaque apprenant (disponibilité, énergie, ressenti) doit faire reconnaître `Planche météo`, pas un tour de table improvisé en `Atelier` ni un diagnostic de connaissances en `Quiz`. « Le plus proche » ou « le plus pertinent » se détermine sur la finalité déclarée, dans **tout** le catalogue — pas par défaut vers ce qui est déjà familier.
 
 ---
 
 ## ACT02 — Choisir une activité pour sa pertinence pédagogique
+
+Le raisonnement part de la situation et de l'objectif réels, pas du catalogue :
+
+```text
+situation + objectif
+→ une activité du catalogue correspond-elle ?
+→ oui : la choisir, en la départageant des autres candidates plausibles
+→ non : dériver une activité du gabarit existant qui s'en rapproche le plus, plutôt que reconstruire depuis zéro
+```
 
 Lorsqu'il existe plusieurs activités plausibles, l'agent doit les départager en fonction du besoin réel et exploiter les métadonnées de sélection disponibles dans leur front matter.
 
@@ -131,225 +100,56 @@ Le choix doit notamment rester cohérent avec :
 - l'étape pédagogique ;
 - les caractéristiques déclarées des activités candidates.
 
-Les métadonnées constituent des **indices de sélection**, pas des conditions exclusives ni une table de décision mécanique.
+Les métadonnées constituent des **indices de sélection**, pas des conditions exclusives ni une table de décision mécanique — protégé par `V31-ACT02-4` : un vocabulaire de surface qui recoupe les `selection_keywords` d'un gabarit ne doit pas l'emporter sur la fonction réellement décrite.
 
-Si aucun type existant ne convient, l'agent peut construire une activité adaptée à partir du socle commun.
+Si aucun type existant ne correspond exactement, l'agent adapte le gabarit existant le plus proche plutôt que de repartir d'une page blanche — c'est ce que les runs exploratoires ont déjà montré (`Atelier` adapté pour une analyse de dossier ou pour un jeu de rôle, `Brique` adapté pour une observation ciblée). Une construction entièrement nouvelle depuis le seul socle `Activité`, sans prendre appui sur aucun gabarit existant, reste possible mais n'est pas le premier réflexe attendu.
 
-### Observable attendu
-
-Deux situations différentes mais superficiellement proches peuvent conduire à deux choix d'activités différents lorsque leurs besoins pédagogiques diffèrent réellement.
-
----
-
-# Chantier 2 — Mobiliser quelques leviers issus de la psychologie cognitive et des biais cognitifs
-
-## COG01 — Utiliser les mécanismes cognitifs comme leviers de décision
-
-La V3 peut mobiliser un nombre limité de leviers issus de connaissances documentées sur l'apprentissage lorsqu'ils permettent d'éclairer une décision pédagogique.
-
-Ces leviers peuvent notamment aider à décider de :
-
-- réduire ou fractionner une difficulté ;
-- limiter une surcharge inutile ;
-- ajuster le niveau de guidage ;
-- faire produire avant de fournir une réponse complète ;
-- proposer un exemple lorsque la recherche autonome n'est plus productive ;
-- retirer progressivement l'aide ;
-- favoriser récupération, consolidation ou transfert.
-
-Le principe cognitif ne doit pas devenir une recette obligatoire.
-
-La chaîne recherchée est :
-
-```text
-connaissance étayée
-→ conséquence pédagogique
-→ levier possible
-→ décision contextualisée
-```
-
-et non :
-
-```text
-notion de psychologie cognitive
-→ règle appliquée mécaniquement
-```
-
-La littérature peut soutenir un mécanisme ou une vigilance sans prescrire la formulation exacte retenue par le skill. Cette opérationnalisation doit rester identifiable comme un choix de conception.
+« Le plus proche » se détermine sur la finalité déclarée, dans tout le catalogue — pas par défaut vers un gabarit générique déjà familier. Le risque symétrique, quand une correspondance exacte existe plutôt qu'un simple repli, relève d'ACT01 (biais de familiarité, ci-dessus) : les deux s'appuient sur la même exigence, comparer sur toute la surface du catalogue.
 
 ### Observable attendu
 
-Lorsqu'un levier cognitif est mobilisé, il répond à une difficulté ou à un objectif pédagogique identifiable ; il n'est pas ajouté par principe ni comme habillage théorique.
+Lorsque plusieurs activités sont plausibles, une différence pédagogique pertinente entre deux situations peut conduire à un choix différent, et ce choix reste justifiable par l'objectif, le contexte et les caractéristiques déclarées des activités candidates.
 
 ---
 
-## COG02 — Utiliser les biais pour rendre l'interprétation plus prudente
+# Ce que V3.1.0 ne promet pas
 
-Les biais cognitifs et métacognitifs ne servent pas à étiqueter l'apprenant.
+V3.1.0 ne promet pas :
 
-Ils servent à rappeler que l'apprenant **et le tuteur** peuvent mal interpréter une performance, une erreur, une impression ou un diagnostic précédent.
-
-L'agent doit notamment conserver comme hypothèses révisables :
-
-- une première estimation de niveau ;
-- une interprétation de la cause d'une erreur ;
-- une impression générale sur l'apprenant ;
-- une déclaration de confiance ou de maîtrise.
-
-Une nouvelle observation pertinente doit pouvoir conduire à réviser le diagnostic précédent.
-
-### Observable attendu
-
-Lorsqu'un observable nouveau contredit une hypothèse antérieure, l'agent peut réviser son interprétation plutôt que chercher à préserver sa première conclusion.
-
----
-
-# Chantier 3 — Renforcer le tutorat
-
-Les règles de cette section sont spécifiques au contexte tutorat.
-
-Elles doivent rester dans la référence spécialisée de tutorat lorsqu'elles n'ont pas vocation à s'appliquer à l'ensemble du skill.
-
-## TUT01 — Établir le point de départ utile avant une décision qui en dépend
-
-Le tutorat part de :
-
-- l'objectif réel de l'apprenant ;
-- ce qui est déjà suffisamment établi sur les prérequis utiles ;
-- ce qui manque réellement pour choisir la prochaine étape.
-
-Le diagnostic doit rester **minimal** : il ne cherche pas à tout savoir sur l'apprenant.
-
-En revanche, lorsqu'une information manque et que l'agent reconnaît qu'elle peut modifier sa décision pédagogique, il ne doit pas transformer cette inconnue en hypothèse de fait pour poursuivre comme si elle était établie.
-
-### Observable attendu
-
-Deux réponses différentes à une question diagnostique pertinente peuvent conduire à deux décisions pédagogiques différentes.
-
-Si l'information est nécessaire à la décision, l'agent attend de la disposer avant de figer cette décision.
-
----
-
-## TUT02 — Construire le chemin minimal pertinent vers l'objectif
-
-Une fois le point de départ suffisamment établi, le tutorat ne déroule pas un programme générique du sujet.
-
-Il cherche :
-
-> **le chemin minimal pertinent entre le point de départ réel et l'objectif réel.**
-
-Une notion intéressante mais non nécessaire n'est pas ajoutée automatiquement.
-
-Le parcours reste révisable si les observations ultérieures modifient ce que l'on sait de l'apprenant.
-
-### Observable attendu
-
-Lorsque certains acquis sont déjà suffisamment établis, l'agent peut raccourcir ou modifier le parcours au lieu de faire repasser systématiquement l'apprenant par toutes les étapes possibles.
-
----
-
-## TUT03 — Introduire les nouveautés progressivement
-
-Le tutorat doit éviter d'empiler plusieurs nouveautés simultanées lorsqu'elles ne sont pas nécessaires à l'objectif immédiat.
-
-Le principe spécifique au tutorat est :
-
-> **Une nouveauté = une activité, autant que possible.**
-
-Lorsqu'une notion constitue la nouveauté travaillée, les difficultés périphériques doivent autant que possible être :
-
-- déjà connues ;
-- fournies ;
-- guidées ;
-- ou temporairement neutralisées.
-
-Cette règle ne signifie pas qu'une activité doit être artificiellement facile ni qu'une situation complexe est interdite.
-
-Elle cherche à éviter qu'une difficulté périphérique empêche de savoir ce que l'apprenant est réellement en train d'apprendre.
-
-### Observable attendu
-
-Une activité destinée à introduire une notion nouvelle ne demande pas simultanément la maîtrise autonome de plusieurs autres notions encore nouvelles lorsque celles-ci peuvent être fournies, guidées ou différées.
-
----
-
-## TUT04 — Observer puis adapter la suite
-
-Le tutorat ne doit pas dérouler mécaniquement un plan figé.
-
-La boucle générale recherchée est :
-
-```text
-activité
-→ observation
-→ mise à jour de ce que l'on sait
-→ adaptation éventuelle
-→ activité suivante
-```
-
-L'agent exploite la réponse réelle de l'apprenant pour décider notamment :
-
-- s'il peut avancer ;
-- s'il doit reprendre ou fractionner ;
-- s'il doit modifier le niveau de guidage ;
-- s'il doit choisir une autre activité ;
-- si une hypothèse précédente sur les acquis doit être révisée.
-
-### Observable attendu
-
-Deux performances différentes sur une même étape peuvent conduire à des suites différentes.
-
-La prochaine activité dépend de ce qui vient d'être observé, pas uniquement du plan initial.
-
----
-
-# Ce que la V3 ne promet pas
-
-La V3 ne promet pas :
-
-- d'appliquer systématiquement tous les leviers de psychologie cognitive disponibles ;
-- de diagnostiquer exhaustivement l'apprenant avant d'agir ;
-- de transformer les biais cognitifs en catégories psychologiques appliquées aux personnes ;
 - de dérouler toutes les activités du catalogue ;
 - d'imposer une activité existante lorsqu'aucune ne convient ;
 - de rendre toute activité simple ou facile ;
-- de construire un parcours définitif qui ne pourrait plus être révisé ;
 - de remplacer le jugement pédagogique d'un formateur ;
-- de modifier les acquis validés de la V2.1 sans justification et validation explicites.
+- de modifier les acquis validés de la V2.1 sans justification et validation explicites ;
+- de mobiliser des leviers cognitifs ou d'adapter le tutorat : ces comportements relèvent des mineures V3.2.0 et V3.3.0, non encore engagées.
 
 ---
 
-# Critère comportemental central de la V3
+# Critère comportemental central de V3.1.0
 
 Le critère central de la V2.1 reste valide :
 
 > **Une information pédagogique pertinente différente doit pouvoir conduire l'agent à une décision différente lorsque cette information devrait effectivement modifier l'apprentissage ou l'évaluation.**
 
-La V3 étend ce critère :
+V3.1.0 étend ce critère au choix d'activité :
 
-> **L'agent doit également pouvoir choisir une activité plus pertinente, mobiliser ou non un levier cognitif et adapter la progression tutorielle en fonction du besoin réel et des observations disponibles, plutôt que dérouler une réponse ou un parcours plausible mais générique.**
+> **L'agent doit également pouvoir identifier et choisir une activité plus pertinente en fonction de l'objectif, du contexte et du besoin pédagogique effectif, plutôt que dérouler une réponse ou un format plausible mais générique.**
 
 Le comportement recherché devient notamment :
 
 ```text
 Demande / objectif
    ↓
-État pertinent issu de la V2.1
-(notions, paliers, fondements)
+Contexte et informations pédagogiques pertinentes
+(dont l'état V2.1 disponible)
    ↓
 Besoin pédagogique actuel
    ↓
+Activités candidates
+   ↓
 Choix d'une activité pertinente
    ↓
-Levier cognitif éventuel si utile
-   ↓
-Activité / accompagnement
-   ↓
-Observation
-   ↓
-Révision éventuelle du diagnostic
-   ↓
-Adaptation de la suite
+Activité
 ```
 
 et non :
@@ -360,25 +160,27 @@ Demande
 Choix automatique d'un format
    ↓
 Application mécanique d'une recette
-   ↓
-Déroulement d'un parcours prédéfini
 ```
 
 ---
 
 # Statut de cette promesse
 
-Cette promesse est une **candidate de travail pour la V3.0.0**.
+Cette promesse est une **candidate stabilisée pour V3.1.0, prête pour la phase SPEC — pas encore gelée.**
 
-Avant implémentation complète :
+Deux passes de revue (interne puis externe, vérifiées point par point plutôt qu'appliquées telles quelles) ont déjà couvert les points 1 et 2 ci-dessous. Restent à faire avant gel, dans cet ordre (`base_de_travail.md` §15) :
 
-1. chaque propriété nouvelle doit être examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation ;
-2. les doublons doivent être supprimés ;
-3. quelques scénarios courts et discriminants doivent être dérivés de la promesse ;
-4. les comportements réellement nouveaux doivent être testés en **A / B′** lorsque cette comparaison permet de vérifier leur valeur ajoutée ;
-5. la promesse doit être ajustée puis gelée avant l'implémentation complète de la V3.
+1. ~~chaque propriété nouvelle (ACT01, ACT02) examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation~~ — fait ;
+2. ~~doublons supprimés~~ — fait ;
+3. quelques scénarios courts et discriminants dérivés de la promesse, dans `validation/v3.1/non_regression/` — six créés, aucun encore joué sur le catalogue réel (cinq joués en exploratoire sur le socle seul, sans les nouveaux gabarits) ;
+4. les scénarios qui portent la charge de preuve de la fiabilité (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3` — voir le paragraphe ci-dessus) rejoués trois fois chacun une fois le catalogue réel disponible, pas une seule ; un test A / B′ reste par ailleurs possible en complément lorsqu'il apporte une information utile — vigilance particulière sur ACT01, dont `V31-ACT01-1` est déjà identifié comme le scénario le plus faible de la batterie (quasi tautologique une fois le catalogue en place) ;
+5. la promesse ajustée si nécessaire puis **gelée seulement à ce moment-là**, avant l'implémentation complète de V3.1.0 — pas avant.
 
-La validation finale distinguera :
+La validation de V3.1.0 rejouera, en une seule passe pour la détection de régression (`base_de_travail.md` §13) :
 
-- **non-régression du socle V2.1** ;
-- **validation des comportements nouveaux de la V3**.
+- les 15 scénarios de la baseline V2.1 ;
+- les scénarios V3.1.0, une fois joués et retenus.
+
+Cette passe unique de gel est distincte de la validation initiale de la fiabilité d'ACT01/ACT02 (point 4 ci-dessus), qui doit être établie **avant** que ces scénarios rejoignent la batterie rejouée en passe unique — on ne peut pas gager en une passe une propriété qui n'a jamais été montrée stable.
+
+Une fois V3.1.0 validée et promue, `promesse.md` sera étendu en V3.2.0 (chantier 2 — leviers cognitifs et biais).

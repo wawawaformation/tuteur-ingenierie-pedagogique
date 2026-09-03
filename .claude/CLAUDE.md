@@ -34,9 +34,10 @@ dist/stable/
 → V1 et V2 sont conservées pour historique
 
 en_cours/
-→ candidat V3 (hérite du socle V2.1 validé ; trois chantiers : activités, leviers cognitifs, tutorat)
+→ candidat V3, mineure V3.1.0 engagée (chantier 1 : catalogue d'activités)
+→ hérite du socle V2.1 validé ; V3 séquencée en mineures indépendantes 3.1 → 3.2 → 3.3 (voir en_cours/base_de_travail.md §4.1)
 → non public par principe
-→ promesse V3.0.0 candidate, non encore gelée
+→ promesse V3.1.0 candidate, non encore gelée
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.
@@ -65,6 +66,11 @@ validation/v2.1/non_regression/
 → scénarios NOY candidats pour V2.1, pas encore autoritatifs
 → numérotation propre à ce dossier, distincte de validation/non_regression/ (voir son CLAUDE.md)
 
+validation/v3.1/non_regression/
+→ scénarios NOY candidats pour la mineure V3.1.0 (chantier 1), pas encore autoritatifs ; encore vide
+→ numérotation propre à ce dossier (voir son CLAUDE.md)
+→ des dossiers frères validation/v3.2/, validation/v3.3/ suivront au fil des mineures
+
 validation/collector-kit/
 → instrumentation générique de collecte
 → le collector collecte ; il ne score pas
@@ -89,6 +95,7 @@ Avant de modifier un comportement, identifier le document autoritatif correspond
 - Feuille de route du candidat : `en_cours/base_de_travail.md`.
 - Scénarios NOY autoritatifs : `validation/non_regression/`.
 - Scénarios NOY candidats V2.1 : `validation/v2.1/non_regression/`.
+- Scénarios NOY candidats V3.1.0 : `validation/v3.1/non_regression/`.
 - Campagne V2 historique : `validation/v2/`.
 - Distribution publique : `dist/stable/`.
 

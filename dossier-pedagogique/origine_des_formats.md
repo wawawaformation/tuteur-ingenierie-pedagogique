@@ -139,6 +139,117 @@ Les travaux réalisés depuis ont conduit à recentrer clairement ce gabarit sur
 
 Il n'est donc plus défini comme obligatoirement situé après un Atelier ni comme nécessitant une validation par un tiers.
 
+### Facettes (candidat V3.1.0)
+
+Observé de façon répétée, comme formateur et comme apprenant, plutôt qu'issu d'un protocole académique appliqué tel quel : ce format sert surtout à **introduire** un sujet ou un thème, dans une logique où l'apprenant va chercher le savoir lui-même plutôt que de le recevoir — posture active déjà rattachée à Knowles dans ce document (§1, `andragogie.md`), pas une référence supplémentaire à ajouter ici.
+
+Filiation établie et citable, sans en être une implémentation :
+
+- **interdépendance positive** (Deutsch, 1949 ; Johnson & Johnson, 1989) — chaque sous-groupe détient une pièce indispensable à la vision d'ensemble ;
+- **Group Investigation** (Sharan & Sharan — germe dans *Small-Group Teaching*, 1976 ; forme mature : *Group Investigation Expands Cooperative Learning*, 1990, et *Expanding Cooperative Learning through Group Investigation*, 1992) — parenté forte sur la structure (sous-thèmes → groupes parallèles → restitution → vision globale), mais sans l'autonomie de choix des apprenants sur les sous-thèmes ni la durée (investigation de plusieurs semaines dans la GI canonique, contre quelques dizaines de minutes ici) ;
+- **Co-op Co-op** (Kagan, 1985, *Co-op Co-op: A Flexible Cooperative Learning Technique*) — parenté sur la logique équipe → présentation collective, mais sans la sous-spécialisation individuelle à l'intérieur de chaque sous-groupe que Co-op Co-op prévoit ;
+- explicitement **pas un Jigsaw** (Aronson, 1978) : aucune phase de groupes d'experts recomposés entre sous-groupes.
+
+Aucune source établie ne nomme cette variante allégée et pré-structurée par le formateur, ni son usage typique en introduction/classe inversée — vérifié par recoupement de deux sources indépendantes avant de conclure. Facettes est donc **observé + choisi** : la filiation théorique est établie, l'implémentation précise ne l'est pas.
+
+### Devine-carte (candidat V3.1.0)
+
+Adaptation pédagogique directe d'un jeu de société connu, de la famille **Time's Up!** (aussi désigné Celebrity ou Fishbowl selon les traditions) : mêmes cartes réutilisées sur trois manches progressivement contraintes (explication libre, un seul mot, mime). **Établi** comme mécanique de jeu, **choisi** comme adaptation pédagogique — les cartes portent des notions de formation déjà rencontrées plutôt que des noms ou expressions à deviner pour le jeu.
+
+Observé par le formateur comme particulièrement adapté à un groupe qui a besoin de se détendre (fatigue, tension), tout en restant utile pédagogiquement : les trois manches ne testent pas la même chose. L'explication libre mobilise la compréhension ; la manche « un seul mot » force une identification précise du terme ; le mime, sans recours au verbal, vérifie un niveau d'appropriation plus exigeant que les deux précédentes.
+
+Double fonction assumée, pas accessoire : détente du groupe **et** réactivation de savoirs théoriques déjà rencontrés — jamais introduction d'une notion nouvelle (cohérent avec les `typical_uses` déclarés du gabarit).
+
+### Étude de cas (candidat V3.1.0)
+
+**Établi.** La méthode des cas est l'une des techniques pédagogiques les plus anciennement documentées et les plus largement adoptées, notamment popularisée par la Harvard Business School (à partir d'une méthode d'abord développée en droit, à la Harvard Law School, sous Langdell, avant son adaptation à l'enseignement du management au début du XXe siècle). Présente nommément dans la quasi-totalité des LMS et référentiels de formation professionnelle et supérieure.
+
+Distinction utile avec les gabarits précédents de cette liste : `étude de cas` mobilise typiquement `appliquer`, `analyser`, `évaluer` (et `créer` en option) — un tout autre niveau d'exigence cognitive que Facettes (`comprendre`/`appliquer`) ou Devine-carte (`savoir`/`comprendre`). Ce n'est pas un gabarit de premier contact ou de réactivation légère : il suppose un raisonnement complexe sur une situation contextualisée déjà en partie maîtrisée, pas une découverte ou une révision.
+
+### Simulation / mise en situation (candidat V3.1.0)
+
+**Établi.** Apprentissage par la mise en situation / jeu de rôle : techniques anciennement documentées et largement adoptées en formation professionnelle (santé, relation client, management), reliées à l'apprentissage expérientiel (Kolb) — l'expérience concrète comme déclencheur, suivie d'une réflexion et d'une conceptualisation, ce que le débrief de ce gabarit opérationnalise directement.
+
+Point de vigilance observé, à conserver : l'apprentissage produit par une mise en situation est souvent **discret mais réel** — moins immédiatement visible qu'une production écrite (étude de cas, par exemple), parce qu'il touche à un comportement rejoué plutôt qu'à un raisonnement explicité. Ceci rejoint directement le principe déjà central au skill : la portée d'une preuve est limitée à ce qu'elle montre réellement (`activite_evaluee.md`). Un bon débrief ne prouve pas à lui seul un changement de comportement réel ; inversement, un apprentissage réel peut rester peu visible dans le débrief.
+
+Précision tranchée avec l'utilisateur sur `properties.ludique: false` du front matter : confirmé correct, pas une erreur. Le jeu de rôle peut être ludique (registre théâtral, léger) ; la simulation/mise en situation au sens de ce gabarit vise la fidélité et l'entraînement comportemental proche du réel, sans obligation d'être ludique — c'est d'ailleurs ce qui a été observé dans `V31-ACT02-2` (entretien managérial sérieux). Le nom du gabarit accole les deux notions ; seule une variante jeu de rôle plus légère porterait la dimension ludique, non représentée ici.
+
+### Tabou conceptuel — besoin identifié, véhicule non validé, **hors catalogue V3.1.0**
+
+À la différence de Facettes et Devine-carte, ce candidat n'a **aucune validation** de l'utilisateur : ni observé, ni utilisé, ni enseigné avec, ni comme formateur ni comme apprenant. Il rompt donc le critère qui fonde le chantier 1 (`promesse.md`) — des formats éprouvés par un formateur expérimenté, pas des inventions à valider a posteriori.
+
+Le **besoin** qu'il vise reste réel et identifié : vérifier qu'une notion est comprise en profondeur — au-delà d'une définition ou d'un vocabulaire mémorisé par cœur — en forçant sa reformulation sans les mots-clés les plus immédiats. Distinct de Devine-carte, qui teste la disponibilité en mémoire (largeur, répétition sur plusieurs notions) plutôt que la profondeur de compréhension d'une notion donnée.
+
+Le **véhicule** envisagé — adaptation du jeu Tabou (Hasbro) — est une hypothèse de conception (**choisi**), non testée dans ce contexte pédagogique. Décision : ne pas l'intégrer au catalogue de la mineure V3.1.0 tant qu'il n'a pas été testé, par l'utilisateur ou par un run réel. Le besoin reste ouvert pour une mineure ultérieure ou un autre véhicule.
+
+### Brainstorming (candidat V3.1.0)
+
+**Établi.** Formalisé par Alex Osborn (*Applied Imagination*, 1953) : suspendre le jugement, viser la quantité, accueillir les idées inhabituelles, rebondir sur les idées des autres. L'une des techniques de facilitation les plus universellement documentées et diffusées.
+
+Observation pratique de l'utilisateur, à conserver — elle nuance la réputation de simplicité du format : le protocole ne s'anime pas tout seul, le formateur doit intervenir activement pour éviter les longs silences. Ce risque est lui-même documenté dans la littérature sur la créativité en groupe (perte de productivité en groupe de brainstorming, parfois désignée *production blocking* — Diehl & Stroebe, 1987) : l'idéal d'Osborn (flux continu d'idées) se heurte en pratique à l'attente de son tour et à l'appréhension du jugement, même quand celui-ci est officiellement suspendu.
+
+Combinaison observée avec les **5 Pourquoi** (5 Whys — origine Toyota Production System, Sakichi Toyoda), technique distincte de résolution de problème par questionnement en profondeur, parfois mobilisée par l'utilisateur en appui du brainstorming plutôt qu'en s'en tenant au seul protocole Osborn.
+
+### Planche météo (candidat V3.1.0)
+
+**Établi comme genre**, pas comme forme unique : les techniques de check-in d'état (« météo », couleurs, émoticônes, échelle numérique…) sont très répandues en facilitation et en méthodes agiles (rétrospectives Scrum notamment). La métaphore météo précisément est un choix parmi d'autres formes équivalentes, pas la seule référence établie.
+
+Précision d'usage donnée par l'utilisateur : à positionner comme un **rituel**, pour des formations d'une durée un peu longue — répété au fil de la formation plutôt qu'utilisé une seule fois.
+
+**Incohérence de métadonnée relevée par cette précision, à corriger avant intégration.** Le front matter du brouillon déclare déjà `ritual.suitable: true`, mais aussi `typical_frequency: ponctuel` — qui indique au contraire un usage isolé. Un rituel répété sur plusieurs jours de formation est l'inverse de ponctuel. `typical_frequency` devrait plutôt porter une fréquence répétée (quotidienne ou par demi-journée, par exemple), au moins pour les formations longues.
+
+### Carte conceptuelle (candidat V3.1.0)
+
+**Établi.** Le *concept mapping* de Joseph Novak (Cornell, années 1970-80 ; référence classique : Novak & Gowin, *Learning How to Learn*, 1984) est l'une des techniques les plus documentées en recherche pédagogique pour représenter des concepts et leurs relations.
+
+Novak s'appuie explicitement sur la théorie de l'apprentissage significatif d'Ausubel — déjà citée en §1 de ce document (« Point de départ et élicitation ») pour un usage différent (ancrage des nouveaux apprentissages en tutorat individuel). Même filiation théorique, deux opérationnalisations distinctes dans le skill.
+
+### En un mot (candidat V3.1.0)
+
+**Établi comme genre** : le « one word check-out », pratique courante de clôture en facilitation et en méthodes agiles — pendant symétrique du check-in (voir Planche météo). Pas de source académique unique à citer, au même titre que Planche météo.
+
+Distinction précisée par l'utilisateur, à ne pas confondre avec Planche météo malgré la ressemblance de surface (les deux sont brefs et ludiques) :
+
+```text
+Planche météo
+→ état du moment de l'apprenant
+→ plutôt en ouverture ou en milieu de séance
+→ regarde vers l'apprenant, vers l'avant
+
+En un mot
+→ feedback sur les pratiques du formateur
+→ en clôture : fin de journée, de séquence, de séance
+→ regarde vers le formateur, vers l'arrière
+```
+
+Objectif explicitement déclaré par le `purpose` du gabarit : éclairer les futures pratiques pédagogiques du formateur — pas seulement mesurer une satisfaction ou une humeur générale.
+
+### Évaluation par les pairs (candidat V3.1.0)
+
+**Établi**, sur deux plans distincts : recherche en pédagogie (Topping, *Peer Assessment Between Students in Colleges and Universities*, 1998, référence de synthèse la plus citée du domaine) et présence nommée dans un LMS courant — Moodle propose un module natif dédié, « Atelier » (*Workshop*), spécifiquement construit pour l'évaluation par les pairs.
+
+Niveau de taxonomie confirmé haut (`appliquer`, `analyser`, `évaluer` selon le front matter), cohérent avec un point relevé par l'utilisateur, plus important ici que pour les autres gabarits de cette liste : **les critères doivent être précisément spécifiés**. Ce n'est pas une simple bonne pratique externe — c'est directement le principe déjà central au skill (`activite_evaluee.md`, `opo.md` : alignement objectif → tâche → production → critères → preuve → conclusion, refus de la notation arbitraire). Sans critères explicites, l'évaluation par les pairs devient précisément ce que le skill interdit ailleurs : un jugement non justifié. Le niveau `évaluer` visé rend l'exercice du jugement lui-même l'objet de l'activité — un critère faible n'affaiblit pas seulement le retour produit, il invalide l'exercice pédagogique.
+
+### Rétrospective (candidat V3.1.0)
+
+**Établi.** La rétrospective Agile/Scrum — l'une des cérémonies centrales du framework Scrum (Schwaber & Sutherland, *Scrum Guide*), popularisée dans sa forme facilitée (Start/Stop/Continue et variantes) par Derby & Larsen, *Agile Retrospectives: Making Good Teams Great*, 2006 — largement diffusée bien au-delà du développement logiciel.
+
+Point distinctif relevé par l'utilisateur, qui sépare ce gabarit des deux autres formats de « régulation » déjà documentés dans cette liste : la **régulation collective horizontale**.
+
+```text
+Planche météo / En un mot
+→ collecte individuelle
+→ chacun exprime séparément son état ou son avis
+→ circuit vertical : vers le formateur, qui synthétise ensuite
+
+Rétrospective
+→ processus collectif
+→ le groupe identifie ET priorise ensemble
+→ circuit horizontal : le groupe régule lui-même, pas seulement le formateur
+```
+
+Ce n'est donc pas une variante plus longue d'En un mot : c'est un format structurellement différent, où la négociation collective (que retenir, que prioriser) fait partie de l'activité elle-même, pas seulement sa collecte.
+
 ### Durées
 
 Certaines fourchettes de durée présentes historiquement dans les gabarits viennent de pratiques observées.

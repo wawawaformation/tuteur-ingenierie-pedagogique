@@ -1,8 +1,8 @@
 # Base de travail — passage de la V2.1 à la V3
 
 **Projet :** `tuteur-ingenierie-pedagogique`  
-**Date :** 2026-09-02  
-**Statut :** base de travail V3 — V2.1 stabilisée et validée
+**Date :** 2026-09-03  
+**Statut :** base de travail V3 — V2.1 stabilisée et validée, V3 séquencée en mineures 3.1/3.2/3.3
 
 ---
 
@@ -117,6 +117,26 @@ Les trois chantiers ne sont pas trois silos.
 
 ---
 
+## 4.1 Séquencement en versions mineures
+
+Bien que reliés, les trois chantiers ne sont pas menés en parallèle. Chacun devient une version mineure indépendante, gelée et validée avant d'engager la suivante :
+
+```text
+V2.1 (socle stable et validé)
+   ↓
+V3.1.0 — Chantier 1 : catalogue d'activités
+   ↓
+V3.2.0 — Chantier 2 : leviers cognitifs et biais
+   ↓
+V3.3.0 — Chantier 3 : tutorat → V3 complète
+```
+
+Cet ordre suit une dépendance réelle, pas un choix arbitraire : le tutorat (§7.9) mobilise naturellement le catalogue d'activités et peut s'appuyer sur les leviers cognitifs ; le placer en dernier lui permet de s'appuyer sur les deux chantiers précédents déjà validés.
+
+`V3.3.0` est directement la V3 complète : pas de palier de clôture séparé. D'éventuels correctifs post-promotion restent des patches sur cette dernière mineure (`V3.3.1`, `V3.3.2`, …), jamais un saut vers un `V3.0.0` distinct.
+
+---
+
 # 5. Chantier 1 — Étoffer le catalogue des activités
 
 ## 5.1 Objectif
@@ -173,6 +193,17 @@ nouveau gabarit
 ```
 
 sans devoir ajouter une nouvelle règle générale au noyau uniquement pour rendre cette activité utilisable.
+
+---
+
+## 5.5 Matériau brouillon disponible
+
+`plus_tard/` contient déjà du matériau de travail pour ce chantier :
+
+- `activites_type_origine_retravaillees.zip` — les quatre gabarits actuels (`atelier`, `brique`, `quiz`, `recul`) retravaillés en brouillon ;
+- `nouvelles_activites_v3_metadonnees.zip` — onze nouveaux gabarits candidats, une proposition de métadonnées de sélection et des notes de brainstorming.
+
+Ce matériau est une source de travail, pas un contenu à copier tel quel dans `references/activites_type/` : chaque gabarit candidat doit être trié et confronté aux principes de §5.2 avant intégration, sur le même principe que le tri appliqué à la V3 expérimentale (§1).
 
 ---
 
@@ -407,41 +438,39 @@ Inversement, il ne choisit pas un gabarit simplement parce qu'il existe.
 
 # 8. Promesse V3
 
-La promesse V3 est désormais travaillée dans un document dédié :
+La promesse V3 est travaillée dans un document unique :
 
 ```text
 promesse.md
 ```
 
-Elle doit :
+Le document est **amendé en place à chaque mineure**, pas remplacé : le numéro de version en tête progresse (`V3.1.0` → `V3.2.0` → `V3.3.0`), et seules les propriétés du chantier engagé et des chantiers déjà gelés y figurent — les propriétés d'un chantier non encore engagé n'y sont pas ajoutées par anticipation. L'historique de chaque version gelée reste consultable par git log/tag, comme c'est déjà la convention du dépôt pour `SKILL.md` et les autres références.
 
-1. rappeler explicitement que la V2.1 constitue le socle validé ;
-2. distinguer les trois chantiers de la V3 ;
+Chaque version de la promesse doit :
+
+1. rappeler explicitement que la V2.1 (et les mineures déjà gelées) constituent le socle validé ;
+2. porter les propriétés du seul chantier engagé par cette mineure ;
 3. exprimer des **comportements utiles et observables** ;
 4. éviter de transformer chaque moyen d'implémentation en promesse ;
 5. rester suffisamment courte pour permettre la construction de scénarios discriminants.
 
-La promesse candidate actuelle distingue :
+Séquence des gels :
 
 ```text
-Socle V2.1
-│
-├── Chantier 1 : activités
-├── Chantier 2 : leviers cognitifs et biais
-└── Chantier 3 : tutorat
+V3.1.0 — Socle V2.1 + Chantier 1 (activités)
+V3.2.0 — V3.1.0 + Chantier 2 (leviers cognitifs et biais)
+V3.3.0 — V3.2.0 + Chantier 3 (tutorat) = V3 complète
 ```
 
-Elle n'est pas encore considérée comme gelée.
+Avant chaque gel, chaque propriété nouvellement ajoutée doit être soumise à la question :
 
-Avant gel, chaque propriété doit être soumise à la question :
-
-> **Si cette propriété disparaît, la V3 perd-elle réellement quelque chose d'essentiel ?**
+> **Si cette propriété disparaît, la mineure perd-elle réellement quelque chose d'essentiel ?**
 
 ---
 
 # 9. Tester la promesse avant l'implémentation complète
 
-Une fois la promesse candidate suffisamment réduite et claire, créer seulement **quelques scénarios courts et discriminants**.
+Une fois la promesse candidate de la mineure en cours suffisamment réduite et claire, créer seulement **quelques scénarios courts et discriminants**.
 
 Les scénarios doivent être :
 
@@ -464,6 +493,8 @@ Le but est de vérifier avant l'investissement d'implémentation que les comport
 4. justifient donc l'évolution.
 
 Une propriété non discriminante ou sans valeur ajoutée démontrable peut être retirée de la promesse.
+
+**Un run unique établit une capacité, pas une fiabilité.** Lorsqu'une propriété de la promesse engage explicitement la fiabilité ou la systématicité d'un comportement — pas seulement sa possibilité — un seul run ne suffit pas à la démontrer : il faut rejouer le même stimulus plusieurs fois et constater un résultat stable. Cette règle est distincte de la passe unique du gel de non-régression (§13.2) : le gel détecte une régression sur une propriété déjà établie comme fiable ; cette étape établit qu'elle l'est, avant qu'elle rejoigne une batterie qui ne sera plus rejouée qu'une fois.
 
 ---
 
@@ -544,29 +575,43 @@ Si l'oracle doit être corrigé, la correction est explicite et ouvre un nouveau
 
 ---
 
-# 13. Validation finale de la V3
+# 13. Validation et promotion par mineure
 
-La validation finale devra distinguer deux objectifs.
+Chaque mineure (3.1, 3.2, 3.3) est gelée et validée indépendamment, avant d'engager la suivante. Il n'y a pas de validation finale unique reportée à la fin des trois chantiers.
 
-## 13.1 Non-régression V2.1
+## 13.1 Non-régression cumulative
 
-Les comportements hérités du socle V2.1 sont vérifiés en condition A.
+Le gel d'une mineure rejoue :
 
-Le but est de confirmer que les extensions V3 n'ont pas dégradé les comportements déjà validés.
+- les 15 scénarios de la baseline V2.1 (`validation/v2.1/non_regression/`) ;
+- les scénarios de chaque mineure déjà gelée (`validation/v3.1/non_regression/`, `validation/v3.2/non_regression/`, …) ;
+- les nouveaux scénarios de la mineure en cours (`validation/v3.x/non_regression/` correspondant).
+
+La suite grossit ainsi à chaque promotion et protège tout ce qui a été validé jusque-là. Chaque dossier de mineure reste la source autoritative de ses propres scénarios ; les scénarios des mineures précédentes ne sont pas recopiés dans le dossier de la mineure courante.
 
 ---
 
-## 13.2 Validation des nouveautés V3
+## 13.2 Une seule passe, reprises ciblées sur FAIL
 
-Les propriétés réellement nouvelles disposent de scénarios spécifiques.
+Contrairement au gel final de V2.1 (deux passes complètes indépendantes, voir `docs/v2.1/RAPPORT_NON_REGRESSION_FINALE_V2.1_2026-09-01.md`), le gel d'une mineure V3 rejoue la batterie cumulative en **une seule passe**.
+
+Si un scénario échoue, la règle de reproductibilité conservée depuis le gel V2.1 reste applicable : ce scénario précis est rejoué (reprises ciblées) pour distinguer variance et régression réelle, sans revenir à deux passes complètes systématiques.
+
+---
+
+## 13.3 Validation des nouveautés de la mineure
+
+Les propriétés réellement nouvelles de la mineure disposent de scénarios spécifiques, créés avant l'implémentation complète (§9).
 
 Une comparaison A / B′ est utilisée lorsqu'elle apporte une information utile sur la valeur ajoutée du skill.
 
-Le protocole final sera défini lorsque :
+---
 
-- la promesse V3 sera gelée ;
-- les comportements auront été implémentés ;
-- les petits runs auront permis de stabiliser le candidat.
+## 13.4 Promotion
+
+Chaque mineure validée est promue individuellement dans `dist/stable/`, selon la procédure déjà décrite dans `dist/stable/CLAUDE.md` (nouveau dossier versionné, archive ZIP, contrôle d'intégrité, commit, tag de release distinct du tag de gel).
+
+`V3.3.0` est directement la V3 complète et devient la version publique recommandée, sans palier de clôture séparé (§4.1).
 
 ---
 
@@ -604,40 +649,33 @@ Les dérogations au noyau restent :
 
 # 15. Séquence de travail actuelle
 
+Le même cycle se répète trois fois, une fois par mineure, avant d'enchaîner sur la suivante :
+
 ```text
 V2.1 stable et validée
 │
-├─ définir les trois chantiers V3
-│  ├─ catalogue d'activités
-│  ├─ leviers cognitifs et biais
-│  └─ tutorat
+├─ V3.1.0 — Chantier 1 : catalogue d'activités
+│  ├─ rédiger / réduire la promesse V3.1.0 (chantier 1 seul)
+│  ├─ créer quelques SPEC discriminantes
+│  ├─ tester en A / B′ lorsque pertinent
+│  ├─ confirmer / retirer / ajuster les propriétés
+│  ├─ geler la promesse V3.1.0
+│  ├─ implémenter par petits morceaux
+│  ├─ petits runs ciblés + diagnostic
+│  ├─ non-régression cumulative (V2.1), une seule passe
+│  └─ promotion V3.1.0
 │
-├─ rédiger la promesse V3 candidate
+├─ V3.2.0 — Chantier 2 : leviers cognitifs et biais
+│  ├─ étendre la promesse à V3.2.0 (chantier 2 seul)
+│  ├─ (même cycle : SPEC, A/B′, ajustement, gel, implémentation, runs)
+│  ├─ non-régression cumulative (V2.1 + V3.1.0), une seule passe
+│  └─ promotion V3.2.0
 │
-├─ réduire / clarifier les propriétés
-│
-├─ geler la promesse V3
-│
-├─ créer quelques SPEC discriminantes
-│
-├─ tester les nouveautés en A / B′ lorsque pertinent
-│
-├─ confirmer / retirer / ajuster les propriétés
-│
-├─ implémenter par petits morceaux
-│  ├─ activités
-│  ├─ leviers retenus
-│  └─ tutorat
-│
-├─ petits runs ciblés + diagnostic
-│
-├─ stabiliser le candidat V3
-│
-├─ non-régression V2.1
-│
-├─ validation des nouveautés V3
-│
-└─ promotion V3
+└─ V3.3.0 — Chantier 3 : tutorat
+   ├─ étendre la promesse à V3.3.0 (chantier 3 seul)
+   ├─ (même cycle : SPEC, A/B′, ajustement, gel, implémentation, runs)
+   ├─ non-régression cumulative (V2.1 + V3.1.0 + V3.2.0), une seule passe
+   └─ promotion V3.3.0 = V3 complète
 ```
 
 ---
@@ -647,6 +685,8 @@ V2.1 stable et validée
 > **Doctrine avant procédure.**
 
 > **La V2.1 est le socle validé ; la V3 l'étend, elle ne la réécrit pas.**
+
+> **Une mineure = un chantier gelé, non-régressé et promu avant d'engager le suivant.**
 
 > **Une seule source normative claire par règle.**
 
