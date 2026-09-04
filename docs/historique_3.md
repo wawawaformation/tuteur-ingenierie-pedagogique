@@ -17,6 +17,20 @@ Cartographie systématique de qui distingue qui dans les 17 gabarits : l'asymét
 
 ---
 
+## 2026-09-04 — Incident méthodologique : campagnes de validation jouées hors des harnais du dépôt
+
+L'utilisateur demande de faire jouer la non-régression V2.1 (14 scénarios NOY, passe unique) puis, sur un `FAIL` détecté (`NOY004`), une reprise ciblée. Les deux campagnes (8 scénarios V3.1 + 14 scénarios V2.1) ont été jouées par des sous-agents dispatchés via l'outil `Agent`, avec fixtures et personas reconstitués à la main — **pas via `scripts/run_baseline.sh`/`run_isole.sh` ni `validation/collector-kit/`**, les deux harnais du dépôt, alors que les deux étaient documentés et avaient déjà été lus.
+
+`NOY004` échoue 4/4 avec cette méthode. L'utilisateur demande de le rejouer « sur claude-test » pour vérifier — ce qui force une relecture attentive de `validation/CLAUDE.md`, où la règle exacte était déjà écrite : le harnais de baseline (`run_baseline.sh`/`run_isole.sh`) s'exécute sous **`david`**, pas `claude-test` ; c'est l'autre harnais (`collector-kit`) qui utilise `claude-test`. Rejeu de `NOY004` avec le vrai harnais (`run_isole.sh`, non modifié pour V3.1.0 ; copie de travail avec seulement `CANDIDAT` repointé pour tester la V2.1 publiée) : **PASS sur les deux candidats**, cohérent avec le `PASS/PASS` déjà consigné le 2026-09-01. Le FAIL 4/4 n'était pas réel — un artefact de la méthode improvisée par sous-agents, pas un défaut du skill.
+
+**Conséquence** : toutes les campagnes de cette session jouées par sous-agents (batterie V3.1 à 8 scénarios, batterie V2.1 à 14 scénarios) sont de fiabilité incertaine et restent à rejouer avec le bon harnais avant de leur refaire confiance. Rien n'a été promu ni figé sur cette base.
+
+- `docs/v3.1/RAPPORT_INCIDENT_METHODOLOGIE_VALIDATION_2026-09-04.md` : rapport complet (cause racine, ce qui est invalidé, tableau des deux harnais).
+- `validation/CLAUDE.md` : règle explicite ajoutée en tête — toujours l'un des deux harnais, jamais une reconstitution par sous-agent.
+- `promesse.md`, §« Statut » : réserve sur `NOY004` corrigée en conséquence (voir entrée suivante).
+
+---
+
 ## 2026-09-04 — Trois gabarits d'ouverture intégrés au chantier 1 (catalogue à 17)
 
 Brouillon fourni par l'utilisateur (« Interview croisée », « Objet express », « Baromètre humain ») après analyse de sa pertinence — aucun des 14 gabarits existants ne couvrait la fonction « premier contact / mise en groupe », et le précédent des gabarits légers non évalués (`Planche météo`, `En un mot`) rendait l'extension cohérente avec le catalogue déjà en place.

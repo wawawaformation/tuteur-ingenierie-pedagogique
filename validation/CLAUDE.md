@@ -2,6 +2,17 @@
 
 Ce dossier contient le **dispositif de validation** du skill : scénarios, personas, instrumentation, procédures et archives de campagnes.
 
+## Exécution — toujours l'un des deux harnais, jamais une reconstitution
+
+Toute campagne de validation ou de non-régression sur ce dépôt utilise l'un des deux harnais existants :
+
+- **`scripts/run_baseline.sh` + `scripts/run_isole.sh`** (compte `david`) pour la batterie V2.1 (`validation/v2.1/baseline/kits/`) ;
+- **`validation/collector-kit/`** (compte `claude-test`) pour les campagnes candidates d'une mineure V3.x.
+
+**Ne jamais improviser un équivalent** — par exemple dispatcher des sous-agents génériques (outil `Agent`) avec le stimulus et l'oracle reconstitués à la main. Même en reprenant fidèlement le stimulus, la fixture et la convention opérateur, rien ne garantit que le modèle, l'effort de raisonnement ou le mode de permission utilisés correspondent aux paramètres épinglés par le harnais — et un verdict obtenu ainsi n'est pas comparable aux campagnes précédentes.
+
+Incident survenu le 2026-09-04 : une campagne entière (8 scénarios V3.1 + 14 scénarios V2.1) a été jouée par sous-agents improvisés, produisant un `FAIL` sur `NOY004` qui s'est révélé faux dès rejeu avec le vrai harnais (`PASS` des deux côtés). Détail complet : `docs/v3.1/RAPPORT_INCIDENT_METHODOLOGIE_VALIDATION_2026-09-04.md`.
+
 ## Principe central
 
 La validation doit protéger l'objectif du test, pas une chorégraphie mécanique.
