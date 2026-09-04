@@ -168,6 +168,12 @@ Application mécanique d'une recette
 
 Cette promesse est **gelée pour V3.1.0**, le 2026-09-03, à l'issue du cycle complet prévu par `base_de_travail.md` §15 :
 
+> ⚠️ **Réserve tranchée le 2026-09-04 — le gel est maintenu.** Une vérification sur le candidat réel, postérieure à ce gel, avait trouvé `V31-ACT02-3` instable (4 réponses en 4 runs). Le diagnostic a établi que ces runs portaient sur une fixture non conforme au prérequis bloquant n°3 de la batterie (catalogue hétérogène : 3 gabarits génériques privés de leur discriminant de sélection) ; ils sont requalifiés **non concluants** et ne constituent pas une charge contre ACT02. Voir `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` §9.
+>
+> **Réparé et vérifié le 2026-09-04** : le discriminant de sélection manquant a été porté dans `atelier.md`, `quiz.md` et `recul.md` (catalogue homogène, 14/14), et `V31-ACT02-3` rejoué 3 fois sur le candidat corrigé donne **3/3 PASS, `Brique` unanime** — résultat identique à la validation d'origine.
+>
+> **Ce qui reste dû** : le candidat ayant changé après ce portage, la batterie complète (15 exécutions) n'a pas encore été passée sur le candidat corrigé. Cette réserve porte sur la couverture de la validation, pas sur la propriété.
+
 1. ~~chaque propriété nouvelle (ACT01, ACT02) examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation~~ — fait, deux passes de revue (interne puis externe, vérifiées point par point) ;
 2. ~~doublons supprimés~~ — fait ;
 3. ~~sept scénarios courts et discriminants dérivés de la promesse, dans `validation/v3.1/non_regression/`~~ — faits ;

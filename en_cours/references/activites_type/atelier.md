@@ -2,6 +2,36 @@
 kind: activite_type
 inherits: ../activite.md
 purpose: "Faire réaliser une production structurée nécessitant une démarche en plusieurs étapes."
+taxonomy_levels:
+  typical:
+    - appliquer
+    - analyser
+    - creer
+  possible:
+    - comprendre
+    - evaluer
+selection_keywords:
+  - production_structuree
+  - plusieurs_etapes
+  - demarche
+  - livrable
+  - brief
+  - organisation_travail
+  - production_evaluee
+  - autonomie
+participation:
+  typical:
+    - individuel
+    - sous_groupe
+  possible:
+    - binome
+    - collectif
+properties:
+  ludique: false
+ritual:
+  suitable: false
+  typical_moments: []
+  typical_frequency: []
 typical_uses:
   - "Travailler à partir d'un cas ou d'un brief pour produire un résultat."
   - "Organiser un travail individuel ou collectif nécessitant plusieurs étapes."
@@ -16,6 +46,20 @@ L'Atelier est une Activité structurée autour d'une production évaluée. Il pe
 Sa caractéristique n'est pas sa modalité ni sa durée, mais le fait que la tâche nécessite une démarche en plusieurs étapes pour aboutir à une production identifiable.
 
 **Soumis à A1/A2/A3/A4** — voir `../activite_evaluee.md` pour les garde-fous.
+
+## Pourquoi choisir un Atelier ?
+
+Choisir un Atelier lorsque la production attendue ne peut pas être raisonnablement travaillée par une tâche isolée et nécessite que l'apprenant :
+
+- organise son travail ;
+- enchaîne plusieurs étapes ;
+- mobilise plusieurs éléments ;
+- fasse des choix ;
+- produise un résultat identifiable.
+
+L'Atelier permet de travailler une démarche plus riche qu'une Brique sans transformer pour autant toute production complexe en projet long.
+
+Il est particulièrement adapté lorsqu'un brief, un cas, un jeu de données ou un ensemble de contraintes doit être exploité pour aboutir à un livrable.
 
 ## Les 8 sections, dans cet ordre
 

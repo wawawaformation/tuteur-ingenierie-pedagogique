@@ -2,6 +2,34 @@
 kind: activite_type
 inherits: ../activite.md
 purpose: "Développer la réflexivité en faisant expliciter, analyser et mettre en perspective une expérience, une production, une démarche ou des choix."
+taxonomy_levels:
+  typical: []
+  possible:
+    - comprendre
+    - analyser
+    - evaluer
+    - creer
+selection_keywords:
+  - reflexivite
+  - conscientisation
+  - analyse_pratique
+  - explicitation
+  - justification
+  - retour_experience
+  - transfert
+  - projection
+participation:
+  typical:
+    - individuel
+  possible:
+    - binome
+    - collectif
+properties:
+  ludique: false
+ritual:
+  suitable: false
+  typical_moments: []
+  typical_frequency: []
 typical_uses:
   - "Prendre du recul après un Atelier, une activité ou une situation professionnelle."
   - "Faire une synthèse réflexive à la fin ou à un moment charnière d'une Séquence."
@@ -17,6 +45,22 @@ Le Recul est une **Activité réflexive**. Il amène l'apprenant à revenir sur 
 Il ne vise pas en priorité la production d'un nouvel artefact technique. La production attendue est plutôt une **trace de réflexivité** : écrite, orale ou sous une autre forme adaptée au contexte.
 
 **Lorsque ce Recul est utilisé comme activité évaluée au sens de `../activite_evaluee.md`, les garde-fous correspondants s'appliquent.**
+
+## Pourquoi choisir un Recul ?
+
+Choisir un Recul lorsqu'il ne suffit plus d'observer ce que l'apprenant a produit et que l'on souhaite lui faire expliciter :
+
+- ce qu'il a fait ;
+- pourquoi il l'a fait ainsi ;
+- les choix qu'il a effectués ;
+- les effets observés ;
+- les écarts rencontrés ;
+- ce qu'il a appris de l'expérience ;
+- ce qu'il conserverait, adapterait ou changerait dans une situation future.
+
+Le Recul permet de transformer une expérience réalisée en **objet d'analyse et de conscientisation**.
+
+Il est particulièrement pertinent lorsqu'un apprenant doit apprendre à argumenter sa pratique, préparer une soutenance ou transférer les enseignements d'une expérience vers une situation future.
 
 ## Intention / objectif
 

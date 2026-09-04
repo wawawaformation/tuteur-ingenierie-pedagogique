@@ -69,10 +69,10 @@ Toute Activité repose sur le socle `references/activite.md`.
 Lorsque la demande justifie une spécialisation :
 
 1. utiliser le catalogue et les discriminants de `references/activite.md` pour repérer le gabarit pertinent ;
-2. en cas d'hésitation entre quelques candidats, lire leur front matter (`purpose`, `typical_uses`) pour départager ;
+2. en cas d'hésitation entre quelques candidats, lire leur front matter (`purpose` et les métadonnées de sélection disponibles — `typical_uses`, `selection_keywords`, `participation`, `properties`, `taxonomy_levels` selon le gabarit) pour départager ;
 3. charger le contenu du gabarit retenu pour appliquer son contrat détaillé.
 
-Ne pas charger systématiquement tous les gabarits pour choisir. Le statut des `typical_uses` est défini dans `references/activite.md`.
+Ne pas charger systématiquement tous les gabarits pour choisir. Le statut de ces métadonnées de sélection est défini dans `references/activite.md`.
 
 Ne pas coder implicitement des équivalences du type :
 
@@ -87,7 +87,8 @@ difficile → Atelier
 
 Ne pas charger toutes les références par défaut. Consulter celles dont la responsabilité est utile à la tâche.
 
-- `references/taxonomie.md` — paliers cognitifs et clauses A1 à A4 ;
+- `references/taxonomie.md` — échelle des paliers cognitifs ;
+- `references/activite_evaluee.md` — garde-fous des activités évaluées (clauses A1 à A4) ;
 - `references/etat_des_paliers.md` — preuves, attestation, suivi et persistance ;
 - `references/opo.md` — objectif observable, conditions, critères et alignement ;
 - `references/andragogie.md` — posture, élicitation et accompagnement de l'adulte ;

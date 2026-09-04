@@ -21,7 +21,17 @@ La bibliothèque contient actuellement :
 - `brique.md` — **Brique** : tâche ciblée sans nécessité d'organiser une démarche pédagogique en plusieurs étapes ;
 - `atelier.md` — **Atelier** : production nécessitant une démarche pédagogique structurée en plusieurs étapes ;
 - `quiz.md` — **Quiz** : diagnostic ou auto-positionnement sur des connaissances et compréhensions ;
-- `recul.md` — **Recul** : mise à distance réflexive d'une expérience, d'une action, d'une production ou d'une démarche.
+- `recul.md` — **Recul** : mise à distance réflexive d'une expérience, d'une action, d'une production ou d'une démarche ;
+- `facettes.md` — **Facettes** : répartir l'exploration d'un thème entre sous-groupes complémentaires, restituer, reconstruire une vision d'ensemble ;
+- `devine_carte.md` — **Devine-carte** : récupération et reconnaissance ludiques de notions déjà travaillées, par indices progressifs ;
+- `etude_de_cas.md` — **Étude de cas** : analyser une situation contextualisée, poser un diagnostic, argumenter une décision ;
+- `simulation_mise_en_situation.md` — **Simulation / mise en situation** : agir dans une situation proche d'un contexte réel ;
+- `brainstorming.md` — **Brainstorming** : produire des idées en suspendant temporairement leur évaluation ;
+- `planche_meteo.md` — **Planche météo** : exprimer l'état du moment (disponibilité, énergie, ressenti) ;
+- `carte_conceptuelle.md` — **Carte conceptuelle** : représenter des concepts et leurs relations ;
+- `en_un_mot.md` — **En un mot** : feedback apprenant très bref pour éclairer les pratiques du formateur ;
+- `evaluation_par_les_pairs.md` — **Évaluation par les pairs** : faire examiner une production par d'autres apprenants à partir de critères explicites ;
+- `retrospective.md` — **Rétrospective** : réguler collectivement les conditions de travail et d'apprentissage.
 
 Chaque gabarit hérite du socle défini ici, puis le précise ou le complète selon sa finalité pédagogique.
 

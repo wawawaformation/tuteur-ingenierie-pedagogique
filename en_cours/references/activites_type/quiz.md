@@ -1,7 +1,31 @@
 ---
 kind: activite_type
 inherits: ../activite.md
-purpose: "Diagnostiquer ou aider l'apprenant à se positionner sur des connaissances et compréhensions."
+purpose: "Diagnostiquer ou aider l'apprenant à se positionner sur des connaissances et sur sa capacité à reconnaître, reformuler ou expliquer des notions."
+taxonomy_levels:
+  typical:
+    - savoir
+    - comprendre
+  possible: []
+selection_keywords:
+  - diagnostic
+  - auto_positionnement
+  - prerequis
+  - acquis
+  - confusion
+  - qcm
+  - feedback
+  - orientation_parcours
+participation:
+  typical:
+    - individuel
+  possible: []
+properties:
+  ludique: false
+ritual:
+  suitable: false
+  typical_moments: []
+  typical_frequency: []
 typical_uses:
   - "Repérer des prérequis ou des acquis avant d'aborder un travail."
   - "Faire un point de positionnement ponctuel au cours d'un parcours."
@@ -16,6 +40,20 @@ Le Quiz est une Activité de diagnostic et d'auto-positionnement. Il sert à rec
 Il est souvent utile en amont d'une Séquence ou d'une nouvelle notion, mais peut aussi être utilisé ponctuellement au cours d'un parcours.
 
 **Diagnostic, hors budget A3 des activités évaluées.** Toute preuve issue du Quiz reste attachée à une notion et ne peut jamais attester au-delà du palier 2 — voir `../activite_evaluee.md`.
+
+## Pourquoi choisir un Quiz d'auto-positionnement ?
+
+Choisir un Quiz lorsque l'on a besoin d'obtenir rapidement des indices sur :
+
+- des prérequis ;
+- des acquis déjà présents ;
+- une confusion fréquente ;
+- une notion à consolider ;
+- la nécessité ou non d'une reprise avant de poursuivre.
+
+Le Quiz n'a pas pour fonction principale de produire une note ou un classement.
+
+Sa valeur tient à ce qu'il permet de **décider quoi travailler ensuite**.
 
 ## Intention / objectif
 

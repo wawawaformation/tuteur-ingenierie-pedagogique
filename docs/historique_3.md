@@ -4,6 +4,24 @@ Journal court des étapes réalisées sur le candidat V3, toutes mineures confon
 
 ---
 
+## 2026-09-04 — Instabilité `V31-ACT02-3` tranchée : défaut de fixture, ni scénario mal posé ni promesse trop ambitieuse
+
+Les deux lectures laissées ouvertes par le rapport du 2026-09-03 sont écartées au profit de la troisième explication qu'il envisageait. Les ZIP sources de `plus_tard/` ont été extraits et comparés fichier par fichier au candidat réel : le front matter des 4 gabarits historiques y est **identique**, mais leur corps non — `atelier.md`, `quiz.md` et `recul.md` ont gardé un corps dépourvu de section `## Pourquoi choisir…`, alors que les 11 autres gabarits du candidat en portent une. Le départage s'opérait donc entre gabarits asymétriquement documentés, et les 3 dénudés étaient précisément les replis génériques que l'oracle attend. Le raisonnement du run 4 (« expérience professionnelle vécue ou observée ») correspond mot pour mot au discriminant manquant de `Recul`, qui l'ancre normalement sur l'action propre de l'apprenant.
+
+C'est le prérequis bloquant n°3 de la batterie (« Homogénéité du schéma ») appliqué à moitié : front matter harmonisé, corps non harmonisés.
+
+- `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` : §9 de diagnostic ajouté, §1 à §8 conservés en l'état comme trace des faits, avec marqueurs de dépassement datés sur §4, §5 et §7. Les 4 runs sont requalifiés **non concluants**, pas effacés.
+- `en_cours/promesse.md` : réserve du 2026-09-03 mise à jour — gel **maintenu**, la charge ne portait pas sur ACT02. Ce qui reste dû est nommé : `V31-ACT02-3` n'est pas encore validé sur un candidat conforme.
+- `validation/v3.1/non_regression/CLAUDE.md` : avertissement relié au prérequis n°3.
+
+Décision retenue pour la réparation : **portage chirurgical** de la seule section discriminante dans les 3 gabarits, réécrite au vocabulaire courant du candidat. Le corps entier des ZIP n'est pas reporté — les corps du candidat sont postérieurs (« palier », `activite_evaluee.md` après le split `7020ec3`), un remplacement en bloc régresserait des acquis V2.1.
+
+**Réparation appliquée et vérifiée le même jour.** Catalogue passé de 11/14 à **14/14** gabarits portant un discriminant de sélection. `V31-ACT02-3` rejoué 3 fois sur fixture isolée du candidat corrigé (manifeste SHA-256 consigné, catalogue de 14 entrées consigné), exécutants sous-agents vierges **Sonnet** comme la campagne initiale : **3/3 PASS, `Brique` unanime** — le résultat de l'environnement 3/3 PASS d'origine est reproduit. Les trois runs écartent `Recul` en citant le discriminant restauré et `Étude de cas` en citant l'exigence de cas préexistant : les deux mécanismes diagnostiqués. Détail en §10 du rapport.
+
+**Reste dû, nommé explicitement** : le candidat a changé après le portage, donc `V31-ACT01-1` et `V31-ACT02-4` (rejoués sur le candidat réel *avant* la correction) portent sur un état antérieur, et les 4 scénarios jamais rejoués sur le candidat réel le restent. Une passe complète de la batterie (15 exécutions) sur le candidat corrigé est nécessaire avant de considérer V3.1.0 validée sur le candidat versionné.
+
+---
+
 ## 2026-09-03 — Validation complète des 7 scénarios V3.1.0, promesse gelée
 
 À la demande de l'utilisateur (« on run »), les 7 scénarios ont été joués pour de vrai sur le catalogue candidat, pas seulement en exploratoire sur le socle V2.1 seul comme précédemment.
@@ -40,6 +58,16 @@ Question posée par l'utilisateur (« on a combien de ACT alors ») qui a fait r
 - `validation/v3.1/non_regression/V31-ACT01-3.md` : renvoi corrigé de « `promesse.md` (ACT02) » vers « `promesse.md` (ACT01, "biais de familiarité") ».
 
 Toujours 2 propriétés au total pour le Chantier 1 (ACT01, ACT02) — la question ne révélait pas un besoin d'ACT03, seulement un mauvais rangement à l'intérieur des deux existantes.
+
+---
+
+## 2026-09-03 — Instabilité trouvée sur `V31-ACT02-3` après le gel : rapport ouvert
+
+En vérifiant le candidat réel juste après le gel de `promesse.md` (implémentation du catalogue sur `en_cours/`, pas seulement la copie de test), `V31-ACT02-3` a donné 4 réponses différentes en 4 runs : Étude de cas ×2, Brique ×1, Recul ×1. La fusion du corps retravaillé de `brique.md` (tentée en réaction) a fait apparaître Brique comme option viable mais n'a pas stabilisé le résultat.
+
+**Rapport dédié : `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md`** — chronologie complète, les 4 runs détaillés, deux lectures non tranchées (scénario mal posé vs propriété ACT02 trop ambitieuse). Sur demande de l'utilisateur, un bilan autoportant en a été extrait et transmis à un autre agent pour second avis, hors session.
+
+**Statut** : `promesse.md` reste marquée gelée dans son texte, mais ce constat n'a pas encore été tranché ni intégré. Aucun fichier du runtime ni de la promesse modifié en conséquence de ce rapport à ce stade — décision en attente, pas d'action unilatérale.
 
 ---
 
