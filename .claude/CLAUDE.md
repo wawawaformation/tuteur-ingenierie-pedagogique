@@ -38,7 +38,9 @@ en_cours/
 → hérite du socle V2.1 validé ; V3 séquencée en mineures indépendantes 3.1 → 3.2 → 3.3 (voir en_cours/base_de_travail.md §4.1)
 → non public par principe
 → promesse V3.1.0 gelée (2026-09-03), validée par 7 scénarios / 15 exécutions / 15 PASS sur copie de test
-→ candidat versionné pas encore implémenté (prérequis bloquants documentés dans validation/v3.1/non_regression/README.md)
+→ catalogue enrichi implémenté sur le candidat versionné (2026-09-04) : 14 gabarits d'activité
+→ batterie V3.1 rejouée sur le candidat corrigé (2026-09-04) : 15/15 PASS, résultats identiques à la copie de test
+→ NON ENCORE FAIT : non-régression de la baseline V2.1 (validation/v2.1/non_regression/) sur ce candidat
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.
@@ -68,7 +70,7 @@ validation/v2.1/non_regression/
 → numérotation propre à ce dossier, distincte de validation/non_regression/ (voir son CLAUDE.md)
 
 validation/v3.1/non_regression/
-→ scénarios NOY candidats pour la mineure V3.1.0 (chantier 1), pas encore autoritatifs ; encore vide
+→ scénarios NOY candidats pour la mineure V3.1.0 (chantier 1), pas encore autoritatifs ; 7 scénarios présents
 → numérotation propre à ce dossier (voir son CLAUDE.md)
 → des dossiers frères validation/v3.2/, validation/v3.3/ suivront au fil des mineures
 

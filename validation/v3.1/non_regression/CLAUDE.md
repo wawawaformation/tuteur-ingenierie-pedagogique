@@ -8,11 +8,25 @@ Ce dossier contient la **batterie de non-régression candidate pour la mineure V
 
 > ⚠️ **Ce 15/15 portait sur une copie de test, pas sur le candidat réel tel qu'implémenté ensuite.** Une vérification postérieure sur le candidat réel a trouvé `V31-ACT02-3` instable (4 réponses différentes en 4 runs). **Diagnostiqué le 2026-09-04** : ces runs violaient le prérequis bloquant n°3 ci-dessous — `atelier.md`, `quiz.md` et `recul.md` avaient gardé un corps sans section `## Pourquoi choisir…`, alors que les 11 autres gabarits en portent une. Runs requalifiés **non concluants**, promesse non dégelée. Discriminant porté le 2026-09-04 (catalogue homogène, 14/14) et `V31-ACT02-3` rejoué : **3/3 PASS, `Brique` unanime**. Voir `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` §9-§10.
 >
-> **Conséquence pour cette batterie** : le candidat a changé après ce portage. Les résultats du tableau ci-dessous restent ceux de la copie de test ; seul `V31-ACT02-3` a été vérifié sur le candidat corrigé. Une passe complète des 15 exécutions sur le candidat corrigé reste à jouer.
+**Méthode des runs (campagne d'origine, copie de test)** : les gabarits candidats n'étant pas encore intégrés au candidat versionné, les runs ont été joués sur une **copie isolée** (`en_cours/` dupliqué dans un répertoire de test, gabarits candidats de `plus_tard/` ajoutés, `activite.md` et `SKILL.md` patchés localement pour le référencement) — voie (a) documentée dans `README.md`, candidat versionné non modifié. Exécutants : sous-agents vierges, sans accès à cette conversation ni aux oracles, restreints au seul répertoire de test.
 
-**Méthode des runs** : les gabarits candidats n'étant pas encore intégrés au candidat versionné, les runs ont été joués sur une **copie isolée** (`en_cours/` dupliqué dans un répertoire de test, gabarits candidats de `plus_tard/` ajoutés, `activite.md` et `SKILL.md` patchés localement pour le référencement) — voie (a) documentée dans `README.md`, candidat versionné non modifié. Exécutants : sous-agents vierges, sans accès à cette conversation ni aux oracles, restreints au seul répertoire de test.
+## Passe sur le candidat versionné — 2026-09-04
 
-Le candidat versionné (`en_cours/references/`, `en_cours/SKILL.md`) n'implémente toujours pas le catalogue enrichi : les prérequis bloquants (énumération du catalogue, noms de champs du front matter, homogénéité du schéma) documentés dans `README.md` restent à appliquer avant tout run sur le vrai candidat.
+Le catalogue enrichi est désormais implémenté sur le candidat versionné, les trois prérequis bloquants du `README.md` appliqués (le troisième, l'homogénéité du schéma, ne l'était d'abord qu'à moitié — voir l'avertissement ci-dessus). La batterie entière a été rejouée sur une fixture isolée du candidat corrigé, mêmes conditions qu'à l'origine, exécutants sous-agents vierges **Sonnet**.
+
+| Scénario | Runs | Verdict | Type retenu (constant) |
+|---|---|---|---|
+| `V31-ACT01-1` | 1/1 | PASS | Facettes |
+| `V31-ACT01-2` | 3/3 | PASS | Quiz |
+| `V31-ACT01-3` | 3/3 | PASS | Planche météo |
+| `V31-ACT02-1` | 1/1 | PASS | Étude de cas |
+| `V31-ACT02-2` | 1/1 | PASS | Simulation / mise en situation |
+| `V31-ACT02-3` | 3/3 | PASS | Brique |
+| `V31-ACT02-4` | 3/3 | PASS | Rétrospective |
+
+**15/15 PASS**, résultats identiques type par type à la campagne sur copie de test. La paire contrastive `ACT02-1` / `ACT02-2` départage bien sur un thème professionnel identique. Détail en `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` §10.3.
+
+**Ce que cette passe ne couvre pas** : la non-régression de la baseline V2.1 (`../../v2.1/non_regression/`, 15 scénarios) n'a pas été jouée sur ce candidat, alors que le portage a touché `atelier.md`, `quiz.md` et `recul.md`. Elle reste requise par `en_cours/promesse.md` §0 et `base_de_travail.md` §13 — voir « Non-régression cumulative » ci-dessous.
 
 ## Numérotation
 

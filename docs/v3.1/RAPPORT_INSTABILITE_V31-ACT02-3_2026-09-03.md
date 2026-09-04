@@ -182,10 +182,32 @@ Exécutants : 3 sous-agents vierges **Sonnet** (même modèle que la campagne in
 
 Les trois écartent `Recul` en citant le discriminant restauré (l'ancrage sur l'action propre de l'apprenant) et `Étude de cas` en citant l'exigence de cas préexistant — les deux mécanismes identifiés au §9.3. Le résultat reproduit celui de l'environnement 3/3 PASS d'origine (`Brique`, 3/3).
 
-### 10.3 Ce qui reste dû
+### 10.3 Passe complète de la batterie sur le candidat corrigé
 
-Le candidat a changé après ces corrections. `V31-ACT01-1` et `V31-ACT02-4`, qui avaient été rejoués sur le candidat réel **avant** le portage, portent donc sur un état antérieur ; les 4 scénarios du §6 n'ont toujours pas été joués sur le candidat réel. Une **passe complète de la batterie sur le candidat corrigé** reste à faire avant de considérer V3.1.0 validée sur le candidat versionné.
+Le portage ayant modifié le candidat, les résultats antérieurs ne le couvraient plus : `V31-ACT01-1` et `V31-ACT02-4` avaient été rejoués **avant** le portage, et les 4 scénarios du §6 n'avaient jamais été joués sur le candidat réel. La batterie entière a donc été passée sur la fixture corrigée, même empreinte de manifeste, mêmes conditions d'exécution (sous-agents vierges Sonnet, stimulus exact, aucun gabarit nommé par l'opérateur).
+
+| Scénario | Exécutions | Type retenu | Verdict |
+|---|---|---|---|
+| `V31-ACT01-1` | 1/1 | Facettes | PASS |
+| `V31-ACT01-2` | 3/3 | Quiz | PASS, unanime |
+| `V31-ACT01-3` | 3/3 | Planche météo | PASS, unanime |
+| `V31-ACT02-1` | 1/1 | Étude de cas | PASS |
+| `V31-ACT02-2` | 1/1 | Simulation / mise en situation | PASS |
+| `V31-ACT02-3` | 3/3 | Brique | PASS, unanime |
+| `V31-ACT02-4` | 3/3 | Rétrospective | PASS, unanime |
+
+**15/15 PASS**, résultats identiques type par type à la campagne d'origine sur copie de test. Les quatre scénarios à charge de preuve sont unanimes sur leurs trois exécutions.
+
+Trois observations utiles au-delà des verdicts :
+
+- la paire contrastive `ACT02-1` / `ACT02-2` donne bien **deux types différents sur un thème professionnel identique** — le départage porte sur la performance attendue, pas sur une association thème → format ;
+- `ACT02-4` traite explicitement le champ `typical_moments` comme un **indice de sélection et non une condition exclusive**, ce qui est mot pour mot la clause d'ACT02 que ce scénario protège ;
+- aucun run ne justifie son choix par la nouveauté, la variété du catalogue ou la disponibilité d'un gabarit : les clauses de `FAIL` sur le motif du choix ne sont déclenchées nulle part.
+
+### 10.4 Ce qui reste dû
+
+La **non-régression de la baseline V2.1** (`validation/v2.1/non_regression/`, 15 scénarios) n'a pas été jouée sur ce candidat. Elle est distincte de la batterie ci-dessus et explicitement requise par `promesse.md` §0 et `base_de_travail.md` §13 : le portage a touché `atelier.md`, `quiz.md` et `recul.md`, qui font partie du socle hérité. Tant qu'elle n'est pas passée, V3.1.0 n'est pas validée au sens du gel de non-régression.
 
 ---
 
-**Prochaine étape** : ~~trancher entre les lectures A et B~~ — fait au §9. ~~Portage chirurgical, puis 3 exécutions de `V31-ACT02-3`~~ — fait au §10, 3/3 PASS. Reste : passe complète de la batterie (15 exécutions) sur le candidat corrigé.
+**Prochaine étape** : ~~trancher entre les lectures A et B~~ — fait au §9. ~~Portage chirurgical, puis 3 exécutions de `V31-ACT02-3`~~ — fait au §10.1-10.2, 3/3 PASS. ~~Passe complète de la batterie sur le candidat corrigé~~ — faite au §10.3, 15/15 PASS. Reste : non-régression de la baseline V2.1 sur ce candidat (§10.4).
