@@ -182,6 +182,22 @@ et ce que je ferais désormais dans une situation comparable »
 
 L'objectif n'est pas de fabriquer un discours artificiel pour le jury, mais d'aider l'apprenant à expliciter et argumenter sa propre pratique.
 
+## Distinction avec la Rétrospective
+
+> Recul : conscientisation du travail et des apprentissages.
+
+> Rétrospective : autorégulation collective des conditions de travail et d'apprentissage.
+
+La première porte sur l'apprenant, individuellement, même si l'expérience analysée s'est déroulée en groupe ; la seconde porte sur la régulation collective du fonctionnement du groupe lui-même.
+
+## Distinction avec la Planche météo
+
+> Recul : « Qu'est-ce que je retiens de ce que j'ai fait ? »
+
+> Planche météo : « Comment suis-je aujourd'hui ? »
+
+La première suppose une expérience, une action ou une production déjà réalisée à analyser ; la seconde porte sur l'état présent, indépendamment de ce qui vient d'être fait.
+
 ## Contrôles avant de livrer le Recul
 
 1. **Héritage du socle Activité** : titre, chapeau, intention / objectif, durée estimée, consigne et production / réponse / action attendue sont présents.

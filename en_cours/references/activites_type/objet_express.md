@@ -98,6 +98,18 @@ Le formateur :
 - Ne pas déduire un profil psychologique de l'objet choisi.
 - En distanciel, prévoir une alternative pour les personnes sans caméra.
 
+## Distinction avec l'Interview croisée
+
+> Objet express : s'exprimer seul, à l'aide d'un objet, sans dépendre d'un binôme.
+
+> Interview croisée : écouter un pair puis le présenter, en binôme.
+
+## Distinction avec le Baromètre humain
+
+> Objet express : expression individuelle, assise, adaptée au distanciel.
+
+> Baromètre humain : positionnement collectif et simultané, nécessite un espace de déplacement en présentiel.
+
 ## Contrôles avant de livrer Objet express
 
 1. **Finalité** : faciliter la prise de parole et la rencontre.

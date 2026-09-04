@@ -41,3 +41,41 @@ else
   echo "  OK — $(echo "$presents" | wc -l) gabarits, énumération et dossier alignés"
 fi
 rm -f /tmp/cg4.diff
+
+# normalise un libellé de gabarit (nom de fichier ou titre de section) pour comparaison :
+# minuscules, accents retirés, séparateurs (_ - /) réduits à un espace, espaces multiples compactés
+normaliser() {
+  echo "$1" \
+    | iconv -f utf8 -t ascii//TRANSLIT 2>/dev/null \
+    | tr '[:upper:]' '[:lower:]' \
+    | sed -E 's/[_\/-]+/ /g; s/[^a-z ]//g; s/ +/ /g; s/^ +| +$//g'
+}
+
+echo "== CG5 : chaque section '## Distinction avec X' est réciproque"
+fail=0
+for f in "$D"/*.md; do
+  nom_f=$(normaliser "$(basename "$f" .md)")
+  grep -oE '^## Distinction avec .*' "$f" | sed -E 's/^## Distinction avec (la |le |les |l.|un |une )?//' | while read -r cible; do
+    cible_norm=$(normaliser "$cible")
+    trouve=""
+    for g in "$D"/*.md; do
+      nom_g=$(normaliser "$(basename "$g" .md)")
+      if [ "$nom_g" = "$cible_norm" ]; then
+        trouve="$g"
+        break
+      fi
+    done
+    if [ -z "$trouve" ]; then
+      echo "  CIBLE INTROUVABLE : $(basename "$f") distingue « $cible » — aucun gabarit ne normalise vers « $cible_norm »"
+      continue
+    fi
+    reciproque=0
+    while read -r cible_retour; do
+      [ "$(normaliser "$cible_retour")" = "$nom_f" ] && reciproque=1
+    done < <(grep -oE '^## Distinction avec .*' "$trouve" | sed -E 's/^## Distinction avec (la |le |les |l.|un |une )?//')
+    if [ "$reciproque" -eq 0 ]; then
+      echo "  NON RÉCIPROQUE : $(basename "$f") distingue « $cible » ($(basename "$trouve")), mais $(basename "$trouve") ne distingue pas en retour"
+    fi
+  done
+done
+[ "$fail" -eq 0 ] && echo "  (voir le détail ci-dessus s'il y en a — contrôle informatif, ne bloque pas la conformité CG1-CG4)"

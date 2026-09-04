@@ -100,6 +100,18 @@ Le formateur :
 - Ne pas demander au binôme d'interpréter la personnalité de l'autre.
 - Ne pas allonger excessivement les restitutions.
 
+## Distinction avec Objet express
+
+> Interview croisée : écouter puis présenter une autre personne, en binôme.
+
+> Objet express : s'exprimer soi-même à l'aide d'un objet, individuellement.
+
+## Distinction avec le Baromètre humain
+
+> Interview croisée : échange approfondi à deux, restitué ensuite au grand groupe.
+
+> Baromètre humain : tout le groupe se positionne et s'exprime en même temps, sans échange individuel préalable.
+
 ## Contrôles avant de livrer l'Interview croisée
 
 1. **Finalité** : faire connaissance par l'écoute et la présentation d'un pair.

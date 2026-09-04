@@ -95,7 +95,13 @@ Elle est adaptée pour :
 - entraîner l'adaptation face à un imprévu ;
 - vérifier qu'une connaissance peut être mobilisée hors du contexte exact où elle a été apprise.
 
+## Distinction avec l'Étude de cas
+
 Elle n'est pas nécessaire lorsque l'objectif consiste principalement à examiner une situation et argumenter une réponse sans agir : une Étude de cas peut alors être plus adaptée.
+
+> Simulation / mise en situation : faire agir l'apprenant dans la situation, pas seulement l'analyser.
+
+> Étude de cas : analyser un dossier déjà écrit, sans que l'apprenant agisse dans la situation elle-même.
 
 ## Situation de référence
 

@@ -138,6 +138,14 @@ Prévoir une courte lecture du résultat permettant à l'apprenant ou au formate
 
 Pour toute notation, quantification ou seuil global, appliquer `../activite_evaluee.md`, clause A4.
 
+## Distinction avec Devine-carte
+
+> Quiz : diagnostiquer ce qui est déjà su ou confondu, pour décider ce qu'il faut reprendre.
+
+> Devine-carte : faire récupérer activement une notion déjà rencontrée, dans une logique de consolidation et de mémorisation.
+
+Le Quiz sert à orienter la suite du travail à partir d'un état des lieux ; Devine-carte ne diagnostique rien, il renforce une mémorisation déjà installée.
+
 ## Checklist auto-cochée — complément possible
 
 Une checklist peut compléter le Quiz lorsque l'auto-perception de l'apprenant apporte une information utile.

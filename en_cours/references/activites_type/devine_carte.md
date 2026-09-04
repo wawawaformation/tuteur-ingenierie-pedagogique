@@ -53,6 +53,14 @@ Les mêmes cartes sont utilisées au cours de trois manches :
 
 Choisir Devine-carte lorsque l'objectif est de faire **récupérer activement des notions déjà rencontrées** plutôt que de les faire relire ou restituer dans un quiz classique.
 
+## Distinction avec le Quiz
+
+> Devine-carte : faire récupérer activement une notion déjà rencontrée, dans une logique de consolidation et de mémorisation.
+
+> Quiz : diagnostiquer ce qui est déjà su ou confondu, pour décider ce qu'il faut reprendre.
+
+Devine-carte ne cherche pas à positionner l'apprenant sur ce qu'il sait ou ne sait pas ; il vise à renforcer une mémorisation déjà installée.
+
 L'activité permet notamment de travailler :
 
 - la récupération en mémoire ;

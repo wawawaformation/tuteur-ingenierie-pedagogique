@@ -94,6 +94,14 @@ Elle n'est pas nécessaire lorsque la tâche attendue est simplement l'applicati
 
 Elle ne devient pas automatiquement un Atelier parce que le cas est complexe. L'Atelier est défini par une production nécessitant une démarche pédagogique structurée en plusieurs étapes ; l'Étude de cas est définie par **l'analyse d'une situation contextualisée**.
 
+## Distinction avec la Simulation / mise en situation
+
+> Étude de cas : analyser un dossier déjà écrit, sans que l'apprenant agisse dans la situation elle-même.
+
+> Simulation / mise en situation : faire agir l'apprenant dans la situation, pas seulement l'analyser.
+
+Si l'objectif exige d'observer une action ou une interaction réelle plutôt qu'un raisonnement sur dossier, une Simulation / mise en situation est plus adaptée.
+
 ## Intention / objectif
 
 Préciser ce que l'apprenant doit être capable de faire à partir du cas.

@@ -117,6 +117,18 @@ Selon le groupe, proposer par exemple :
 - Ne pas présenter une extrémité comme pédagogiquement supérieure.
 - Prévoir une modalité équivalente lorsque le déplacement n'est pas accessible à tous.
 
+## Distinction avec l'Interview croisée
+
+> Baromètre humain : tout le groupe se positionne et s'exprime en même temps, sans échange individuel préalable.
+
+> Interview croisée : échange approfondi à deux, restitué ensuite au grand groupe.
+
+## Distinction avec Objet express
+
+> Baromètre humain : mouvement collectif et simultané, nécessite un espace de déplacement en présentiel.
+
+> Objet express : expression individuelle, assise, adaptée au distanciel.
+
 ## Contrôles avant de livrer le Baromètre humain
 
 1. **Finalité** : faire apparaître la diversité du groupe et faciliter les premières interactions.

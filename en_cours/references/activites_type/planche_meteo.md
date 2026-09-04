@@ -90,6 +90,14 @@ Elle peut être utilisée :
 
 > Planche météo : « Dans quel état suis-je maintenant ? »
 
+## Distinction avec En un mot
+
+> Planche météo : « Dans quel état suis-je maintenant ? »
+
+> En un mot : « Comment je qualifie ce que je viens de vivre en formation ? »
+
+La première porte sur l'état de l'apprenant, indépendamment de ce qui vient d'être vécu ; la seconde porte sur l'expérience pédagogique elle-même.
+
 ## Support
 
 Préparer une planche présentant plusieurs états facilement identifiables.

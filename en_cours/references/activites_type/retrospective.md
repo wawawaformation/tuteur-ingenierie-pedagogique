@@ -70,10 +70,24 @@ Elle n'est pas :
 - une simple enquête de satisfaction ;
 - une obligation de produire une action pour chaque sujet.
 
+## Distinction avec le Recul
+
 Elle se distingue du **Recul**, centré sur le travail, la démarche ou les apprentissages de l'apprenant.
 
 > **Recul : conscientisation du travail et des apprentissages.**  
 > **Rétrospective : autorégulation collective des conditions de travail et d'apprentissage.**
+
+## Distinction avec la Planche météo
+
+> Rétrospective : « Comment fonctionnons-nous et que voulons-nous ajuster ? »
+
+> Planche météo : « Dans quel état suis-je maintenant ? »
+
+## Distinction avec En un mot
+
+La Rétrospective engage un travail collectif d'autorégulation, de priorisation et éventuellement d'ajustement.
+
+En un mot est un **feedback flash** destiné principalement au formateur : il ne nécessite ni discussion collective ni décision.
 
 ## Taxonomie
 

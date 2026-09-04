@@ -4,6 +4,19 @@ Journal court des étapes réalisées sur le candidat V3, toutes mineures confon
 
 ---
 
+## 2026-09-04 — `V31-ACT02-5` (2/3) diagnostiqué : asymétrie de discriminants sur tout le catalogue, `CG5` ajouté
+
+Question de l'utilisateur sur le résultat non unanime de `V31-ACT02-5` (« un gabarit concurrent pas assez discriminé dans l'oracle si j'ai bien compris »). Croisement des traces de lecture des 3 runs, non fait au moment du scoring initial — erreur à corriger avant de conclure : les deux runs corrects avaient ouvert `en_un_mot.md` en plus de `planche_meteo.md` ; le run divergent n'avait ouvert que `planche_meteo.md`, qui ne mentionne `En un mot` nulle part. Ce n'était donc pas une mauvaise application de la distinction (ce que j'avais écrit la veille), mais une distinction absente du côté où le run a atterri — même classe de défaut que `V31-ACT02-3`, dans une autre variante.
+
+Cartographie systématique de qui distingue qui dans les 17 gabarits : l'asymétrie est apparue **systématique**, pas isolée à cette paire — 7 occurrences réelles trouvées (`en_un_mot`↔`planche_meteo`, `en_un_mot`↔`retrospective`, `planche_meteo`↔`recul`, `planche_meteo`↔`retrospective`, `quiz`↔`devine_carte`, `etude_de_cas`↔`simulation`, et aucune distinction entre les 3 brise-glace). Deux fausses pistes écartées après lecture du contexte exact : la mention de « carte conceptuelle » dans `facettes.md` est un exemple de format de restitution, pas une confusion de gabarit ; les mentions d'Atelier/Étude de cas/Carte conceptuelle dans `brainstorming.md` décrivent une composition en aval, pas un risque de sélection.
+
+- `scripts/controle_conformite_gabarits.sh` : `CG5` ajouté (réciprocité des sections `## Distinction avec X`, comparaison par normalisation nom de fichier / titre de section). **Bug trouvé et corrigé en cours d'écriture** : le script normalisait le nom du gabarit courant mais grepait les cibles extraites à l'état brut (accentuées, majuscules) — aucune correspondance ne pouvait jamais matcher. Corrigé par une boucle de comparaison normalisée des deux côtés, revérifié avant de conclure quoi que ce soit sur le contenu.
+- 7 paires réciproques posées (miroir des distinctions déjà écrites, sans invention) dans `planche_meteo.md`, `en_un_mot.md`, `recul.md`, `retrospective.md`, `quiz.md`, `devine_carte.md`, `etude_de_cas.md`, `simulation_mise_en_situation.md` ; 6 sections croisées ajoutées entre les 3 brise-glace (`interview_croisee.md`, `objet_express.md`, `barometre_humain.md`). `CG5` : 0 asymétrie sur 17 gabarits après correction.
+- `V31-ACT02-5` rejoué sur fixture reconstruite (empreinte `2878177f…`) : **3/3 PASS, `En un mot` unanime**, mêmes 4 fichiers ouverts par les 3 runs — seule variable ayant changé entre les deux campagnes, le contenu de `planche_meteo.md`. Preuve directe que le défaut était dans l'artefact, pas dans l'échantillonnage du modèle.
+- `V31-ACT02-5.md`, `README.md` et `promesse.md` mis à jour : les 8 scénarios de la batterie sont désormais tous unanimes.
+
+---
+
 ## 2026-09-04 — Trois gabarits d'ouverture intégrés au chantier 1 (catalogue à 17)
 
 Brouillon fourni par l'utilisateur (« Interview croisée », « Objet express », « Baromètre humain ») après analyse de sa pertinence — aucun des 14 gabarits existants ne couvrait la fonction « premier contact / mise en groupe », et le précédent des gabarits légers non évalués (`Planche météo`, `En un mot`) rendait l'extension cohérente avec le catalogue déjà en place.
