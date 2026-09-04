@@ -30,7 +30,19 @@ Un témoin B′ ne connaît ni les noms, ni les finalités déclarées, ni le co
 
 **Conséquence à assumer.** La note SPEC d'ACT01 dans `promesse.md` signalait que le pouvoir discriminant tient à l'observable négatif *et* au contraste A / B′. En retirant le second, le contrôle de valeur ajoutée repose entièrement sur les scénarios négatifs (`V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4`) et sur la paire contrastive (`V31-ACT02-1` / `V31-ACT02-2`). Ceux-là portent donc la charge de preuve de la mineure ; un `PASS` sur le seul `V31-ACT01-1` ne démontrerait presque rien.
 
-**Exigence de répétition.** `V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3` et `V31-ACT02-4` protègent une propriété de fiabilité, pas seulement de capacité (`promesse.md`, tête du Chantier 1) : chacun doit être rejoué **trois fois** (même stimulus, workspace neuf, majorité stable) avant de conclure — un `PASS` isolé ne suffit pas. Distinct de la passe unique du gel de non-régression (`base_de_travail.md` §13.2), qui porte sur la détection de régression d'une propriété déjà établie, pas sur sa validation initiale.
+**Exigence de répétition.** `V31-ACT01-2`, `V31-ACT01-3`, `V31-ACT02-3`, `V31-ACT02-4` et `V31-ACT02-5` protègent une propriété de fiabilité, pas seulement de capacité (`promesse.md`, tête du Chantier 1) : chacun doit être rejoué **trois fois** (même stimulus, workspace neuf, majorité stable) avant de conclure — un `PASS` isolé ne suffit pas. Distinct de la passe unique du gel de non-régression (`base_de_travail.md` §13.2), qui porte sur la détection de régression d'une propriété déjà établie, pas sur sa validation initiale.
+
+---
+
+## Couverture du catalogue — limite connue, assumée
+
+Ces scénarios vérifient un **mécanisme** de sélection (ACT01, ACT02), pas chaque gabarit un par un — c'est cohérent avec l'invariant d'architecture de la promesse : un gabarit ajouté doit rester mobilisable sans traitement spécifique ajouté au noyau, donc une couverture exhaustive gabarit par gabarit ne serait pas seulement coûteuse, elle contredirait cet invariant.
+
+Constat au 2026-09-04, en comptant les occurrences de chaque gabarit dans les 8 fiches : 12 des 14 gabarits sont ouverts par au moins un run (comme réponse attendue, comme repli admis, ou comme distracteur explicitement mis sous tension). `Brainstorming` est nommé sans jamais être mis sous tension ; `Carte conceptuelle` et `Évaluation par les pairs` ne sont ouverts par aucune fiche.
+
+Ce n'est pas un trou de propriété (le mécanisme reste vérifié), mais un trou de **conformité d'artefact** : un défaut structurel isolé sur ces deux derniers gabarits (champ de front matter mal nommé, section discriminante absente, référence obsolète) ne serait détecté par aucun scénario comportemental — c'est exactement la classe de défaut trouvée et corrigée le 2026-09-04 sur `atelier.md`/`quiz.md`/`recul.md` (voir `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` §9). C'est pour cette classe de défaut, pas pour la couverture comportementale, que `scripts/controle_conformite_gabarits.sh` a été ajouté : il vérifie mécaniquement les 14 gabarits (schéma de front matter, présence du discriminant, absence de référence obsolète, cohérence énumération/dossier), à faire tourner avant toute campagne.
+
+Décision assumée : ne pas ajouter de scénario comportemental pour `Brainstorming` et `Carte conceptuelle` par la seule positive. Le contrôle mécanique couvre le risque de conformité ; un scénario de plus par gabarit non encore mis sous tension déplacerait la batterie de « suffisant » vers « exhaustif » sans gain proportionné.
 
 ---
 
@@ -66,8 +78,13 @@ Voie (a) recommandée pour cette phase ; la voie (b) devient naturelle au moment
 | `V31-ACT02-2` | ACT02 | Situation à jouer → `Simulation / mise en situation` |
 | `V31-ACT02-3` | ACT02 | Besoin non couvert → adapter le gabarit existant le plus proche sans forcer un gabarit inadapté |
 | `V31-ACT02-4` | ACT02 | Piège de mots-clés (`En un mot` vs `Rétrospective`) → suivre la fonction réelle, pas le vocabulaire de surface |
+| `V31-ACT02-5` | ACT02 | Symétrique de `V31-ACT02-4` : besoin individuel et sans négociation → `En un mot` reste le bon choix, ne pas généraliser à tort vers `Rétrospective` |
 
 `V31-ACT02-1` et `V31-ACT02-2` forment une **paire contrastive** : domaine, public, durée et taille de groupe identiques, seule la nature de la performance attendue change. Les verdicts restent attribués séparément ; un résultat identique sur les deux signale que l'agent ne départage pas sur la finalité.
+
+`V31-ACT02-4` et `V31-ACT02-5` forment une **paire contrastive symétrique** : même moment typique (fin de journée), même risque de surface (« feedback », « retour »), fonction opposée (collective vs individuelle). Ajoutée le 2026-09-04 : la batterie d'origine ne couvrait que le sens `En un mot` → `FAIL`, jamais le sens `En un mot` → `PASS`.
+
+**Résultat de la première campagne sur `V31-ACT02-5` : PASS par majorité (2/3), pas unanime.** Un troisième distracteur non anticipé à la conception (`Planche météo`) a été retenu une fois sur trois, en citant correctement la distinction du gabarit puis en l'appliquant à l'envers. Oracle corrigé en conséquence (clause `FAIL` étendue) — voir le détail dans la fiche. Contrairement aux quatre autres scénarios à charge de preuve de cette batterie, tous unanimes 3/3, celui-ci documente une marge d'erreur réelle sur ce départage précis.
 
 `V31-ACT02-3` protège ce que la promesse disclaime : avec un catalogue passant de 4 à ~15 entrées, le risque nouveau n'est pas de manquer un gabarit mais d'en forcer un.
 

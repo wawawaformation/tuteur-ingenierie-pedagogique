@@ -4,6 +4,19 @@ Journal court des étapes réalisées sur le candidat V3, toutes mineures confon
 
 ---
 
+## 2026-09-04 — Couverture du catalogue examinée : trou de conformité comblé, trou comportemental assumé
+
+Question de l'utilisateur (« est-ce que les tests couvrent tous les gabarits ? ») ayant fait compter les occurrences réelles des 14 gabarits dans les 7 fiches : 11 sur 14 ouverts par au moins un run, `Brainstorming` nommé sans mise sous tension, `Carte conceptuelle` et `Évaluation par les pairs` jamais ouverts. Distinction posée : ce n'est pas un trou de propriété (ACT01/ACT02 restent des mécanismes, pas une liste à cocher — l'invariant d'architecture de la promesse l'interdit même), mais un trou de **conformité d'artefact**, la classe de défaut qui vient de coûter la campagne `V31-ACT02-3`.
+
+Deux réponses, sur recommandation de l'utilisateur :
+
+- **`scripts/controle_conformite_gabarits.sh`** : 4 contrôles mécaniques sur les 14 gabarits (schéma de front matter, présence du discriminant de sélection, absence de référence obsolète, cohérence énumération `activite.md` / dossier `activites_type/`). Écrit puis corrigé immédiatement : contenait des `` \` `` littéraux (backslash + backtick) au lieu de simples backticks — invisible en test à la ligne de commande, cassant une fois écrit en fichier. Les 4 contrôles passent après correction.
+- **`V31-ACT02-5`** : symétrique de `V31-ACT02-4`, ferme le trou comportemental le plus net — `En un mot` n'était testé que par la négative (piège vers `Rétrospective`), jamais par la positive. `Brainstorming` et `Carte conceptuelle` restent volontairement sans scénario dédié, consigné comme limite assumée dans le `README.md` de la batterie plutôt que traité comme un oubli.
+
+**Trouvaille sur `V31-ACT02-5` : 2/3 `En un mot` (PASS), 1/3 `Planche météo`.** Le run divergent citait correctement la distinction du gabarit (« Comment suis-je aujourd'hui ? » vs « Comment je qualifie ce que je viens de vivre ? ») puis l'appliquait à l'envers à un stimulus qui reprend presque mot pour mot le libellé propre d'`En un mot`. Un troisième distracteur non anticipé à la conception, pas une lecture défendable. Sur choix de l'utilisateur : scoré `FAIL`, clause `FAIL` de la fiche étendue en conséquence, verdict final retenu **PASS par majorité (2/3)** — conforme à la règle de répétition de la batterie, mais non unanime, à la différence des quatre autres scénarios à charge de preuve.
+
+---
+
 ## 2026-09-04 — Instabilité `V31-ACT02-3` tranchée : défaut de fixture, ni scénario mal posé ni promesse trop ambitieuse
 
 Les deux lectures laissées ouvertes par le rapport du 2026-09-03 sont écartées au profit de la troisième explication qu'il envisageait. Les ZIP sources de `plus_tard/` ont été extraits et comparés fichier par fichier au candidat réel : le front matter des 4 gabarits historiques y est **identique**, mais leur corps non — `atelier.md`, `quiz.md` et `recul.md` ont gardé un corps dépourvu de section `## Pourquoi choisir…`, alors que les 11 autres gabarits du candidat en portent une. Le départage s'opérait donc entre gabarits asymétriquement documentés, et les 3 dénudés étaient précisément les replis génériques que l'oracle attend. Le raisonnement du run 4 (« expérience professionnelle vécue ou observée ») correspond mot pour mot au discriminant manquant de `Recul`, qui l'ancre normalement sur l'action propre de l'apprenant.
