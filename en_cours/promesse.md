@@ -173,6 +173,8 @@ Cette promesse est **gelée pour V3.1.0**, le 2026-09-03, à l'issue du cycle co
 > **Réparé et vérifié le 2026-09-04** : le discriminant de sélection manquant a été porté dans `atelier.md`, `quiz.md` et `recul.md` (catalogue homogène, 14/14), puis la **batterie entière rejouée sur le candidat corrigé — 15/15 PASS**, résultats identiques type par type à la validation d'origine. La réserve est levée : ACT01 et ACT02 tiennent sur le candidat versionné, pas seulement sur une copie de test.
 >
 > **Ce qui reste dû** : la non-régression de la baseline V2.1 (`../validation/v2.1/non_regression/`) n'a pas été jouée sur ce candidat, alors que le portage a touché trois gabarits du socle hérité. Exigence distincte, posée au §0 ci-dessus et par `base_de_travail.md` §13 — V3.1.0 n'est donc pas encore validée au sens du gel de non-régression.
+>
+> **Catalogue étendu le 2026-09-04, gel maintenu.** Trois gabarits d'ouverture (`interview_croisee.md`, `objet_express.md`, `barometre_humain.md` — Interview croisée, Objet express, Baromètre humain) ajoutés au chantier 1 et référencés dans `activite.md` (catalogue à 17 entrées). Décision du même ordre que l'extension `V31-ACT02-5` : contrôle mécanique de conformité seul jugé suffisant (`scripts/controle_conformite_gabarits.sh`, 17/17), sans rejouer la batterie NOY comportementale. Raison : ces trois gabarits ne recoupent la finalité d'aucun des 14 existants (mise en relation de début de formation, non évaluée), donc n'introduisent aucun distracteur nouveau pour les 8 scénarios ACT01/ACT02 déjà établis. Ce raisonnement porte spécifiquement sur ces trois gabarits ; un futur ajout dont la finalité recoupe un gabarit existant devrait être rejugé au cas par cas, pas couvert automatiquement par ce précédent.
 
 1. ~~chaque propriété nouvelle (ACT01, ACT02) examinée pour vérifier qu'elle exprime bien un comportement utile et non un simple moyen d'implémentation~~ — fait, deux passes de revue (interne puis externe, vérifiées point par point) ;
 2. ~~doublons supprimés~~ — fait ;
@@ -183,7 +185,7 @@ Cette promesse est **gelée pour V3.1.0**, le 2026-09-03, à l'issue du cycle co
 La validation de V3.1.0 rejouera, en une seule passe pour la détection de régression (`base_de_travail.md` §13) :
 
 - les 15 scénarios de la baseline V2.1 ;
-- les 7 scénarios V3.1.0 ci-dessus, désormais établis comme fiables.
+- les 8 scénarios V3.1.0 ci-dessus (`V31-ACT02-5` ajouté le 2026-09-04), désormais établis comme fiables.
 
 Reste non couvert avant l'implémentation réelle du catalogue (candidat versionné, pas la copie de test) : les prérequis bloquants documentés dans `validation/v3.1/non_regression/README.md` (référencement dans `activite.md`, évolution de `SKILL.md` sur les métadonnées de sélection) doivent encore être appliqués au candidat lui-même — la validation ci-dessus porte sur une copie isolée, conformément à la voie (a) documentée.
 

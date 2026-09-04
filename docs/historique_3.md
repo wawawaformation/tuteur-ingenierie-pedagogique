@@ -4,6 +4,22 @@ Journal court des étapes réalisées sur le candidat V3, toutes mineures confon
 
 ---
 
+## 2026-09-04 — Trois gabarits d'ouverture intégrés au chantier 1 (catalogue à 17)
+
+Brouillon fourni par l'utilisateur (« Interview croisée », « Objet express », « Baromètre humain ») après analyse de sa pertinence — aucun des 14 gabarits existants ne couvrait la fonction « premier contact / mise en groupe », et le précédent des gabarits légers non évalués (`Planche météo`, `En un mot`) rendait l'extension cohérente avec le catalogue déjà en place.
+
+**Encodage du brouillon corrompu (mojibake UTF-8 réinterprété en Latin-1).** Restauré par un round-trip `latin1`→`utf-8` après isolement des deux séquences qui avaient perdu de l'information en cours de route (un `à` dont le second octet — un espace insécable — avait été normalisé en espace normal ; une flèche `→` dont les octets de continuation avaient été supprimés). Relu intégralement après restauration, aucun résidu.
+
+**Question de versioning posée avant d'agir** : l'utilisateur a d'abord proposé « V3.1.2 ». Vérifié qu'aucune convention de sous-version avant promotion n'existe dans le dépôt — le seul usage documenté du troisième chiffre (`base_de_travail.md` §4.1, `V3.3.1`/`V3.3.2`) désigne des patches **post-promotion**, et `V3.1.0` n'est pas encore promue. Tranché avec l'utilisateur : intégration directe dans le périmètre de `V3.1.0` (candidat non promu, donc encore modifiable), gel traité comme rouvert puis reformé après contrôle.
+
+- 3 fichiers créés dans `en_cours/references/activites_type/` (`interview_croisee.md`, `objet_express.md`, `barometre_humain.md`) : front matter converti du fence ` ```yaml ` du brouillon vers les délimiteurs `---` réels, squelette de sections aligné sur les gabarits légers existants (listes numérotées sous `## Déroulement`, pas de sous-titres `###`/`####` imbriqués). Coquille corrigée au passage : `distantiel` → `distanciel` dans les `selection_keywords` d'Objet express, incohérent avec le reste du texte du brouillon.
+- `en_cours/references/activite.md` : 3 entrées ajoutées à l'énumération du catalogue (17 au total).
+- `scripts/controle_conformite_gabarits.sh` rejoué : 17/17 sur les 4 contrôles — exactement le défaut qui avait coûté la campagne `V31-ACT02-3` est couvert dès l'ajout.
+- Revalidation comportementale jugée non nécessaire, sur décision de l'utilisateur : les 3 nouveaux gabarits ne recoupent la finalité d'aucun des 14 existants (mise en relation de début de formation, non évaluée) — aucun distracteur nouveau pour les 8 scénarios ACT01/ACT02. `promesse.md` documente ce raisonnement explicitement, borné à ces 3 gabarits précis.
+- `promesse.md`, `.claude/CLAUDE.md`, `en_cours/CLAUDE.md` alignés sur 17 gabarits. Au passage, `promesse.md` §« Statut » corrigé : mentionnait encore 7 scénarios de non-régression à rejouer alors que `V31-ACT02-5` en fait 8 depuis plus tôt le même jour.
+
+---
+
 ## 2026-09-04 — Couverture du catalogue examinée : trou de conformité comblé, trou comportemental assumé
 
 Question de l'utilisateur (« est-ce que les tests couvrent tous les gabarits ? ») ayant fait compter les occurrences réelles des 14 gabarits dans les 7 fiches : 11 sur 14 ouverts par au moins un run, `Brainstorming` nommé sans mise sous tension, `Carte conceptuelle` et `Évaluation par les pairs` jamais ouverts. Distinction posée : ce n'est pas un trou de propriété (ACT01/ACT02 restent des mécanismes, pas une liste à cocher — l'invariant d'architecture de la promesse l'interdit même), mais un trou de **conformité d'artefact**, la classe de défaut qui vient de coûter la campagne `V31-ACT02-3`.

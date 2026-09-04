@@ -31,7 +31,10 @@ La bibliothèque contient actuellement :
 - `carte_conceptuelle.md` — **Carte conceptuelle** : représenter des concepts et leurs relations ;
 - `en_un_mot.md` — **En un mot** : feedback apprenant très bref pour éclairer les pratiques du formateur ;
 - `evaluation_par_les_pairs.md` — **Évaluation par les pairs** : faire examiner une production par d'autres apprenants à partir de critères explicites ;
-- `retrospective.md` — **Rétrospective** : réguler collectivement les conditions de travail et d'apprentissage.
+- `retrospective.md` — **Rétrospective** : réguler collectivement les conditions de travail et d'apprentissage ;
+- `interview_croisee.md` — **Interview croisée** : créer du lien par l'écoute et la présentation d'un pair, en binôme ;
+- `objet_express.md` — **Objet express** : faciliter une première prise de parole à l'aide d'un objet médiateur ;
+- `barometre_humain.md` — **Baromètre humain** : faire apparaître la diversité du groupe par un positionnement physique sur un continuum.
 
 Chaque gabarit hérite du socle défini ici, puis le précise ou le complète selon sa finalité pédagogique.
 

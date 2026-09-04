@@ -38,7 +38,7 @@ en_cours/
 → hérite du socle V2.1 validé ; V3 séquencée en mineures indépendantes 3.1 → 3.2 → 3.3 (voir en_cours/base_de_travail.md §4.1)
 → non public par principe
 → promesse V3.1.0 gelée (2026-09-03), validée par 7 scénarios / 15 exécutions / 15 PASS sur copie de test
-→ catalogue enrichi implémenté sur le candidat versionné (2026-09-04) : 14 gabarits d'activité
+→ catalogue enrichi implémenté sur le candidat versionné (2026-09-04) : 17 gabarits d'activité (14 + 3 gabarits d'ouverture ajoutés le même jour)
 → batterie V3.1 rejouée sur le candidat corrigé (2026-09-04) : 15/15 PASS, résultats identiques à la copie de test
 → NON ENCORE FAIT : non-régression de la baseline V2.1 (validation/v2.1/non_regression/) sur ce candidat
 ```
