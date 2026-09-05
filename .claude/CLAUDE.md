@@ -1,5 +1,12 @@
 # CLAUDE.md — règles de travail du dépôt
 
+> ## ⚠️ RÈGLE ABSOLUE — comptes système des campagnes de validation
+>
+> - **Batterie V2.1** (`validation/v2.1/non_regression/`, `scripts/run_baseline.sh`/`run_isole.sh`) → compte **`david`**.
+> - **Toute campagne candidate d'une mineure V3.x** (`validation/v3.x/non_regression/`, ACT/COG/TUT…) → compte **`claude-test`**, jamais `david`, même isolé, même signalé.
+> - Si l'accès à `claude-test` est bloqué (`sudo` refusé par le classificateur, pas de mot de passe) : **s'arrêter et demander à l'utilisateur**. Ne jamais décider seul de basculer sur `david`. `su claude-test -c '...'` fonctionne (`sudo` non).
+> - Incident du 2026-09-05 : violé une fois, corrigé après coup. Détail complet : `validation/CLAUDE.md` et `validation/v3.1/non_regression/CLAUDE.md`.
+
 ## Projet
 
 `tuteur-ingenierie-pedagogique` est un skill destiné au tutorat d'adultes et à l'assistance à l'ingénierie pédagogique.
