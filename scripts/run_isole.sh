@@ -96,6 +96,11 @@ tour)
   [ -n "$PERSONA" ] && ARGS+=(--append-system-prompt-file "$PERSONA")
 
   cd "$WORK" || exit 1
+  # Les runs passent par l'API Anthropic directe (credentials.json) : annuler
+  # les vars Azure Foundry héritées de la session parente si elle en a.
+  CLAUDE_CODE_USE_FOUNDRY="" \
+  ANTHROPIC_FOUNDRY_RESOURCE="" \
+  ANTHROPIC_FOUNDRY_API_KEY="" \
   CLAUDE_CONFIG_DIR="$ISO" "$CLAUDE_BIN" -p \
     --model "$MODEL_ID" --effort "$EFFORT" --permission-mode "$PERMISSION_MODE" \
     "${ARGS[@]}" < "$STIMULUS"

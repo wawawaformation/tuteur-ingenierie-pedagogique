@@ -22,7 +22,9 @@ PROMPT="$REPO/validation/v2.1/baseline/prompt_operateur.md"
 # Le candidat tourne en effort `medium` (paramètre autoritatif V1/V2). L'opérateur
 # tourne en `high` : son jugement borné est plus exigeant que la production testée.
 # Ne pas aligner l'un sur l'autre.
-OP_MODEL=claude-sonnet-5
+# claude-sonnet-5 → claude-sonnet-4-6 : opérateur exécuté via Azure Foundry,
+# où sonnet-5 n'est pas provisionné.
+OP_MODEL=claude-sonnet-4-6
 OP_EFFORT=high
 CLAUDE_BIN=/home/david/.local/share/claude/versions/2.1.241
 export DISABLE_AUTOUPDATER=1
@@ -66,6 +68,10 @@ chmod 600 "$OP/config/.credentials.json"
 } > "$OP/contexte.txt"
 
 cd "$OP/cwd" || exit 1
+CLAUDE_CODE_USE_FOUNDRY=1 \
+ANTHROPIC_FOUNDRY_RESOURCE="${AZURE_FOUNDRY_SWEEDEN_RESOURCE:?variable Azure non exportée}" \
+ANTHROPIC_FOUNDRY_API_KEY="${AZURE_FOUNDRY_SWEEDEN_API_KEY:?variable Azure non exportée}" \
+ANTHROPIC_DEFAULT_MODEL="sonnet" \
 CLAUDE_CONFIG_DIR="$OP/config" "$CLAUDE_BIN" -p \
   --model "$OP_MODEL" --effort "$OP_EFFORT" \
   --disallowed-tools Read Write Edit Bash Glob Grep WebFetch WebSearch Task Skill \

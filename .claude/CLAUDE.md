@@ -40,7 +40,7 @@ en_cours/
 → promesse V3.1.0 gelée (2026-09-03), validée par 7 scénarios / 15 exécutions / 15 PASS sur copie de test
 → catalogue enrichi implémenté sur le candidat versionné (2026-09-04) : 17 gabarits d'activité (14 + 3 gabarits d'ouverture ajoutés le même jour)
 → batterie V3.1 rejouée sur le candidat corrigé (2026-09-04) : 15/15 PASS, résultats identiques à la copie de test
-→ NON ENCORE FAIT : non-régression de la baseline V2.1 (validation/v2.1/non_regression/) sur ce candidat
+→ non-régression de la baseline V2.1 (validation/v2.1/non_regression/) rejouée sur ce candidat (2026-09-05) : 14/14 PASS (voir docs/v3.1/RAPPORT_NON_REGRESSION_V2.1_SUR_CANDIDAT_V3.1_2026-09-05.md)
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.
