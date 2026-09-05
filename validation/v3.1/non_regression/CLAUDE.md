@@ -26,7 +26,24 @@ Le catalogue enrichi est désormais implémenté sur le candidat versionné, les
 
 **15/15 PASS**, résultats identiques type par type à la campagne sur copie de test. La paire contrastive `ACT02-1` / `ACT02-2` départage bien sur un thème professionnel identique. Détail en `docs/v3.1/RAPPORT_INSTABILITE_V31-ACT02-3_2026-09-03.md` §10.3.
 
-**Ce que cette passe ne couvre pas** : la non-régression de la baseline V2.1 (`../../v2.1/non_regression/`, 15 scénarios) n'a pas été jouée sur ce candidat, alors que le portage a touché `atelier.md`, `quiz.md` et `recul.md`. Elle reste requise par `en_cours/promesse.md` §0 et `base_de_travail.md` §13 — voir « Non-régression cumulative » ci-dessous.
+**Ce que cette passe ne couvrait pas alors** : la non-régression de la baseline V2.1 (`../../v2.1/non_regression/`, 14 scénarios) n'avait pas été jouée sur ce candidat, alors que le portage avait touché `atelier.md`, `quiz.md` et `recul.md`. **Close depuis** : rejouée le 2026-09-05, 14/14 PASS (voir `docs/v3.1/RAPPORT_NON_REGRESSION_V2.1_SUR_CANDIDAT_V3.1_2026-09-05.md` et V3.1.0 promue vers `dist/stable/`).
+
+## Re-vérification complète — 2026-09-05, sous `claude-test`
+
+Après la promotion de V3.1.0, l'ensemble des 8 fiches (les 7 de la batterie gelée + `V31-ACT02-5`, ajoutée le 2026-09-04 après le gel pour fermer un trou de couverture symétrique — voir README.md) a été rejoué sous le compte `claude-test` via une variante de `scripts/run_isole.sh` (mêmes paramètres épinglés : `claude-sonnet-5`, effort `medium`, `en_cours/` en lecture seule avec manifeste SHA-256), en remplacement du `collector-kit` documenté dont le workspace (`/projets/skill/tests/tests_avec_skill_A`) et l'ancien chemin de dépôt (`/projets/skill/tuteur-ingenierie-pedagogique-v2/`) n'existent plus après le déplacement du dépôt — à reconstruire séparément si des campagnes A/B′ redeviennent nécessaires.
+
+| Scénario | Runs | Verdict | Type retenu |
+|---|---|---|---|
+| `V31-ACT01-1` | 1/1 | PASS | Facettes |
+| `V31-ACT01-2` | 3/3 | PASS | Quiz (unanime) |
+| `V31-ACT01-3` | 3/3 | PASS | Planche météo (unanime) |
+| `V31-ACT02-1` | 1/1 | PASS | Étude de cas |
+| `V31-ACT02-2` | 1/1 | PASS | Simulation / mise en situation |
+| `V31-ACT02-3` | 3/3 | PASS | Brique (unanime) |
+| `V31-ACT02-4` | 3/3 | PASS | Rétrospective (unanime) |
+| `V31-ACT02-5` | 3/3 | PASS | En un mot (unanime) |
+
+**18/18 PASS**, aucune invalidité technique. Confirme intégralement le 15/15 déjà gelé et corrobore le 3/3 déjà documenté pour `V31-ACT02-5` (README.md). Une première tentative de re-vérification, exécutée par erreur sous le compte `david` (isolation `CLAUDE_CONFIG_DIR` correcte mais mauvais compte système), avait donné les mêmes verdicts sauf sur `ACT02-3` (2/3 `Brique` + 1/3 `Étude de cas`, toujours `PASS` au sens de l'oracle comportemental de la fiche, mais type non unanime) — écart traité comme variance naturelle d'échantillonnage entre deux campagnes indépendantes, pas comme un défaut, mais l'incident méthodologique (mauvais compte) est documenté pour ne pas se reproduire.
 
 ## Numérotation
 

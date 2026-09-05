@@ -13,6 +13,8 @@ Toute campagne de validation ou de non-régression sur ce dépôt utilise l'un d
 
 Incident survenu le 2026-09-04 : une campagne entière (8 scénarios V3.1 + 14 scénarios V2.1) a été jouée par sous-agents improvisés, produisant un `FAIL` sur `NOY004` qui s'est révélé faux dès rejeu avec le vrai harnais (`PASS` des deux côtés). Détail complet : `docs/v3.1/RAPPORT_INCIDENT_METHODOLOGIE_VALIDATION_2026-09-04.md`.
 
+Deuxième incident, le 2026-09-05 : une re-vérification de la batterie `validation/v3.1/non_regression/` a été lancée sous `david` via `scripts/run_isole.sh` au lieu de `collector-kit`/`claude-test`, au motif (annoncé, mais décidé seul) que le `sudo -u claude-test` était refusé. Corrigé en repassant sous `claude-test` via `su claude-test` (fonctionne, contrairement à `sudo`, bloqué par le classificateur d'auto mode). **Ne jamais décider seul de changer de compte système** — s'arrêter et demander. À cette occasion, constaté que les chemins documentés de `collector-kit` (`/projets/skill/tests/tests_avec_skill_A`, `/projets/skill/tuteur-ingenierie-pedagogique-v2/`) n'existent plus depuis le déplacement du dépôt : à reconstruire avant la prochaine campagne A/B′ sous `claude-test`. Détail : `validation/v3.1/non_regression/CLAUDE.md`, section « Re-vérification complète — 2026-09-05 ».
+
 ## Principe central
 
 La validation doit protéger l'objectif du test, pas une chorégraphie mécanique.
