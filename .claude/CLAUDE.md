@@ -30,17 +30,17 @@ Dans l'état actuel du dépôt :
 ```text
 dist/stable/
 → distributions publiques validées
-→ V2.1 est la version publique recommandée
-→ V1 et V2 sont conservées pour historique
+→ V3.1.0 est la version publique recommandée
+→ V1, V2 et V2.1 sont conservées pour historique
 
 en_cours/
-→ candidat V3, mineure V3.1.0 engagée (chantier 1 : catalogue d'activités)
+→ runtime du candidat V3.1.0, promu (2026-09-05) ; VERSION reste "V3.1" dans l'attente de l'ouverture de V3.2.0 (chantier 2)
 → hérite du socle V2.1 validé ; V3 séquencée en mineures indépendantes 3.1 → 3.2 → 3.3 (voir en_cours/base_de_travail.md §4.1)
-→ non public par principe
 → promesse V3.1.0 gelée (2026-09-03), validée par 7 scénarios / 15 exécutions / 15 PASS sur copie de test
 → catalogue enrichi implémenté sur le candidat versionné (2026-09-04) : 17 gabarits d'activité (14 + 3 gabarits d'ouverture ajoutés le même jour)
 → batterie V3.1 rejouée sur le candidat corrigé (2026-09-04) : 15/15 PASS, résultats identiques à la copie de test
 → non-régression de la baseline V2.1 (validation/v2.1/non_regression/) rejouée sur ce candidat (2026-09-05) : 14/14 PASS (voir docs/v3.1/RAPPORT_NON_REGRESSION_V2.1_SUR_CANDIDAT_V3.1_2026-09-05.md)
+→ V3.1.0 promue vers dist/stable/tuteur-ingenierie-pedagogique_v3.1/ (2026-09-05)
 ```
 
 `en_cours/VERSION` fait foi pour le numéro du candidat en développement.

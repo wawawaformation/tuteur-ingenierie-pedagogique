@@ -6,7 +6,8 @@ Il contient actuellement :
 
 - V1, conservée pour historique ;
 - V2, conservée pour historique ;
-- V2.1, version publique recommandée ;
+- V2.1, conservée pour historique ;
+- V3.1.0, version publique recommandée ;
 - les archives ZIP correspondantes.
 
 ## Règle principale

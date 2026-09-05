@@ -248,13 +248,13 @@ docs/
 
 [`dist/stable/`](dist/stable/) reste le point d’entrée recommandé pour un usage public.
 
-La version actuellement distribuée correspond à la **V2.1 validée**. V1 et V2 restent conservées pour historique.
+La version actuellement distribuée correspond à la **V3.1.0 validée**. V1, V2 et V2.1 restent conservées pour historique.
 
 ### Développement en cours
 
 [`en_cours/`](en_cours/) est la zone de développement du candidat courant.
 
-Le candidat V2.1 qui y était développé a été validé et promu (voir ci-dessus). `en_cours/` contient désormais le candidat **V3**, qui étend ce socle validé ; le contenu de `en_cours/` n'est jamais considéré comme public de son propre fait.
+Le candidat V3.1.0 qui y était développé a été validé et promu (voir ci-dessus). `en_cours/` contient toujours ce même runtime dans l'attente de l'ouverture de la mineure suivante, **V3.2.0** (chantier 2 : leviers cognitifs et biais) ; le contenu de `en_cours/` n'est jamais considéré comme public de son propre fait.
 
 Le flux de publication reste :
 
